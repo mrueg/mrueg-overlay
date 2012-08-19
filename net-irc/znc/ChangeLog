@@ -1,0 +1,5 @@
+*znc-0.206-r50 (19 Aug 2012)
+
+  19 Aug 2012; Manuel Rüger (mrueg) gentoo@rueg.eu +files/znc.init,
+  +metadata.xml, +znc-0.206-r50.ebuild:
+  net-irc/znc: Updated HOMEPAGE, added daemon-mode

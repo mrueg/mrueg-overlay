@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+	<email>gentoo@rueg.eu</email>
+	<name>Manuel Rüger</name>
+</maintainer>
+<use>
+	<flag name="extras">Enable some additional modules</flag>
+	<flag name="ares">Enables support for asynchronous DNS using the c-ares library</flag>
+	<flag name="daemon">Install init-file and setup for running as daemon</flag>
+</use>
+</pkgmetadata>
