@@ -1,0 +1,6 @@
+*arduino-1.0.1 (20 Aug 2012)
+
+  20 Aug 2012; Manuel Rüger (mrueg) gentoo@rueg.eu +arduino-1.0.1.ebuild,
+  +files/arduino-1.0.1-build.xml.patch, +files/arduino-1.0.1-script.patch,
+  +metadata.xml:
+  dev-embedded/arduino: Ebuild from bug #420861
