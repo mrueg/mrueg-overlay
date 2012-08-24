@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.60-r1.ebuild,v 1.6 2012/06/14 14:28:42 xmw Exp $
+# $Header: $
 
 EAPI=4
 
