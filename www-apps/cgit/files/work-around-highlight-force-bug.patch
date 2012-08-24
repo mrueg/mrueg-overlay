@@ -1,0 +1,9 @@
+--- filters/syntax-highlighting.sh~	2012-05-08 13:58:54.185526590 +0200
++++ filters/syntax-highlighting.sh	2012-05-08 13:59:17.506235037 +0200
+@@ -31,4 +31,6 @@
+ # map Makefile and Makefile.* to .mk
+ [ "${BASENAME%%.*}" == "Makefile" ] && EXTENSION=mk
+ 
++echo "test" | highlight -f -I -O xhtml -S $EXTENSION &>/dev/null
++[ ${?} -ne 0 ] && EXTENSION="txt"
+ exec highlight --force -f -I -O xhtml -S $EXTENSION 2>/dev/null
