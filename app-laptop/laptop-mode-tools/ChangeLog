@@ -1,0 +1,5 @@
+*laptop-mode-tools-1.61 (24 Aug 2012)
+
+  24 Aug 2012; Manuel Rüger (mrueg) gentoo@rueg.eu +files/laptop_mode.init-1.4,
+  +laptop-mode-tools-1.61.ebuild, +metadata.xml:
+  app-laptop/laptop-mode-tools: Version bump #420979
