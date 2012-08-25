@@ -1,0 +1,5 @@
+*albino-1.3.3 (25 Aug 2012)
+
+  25 Aug 2012; Manuel Rüger (mrueg) <gentoo@rueg.eu> +albino-1.3.3.ebuild,
+  +metadata.xml:
+  dev-ruby/albino: Initial ebuild
