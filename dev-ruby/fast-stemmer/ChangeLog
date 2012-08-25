@@ -1,0 +1,5 @@
+*fast-stemmer-1.0.1 (25 Aug 2012)
+
+  25 Aug 2012; Manuel Rüger (mrueg) gentoo@rueg.eu +fast-stemmer-1.0.1.ebuild,
+  +metadata.xml:
+  dev-ruby/fast-stemmer: Initial ebuild
