@@ -1,0 +1,5 @@
+*directory_watcher-1.4.1 (25 Aug 2012)
+
+  25 Aug 2012; Manuel Rüger (mrueg) gentoo@rueg.eu
+  +directory_watcher-1.4.1.ebuild, +metadata.xml:
+  dev-ruby/directory_watcher: Initial ebuild
