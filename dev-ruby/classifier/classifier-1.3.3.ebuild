@@ -18,11 +18,12 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="gsl"
 
-DEPEND=">=dev-ruby/fast-stemmer-1.0.0
-	gsl? ( dev-ruby/ruby-gsl
-		sci-libs/gsl )"
-	#test? ( virtual/ruby-test-unit )"
-RDEPEND="${DEPEND}"
+ruby_add_bdepend ">=dev-ruby/fast-stemmer-1.0.0"
+ruby_add_rdepend ">=dev-ruby/fast-stemmer-1.0.0"
+if use gsl; then
+	ruby_add_rdepend "dev-ruby/ruby-gsl"
+	RDEPEND+=" sci-libs/gsl"
+fi
 
 all_ruby_prepare(){
 	if use !gsl; then
