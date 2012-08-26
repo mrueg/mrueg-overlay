@@ -1,0 +1,5 @@
+*jekyll-0.11.2 (26 Aug 2012)
+
+  26 Aug 2012; Manuel Rüger (mrueg) gentoo@rueg.eu +jekyll-0.11.2.ebuild,
+  +metadata.xml:
+  www-apps/jekyll: Initial ebuild
