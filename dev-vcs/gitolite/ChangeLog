@@ -1,5 +1,0 @@
-*gitolite-3.04 (26 Aug 2012)
-
-  26 Aug 2012; Manuel Rüger (mrueg) gentoo@rueg.eu +gitolite-3.04.ebuild,
-  +metadata.xml:
-  dev-vcs/gitolite: Version bump #423995
