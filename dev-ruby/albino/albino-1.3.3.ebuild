@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=4
-USE_RUBY="ruby18 ruby19 ree18"
+USE_RUBY="ruby18 ruby19"
 
 RUBY_FAKEGEM_EXTRADOC="README.md"
 RUBY_FAKEGEM_EXTRAINSTALL="vendor test"
