@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=4
-USE_RUBY="ruby18 ruby19 ree18 jruby"
+USE_RUBY="ruby18 ruby19 ree18"
 
 RUBY_FAKEGEM_EXTRADOC="README.md"
 RUBY_FAKEGEM_EXTRAINSTALL="vendor test"
@@ -18,9 +18,9 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND=">=dev-ruby/posix-spawn-0.3.6"
-RDEPEND="${DEPEND}
-	dev-python/pygments"
+ruby_add_bdepend "dev-ruby/posix-spawn"
+ruby_add_rdepend "dev-ruby/posix-spawn"
+RDEPEND+=" dev-python/pygments"
 
 #each_fakegem_test() {
 #	${RUBY} test/albino_test.rb || die "tests failed"
