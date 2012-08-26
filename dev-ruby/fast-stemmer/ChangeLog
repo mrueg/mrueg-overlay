@@ -1,3 +1,6 @@
+  26 Aug 2012; Manuel Rüger (mrueg) gentoo@rueg.eu fast-stemmer-1.0.1.ebuild:
+  dev-ruby/fast-stemmer: Drop some ruby targets
+
 *fast-stemmer-1.0.1 (25 Aug 2012)
 
   25 Aug 2012; Manuel Rüger (mrueg) gentoo@rueg.eu +fast-stemmer-1.0.1.ebuild,
