@@ -1,0 +1,6 @@
+*ati-drivers-12.8 (29 Aug 2012)
+
+  29 Aug 2012; Manuel Rüger (mrueg) gentoo@rueg.eu +ati-drivers-12.8.ebuild,
+  +files/ati-drivers-do_mmap.patch, +files/ati-powermode-opt-path-3.patch,
+  +files/atieventsd.init, +files/switchlibGL, +metadata.xml:
+  x11-drivers/ati-drivers: Version bump #431694
