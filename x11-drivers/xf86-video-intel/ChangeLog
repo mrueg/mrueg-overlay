@@ -1,0 +1,5 @@
+*xf86-video-intel-2.20.5 (29 Aug 2012)
+
+  29 Aug 2012; Manuel Rüger (mrueg) gentoo@rueg.eu +metadata.xml,
+  +xf86-video-intel-2.20.5.ebuild:
+  x11-drivers/xf86-video-intel: Version bump
