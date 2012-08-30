@@ -1,0 +1,6 @@
+*radeontop-0.6 (30 Aug 2012)
+
+  30 Aug 2012; Manuel Rüger (mrueg) gentoo@rueg.eu
+  +files/radeontop-0.6-Makefile.patch, +files/radeontop-0.6-dump.patch,
+  +files/version.h, +metadata.xml, +radeontop-0.6.ebuild:
+  x11-apps/radeontop: Initial ebuild

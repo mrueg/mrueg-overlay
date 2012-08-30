@@ -1,0 +1,12 @@
+Add missing header
+
+--- dump.c.old	2012-08-30 02:18:01.523325477 +0200
++++ dump.c	2012-08-30 02:18:13.102324559 +0200
+@@ -15,6 +15,7 @@
+ */
+ 
+ #include "radeontop.h"
++#include <locale.h>
+ 
+ static unsigned char quit = 0;
+ 
