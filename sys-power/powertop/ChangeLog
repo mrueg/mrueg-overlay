@@ -1,5 +1,0 @@
-*powertop-2.1 (24 Aug 2012)
-
-  24 Aug 2012; Manuel Rüger (mrueg) gentoo@rueg.eu +files/csstoh, +metadata.xml,
-  +powertop-2.1.ebuild:
-  sys-power/powertop: Version bump #432180
