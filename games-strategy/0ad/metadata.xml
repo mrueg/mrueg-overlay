@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>gentoo@rueg.eu</email>
+		<name>Manuel Rüger (mrueg)</name>
+	</maintainer>
+	<use>
+		<flag name='audio'> Enables sound and effects output </flag>
+		<flag name='editor'> Build scenario editor  </flag>
+	</use>
+</pkgmetadata>

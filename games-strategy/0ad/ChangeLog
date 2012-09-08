@@ -1,0 +1,6 @@
+*0ad-0_alpha11 (08 Sep 2012)
+
+  08 Sep 2012; Manuel Rüger (mrueg) gentoo@rueg.eu +0ad-0_alpha11.ebuild,
+  +files/0ad-0_alpha11-gentoo.patch, +files/0ad-0_alpha11-include.patch,
+  +metadata.xml:
+  games-strategy/0ad: Version bump to alpha11, ebuild from hasufell-overlay

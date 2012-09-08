@@ -1,0 +1,106 @@
+From: Julian Ospald <hasufell@gentoo.org>
+Date: Sun Jun 24 18:32:38 UTC 2012
+Subject: build system
+
+respect flags for 0ad
+http://trac.wildfiregames.com/ticket/1516
+
+repsect flags for 3rd party FCOLLADA
+and filter optimizations that break compilation/linking
+http://trac.wildfiregames.com/ticket/1516
+
+don't add CFLAGS to CXX calls
+http://trac.wildfiregames.com/changeset/12025
+
+--- build/premake/premake4.lua
++++ build/premake/premake4.lua
+@@ -135,7 +135,7 @@
+ 
+ function project_set_build_flags()
+ 
+-	flags { "Symbols", "NoEditAndContinue" }
++	flags { "NoEditAndContinue" }
+ 	if not _OPTIONS["icc"] and (os.is("windows") or not _OPTIONS["minimal-flags"]) then
+ 		-- adds the -Wall compiler flag
+ 		flags { "ExtraWarnings" } -- this causes far too many warnings/remarks on ICC
+@@ -240,23 +240,8 @@
+ 					}
+ 				end
+ 
+-				if arch == "x86" or arch == "amd64" then
+-					buildoptions {
+-						-- enable SSE intrinsics
+-						"-msse"
+-					}
+-				end
+-
+ 				if os.is("linux") or os.is("bsd") then
+-					linkoptions { "-Wl,--no-undefined", "-Wl,--as-needed" }
+-				end
+-
+-				if arch == "x86" then
+-					buildoptions {
+-						-- To support intrinsics like __sync_bool_compare_and_swap on x86
+-						-- we need to set -march to something that supports them
+-						"-march=i686"
+-					}
++					linkoptions { "-Wl,--no-undefined" }
+ 				end
+ 
+ 			end
+
+--- libraries/fcollada/src/Makefile
++++ libraries/fcollada/src/Makefile
+@@ -8,18 +8,17 @@
+ endif
+ 
+ CXX ?= g++
+-CXXFLAGS += -fvisibility=hidden -W -Wall -Wno-unused-parameter -Wno-unused-function $(OS_DEFINE) $(PIC_FLAGS) $(CPPFLAGS)
+-CXXFLAGS_DEBUG := -O0 -g -D_DEBUG -DRETAIL
+-CXXFLAGS_RELEASE := -O1 -DNDEBUG -DRETAIL
+-# (-O2 with gcc 4.3 causes linker errors when using this library, for unknown reasons, so stick with -O1)
+-CXXFLAGS_TEST := -O0 -g -D_DEBUG
++CXXFLAGS += $(OS_DEFINE) $(PIC_FLAGS) $(CPPFLAGS)
++CXXFLAGS_DEBUG := -g -D_DEBUG -DRETAIL
++CXXFLAGS_RELEASE := -DNDEBUG -DRETAIL
++CXXFLAGS_TEST := -g -D_DEBUG
+ LIBS += `pkg-config libxml-2.0 --libs`
+ INCLUDES += -IFCollada `pkg-config libxml-2.0 --cflags`
+ INCLUDES_TEST := -IFCollada/FColladaTest $(INCLUDES)
+ 
+-# FCollada is not aliasing-safe, so disallow dangerous optimisations
+-# (TODO: It'd be nice to fix FCollada, but that looks hard)
+-CXXFLAGS += -fno-strict-aliasing
++# disallow optimizations which are causing
++# linker errors when using this library
++CXXFLAGS += -fno-strict-aliasing -fno-inline-small-functions -fno-ipa-cp -fno-ipa-sra
+ 
+ SOURCE = \
+ 	FCollada/FCollada.cpp \
+
+--- build/premake/premake4/src/tools/gcc.lua
++++ build/premake/premake4/src/tools/gcc.lua
+@@ -136,8 +136,6 @@
+ 		if not cfg.flags.Symbols then
+ 			if cfg.system == "macosx" then
+ 				table.insert(result, "-Wl,-x")
+-			else
+-				table.insert(result, "-s")
+ 			end
+ 		end
+ 		 	
+--- build/premake/premake4/build/gmake.unix/Premake4.make
++++ build/premake/premake4/build/gmake.unix/Premake4.make
+@@ -26,9 +26,9 @@
+   DEFINES   += -DNDEBUG -DLUA_USE_POSIX -DLUA_USE_DLOPEN
+   INCLUDES  += -I../../src/host/lua-5.1.4/src
+   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
+-  CFLAGS    += $(CPPFLAGS) -Wall -Os
+-  CXXFLAGS  += $(CPPFLAGS) -Wall -Os
+-  LDFLAGS   += -s -rdynamic
++  CFLAGS    += $(CPPFLAGS)
++  CXXFLAGS  += $(CPPFLAGS)
++  LDFLAGS   += -rdynamic
+   LIBS      += -lm -ldl 
+   RESFLAGS  += $(DEFINES) $(INCLUDES) 
+   LDDEPS    += 
