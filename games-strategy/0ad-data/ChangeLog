@@ -1,3 +1,6 @@
+  09 Sep 2012; Manuel Rüger (mrueg) gentoo@rueg.eu 0ad-data-0_alpha11.ebuild:
+  games-strategy/0ad-data: Sync with hasufell-overlay
+
 *0ad-data-0_alpha11 (08 Sep 2012)
 
   08 Sep 2012; Manuel Rüger (mrueg) gentoo@rueg.eu +0ad-data-0_alpha11.ebuild,

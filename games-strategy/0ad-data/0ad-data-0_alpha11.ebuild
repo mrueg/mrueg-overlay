@@ -27,6 +27,6 @@ src_prepare() {
 
 src_install() {
 	insinto "${GAMES_DATADIR}"/${MY_PN}
-	doins -r binaries/data/* || die
+	doins -r binaries/data/*
 	prepgamesdirs
 }
