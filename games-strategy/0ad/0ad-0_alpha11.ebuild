@@ -6,7 +6,7 @@ EAPI=4
 
 WX_GTK_VER="2.8"
 
-inherit eutils flag-o-matic wxwidgets toolchain-funcs games
+inherit eutils wxwidgets toolchain-funcs games
 
 MY_P="${PN}-0.0.${PV#*alpha}-alpha"
 
@@ -46,7 +46,7 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch \
-		"${FILESDIR}"/${P}-include.patch
+		"${FILESDIR}"/${P}-pch.patch
 }
 
 src_configure() {
@@ -56,13 +56,13 @@ src_configure() {
 		--with-system-nvtt
 		--with-system-enet
 		--with-system-mozjs185
+		--minimal-flags
 		$(usex fam "" "--without-fam")
 		$(usex pch "" "--without-pch")
 		$(usex test "" "--without-tests")
 		$(usex audio "" "--without-audio")
 		$(usex editor "--atlas" "")
 		--collada
-		--minimal-flags
 		--bindir="${GAMES_BINDIR}"
 		--libdir="$(games_get_libdir)"/${PN}
 		--datadir="${GAMES_DATADIR}"/${PN}
