@@ -1,0 +1,6 @@
+*mobilesim-0.5.0 (09 Sep 2012)
+
+  09 Sep 2012; Manuel Rüger (mrueg) gentoo@rueg.eu
+  +files/mobilesim-0.5.0-Makefile.patch, +files/mobilesim-0.5.0-gentoo.patch,
+  +metadata.xml, +mobilesim-0.5.0.ebuild:
+  sci-electronics/mobilesim: Initial ebuild, parallel-compilation issues
