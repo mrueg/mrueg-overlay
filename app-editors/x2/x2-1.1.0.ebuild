@@ -23,5 +23,5 @@ DEPEND="${RDEPEND}
 src_prepare(){
 	epatch "${FILESDIR}/${P}-desktop.patch"
 	epatch "${FILESDIR}/${P}-Makefile.patch"
-	#tc-export CC
+	tc-export CC
 }

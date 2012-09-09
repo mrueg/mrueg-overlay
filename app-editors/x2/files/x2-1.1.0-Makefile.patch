@@ -4,8 +4,8 @@
  srcdir         = @srcdir@
  VPATH          = @srcdir@
  
-+CFLAGS				+=$(shell pkg-config --cflags vte gtksourceview-2.0)
-+LIBS					+=$(shell pkg-config --libs vte gtksourceview-2.0)
++CFLAGS +=$(shell pkg-config --cflags vte gtksourceview-2.0)
++LIBS +=$(shell pkg-config --libs vte gtksourceview-2.0)
 +
 +
  all: x2

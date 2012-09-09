@@ -1,3 +1,7 @@
+  09 Sep 2012; Manuel Rüger (mrueg) gentoo@rueg.eu
+  files/x2-1.1.0-Makefile.patch, x2-1.1.0.ebuild:
+  app-editors/x2: Fix spacing
+
 *x2-1.1.0 (24 Aug 2012)
 
   24 Aug 2012; Manuel Rüger (mrueg) gentoo@rueg.eu
