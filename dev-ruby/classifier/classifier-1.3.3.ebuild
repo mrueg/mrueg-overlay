@@ -18,12 +18,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="gsl"
 
-ruby_add_bdepend ">=dev-ruby/fast-stemmer-1.0.0"
 ruby_add_rdepend ">=dev-ruby/fast-stemmer-1.0.0"
-if use gsl; then
-	ruby_add_rdepend "dev-ruby/ruby-gsl"
-	RDEPEND+=" sci-libs/gsl"
-fi
+use gsl && ruby_add_rdepend "dev-ruby/ruby-gsl"
 
 all_ruby_prepare(){
 	if use !gsl; then
@@ -31,8 +27,11 @@ all_ruby_prepare(){
 	fi
 }
 
-#each_fakegem_test(){
-#	${RUBY} test/lsi/lsi_test.rb || die "Test failed"
-#	${RUBY} test/extensions/word_hash_test.rb || die "Test failed"
-#	${RUBY} test/bayes/bayesian_test.rb || die "Test failed"
-#}
+each_ruby_test(){
+	cd test/lsi || die
+	${RUBY} lsi_test.rb || die "Test failed"
+	cd ../extensions || die
+	${RUBY} word_hash_test.rb || die "Test failed"
+	cd ../bayes || die
+	${RUBY} bayesian_test.rb || die "Test failed"
+}
