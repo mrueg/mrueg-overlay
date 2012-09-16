@@ -18,11 +18,11 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-ruby_add_bdepend "dev-ruby/posix-spawn"
 ruby_add_rdepend "dev-ruby/posix-spawn"
 RDEPEND+=" dev-python/pygments"
 
 #each_fakegem_test() {
-#	${RUBY} test/albino_test.rb || die "tests failed"
-#	${RUBY} test/multi_albino_test.rb || die "tests failed"
+#	cd test || die
+#	${RUBY} albino_test.rb || die "Test failed"
+#	${RUBY} multi_albino_test.rb || die "Test failed"
 #}

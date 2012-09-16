@@ -1,3 +1,6 @@
+  16 Sep 2012; Manuel Rüger (mrueg) gentoo@rueg.eu albino-1.3.3.ebuild:
+  dev-ruby/albino: Fix dependencies
+
   26 Aug 2012; Manuel Rüger (mrueg) gentoo@rueg.eu albino-1.3.3.ebuild:
   dev-ruby/albino: Drop some ruby targets
 
