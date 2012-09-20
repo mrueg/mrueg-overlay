@@ -1,3 +1,6 @@
+  20 Sep 2012; Manuel Rueger (mrueg) gentoo@rueg.eu +files/switchlibGL:
+  x11-drivers/ati-drivers: Add another missing file
+
   20 Sep 2012; Manuel Rueger (mrueg) gentoo@rueg.eu +files/atieventsd.init:
   x11-drivers/ati-drivers: Add missing file
 
