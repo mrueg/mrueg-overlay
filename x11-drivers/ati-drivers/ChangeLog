@@ -1,0 +1,6 @@
+*ati-drivers-12.9 (20 Sep 2012)
+
+  20 Sep 2012; Manuel Rueger (mrueg) gentoo@rueg.eu +ati-drivers-12.9.ebuild,
+  +files/ati-drivers-x32_something_something.patch,
+  +files/ati-powermode-opt-path-3.patch, +metadata.xml:
+  x11-drivers/ati-drivers: Ebuild from x11 overlay
