@@ -1,0 +1,55 @@
+see https://rubyforge.org/forum/forum.php?thread_id=49784&forum_id=1225
+
+diff --git a/ext/matrix_complex.c b/ext/matrix_complex.c
+index 8a77ac1..1b1d8af 100644
+--- a/ext/matrix_complex.c
++++ b/ext/matrix_complex.c
+@@ -1519,8 +1519,7 @@ static VALUE rb_gsl_matrix_complex_indgen_singleton(int argc, VALUE *argv, VALUE
+   return Data_Wrap_Struct(cgsl_matrix_complex, 0, gsl_matrix_complex_free, mnew);
+ }
+ 
+-
+-static int gsl_matrix_complex_equal(const gsl_matrix_complex *m1,
++static int gsl_matrix_complex_equal_witg_eps(const gsl_matrix_complex *m1,
+   const gsl_matrix_complex *m2, double eps)
+ {
+   gsl_complex z1, z2;
+@@ -1537,6 +1536,7 @@ static int gsl_matrix_complex_equal(const gsl_matrix_complex *m1,
+   return 1;
+ }
+ 
++
+ static VALUE rb_gsl_matrix_complex_equal(int argc, VALUE *argv, VALUE obj)
+ {
+   gsl_matrix_complex *m1, *m2;
+@@ -1555,7 +1555,7 @@ static VALUE rb_gsl_matrix_complex_equal(int argc, VALUE *argv, VALUE obj)
+   Data_Get_Struct(obj, gsl_matrix_complex, m1);
+   CHECK_MATRIX_COMPLEX(argv[0]);
+   Data_Get_Struct(argv[0], gsl_matrix_complex, m2);
+-  ret = gsl_matrix_complex_equal(m1, m2, eps);
++  ret = gsl_matrix_complex_equal_witg_eps(m1, m2, eps);
+   if (ret == 1) return Qtrue;
+   else return Qfalse;
+ }
+diff --git a/ext/vector_complex.c b/ext/vector_complex.c
+index f9a84f0..2711a36 100644
+--- a/ext/vector_complex.c
++++ b/ext/vector_complex.c
+@@ -1986,7 +1986,7 @@ static VALUE rb_gsl_vector_complex_zip(int argc, VALUE *argv, VALUE obj)
+   return ary;
+ }
+ 
+-static int gsl_vector_complex_equal(const gsl_vector_complex *v1,
++static int gsl_vector_complex_equal_with_eps(const gsl_vector_complex *v1,
+   const gsl_vector_complex *v2, double eps)
+ {
+   gsl_complex z1, z2;
+@@ -2019,7 +2019,7 @@ static VALUE rb_gsl_vector_complex_equal(int argc, VALUE *argv, VALUE obj)
+   Data_Get_Struct(obj, gsl_vector_complex, v1);
+   CHECK_VECTOR_COMPLEX(argv[0]);
+   Data_Get_Struct(argv[0], gsl_vector_complex, v2);
+-  ret = gsl_vector_complex_equal(v1, v2, eps);
++  ret = gsl_vector_complex_equal_with_eps(v1, v2, eps);
+   if (ret == 1) return Qtrue;
+   else return Qfalse;
+ }

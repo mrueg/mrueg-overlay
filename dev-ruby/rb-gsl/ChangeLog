@@ -1,0 +1,5 @@
+*rb-gsl-1.14.7 (22 Sep 2012)
+
+  22 Sep 2012; Manuel Rueger (mrueg) gentoo@rueg.eu
+  +files/rb-gsl-1.14.7-gsl-1.15.patch, +metadata.xml, +rb-gsl-1.14.7.ebuild:
+  dev-ruby/rb-gsl: Initial commit
