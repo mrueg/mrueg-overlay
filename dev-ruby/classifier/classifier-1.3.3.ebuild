@@ -6,7 +6,6 @@ EAPI=4
 USE_RUBY="ruby18 ruby19"
 
 RUBY_FAKEGEM_EXTRADOC="README"
-RUBY_FAKEGEM_EXTRAINSTALL="test"
 
 inherit ruby-fakegem
 
@@ -19,7 +18,7 @@ KEYWORDS="~amd64"
 IUSE="gsl"
 
 ruby_add_rdepend ">=dev-ruby/fast-stemmer-1.0.0"
-use gsl && ruby_add_rdepend "dev-ruby/ruby-gsl"
+ruby_add_rdepend "gsl? ( dev-ruby/rb-gsl )"
 
 all_ruby_prepare(){
 	if use !gsl; then
@@ -29,9 +28,9 @@ all_ruby_prepare(){
 
 each_ruby_test(){
 	cd test/lsi || die
-	${RUBY} lsi_test.rb || die "Test failed"
+	${RUBY} lsi_test.rb || die
 	cd ../extensions || die
-	${RUBY} word_hash_test.rb || die "Test failed"
+	${RUBY} word_hash_test.rb || die
 	cd ../bayes || die
-	${RUBY} bayesian_test.rb || die "Test failed"
+	${RUBY} bayesian_test.rb || die
 }
