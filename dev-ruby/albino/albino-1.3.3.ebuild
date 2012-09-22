@@ -6,7 +6,7 @@ EAPI=4
 USE_RUBY="ruby18 ruby19"
 
 RUBY_FAKEGEM_EXTRADOC="README.md"
-RUBY_FAKEGEM_EXTRAINSTALL="vendor test"
+RUBY_FAKEGEM_EXTRAINSTALL="vendor"
 
 inherit ruby-fakegem
 
@@ -18,11 +18,10 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
+ruby_add_bdepend "test? ( dev-ruby/mocha )"
 ruby_add_rdepend "dev-ruby/posix-spawn"
 RDEPEND+=" dev-python/pygments"
 
-#each_fakegem_test() {
-#	cd test || die
-#	${RUBY} albino_test.rb || die "Test failed"
-#	${RUBY} multi_albino_test.rb || die "Test failed"
-#}
+each_fakegem_test() {
+	${RUBY} -Ilib test/* || die
+}
