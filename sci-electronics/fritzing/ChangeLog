@@ -1,0 +1,6 @@
+*fritzing-0.7.7b (22 Sep 2012)
+
+  22 Sep 2012; Manuel Rueger (mrueg) gentoo@rueg.eu
+  +files/no-bundled-boost.patch, +files/no-bundled-quazip.patch,
+  +fritzing-0.7.7b.ebuild, +metadata.xml:
+  sci-electronics/fritzing: Version bump
