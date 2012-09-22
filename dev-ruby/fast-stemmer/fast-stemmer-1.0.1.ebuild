@@ -5,10 +5,10 @@
 EAPI=4
 USE_RUBY="ruby18 ruby19"
 
+RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="README"
-RUBY_FAKEGEM_EXTRAINSTALL="test ext"
 
-inherit toolchain-funcs ruby-fakegem
+inherit multilib ruby-fakegem
 
 DESCRIPTION="Simple wrapper around multithreaded Porter stemming algorithm"
 HOMEPAGE="https://github.com/romanbsd/fast-stemmer"
@@ -18,12 +18,19 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-each_ruby_compile(){
-	local RUBY_SONAME=$(${RUBY} -rrbconfig -e \
-		"puts(RbConfig::CONFIG['RUBY_SO_NAME'])")
-	cd ext || die
-	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -I $(ruby_get_hdrdir)/ruby \
-	-I $(ruby_get_hdrdir) -I$(ruby_get_hdrdir)/$(tc-arch-kernel)-linux/ \
-	-fPIC -shared -o stemmer.so -l${RUBY_SONAME} -ldl  porter.c porter_wrap.c
-	cp stemmer.so ../lib || die
+all_ruby_prepare() {
+	rm ext/Makefile || die
+}
+
+each_ruby_configure() {
+	${RUBY} -Cext extconf.rb || die
+}
+
+each_ruby_compile() {
+	emake -Cext
+	cp ext/stemmer$(get_modname) lib/ || die
+}
+
+each_ruby_test() {
+	${RUBY} -Ilib -S testrb test/fast_stemmer_test.rb || die
 }
