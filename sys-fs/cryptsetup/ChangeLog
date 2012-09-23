@@ -1,0 +1,5 @@
+*cryptsetup-1.5.0 (23 Sep 2012)
+
+  23 Sep 2012; Manuel Rueger (mrueg) gentoo@rueg.eu +cryptsetup-1.5.0.ebuild,
+  +files/1.0.6-dmcrypt.confd, +files/dmcrypt.rc, +metadata.xml:
+  sys-fs/cryptsetup: Version bump bug 421249
