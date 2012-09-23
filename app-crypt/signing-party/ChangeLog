@@ -1,0 +1,6 @@
+*signing-party-1.1.4 (23 Sep 2012)
+
+  23 Sep 2012; Manuel Rueger (mrueg) gentoo@rueg.eu
+  +files/signing-party-makefile.diff, +metadata.xml,
+  +signing-party-1.1.4.ebuild:
+  app-crypt/signing-party: Version bump bug 436018
