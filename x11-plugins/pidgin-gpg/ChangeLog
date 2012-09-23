@@ -1,0 +1,5 @@
+*pidgin-gpg-0.9 (23 Sep 2012)
+
+  23 Sep 2012; Manuel Rueger (mrueg) gentoo@rueg.eu +metadata.xml,
+  +pidgin-gpg-0.9.ebuild:
+  x11-plugins/pidgin-gpg: Initial version
