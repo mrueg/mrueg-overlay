@@ -19,7 +19,3 @@ RDEPEND=">=app-text/poppler-0.20[cjk,png]
 	media-gfx/fontforge"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
-
-src_prepare() {
-	sed -e "/-O2/d" -i CMakeLists.txt || die
-}
