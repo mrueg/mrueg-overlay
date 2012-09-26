@@ -14,6 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="+gentoo-zsh-completion"
 RDEPEND="app-shells/zsh
+	gentoo-zsh-completion? ( app-shells/zsh-completion  )
 	!gentoo-zsh-completion? ( !app-shells/zsh-completion  )"
 
 src_prepare() {

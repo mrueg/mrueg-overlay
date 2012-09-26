@@ -6,6 +6,6 @@
 		<name>Manuel Rüger (mrueg)</name>
 	</maintainer>
 	<use>
-		<flag name='gentoo-zsh-completion'>Don't install files, installed by <pkg>app-shells/zsh-completion</pkg></flag>
+		<flag name='gentoo-zsh-completion'>Use completions from <pkg>app-shells/zsh-completion</pkg></flag>
 	</use>
 </pkgmetadata>
