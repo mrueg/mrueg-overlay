@@ -13,7 +13,7 @@ HOMEPAGE="http://github.com/schacon/ruby-git/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND+=" dev-vcs/git"
