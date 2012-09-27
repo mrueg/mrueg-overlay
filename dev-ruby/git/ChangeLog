@@ -1,0 +1,5 @@
+*git-1.2.5 (27 Sep 2012)
+
+  27 Sep 2012; Manuel Rueger (mrueg) gentoo@rueg.eu +git-1.2.5.ebuild,
+  +metadata.xml:
+  dev-ruby/git: Initial version
