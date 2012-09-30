@@ -1,3 +1,9 @@
+*ati-drivers-12.9_beta (30 Sep 2012)
+
+  30 Sep 2012; Manuel Rueger (mrueg) gentoo@rueg.eu
+  +ati-drivers-12.9_beta.ebuild, -ati-drivers-12.9.ebuild:
+  x11-drivers/ati-drivers: Sync with x11-overlay
+
   20 Sep 2012; Manuel Rueger (mrueg) gentoo@rueg.eu +files/switchlibGL:
   x11-drivers/ati-drivers: Add another missing file
 

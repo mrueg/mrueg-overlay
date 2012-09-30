@@ -9,8 +9,8 @@ inherit eutils multilib linux-info linux-mod toolchain-funcs versionator
 DESCRIPTION="Ati precompiled drivers for Radeon Evergreen (HD5000 Series) and newer chipsets"
 HOMEPAGE="http://www.amd.com"
 MY_V=( $(get_version_components) )
-RUN="${WORKDIR}/amd-driver-installer-9.00-x86.x86_64.run"
-SRC_URI="http://www2.ati.com/drivers/embedded/9.00-120815a-146426C-EDG_Direct.zip"
+#RUN="${WORKDIR}/amd-driver-installer-9.00-x86.x86_64.run"
+SRC_URI="http://www2.ati.com/drivers/beta/amd-driver-installer-12-9-beta-x86.x86_64.zip"
 FOLDER_PREFIX="common/"
 IUSE="debug +modules multilib qt4 static-libs disable-watermark"
 
