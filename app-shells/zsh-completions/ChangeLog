@@ -1,3 +1,7 @@
+  07 Oct 2012; Manuel Rueger (mrueg) gentoo@rueg.eu
+  zsh-completions-0.7.0.ebuild:
+  app-shells/zsh-completions: Drop useflag
+
   26 Sep 2012; Manuel Rueger (mrueg) gentoo@rueg.eu metadata.xml,
   zsh-completions-0.7.0.ebuild:
   app-shells/zsh-completions: Fix deps

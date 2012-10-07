@@ -12,16 +12,12 @@ SRC_URI="https://github.com/zsh-users/${PN}/tarball/${PV} -> ${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="+gentoo-zsh-completion"
+IUSE=""
 RDEPEND="app-shells/zsh
-	gentoo-zsh-completion? ( app-shells/zsh-completion  )
-	!gentoo-zsh-completion? ( !app-shells/zsh-completion  )"
+	app-shells/zsh-completion"
 
 src_prepare() {
-	if use gentoo-zsh-completion; then
-		rm src/_{baselayout,eselect,gcc-config,genlop,gentoo_packages,gentoolkit,layman,portage,portage_utils} || die
-	fi
-	rm src/_yaourt || die
+	rm src/_{baselayout,eselect,gcc-config,genlop,gentoo_packages,gentoolkit,layman,portage,portage_utilsi,yaourt} || die
 }
 
 src_install() {
