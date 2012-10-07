@@ -1,4 +1,7 @@
   07 Oct 2012; Manuel Rueger (mrueg) gentoo@rueg.eu pidgin-gpg-0.9.ebuild:
+  x11-plugins/pidgin-gpg: Add dep on pkgconfig
+
+  07 Oct 2012; Manuel Rueger (mrueg) gentoo@rueg.eu pidgin-gpg-0.9.ebuild:
   x11-plugins/pidgin-gpg: Fix indentation
 
 *pidgin-gpg-0.9 (23 Sep 2012)

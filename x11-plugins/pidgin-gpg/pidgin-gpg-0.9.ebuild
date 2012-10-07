@@ -4,6 +4,7 @@
 
 EAPI=4
 
+AUTOTOOLS_AUTORECONF="1"
 inherit autotools-utils
 
 DESCRIPTION="GPG/OpenPGP Plugin for Pidgin (XEP-0027)"
@@ -15,11 +16,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="app-crypt/gnupg
+RDEPEND="app-crypt/gnupg
 	app-crypt/gpgme
 	net-im/pidgin"
-RDEPEND="${DEPEND}"
-
-src_prepare(){
-	eautoreconf
-}
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
