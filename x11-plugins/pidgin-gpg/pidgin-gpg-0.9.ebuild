@@ -16,8 +16,8 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="app-crypt/gnupg
-app-crypt/gpgme
-net-im/pidgin"
+	app-crypt/gpgme
+	net-im/pidgin"
 RDEPEND="${DEPEND}"
 
 src_prepare(){
