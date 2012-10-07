@@ -21,3 +21,10 @@ RDEPEND="app-crypt/gnupg
 	net-im/pidgin"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+PATCHES=( "${FILESDIR}"/${P}-automake-1.12.patch )
+
+src_install() {
+	autotools-utils_src_install
+	prune_libtool_files --all 
+}
