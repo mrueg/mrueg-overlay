@@ -24,7 +24,7 @@ RDEPEND="sys-libs/zlib
 DEPEND="${RDEPEND}
 	>=dev-libs/boost-1.40"
 
-S="${WORKDIR}/${PN}-0.7.6b.source"
+S="${WORKDIR}/${P}.source"
 
 src_prepare() {
 	local translations=
