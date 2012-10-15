@@ -51,7 +51,7 @@ src_configure() {
 		$(use_enable ipv6) \
 		$(use_enable perl) \
 		$(use python && echo "--enable-python=python-$(python_get_version)") \
-		$(use_enable sasl) \
+		$(use_enable sasl cyrus) \
 		$(use_enable ssl openssl) \
 		$(use_enable tcl tcl)
 }

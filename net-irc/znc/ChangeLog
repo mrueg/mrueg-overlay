@@ -1,3 +1,6 @@
+  15 Oct 2012; Manuel Rueger (mrueg) gentoo@rueg.eu znc-1.0_beta1-r50.ebuild:
+  net-irc/znc: Small cyrus fix
+
 *znc-1.0_beta1-r50 (15 Oct 2012)
 
   15 Oct 2012; Manuel Rueger (mrueg) gentoo@rueg.eu +znc-1.0_beta1-r50.ebuild:
