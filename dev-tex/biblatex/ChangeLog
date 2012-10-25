@@ -1,0 +1,5 @@
+*biblatex-2.2 (25 Oct 2012)
+
+  25 Oct 2012; Manuel Rueger (mrueg) gentoo@rueg.eu +biblatex-2.2.ebuild,
+  +metadata.xml:
+  dev-tex/biblatex: biblatex version bump
