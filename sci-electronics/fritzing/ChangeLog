@@ -1,3 +1,9 @@
+*fritzing-0.7.10b (25 Oct 2012)
+
+  25 Oct 2012; Manuel Rueger (mrueg) gentoo@rueg.eu +fritzing-0.7.10b.ebuild,
+  -fritzing-0.7.9b.ebuild:
+  sci-electronics/fritzing: Version bump
+
 *fritzing-0.7.9b (14 Oct 2012)
 
   14 Oct 2012; Manuel Rueger (mrueg) gentoo@rueg.eu +fritzing-0.7.9b.ebuild,
