@@ -1,0 +1,4 @@
+*Text-BibTeX-0.66 (02 Nov 2012)
+
+  02 Nov 2012;  <mrueg@gentoo.org> +Text-BibTeX-0.66.ebuild, +metadata.xml:
+  dev-perl/Text-BibTeX: Import via bug #386811
