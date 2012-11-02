@@ -19,6 +19,6 @@ RESTRICT="mirror"
 
 DEPEND="test? (	>=dev-perl/Test-Pod-1.14
 	>=dev-perl/Test-Pod-Coverage-1.08 )"
-RDEPEND=""
+RDEPEND="dev-perl/Capture-Tiny"
 
 SRC_TEST="do"
