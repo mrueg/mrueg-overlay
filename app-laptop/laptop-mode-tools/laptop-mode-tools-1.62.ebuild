@@ -13,7 +13,7 @@ SRC_URI="http://www.samwel.tk/laptop_mode/tools/downloads/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="acpi apm bluetooth scsi"
+IUSE="acpi apm bluetooth scsi systemd"
 
 RDEPEND="net-wireless/wireless-tools
 	sys-apps/ethtool
@@ -53,6 +53,7 @@ src_install() {
 	# See src_prepare()
 	insinto /etc/pm/config.d
 	doins "${T}"/${PN}
+	use systemd || rm -rf "${D}"/lib/systemd
 }
 
 pkg_postinst() {
