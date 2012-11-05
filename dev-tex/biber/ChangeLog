@@ -1,0 +1,5 @@
+*biber-1.3 (02 Nov 2012)
+
+  02 Nov 2012;  <mrueg@gentoo.org> +biber-1.3.ebuild,
+  +files/biber-1.2-drop-Mozilla-CA.patch, +metadata.xml:
+  dev-tex/biber: Import via bug #340353

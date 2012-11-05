@@ -3,5 +3,7 @@
 <pkgmetadata>
 <use>
   <flag name='scsi'>Adds dependency on sdparm to control non-SATA SCSI drivers</flag>
+  <flag name='systemd'> Installs systemd files</flag>
 </use>
+
 </pkgmetadata>
