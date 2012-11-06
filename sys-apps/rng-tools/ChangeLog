@@ -1,6 +1,0 @@
-*rng-tools-4 (06 Nov 2012)
-
-  06 Nov 2012; Manuel Rueger (mrueg) gentoo@rueg.eu +files/rngd-confd-4,
-  +files/rngd-initd-4, +files/test-for-argp.patch, +metadata.xml,
-  +rng-tools-4.ebuild:
-  sys-apps/rng-tools: Version bump via bug #438648
