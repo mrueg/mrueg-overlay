@@ -1,3 +1,9 @@
+*fwts-0.26.01 (07 Nov 2012)
+
+  07 Nov 2012; Manuel Rueger (mrueg) gentoo@rueg.eu +fwts-0.26.01.ebuild,
+  -fwts-0.26.00.ebuild:
+  sys-apps/fwts: Version bump
+
 *fwts-0.26.00 (20 Sep 2012)
 
   20 Sep 2012; Manuel Rueger (mrueg) gentoo@rueg.eu +fwts-0.26.00.ebuild,
