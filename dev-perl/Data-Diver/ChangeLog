@@ -1,0 +1,5 @@
+*Data-Diver-1.010.1 (08 Nov 2012)
+
+  08 Nov 2012; Manuel Rueger <gentoo@rueg.eu +Data-Diver-1.010.1.ebuild,
+  +metadata.xml:
+  dev-perl/Data-Diver: Import via bug #442342
