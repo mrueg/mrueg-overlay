@@ -25,6 +25,7 @@ RDEPEND=">=dev-lang/perl-5.14
 	dev-perl/Business-ISSN
 	dev-perl/Business-ISMN
 	dev-perl/Data-Compare
+	dev-perl/Data-Diver
 	dev-perl/Data-Dump
 	dev-perl/Date-Simple
 	dev-perl/File-Slurp-Unicode
@@ -32,20 +33,16 @@ RDEPEND=">=dev-lang/perl-5.14
 	dev-perl/libwww-perl
 	dev-perl/List-AllUtils
 	dev-perl/Log-Log4perl
+	dev-perl/Mozilla-CA
 	dev-perl/regexp-common
 	dev-perl/Readonly
 	dev-perl/Readonly-XS
-	>=dev-perl/Text-BibTeX-0.64
+	>=dev-perl/Text-BibTeX-0.65
 	dev-perl/XML-LibXML-Simple
 	dev-perl/XML-LibXSLT
 	>=dev-tex/biblatex-2.3
 	virtual/perl-IPC-Cmd"
 
-S="${WORKDIR}"/${MY_PN}-1.2
+S="${WORKDIR}"/${MY_PN}-${PV}
 
 SRC_TEST="parallel"
-
-src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.2-drop-Mozilla-CA.patch														
-	perl-module_src_prepare
-	}
