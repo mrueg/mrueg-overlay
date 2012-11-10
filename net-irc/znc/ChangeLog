@@ -1,3 +1,6 @@
+  10 Nov 2012; Manuel Rueger <gentoo@rueg.eu metadata.xml:
+  net-irc/znc: Fix metadata
+
   10 Nov 2012; Manuel Rueger <gentoo@rueg.eu -znc-0.206-r50.ebuild:
   net-irc/znc: Remove old version
 
