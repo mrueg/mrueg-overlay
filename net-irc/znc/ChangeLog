@@ -1,3 +1,6 @@
+  10 Nov 2012; Manuel Rueger <gentoo@rueg.eu -znc-0.206-r50.ebuild:
+  net-irc/znc: Remove old version
+
 *znc-1.0-r50 (08 Nov 2012)
 
   08 Nov 2012;  <mrueg@gentoo.org> +znc-1.0-r50.ebuild, -znc-1.0_rc1-r50.ebuild:
