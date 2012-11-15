@@ -1,7 +1,0 @@
-*cgit-0.9.0.3 (24 Aug 2012)
-
-  24 Aug 2012; Manuel Rüger (mrueg) gentoo@rueg.eu +cgit-0.9.0.3.ebuild,
-  +files/cgitrc, +files/postinstall-en.txt,
-  +files/use-highlight-version-3.patch,
-  +files/work-around-highlight-force-bug.patch, +metadata.xml:
-  www-apps/cgit: Ebuild from #409485
