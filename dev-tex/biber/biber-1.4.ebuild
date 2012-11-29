@@ -33,14 +33,13 @@ RDEPEND=">=dev-lang/perl-5.14
 	dev-perl/libwww-perl
 	dev-perl/List-AllUtils
 	dev-perl/Log-Log4perl
-	dev-perl/Mozilla-CA
 	dev-perl/regexp-common
 	dev-perl/Readonly
 	dev-perl/Readonly-XS
-	>=dev-perl/Text-BibTeX-0.65
+	>=dev-perl/Text-BibTeX-0.66
 	dev-perl/XML-LibXML-Simple
 	dev-perl/XML-LibXSLT
-	>=dev-tex/biblatex-2.3
+	>=dev-tex/biblatex-2.4
 	virtual/perl-IPC-Cmd"
 
 S="${WORKDIR}"/${MY_PN}-${PV}
