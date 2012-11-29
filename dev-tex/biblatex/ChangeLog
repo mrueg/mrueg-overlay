@@ -1,3 +1,8 @@
+*biblatex-2.4 (29 Nov 2012)
+
+  29 Nov 2012;  <mrueg@gentoo.org> +biblatex-2.4.ebuild, -biblatex-2.3.ebuild:
+  dev-tex/biblatex: Version bump
+
 *biblatex-2.3 (02 Nov 2012)
 
   02 Nov 2012;  <mrueg@gentoo.org> +biblatex-2.3.ebuild, -biblatex-2.2.ebuild:
