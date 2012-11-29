@@ -1,3 +1,9 @@
+*Config-AutoConf-0.20 (29 Nov 2012)
+
+  29 Nov 2012;  <mrueg@gentoo.org> +Config-AutoConf-0.20.ebuild,
+  -Config-AutoConf-0.19.ebuild:
+  dev-perl/Config-AutoConf: Version bump
+
   02 Nov 2012;  <mrueg@gentoo.org> Config-AutoConf-0.19.ebuild:
   dev-perl/Config-AutoConf: Add missing rdep
 
