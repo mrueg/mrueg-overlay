@@ -1,0 +1,6 @@
+*arduino-1.0.2 (25 Nov 2012)
+
+  25 Nov 2012; Manuel Rueger (mrueg) gentoo@rueg.eu +arduino-1.0.2.ebuild,
+  +files/arduino-1.0.1-build.xml.patch, +files/arduino-1.0.2-script.patch,
+  +files/arduino.desktop, +metadata.xml:
+  dev-embedded/arduino: Version bump wrt #442130
