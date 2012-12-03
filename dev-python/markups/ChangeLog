@@ -1,0 +1,5 @@
+*markups-0.2.4 (03 Dec 2012)
+
+  03 Dec 2012; Manuel Rueger (mrueg) gentoo@rueg.eu +markups-0.2.4.ebuild,
+  +metadata.xml:
+  dev-python/markups: Initial version
