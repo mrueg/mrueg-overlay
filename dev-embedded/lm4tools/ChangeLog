@@ -1,0 +1,5 @@
+*lm4tools-0_pre20121113 (03 Dec 2012)
+
+  03 Dec 2012; Manuel Rueger (mrueg) gentoo@rueg.eu
+  +lm4tools-0_pre20121113.ebuild, +metadata.xml:
+  dev-embedded/lm4tools: Initial version
