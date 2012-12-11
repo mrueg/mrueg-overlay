@@ -1,0 +1,5 @@
+*sparkleshare-1.0.0 (11 Dec 2012)
+
+  11 Dec 2012; Manuel Rueger (mrueg) gentoo@rueg.eu +metadata.xml,
+  +sparkleshare-1.0.0.ebuild:
+  app-misc/sparkleshare: Initial version
