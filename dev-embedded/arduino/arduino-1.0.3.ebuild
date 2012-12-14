@@ -9,7 +9,7 @@ inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="An open-source AVR electronics prototyping platform"
 HOMEPAGE="http://arduino.cc/ http://arduino.googlecode.com/"
-SRC_URI="http://arduino.googlecode.com/files/${P}-src.tar.gz"
+SRC_URI="http://${PN}.googlecode.com/files/${P}-src.tar.gz"
 LICENSE="GPL-2 LGPL-2 CCPL-Attribution-ShareAlike-3.0"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
@@ -36,7 +36,6 @@ java_prepare() {
 	rm build/linux/dist/tools/avrdude* || die
 	rm build/linux/dist/lib/* || die
 	rm app/lib/* || die
-	rm app/pde.jar || die
 	rm -rf app/src/processing/app/macosx || die
 	# Patch build/build.xml - remove local jar files
 	# for rxtx and ecj (use system wide versions)
