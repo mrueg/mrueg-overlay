@@ -1,0 +1,5 @@
+*pygments-rb-0.3.3 (28 Dec 2012)
+
+  28 Dec 2012; Manuel Rüger <gentoo@rueg.eu +metadata.xml,
+  +pygments-rb-0.3.3.ebuild:
+  dev-ruby/pygments-rb: Initial version for pygments.rb
