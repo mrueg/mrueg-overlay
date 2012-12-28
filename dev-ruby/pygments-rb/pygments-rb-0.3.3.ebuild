@@ -35,7 +35,10 @@ all_ruby_prepare() {
 	python_convert_shebangs -r 2 .
 }
 
-# 1 test is fails 28/12/2012
+# 28/12/2012: 1 test failing with pygments-1.5-r1 from tree, should be fixed in
+# pygments' next version
+# test_css_colorful(PygmentsCssTest) [test_pygments.rb:250]
+
 each_ruby_test() {
 	cd test
 	${RUBY} -I../lib test_pygments.rb
