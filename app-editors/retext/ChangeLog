@@ -1,0 +1,4 @@
+*retext-4.0.0 (31 Dec 2012)
+
+  31 Dec 2012; Manuel Rüger <gentoo@rueg.eu +metadata.xml, +retext-4.0.0.ebuild:
+  app-editors/retext: Initial version
