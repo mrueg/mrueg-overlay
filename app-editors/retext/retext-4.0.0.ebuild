@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="+spell"
 
-RDEPEND="dev-python/PyQt4
+RDEPEND="dev-python/PyQt4[webkit]
 	dev-python/markups
 	dev-python/markdown
 	dev-python/docutils
