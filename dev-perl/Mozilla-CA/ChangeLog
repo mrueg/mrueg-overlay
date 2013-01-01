@@ -1,0 +1,5 @@
+*Mozilla-CA-20120823 (08 Nov 2012)
+
+  08 Nov 2012; Manuel Rueger <gentoo@rueg.eu +Mozilla-CA-20120823.ebuild,
+  +metadata.xml:
+  dev-perl/Mozilla-CA: Import via bug #428798
