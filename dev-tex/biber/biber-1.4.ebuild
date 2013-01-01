@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -18,7 +18,10 @@ KEYWORDS="~amd64"
 IUSE="test"
 
 DEPEND="${RDEPEND}
-	test? ( dev-perl/File-Which )
+	test? ( dev-perl/File-Which
+			dev-perl/Mozilla-CA
+			dev-perl/Test-Pod
+			dev-perl/Test-Pod-Coverage )
 	virtual/perl-Module-Build"
 RDEPEND=">=dev-lang/perl-5.14
 	dev-perl/Business-ISBN
@@ -30,7 +33,7 @@ RDEPEND=">=dev-lang/perl-5.14
 	dev-perl/Date-Simple
 	dev-perl/File-Slurp-Unicode
 	dev-perl/IPC-Run3
-	dev-perl/libwww-perl
+	dev-perl/libwww-perl[ssl]
 	dev-perl/List-AllUtils
 	dev-perl/Log-Log4perl
 	dev-perl/regexp-common
