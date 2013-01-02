@@ -1,3 +1,9 @@
+*pygments-rb-0.3.7 (02 Jan 2013)
+
+  02 Jan 2013; Manuel Rüger <gentoo@rueg.eu> +pygments-rb-0.3.7.ebuild,
+  -pygments-rb-0.3.4.ebuild:
+  dev-ruby/pygments-rb: Version bump
+
 *pygments-rb-0.3.4 (29 Dec 2012)
 
   29 Dec 2012; Manuel Rüger <gentoo@rueg.eu +pygments-rb-0.3.4.ebuild,
