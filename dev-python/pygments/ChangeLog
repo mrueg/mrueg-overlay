@@ -1,0 +1,5 @@
+*pygments-9999 (02 Jan 2013)
+
+  02 Jan 2013; Manuel Rüger <gentoo@rueg.eu> +metadata.xml,
+  +pygments-9999.ebuild:
+  dev-python/pygments: Add live ebuild
