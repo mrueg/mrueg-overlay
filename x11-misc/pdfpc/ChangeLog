@@ -1,3 +1,6 @@
+  03 Jan 2013; Manuel Rüger <gentoo@rueg.eu> pdfpc-3.1.1-r1.ebuild:
+  x11-misc/pdfpc: Drop EPREFIX as I can't test it
+
 *pdfpc-3.1.1-r1 (02 Nov 2012)
 
   02 Nov 2012; Manuel Rueger (mrueg) gentoo@rueg.eu +pdfpc-3.1.1-r1.ebuild,
