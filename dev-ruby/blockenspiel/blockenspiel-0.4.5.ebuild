@@ -17,11 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND=""
-RDEPEND="${DEPEND}"
-
 each_ruby_configure() {
-    ${RUBY} -Cext/unmixer_mri extconf.rb || die
+	${RUBY} -Cext/unmixer_mri extconf.rb || die
 }
 
 each_ruby_compile() {
@@ -34,4 +31,3 @@ each_ruby_test() {
 		${RUBY} -Ilib test/tc_${i}.rb
 	done
 }
-
