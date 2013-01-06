@@ -5,7 +5,7 @@
 EAPI=4
 
 USE_RUBY="ruby18 ruby19"
-RUBY_FAKEGEM_EXTRADOC="Blockenspiel.rdoc History.rdoc ImplementingDSLblocks.rdoc "
+RUBY_FAKEGEM_EXTRADOC="Blockenspiel.rdoc History.rdoc ImplementingDSLblocks.rdoc README.rdoc"
 
 inherit multilib ruby-fakegem
 
