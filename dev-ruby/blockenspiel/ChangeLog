@@ -1,0 +1,5 @@
+*blockenspiel-0.4.5 (06 Jan 2013)
+
+  06 Jan 2013; Manuel Rüger <gentoo@rueg.eu> +blockenspiel-0.4.5.ebuild,
+  +metadata.xml:
+  dev-ruby/blockenspiel: Initial version
