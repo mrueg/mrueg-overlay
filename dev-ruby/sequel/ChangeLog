@@ -1,0 +1,5 @@
+*sequel-3.42.0 (06 Jan 2013)
+
+  06 Jan 2013; Manuel Rüger <gentoo@rueg.eu> +metadata.xml,
+  +sequel-3.42.0.ebuild:
+  dev-ruby/sequel: Initial version
