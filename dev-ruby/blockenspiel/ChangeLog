@@ -1,4 +1,7 @@
   06 Jan 2013; Manuel Rüger <gentoo@rueg.eu> blockenspiel-0.4.5.ebuild:
+  dev-ruby/blockenspiel: Die when test fails
+
+  06 Jan 2013; Manuel Rüger <gentoo@rueg.eu> blockenspiel-0.4.5.ebuild:
   dev-ruby/blockenspiel: Add missing file
 
   06 Jan 2013; Manuel Rüger <gentoo@rueg.eu> blockenspiel-0.4.5.ebuild:

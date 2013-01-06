@@ -29,6 +29,6 @@ each_ruby_compile() {
 
 each_ruby_test() {
 	for i in basic behaviors dsl_attrs dsl_methods dynamic embedded_block mixins modules version; do
-		${RUBY} -Ilib test/tc_${i}.rb
+		${RUBY} -Ilib test/tc_${i}.rb || die "Test failed"
 	done
 }
