@@ -1,0 +1,5 @@
+*cherrymusic-0.22.0 (08 Jan 2013)
+
+  08 Jan 2013; Manuel Rueger (mrueg) gentoo@rueg.eu +cherrymusic-0.22.0.ebuild,
+  +metadata.xml:
+  media-sound/cherrymusic: Initial version
