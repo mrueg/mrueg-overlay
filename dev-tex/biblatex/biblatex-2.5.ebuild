@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/dev-tex/biblatex/biblatex-2.1-r1.ebuild,v 1.1 2012/08/02 13:35:51 aballier Exp $
 
