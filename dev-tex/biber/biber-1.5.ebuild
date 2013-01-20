@@ -25,8 +25,8 @@ DEPEND="${RDEPEND}
 	virtual/perl-Module-Build"
 RDEPEND=">=dev-lang/perl-5.14
 	dev-perl/Business-ISBN
-	dev-perl/Business-ISSN
 	dev-perl/Business-ISMN
+	dev-perl/Business-ISSN
 	dev-perl/Data-Compare
 	dev-perl/Data-Diver
 	dev-perl/Data-Dump
