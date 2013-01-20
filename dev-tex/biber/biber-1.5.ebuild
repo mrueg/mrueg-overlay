@@ -42,7 +42,7 @@ RDEPEND=">=dev-lang/perl-5.14
 	>=dev-perl/Text-BibTeX-0.66
 	dev-perl/XML-LibXML-Simple
 	dev-perl/XML-LibXSLT
-	>=dev-tex/biblatex-2.4
+	>=dev-tex/biblatex-2.5
 	virtual/perl-IPC-Cmd"
 
 S="${WORKDIR}"/${MY_PN}-${PV}
