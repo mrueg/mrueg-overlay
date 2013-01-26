@@ -1,0 +1,36 @@
+From 82d0247e8342594419313f6c4577065230c1b504 Mon Sep 17 00:00:00 2001
+From: Colin Ian King <colin.king@canonical.com>
+Date: Fri, 18 Jan 2013 01:56:46 +0000
+Subject: [PATCH] lib: fwts_uefi: fix build error when using gcc 4.6.3
+
+With older versions of gcc we get a build failure:
+
+fwts_uefi.c: In function 'fwts_uefi_print_status_info':
+fwts_uefi.c:469:2: error: expected ')' before 'PRIx64'
+fwts_uefi.c:469:2: error: spurious trailing '%' in format [-Werror=format]
+
+..because some required headers were left out.
+
+Signed-off-by: Colin Ian King <colin.king@canonical.com>
+Acked-by: Keng-Yu Lin <kengyu@canonical.com>
+Acked-by: Ivan Hu <ivan.hu@canonical.com>
+---
+ src/lib/src/fwts_uefi.c |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+diff --git a/src/lib/src/fwts_uefi.c b/src/lib/src/fwts_uefi.c
+index 8cfa321..c4435e6 100644
+--- a/src/lib/src/fwts_uefi.c
++++ b/src/lib/src/fwts_uefi.c
+@@ -25,6 +25,8 @@
+ #include <fcntl.h>
+ #include <unistd.h>
+ #include <dirent.h>
++#include <stdint.h>
++#include <inttypes.h>
+ 
+ #include "fwts.h"
+ #include "fwts_uefi.h"
+-- 
+1.7.0.4
+

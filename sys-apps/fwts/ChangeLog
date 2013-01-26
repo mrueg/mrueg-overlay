@@ -1,3 +1,10 @@
+*fwts-0.26.04 (26 Jan 2013)
+
+  26 Jan 2013; Manuel Rueger (mrueg) gentoo@rueg.eu
+  +files/fwts-0.26.04-gcc-4.6.3.patch, +fwts-0.26.04.ebuild,
+  -fwts-0.26.03.ebuild:
+  sys-apps/fwts: Version bump
+
 *fwts-0.26.03 (26 Dec 2012)
 
   26 Dec 2012; Manuel Rüger <gentoo@rueg.eu +fwts-0.26.03.ebuild,
