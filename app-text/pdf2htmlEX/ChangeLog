@@ -1,3 +1,9 @@
+*pdf2htmlEX-0.6 (26 Jan 2013)
+
+  26 Jan 2013; Manuel Rueger (mrueg) gentoo@rueg.eu +pdf2htmlEX-0.6.ebuild,
+  -pdf2htmlEX-0.5.ebuild:
+  app-text/pdf2htmlEX: Version bump
+
 *pdf2htmlEX-0.5 (06 Oct 2012)
 
   06 Oct 2012; Manuel Rueger (mrueg) gentoo@rueg.eu +pdf2htmlEX-0.5.ebuild,
