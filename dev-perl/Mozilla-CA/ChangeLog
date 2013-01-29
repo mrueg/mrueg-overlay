@@ -1,3 +1,9 @@
+*Mozilla-CA-20130114 (29 Jan 2013)
+
+  29 Jan 2013; Manuel Rueger (mrueg) gentoo@rueg.eu +Mozilla-CA-20130114.ebuild,
+  -Mozilla-CA-20120823.ebuild:
+  dev-perl/Mozilla-CA: Version bump
+
 *Mozilla-CA-20120823 (08 Nov 2012)
 
   08 Nov 2012; Manuel Rueger <gentoo@rueg.eu +Mozilla-CA-20120823.ebuild,
