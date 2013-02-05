@@ -18,7 +18,7 @@ RDEPEND="app-shells/zsh
 	!gentoo-zsh-completion? ( !app-shells/zsh-completion )"
 
 src_prepare() {
-	use zcomp-gentoo && (rm src/_{baselayout,eselect,gcc-config,genlop,gentoo_packages,gentoolkit,layman,portage,portage_utils} || die)
+	use gentoo-zsh-completion && (rm src/_{baselayout,eselect,gcc-config,genlop,gentoo_packages,gentoolkit,layman,portage,portage_utils} || die)
 	rm src/_yaourt || die
 }
 
