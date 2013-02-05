@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
 inherit vcs-snapshot
 DESCRIPTION="Additional completion definitions for Zsh"
@@ -12,12 +12,14 @@ SRC_URI="https://github.com/zsh-users/${PN}/tarball/${PV} -> ${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+IUSE="gentoo-zsh-completion"
 RDEPEND="app-shells/zsh
-	app-shells/zsh-completion"
+	gentoo-zsh-completion? ( app-shells/zsh-completion )
+	!gentoo-zsh-completion? ( !app-shells/zsh-completion )"
 
 src_prepare() {
-	rm src/_{baselayout,eselect,gcc-config,genlop,gentoo_packages,gentoolkit,layman,portage,portage_utils,yaourt} || die
+	use zcomp-gentoo && (rm src/_{baselayout,eselect,gcc-config,genlop,gentoo_packages,gentoolkit,layman,portage,portage_utils} || die)
+	rm src/_yaourt || die
 }
 
 src_install() {
