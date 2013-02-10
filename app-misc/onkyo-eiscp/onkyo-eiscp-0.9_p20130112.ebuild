@@ -17,4 +17,5 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="=dev-python/docopt-0.4.1[${PYTHON_USEDEP}]"
