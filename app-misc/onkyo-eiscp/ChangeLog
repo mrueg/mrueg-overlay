@@ -1,0 +1,5 @@
+*onkyo-eiscp-0.9_p20130112 (10 Feb 2013)
+
+  10 Feb 2013; Manuel Rueger (mrueg) gentoo@rueg.eu +metadata.xml,
+  +onkyo-eiscp-0.9_p20130112.ebuild:
+  app-misc/onkyo-eiscp: Initial version
