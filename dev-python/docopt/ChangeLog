@@ -1,3 +1,7 @@
+  10 Feb 2013; Manuel Rueger (mrueg) gentoo@rueg.eu docopt-0.4.1.ebuild,
+  docopt-0.6.1.ebuild:
+  dev-python/docopt: Add setuptools dependency
+
 *docopt-0.4.1 (10 Feb 2013)
 
   10 Feb 2013; Manuel Rueger (mrueg) gentoo@rueg.eu +docopt-0.4.1.ebuild:
