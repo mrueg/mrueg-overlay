@@ -1,0 +1,5 @@
+*docopt-0.6.1 (10 Feb 2013)
+
+  10 Feb 2013; Manuel Rueger (mrueg) gentoo@rueg.eu +docopt-0.6.1.ebuild,
+  +metadata.xml:
+  dev-python/docopt: Initial version
