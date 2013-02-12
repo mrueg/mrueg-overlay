@@ -1,3 +1,9 @@
+*fast-stemmer-1.0.2 (12 Feb 2013)
+
+  12 Feb 2013; Manuel Rueger (mrueg) gentoo@rueg.eu +fast-stemmer-1.0.2.ebuild,
+  -fast-stemmer-1.0.1.ebuild:
+  dev-ruby/fast-stemmer: Version bump
+
   22 Sep 2012; Manuel Rueger (mrueg) gentoo@rueg.eu fast-stemmer-1.0.1.ebuild:
   dev-ruby/fast-stemmer: Further fixes, thanks to graaff
 
