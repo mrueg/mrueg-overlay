@@ -2,7 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/phonon-vlc-0.6.1.ebuild,v 1.2 2012/11/16 19:59:34 ago Exp $
 
-EAPI=4
+EAPI=5
+
 MY_PN="phonon-backend-vlc"
 MY_P="${MY_PN}-${PV}"
 EGIT_REPO_URI="git://anongit.kde.org/${PN}"
