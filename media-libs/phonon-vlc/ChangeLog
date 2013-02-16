@@ -1,0 +1,5 @@
+*phonon-vlc-0.6.2 (16 Feb 2013)
+
+  16 Feb 2013; Manuel Rueger (mrueg) gentoo@rueg.eu +metadata.xml,
+  +phonon-vlc-0.6.2.ebuild:
+  media-libs/phonon-vlc: Version bump from in-tree ebuild
