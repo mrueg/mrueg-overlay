@@ -1,0 +1,5 @@
+*rake-compiler-0.8.3 (21 Feb 2013)
+
+  21 Feb 2013; Manuel Rüger <gentoo@rueg.eu> +metadata.xml,
+  +rake-compiler-0.8.3.ebuild:
+  dev-ruby/rake-compiler: Version bump, ebuild from main tree
