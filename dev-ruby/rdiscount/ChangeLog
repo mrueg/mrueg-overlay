@@ -1,0 +1,5 @@
+*rdiscount-2.0.7 (21 Feb 2013)
+
+  21 Feb 2013; Manuel Rüger <gentoo@rueg.eu> +metadata.xml,
+  +rdiscount-2.0.7.ebuild:
+  dev-ruby/rdiscount: Version bump, ebuild from main tree
