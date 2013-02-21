@@ -1,3 +1,15 @@
+*idea-community-12.0.4.123.169 (14 Feb 2013)
+
+  14 Feb 2013; Manuel Rueger (mrueg) gentoo@rueg.eu
+  +idea-community-12.0.4.123.169.ebuild, -idea-community-12.0.3.123.155.ebuild:
+  dev-util/idea-community: Version bump
+
+*idea-community-12.0.3.123.155 (09 Feb 2013)
+
+  09 Feb 2013; Manuel Rueger (mrueg) gentoo@rueg.eu
+  +idea-community-12.0.3.123.155.ebuild, -idea-community-12.0.2.123.123.ebuild:
+  dev-util/idea-community: Version bump
+
 *idea-community-12.0.2.123.123 (26 Jan 2013)
 
   26 Jan 2013; Manuel Rueger (mrueg) gentoo@rueg.eu
