@@ -22,7 +22,7 @@ IUSE=""
 
 ruby_add_rdepend "dev-ruby/posix-spawn
 	dev-ruby/yajl-ruby"
-RDEPEND+=" dev-python/pygments"
+RDEPEND+=" >=dev-python/pygments-1.6"
 # could be also an rdep: dev-python/simplejson
 
 pkg_setup() {
@@ -34,10 +34,6 @@ all_ruby_prepare() {
 	rm -rf vendor/{pygments-main,simplejson}
 	python_convert_shebangs -r 2 .
 }
-
-# 28/12/2012: 1 test failing with pygments-1.5-r1 from tree, should be fixed in
-# pygments' next version
-# test_css_colorful(PygmentsCssTest) [test_pygments.rb:250]
 
 each_ruby_test() {
 	cd test
