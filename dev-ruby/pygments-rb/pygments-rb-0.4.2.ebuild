@@ -3,14 +3,15 @@
 # $Header: $
 
 EAPI=5
-PYTHON_DEPEND="2"
-USE_RUBY="ruby18 ruby19"
 
+PYTHON_COMPAT=( python2_6 python2_7 )
+
+USE_RUBY="ruby18 ruby19"
 RUBY_FAKEGEM_NAME="pygments.rb"
 RUBY_FAKEGEM_EXTRADOC="README.md"
-RUBY_FAKEGEM_EXTRAINSTALL="vendor/custom_lexers bench.rb cache-lexers.rb lexers"
+RUBY_FAKEGEM_EXTRAINSTALL="vendor/custom_lexers/github.py bench.rb cache-lexers.rb lexers"
 
-inherit python ruby-fakegem
+inherit python-r1 ruby-fakegem
 
 DESCRIPTION="Ruby wrapper for pygments syntax highlighter"
 HOMEPAGE="http://github.com/tmm1/pygments.rb http://rubygems.org/gems/pygments.rb"
@@ -22,20 +23,29 @@ IUSE=""
 
 ruby_add_rdepend "dev-ruby/posix-spawn
 	dev-ruby/yajl-ruby"
-RDEPEND+=" >=dev-python/pygments-1.6"
-# could be also an rdep: dev-python/simplejson
-
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
+RDEPEND+=" >=dev-python/pygments-1.6[${PYTHON_USEDEP}]
+	${PYTHON_DEPS}"
+# possible RDEP: simplejson
 
 all_ruby_prepare() {
 	rm -rf vendor/{pygments-main,simplejson}
-	python_convert_shebangs -r 2 .
+}
+
+src_install() {
+	ruby-ng_src_install
+
+	# install modules in appropriate python dirs
+	mypythoninstall() {
+		python_moduleinto ${PN}
+		python_domodule "$(find "${S}" -type f -path "*custom_lexers/github.py" -print -quit)"
+	}
+	python_foreach_impl mypythoninstall
+	# create implementation specific files for the script
+	python_replicate_script $(find "${D}" -type f -path "*pygments/mentos.py" -print)
 }
 
 each_ruby_test() {
+	python_export_best
 	cd test
 	${RUBY} -I../lib test_pygments.rb
 }
