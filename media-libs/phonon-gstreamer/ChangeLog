@@ -1,5 +1,0 @@
-*phonon-gstreamer-4.6.3 (16 Feb 2013)
-
-  16 Feb 2013; Manuel Rueger (mrueg) gentoo@rueg.eu +metadata.xml,
-  +phonon-gstreamer-4.6.3.ebuild:
-  media-libs/phonon-gstreamer: Version bump from in-tree ebuild
