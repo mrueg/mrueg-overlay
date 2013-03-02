@@ -1,3 +1,9 @@
+*eclipse-sdk-bin-4.2.2 (02 Mar 2013)
+
+  02 Mar 2013; Manuel Rueger (mrueg) gentoo@rueg.eu
+  +eclipse-sdk-bin-4.2.2.ebuild, -eclipse-sdk-bin-4.2.1.ebuild:
+  dev-util/eclipse-sdk-bin: Version bump, ebuild from java-overlay
+
 *eclipse-sdk-bin-4.2.1 (21 Oct 2012)
 
   21 Oct 2012; Manuel Rueger (mrueg) gentoo@rueg.eu
