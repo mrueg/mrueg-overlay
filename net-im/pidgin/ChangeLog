@@ -1,3 +1,7 @@
+  02 Mar 2013; Manuel Rüger <gentoo@rueg.eu> +files/pidgin-2.10.7-fix-cap.patch,
+  pidgin-2.10.7.ebuild:
+  net-im/pidgin: Add patch for CAP Plugin to prevent crashing on startup
+
 *pidgin-2.10.7 (02 Mar 2013)
 
   02 Mar 2013; Manuel Rüger <gentoo@rueg.eu> +files/pidgin-2.10.0-gold.patch,
