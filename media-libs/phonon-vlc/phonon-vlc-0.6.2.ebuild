@@ -27,8 +27,8 @@ IUSE="debug"
 RDEPEND="
 	>=media-libs/phonon-4.6.0
 	>=media-video/vlc-2.0.1[dbus,ogg,vorbis]
-	>=x11-libs/qt-dbus-4.6.0:4
-	>=x11-libs/qt-gui-4.6.0:4
+	>=dev-qt/qtdbus-4.6.0:4
+	>=dev-qt/qtgui-4.6.0:4
 "
 DEPEND="${RDEPEND}
 	>=dev-util/automoc-0.9.87

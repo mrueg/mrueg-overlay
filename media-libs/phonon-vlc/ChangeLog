@@ -1,3 +1,6 @@
+  03 Mar 2013; Manuel Rüger <gentoo@rueg.eu> phonon-vlc-0.6.2.ebuild:
+  media-libs/phonon-vlc: Change deps category due to qt move
+
   16 Feb 2013; Manuel Rueger (mrueg) gentoo@rueg.eu phonon-vlc-0.6.2.ebuild:
   media-libs/phonon-vlc: Update EAPI
 
