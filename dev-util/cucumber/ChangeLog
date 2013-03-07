@@ -1,0 +1,5 @@
+*cucumber-1.2.2 (07 Mar 2013)
+
+  07 Mar 2013; Manuel Rüger <gentoo@rueg.eu> +cucumber-1.2.2.ebuild,
+  +metadata.xml:
+  dev-util/cucumber: Version bump, ebuild from main tree
