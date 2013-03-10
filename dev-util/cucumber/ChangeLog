@@ -1,3 +1,9 @@
+*cucumber-1.2.3 (10 Mar 2013)
+
+  10 Mar 2013; Manuel Rüger <gentoo@rueg.eu> +cucumber-1.2.3.ebuild,
+  -cucumber-1.2.2.ebuild:
+  dev-util/cucumber: Version bump
+
 *cucumber-1.2.2 (07 Mar 2013)
 
   07 Mar 2013; Manuel Rüger <gentoo@rueg.eu> +cucumber-1.2.2.ebuild,
