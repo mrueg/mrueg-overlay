@@ -3,21 +3,21 @@
 # $Header: $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19 ree18 jruby"
+USE_RUBY="ruby18 ruby19 ree18"
 
-RUBY_FAKEGEM_EXTRADOC="README.md AUTHORS ChangeLog CONTRIBUTERS"
+RUBY_FAKEGEM_EXTRADOC="README.md AUTHORS CONTRIBUTERS"
 
 RUBY_FAKEGEM_EXTRAINSTALL="data"
 
 inherit ruby-fakegem
 
-DESCRIPTION="yet-another-markdown-parser but fast, pure Ruby, using a strict syntax definition."
+DESCRIPTION="Yet-another-markdown-parser but fast, pure Ruby, using a strict syntax definition"
 HOMEPAGE="http://kramdown.rubyforge.org/"
 
-LICENSE="GPL-3"
+LICENSE="MIT"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 IUSE="latex"
 
 LATEX_DEPS="latex? ( dev-texlive/texlive-latex dev-texlive/texlive-latexextra )"
@@ -25,7 +25,8 @@ RDEPEND+=" ${LATEX_DEPS}"
 DEPEND+=" test? ( ${LATEX_DEPS} app-text/htmltidy )"
 
 ruby_add_bdepend "doc? ( dev-ruby/rdoc )
-	test? ( >=dev-ruby/coderay-1.0.0 )"
+	test? ( >=dev-ruby/coderay-1.0.0
+		>=dev-ruby/stringex-1.5.1 )"
 
 all_ruby_prepare() {
 	if ! use latex; then
