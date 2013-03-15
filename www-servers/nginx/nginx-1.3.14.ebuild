@@ -18,8 +18,8 @@ EAPI="4"
 GENTOO_DEPEND_ON_PERL="no"
 
 # syslog
-SYSLOG_MODULE_PV="0.24"
-SYSLOG_MODULE_NGINX_PV="1.3.11"
+SYSLOG_MODULE_PV="0.25"
+SYSLOG_MODULE_NGINX_PV="1.3.14"
 SYSLOG_MODULE_P="ngx_syslog-${SYSLOG_MODULE_PV}"
 SYSLOG_MODULE_URI="https://github.com/yaoweibin/nginx_syslog_patch/archive/v${SYSLOG_MODULE_PV}.tar.gz"
 SYSLOG_MODULE_WD="${WORKDIR}/nginx_syslog_patch-${SYSLOG_MODULE_PV}"
