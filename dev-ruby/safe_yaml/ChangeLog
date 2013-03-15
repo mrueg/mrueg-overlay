@@ -1,0 +1,5 @@
+*safe_yaml-0.8.5 (15 Mar 2013)
+
+  15 Mar 2013; Manuel Rüger <gentoo@rueg.eu> +metadata.xml,
+  +safe_yaml-0.8.5.ebuild:
+  dev-ruby/safe_yaml: Initial version
