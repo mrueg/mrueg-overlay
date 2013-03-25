@@ -24,10 +24,7 @@ src_prepare() {
 
 src_install() {
 	insinto /usr/share/zsh/site-functions/
-	for i in src/*;
-	do
-		doins ${i};
-	done
+	doins src/*
 }
 
 pkg_postinst() {
