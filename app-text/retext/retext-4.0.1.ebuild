@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -19,10 +19,11 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="+spell"
 
-RDEPEND="dev-python/PyQt4[webkit]
-	dev-python/markups
-	dev-python/markdown
-	dev-python/docutils
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
+RDEPEND="dev-python/PyQt4[webkit,${PYTHON_USEDEP}]
+	dev-python/markups[${PYTHON_USEDEP}]
+	dev-python/markdown[${PYTHON_USEDEP}]
+	dev-python/docutils[${PYTHON_USEDEP}]
 	spell? ( dev-python/pyenchant )"
 
 S="${WORKDIR}/${MY_P}"
