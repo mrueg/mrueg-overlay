@@ -1,3 +1,9 @@
+*retext-4.0.1 (27 Mar 2013)
+
+  27 Mar 2013; Manuel Rueger (mrueg) gentoo@rueg.eu +retext-4.0.1.ebuild,
+  -retext-4.0.0.ebuild:
+  app-text/retext: Version bump
+
   31 Dec 2012; Manuel Rüger <gentoo@rueg.eu retext-4.0.0.ebuild:
   app-editors/retext: Fix dependency
 
