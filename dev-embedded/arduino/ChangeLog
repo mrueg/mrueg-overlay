@@ -1,6 +1,0 @@
-*arduino-1.0.4 (21 Mar 2013)
-
-  21 Mar 2013; Manuel Rueger (mrueg) gentoo@rueg.eu +arduino-1.0.4.ebuild,
-  +files/arduino-1.0.1-build.xml.patch, +files/arduino-1.0.3-script.patch,
-  +files/arduino.desktop, +metadata.xml:
-  dev-embedded/arduino: Version bump, ebuild from tree
