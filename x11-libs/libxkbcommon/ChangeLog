@@ -1,5 +1,0 @@
-*libxkbcommon-0.2.0 (05 Nov 2012)
-
-  05 Nov 2012; Manuel Rueger (mrueg) gentoo@rueg.eu +libxkbcommon-0.2.0.ebuild,
-  +metadata.xml:
-  x11-libs/libxkbcommon: Initial version via bug #439578
