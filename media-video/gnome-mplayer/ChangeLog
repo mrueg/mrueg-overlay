@@ -1,0 +1,5 @@
+*gnome-mplayer-1.0.8 (20 Apr 2013)
+
+  20 Apr 2013; Manuel Rueger (mrueg) gentoo@rueg.eu +gnome-mplayer-1.0.8.ebuild,
+  +metadata.xml:
+  media-video/gnome-mplayer: Version bump, ebuild from tree
