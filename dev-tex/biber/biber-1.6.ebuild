@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
 inherit eutils perl-module
 
@@ -17,13 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="test"
 
-DEPEND="${RDEPEND}
-	test? ( dev-perl/File-Which
-			dev-perl/Mozilla-CA
-			dev-perl/Test-Pod
-			dev-perl/Test-Pod-Coverage )
-	virtual/perl-Module-Build"
-RDEPEND=">=dev-lang/perl-5.14
+RDEPEND=">=dev-lang/perl-5.16
 	dev-perl/Business-ISBN
 	dev-perl/Business-ISMN
 	dev-perl/Business-ISSN
@@ -31,6 +25,9 @@ RDEPEND=">=dev-lang/perl-5.14
 	dev-perl/Data-Diver
 	dev-perl/Data-Dump
 	dev-perl/Date-Simple
+	dev-perl/Encode-EUCJPASCII
+	dev-perl/Encode-HanExtra
+	dev-perl/Encode-JIS2K
 	dev-perl/File-Slurp-Unicode
 	dev-perl/IPC-Run3
 	dev-perl/libwww-perl[ssl]
@@ -42,8 +39,16 @@ RDEPEND=">=dev-lang/perl-5.14
 	>=dev-perl/Text-BibTeX-0.66
 	dev-perl/XML-LibXML-Simple
 	dev-perl/XML-LibXSLT
-	>=dev-tex/biblatex-2.5
+	dev-perl/Unicode-LineBreak
+	>=dev-tex/biblatex-2.6
 	virtual/perl-IPC-Cmd"
+DEPEND="${RDEPEND}
+	dev-perl/Config-AutoConf
+	virtual/perl-Module-Build
+	test? ( dev-perl/File-Which
+			dev-perl/Mozilla-CA
+			dev-perl/Test-Pod
+			dev-perl/Test-Pod-Coverage )"
 
 S="${WORKDIR}"/${MY_PN}-${PV}
 
