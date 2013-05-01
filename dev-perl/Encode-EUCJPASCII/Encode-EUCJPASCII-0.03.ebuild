@@ -18,3 +18,5 @@ IUSE=""
 RDEPEND="dev-lang/perl
 	virtual/perl-Encode"
 DEPEND="${RDEPEND}"
+
+SRC_TEST="do"
