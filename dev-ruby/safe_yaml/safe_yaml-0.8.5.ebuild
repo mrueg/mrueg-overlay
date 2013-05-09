@@ -7,6 +7,7 @@ USE_RUBY="ruby18 ruby19"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="README.md"
+RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
 inherit multilib ruby-fakegem
 
@@ -20,7 +21,3 @@ IUSE=""
 
 ruby_add_bdepend "test? ( dev-ruby/hashie
 	dev-ruby/heredoc_unindent )"
-
-each_ruby_test() {
-	${RUBY} -S rake spec || die 
-}
