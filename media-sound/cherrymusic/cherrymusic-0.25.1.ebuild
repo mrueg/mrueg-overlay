@@ -27,5 +27,5 @@ python_test() {
 }
 
 pkg_postinst() {
-	elog "Install dev-python/stagger for ID3-Tag support."
+	elog "Install media-sound/stagger for ID3-Tag support."
 }
