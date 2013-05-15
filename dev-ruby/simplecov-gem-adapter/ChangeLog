@@ -1,0 +1,5 @@
+*simplecov-gem-adapter-1.0.1 (15 May 2013)
+
+  15 May 2013; Manuel Rüger <gentoo@rueg.eu> +metadata.xml,
+  +simplecov-gem-adapter-1.0.1.ebuild:
+  dev-ruby/simplecov-gem-adapter: Initial version
