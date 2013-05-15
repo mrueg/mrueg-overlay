@@ -1,3 +1,9 @@
+*cherrymusic-0.25.1 (15 May 2013)
+
+  15 May 2013; Manuel Rueger (mrueg) gentoo@rueg.eu +cherrymusic-0.25.1.ebuild,
+  -cherrymusic-0.24.1.ebuild:
+  media-sound/cherrymusic: Version bump
+
 *cherrymusic-0.24.1 (01 Mar 2013)
 
   01 Mar 2013; Manuel Rüger <gentoo@rueg.eu> +cherrymusic-0.24.1.ebuild,

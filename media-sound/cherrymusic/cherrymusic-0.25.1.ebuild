@@ -4,7 +4,7 @@
 
 EAPI=5
 PYTHON_REQ_USE='sqlite'
-PYTHON_COMPAT=( python2_6 python2_7 python3_1 python3_2 )
+PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2} )
 inherit distutils-r1
 
 DESCRIPTION="A standalone music server based on CherryPy and jPlayer"
@@ -14,11 +14,17 @@ SRC_URI="https://github.com/devsnd/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+IUSE="test"
 
-DEPEND="dev-python/cherrypy"
-RDEPEND="${DEPEND}"
+RDEPEND="dev-python/cherrypy[$PYTHON_USEDEP]
+	${PYTHON_DEPS}"
+DEPEND="${RDEPEND}
+	test? ( dev-python/nose[$PYTHON_USEDEP] )"
 
 python_test() {
-	./runtests || die
+	nosetests || die
+}
+
+pkg_postinst() {
+	elog "Install dev-python/stagger for ID3-Tag support."
 }
