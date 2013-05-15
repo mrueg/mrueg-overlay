@@ -8,7 +8,7 @@ USE_RUBY="ruby19"
 RUBY_FAKEGEM_EXTRADOC="History.rdoc README.rdoc"
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
-inherit multilib ruby-fakegem
+inherit ruby-fakegem
 
 DESCRIPTION="Simple wrapper around multithreaded Porter stemming algorithm"
 HOMEPAGE="http://visionmedia.github.com/commander/"
