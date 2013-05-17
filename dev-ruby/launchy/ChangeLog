@@ -1,0 +1,5 @@
+*launchy-2.3.0 (17 May 2013)
+
+  17 May 2013; Manuel Rueger (mrueg) gentoo@rueg.eu +launchy-2.3.0.ebuild,
+  +metadata.xml:
+  dev-ruby/launchy: original ebuild from ruby-overlay, version bump
