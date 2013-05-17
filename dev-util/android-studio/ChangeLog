@@ -1,0 +1,5 @@
+*android-studio-130.677228 (17 May 2013)
+
+  17 May 2013; Manuel Rueger (mrueg) gentoo@rueg.eu
+  +android-studio-130.677228.ebuild, +metadata.xml:
+  dev-util/android-studio: Initial version, based on idea-community ebuild
