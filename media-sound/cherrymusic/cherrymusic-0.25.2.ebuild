@@ -11,7 +11,7 @@ DESCRIPTION="A standalone music server based on CherryPy and jPlayer"
 HOMEPAGE="http://fomori.org/cherrymusic/"
 SRC_URI="https://github.com/devsnd/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="test"
