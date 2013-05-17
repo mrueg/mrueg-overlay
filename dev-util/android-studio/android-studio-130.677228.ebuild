@@ -8,7 +8,7 @@ inherit eutils
 RESTRICT="strip"
 QA_TEXTRELS="opt/${P}/bin/libbreakgen.so"
 
-DESCRIPTION="IntelliJ IDEA is an intelligent Java IDE (Community Edition)"
+DESCRIPTION="A new Android development environment based on IntelliJ IDEA"
 HOMEPAGE="http://jetbrains.com/idea/"
 SRC_URI="http://dl.google.com/android/studio/${PN}-bundle-${PV}-linux.tgz"
 

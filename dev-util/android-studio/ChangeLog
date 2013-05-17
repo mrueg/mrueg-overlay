@@ -1,3 +1,7 @@
+  17 May 2013; Manuel Rueger (mrueg) gentoo@rueg.eu
+  android-studio-130.677228.ebuild:
+  dev-util/android-studio: Fix description
+
 *android-studio-130.677228 (17 May 2013)
 
   17 May 2013; Manuel Rueger (mrueg) gentoo@rueg.eu
