@@ -5,6 +5,9 @@
 EAPI=4
 
 USE_RUBY="ruby18 ruby19"
+
+RUBY_FAKEGEM_TASK_DOC="doc:rdoc"
+
 RUBY_FAKEGEM_EXTRADOC="Blockenspiel.rdoc History.rdoc ImplementingDSLblocks.rdoc README.rdoc"
 RUBY_FAKEGEM_EXTRAINSTALL="Version"
 
