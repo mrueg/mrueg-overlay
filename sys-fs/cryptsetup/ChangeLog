@@ -1,0 +1,5 @@
+*cryptsetup-1.6.1 (18 May 2013)
+
+  18 May 2013; Manuel Rueger (mrueg) gentoo@rueg.eu +cryptsetup-1.6.1.ebuild,
+  +files/1.0.6-dmcrypt.confd, +files/1.5.1-dmcrypt.rc, +metadata.xml:
+  sys-fs/cryptsetup: Version bump, ebuild from tree, migrated to python-r1
