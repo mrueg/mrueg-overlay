@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/project/${MY_PN}/${MY_PN}/${PV}/${MY_PN}.tar.gz ->
 LICENSE="|| ( Artistic-2 GPL-1 GPL-2 GPL-3 )"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="test"
+IUSE="doc test"
 
 RDEPEND=">=dev-lang/perl-5.16
 	dev-perl/Business-ISBN
@@ -53,3 +53,8 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}"/${MY_PN}-${PV}
 
 SRC_TEST="parallel"
+
+src_install(){
+	perl-module_src_install
+	use doc && dodoc -r doc/*
+}
