@@ -1,3 +1,6 @@
+  22 May 2013; Manuel Rueger (mrueg) gentoo@rueg.eu cherrymusic-0.25.2.ebuild:
+  media-sound/cherrymusic: Silence repoman
+
   17 May 2013; Manuel Rueger (mrueg) gentoo@rueg.eu cherrymusic-0.25.2.ebuild:
   media-sound/cherrymusic: Fix license
 

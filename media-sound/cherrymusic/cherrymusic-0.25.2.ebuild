@@ -19,7 +19,7 @@ IUSE="test"
 RDEPEND="dev-python/cherrypy[$PYTHON_USEDEP]
 	${PYTHON_DEPS}"
 DEPEND="${RDEPEND}
-	test? ( dev-python/nose[$PYTHON_USEDEP] 
+	test? ( dev-python/nose[$PYTHON_USEDEP]
 		media-sound/vorbis-tools )"
 
 python_test() {
