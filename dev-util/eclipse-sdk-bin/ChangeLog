@@ -1,3 +1,7 @@
+  22 May 2013; Manuel Rueger (mrueg) gentoo@rueg.eu
+  eclipse-sdk-bin-4.2.2.ebuild:
+  dev-util/eclipse-sdk-bin: Silence repoman
+
 *eclipse-sdk-bin-4.2.2 (02 Mar 2013)
 
   02 Mar 2013; Manuel Rueger (mrueg) gentoo@rueg.eu

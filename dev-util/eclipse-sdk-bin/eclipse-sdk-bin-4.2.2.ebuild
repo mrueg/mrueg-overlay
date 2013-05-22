@@ -41,8 +41,8 @@ src_install() {
 	doins "${FILESDIR}"/eclipserc-bin-${SLOT}
 
 	dobin "${FILESDIR}"/eclipse-bin-${SLOT}
-	make_desktop_entry "eclipse-bin-${SLOT}" "Eclipse ${PV} (bin)" "${dest}/icon.xpm"	
-	
+	make_desktop_entry "eclipse-bin-${SLOT}" "Eclipse ${PV} (bin)" "${dest}/icon.xpm"
+
 	# At least CDT needs the following dir to exist to be installable, doesn't
 	# need to be writable though.
 	keepdir "${dest}"/dropins
