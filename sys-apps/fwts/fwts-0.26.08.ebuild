@@ -30,7 +30,7 @@ src_prepare(){
 	sed -i -e 's/-Wall -Werror/-Wall/' configure.ac {,src/,src/lib/src/}Makefile.am || die
 	sed -i -e 's:/usr/bin/lspci:'$(type -p lspci)':' src/lib/include/fwts_binpaths.h || die
 	sed -i -e 's|/usr/share/misc/intel-microcode.dat|/lib/firmware/microcode.dat|' src/lib/include/fwts_microcode.h || die
-	
+
 	# Fix json-c includes
 	if has_version '>=dev-libs/json-c-0.10-r1'; then
 		sed -e 's/^#include <json\//#include <json-c\//g' -i \
