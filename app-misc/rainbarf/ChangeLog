@@ -1,0 +1,5 @@
+*rainbarf-0.8 (22 May 2013)
+
+  22 May 2013; Manuel Rueger (mrueg) gentoo@rueg.eu +metadata.xml,
+  +rainbarf-0.8.ebuild:
+  app-misc/rainbarf: Initial version
