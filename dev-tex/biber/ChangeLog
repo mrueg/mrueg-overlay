@@ -1,3 +1,8 @@
+*biber-9999 (22 May 2013)
+
+  22 May 2013; Manuel Rueger (mrueg) gentoo@rueg.eu +biber-9999.ebuild:
+  dev-tex/biber: Add live ebuild, tracking dev branch
+
   19 May 2013; Manuel Rueger (mrueg) gentoo@rueg.eu biber-1.6.ebuild:
   dev-tex/biber: Fix manifest, add doc useflag
 
