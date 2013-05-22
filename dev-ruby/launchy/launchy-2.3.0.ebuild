@@ -20,11 +20,10 @@ IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/addressable-2.3"
 
-ruby_add_bdepend "test? ( >=dev-ruby/minitest-4.5.0 
+ruby_add_bdepend "test? ( >=dev-ruby/minitest-4.5.0
 	dev-ruby/simplecov )"
 
 # Tests fail, reported upstream. (Note for 2.0.3: can't find bug
 # report. Tests still fail). Wrong tests run on wrong OS. spoon
 # dependency unpackaged.
 RESTRICT=test
-
