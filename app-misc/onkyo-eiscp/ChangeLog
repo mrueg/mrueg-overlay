@@ -1,3 +1,9 @@
+*onkyo-eiscp-0.9_p20130525 (26 May 2013)
+
+  26 May 2013; Manuel Rueger (mrueg) gentoo@rueg.eu
+  +onkyo-eiscp-0.9_p20130525.ebuild, -onkyo-eiscp-0.9_p20130112.ebuild:
+  app-misc/onkyo-eiscp: Version bump
+
   10 Feb 2013; Manuel Rueger (mrueg) gentoo@rueg.eu
   onkyo-eiscp-0.9_p20130112.ebuild:
   app-misc/onkyo-eiscp: Add setuptools dependency

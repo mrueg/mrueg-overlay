@@ -9,7 +9,7 @@ inherit distutils-r1 vcs-snapshot
 
 DESCRIPTION="Control Onkyo receivers over ethernet"
 HOMEPAGE="https://github.com/miracle2k/onkyo-eiscp"
-COMMIT="410f9f23c35c3987a54a95c1e01f425b86e4183c"
+COMMIT="42e5eec7ccd2743f98f303d6d29f9fe5f3fc9569"
 SRC_URI="https://github.com/miracle2k/${PN}/tarball/${COMMIT} -> ${P}.tar.gz"
 
 LICENSE="MIT"
@@ -18,4 +18,4 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
-RDEPEND="=dev-python/docopt-0.4.1[${PYTHON_USEDEP}]"
+RDEPEND="dev-python/docopt[${PYTHON_USEDEP}]"
