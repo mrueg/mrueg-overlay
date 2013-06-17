@@ -1,3 +1,9 @@
+*android-studio-130.687321 (17 Jun 2013)
+
+  17 Jun 2013; Manuel Rüger <gentoo@rueg.eu> +android-studio-130.687321.ebuild,
+  -android-studio-130.677228.ebuild:
+  dev-util/android-studio: Fix Homepage, Version bump
+
   17 May 2013; Manuel Rueger (mrueg) gentoo@rueg.eu
   android-studio-130.677228.ebuild:
   dev-util/android-studio: Fix description

@@ -9,7 +9,7 @@ RESTRICT="strip"
 QA_TEXTRELS="opt/${P}/bin/libbreakgen.so"
 
 DESCRIPTION="A new Android development environment based on IntelliJ IDEA"
-HOMEPAGE="http://jetbrains.com/idea/"
+HOMEPAGE="http://developer.android.com/sdk/installing/studio.html"
 SRC_URI="http://dl.google.com/android/studio/${PN}-bundle-${PV}-linux.tgz"
 
 LICENSE="Apache-2.0"
