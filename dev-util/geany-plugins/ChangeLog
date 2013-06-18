@@ -1,0 +1,5 @@
+*geany-plugins-1.23 (18 Jun 2013)
+
+  18 Jun 2013; Manuel Rüger <gentoo@rueg.eu> +geany-plugins-1.23.ebuild,
+  +metadata.xml:
+  dev-util/geany-plugins: Version bump, some deps maybe missing
