@@ -1,0 +1,5 @@
+*hashie-2.0.5 (21 Jun 2013)
+
+  21 Jun 2013; Manuel Rüger <gentoo@rueg.eu> +hashie-2.0.5.ebuild,
+  +metadata.xml:
+  dev-ruby/hashie: Version bump, ebuild from tree
