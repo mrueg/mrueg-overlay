@@ -1,0 +1,5 @@
+*highline-1.6.19 (21 Jun 2013)
+
+  21 Jun 2013; Manuel Rüger <gentoo@rueg.eu> +highline-1.6.19.ebuild,
+  +metadata.xml:
+  dev-ruby/highline: Version bump, ebuild from tree
