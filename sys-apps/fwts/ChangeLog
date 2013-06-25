@@ -1,3 +1,9 @@
+*fwts-13.06.00 (25 Jun 2013)
+
+  25 Jun 2013; Manuel Rüger <gentoo@rueg.eu> +fwts-13.06.00.ebuild,
+  -fwts-0.26.08.ebuild:
+  sys-apps/fwts: Version bump
+
   22 May 2013; Manuel Rueger (mrueg) gentoo@rueg.eu fwts-0.26.08.ebuild:
   sys-apps/fwts: Silence repoman
 
