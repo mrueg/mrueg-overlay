@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-RDEPEND="dev-python/pygtk
+RDEPEND="dev-python/pygobject:3[${PYTHON_USEDEP}]
 	x11-libs/gtk+:3"
 
 DOCS=( README.md )

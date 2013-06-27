@@ -1,4 +1,7 @@
   27 Jun 2013; Manuel Rüger <gentoo@rueg.eu> pySnipps-9999.ebuild:
+  dev-util/pySnipps: Fix dep
+
+  27 Jun 2013; Manuel Rüger <gentoo@rueg.eu> pySnipps-9999.ebuild:
   dev-util/pySnipps: Drop keywords in live ebuild
 
 *pySnipps-9999 (27 Jun 2013)
