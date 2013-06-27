@@ -14,11 +14,10 @@ HOMEPAGE="http://pysnipps.icetruck.de/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND="dev-python/pygtk
 	x11-libs/gtk+:3"
 
 DOCS=( README.md )
-
