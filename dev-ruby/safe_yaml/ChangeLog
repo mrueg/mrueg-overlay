@@ -1,3 +1,9 @@
+*safe_yaml-0.9.4 (10 Jul 2013)
+
+  10 Jul 2013; Manuel Rüger <mrueg@gentoo.org> +safe_yaml-0.9.4.ebuild,
+  -safe_yaml-0.9.3.ebuild:
+  dev-ruby/safe_yaml: Version bump
+
 *safe_yaml-0.9.3 (06 Jun 2013)
 
   06 Jun 2013; Manuel Rüger <gentoo@rueg.eu> +safe_yaml-0.9.3.ebuild,
