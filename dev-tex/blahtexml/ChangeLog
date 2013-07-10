@@ -1,9 +1,0 @@
-  22 May 2013; Manuel Rueger (mrueg) gentoo@rueg.eu blahtexml-0.9.ebuild:
-  dev-tex/blahtexml: Fix license
-
-*blahtexml-0.9 (24 Aug 2012)
-
-  24 Aug 2012; Manuel Rüger (mrueg) gentoo@rueg.eu +blahtexml-0.9.ebuild,
-  +files/blahtexml-0.9-Makefile.patch, +files/blahtexml-0.9-gcc-4.7.patch,
-  +files/blahtexml.1, +metadata.xml:
-  dev-tex/blahtexml: New ebuild via #431566
