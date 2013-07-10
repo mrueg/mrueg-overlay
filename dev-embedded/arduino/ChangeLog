@@ -1,6 +1,0 @@
-*arduino-1.0.5 (20 May 2013)
-
-  20 May 2013; Manuel Rüger <gentoo@rueg.eu> +arduino-1.0.5.ebuild,
-  +files/arduino-1.0.1-build.xml.patch, +files/arduino-1.0.3-script.patch,
-  +files/arduino.desktop, +metadata.xml:
-  dev-embedded/arduino: Version bump, ebuild from tree
