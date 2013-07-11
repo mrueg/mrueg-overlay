@@ -37,10 +37,11 @@ RDEPEND=">=dev-lang/perl-5.16
 	dev-perl/Readonly
 	dev-perl/Readonly-XS
 	>=dev-perl/Text-BibTeX-0.66
+	dev-perl/Unicode-LineBreak
 	dev-perl/XML-LibXML-Simple
 	dev-perl/XML-LibXSLT
-	dev-perl/Unicode-LineBreak
-	>=dev-tex/biblatex-2.6
+	dev-perl/XML-Writer
+	>=dev-tex/biblatex-2.7
 	virtual/perl-IPC-Cmd"
 DEPEND="${RDEPEND}
 	dev-perl/Config-AutoConf

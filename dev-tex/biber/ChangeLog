@@ -1,3 +1,9 @@
+*biber-1.7 (11 Jul 2013)
+
+  11 Jul 2013; Manuel Rüger <mrueg@gentoo.org> +biber-1.7.ebuild,
+  -biber-1.6.ebuild:
+  dev-tex/biber: Version bump
+
 *biber-9999 (22 May 2013)
 
   22 May 2013; Manuel Rueger (mrueg) gentoo@rueg.eu +biber-9999.ebuild:
