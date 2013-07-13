@@ -1,0 +1,5 @@
+*pygments_rb-0.5.1 (13 Jul 2013)
+
+  13 Jul 2013; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
+  +pygments_rb-0.5.1.ebuild:
+  dev-ruby/pygments_rb: New ebuild from dev-zero's overlay. Minor changes by me.
