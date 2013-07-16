@@ -1,3 +1,9 @@
+*cherrymusic-0.26.0 (16 Jul 2013)
+
+  16 Jul 2013; Manuel Rüger <mrueg@gentoo.org> +cherrymusic-0.26.0.ebuild,
+  -cherrymusic-0.25.2.ebuild:
+  Version bump
+
   22 May 2013; Manuel Rueger (mrueg) gentoo@rueg.eu cherrymusic-0.25.2.ebuild:
   media-sound/cherrymusic: Silence repoman
 
