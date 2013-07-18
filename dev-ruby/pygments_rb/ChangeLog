@@ -1,3 +1,9 @@
+*pygments_rb-0.5.2 (18 Jul 2013)
+
+  18 Jul 2013; Manuel Rüger <mrueg@gentoo.org> +pygments_rb-0.5.2.ebuild,
+  -pygments_rb-0.5.1.ebuild:
+  dev-ruby/pygments_rb: Version bump
+
 *pygments_rb-0.5.1 (13 Jul 2013)
 
   13 Jul 2013; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
