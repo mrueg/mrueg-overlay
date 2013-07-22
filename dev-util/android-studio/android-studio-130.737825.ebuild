@@ -29,6 +29,6 @@ src_install() {
 	fperms 755 "${dir}/bin/studio.sh" "${dir}/bin/fsnotifier" "${dir}/bin/fsnotifier64"
 
 	newicon "bin/idea.png" "${exe}.png"
-	make_wrapper "${exe}" "/opt/${P}/bin/${MY_PN}.sh"
+	make_wrapper "${exe}" "/opt/${P}/bin/studio.sh"
 	make_desktop_entry ${exe} "Android Stuio" "${exe}" "Development;IDE"
 }

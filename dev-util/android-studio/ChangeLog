@@ -1,3 +1,7 @@
+  22 Jul 2013; Manuel Rueger (mrueg) gentoo@rueg.eu
+  android-studio-130.737825.ebuild:
+  dev-util/android-studio: Fix wrapper
+
 *android-studio-130.737825 (21 Jul 2013)
 
   21 Jul 2013; Manuel Rüger <mrueg@gentoo.org>
