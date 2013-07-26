@@ -1,5 +1,0 @@
-*heredoc_unindent-1.1.2 (15 Mar 2013)
-
-  15 Mar 2013; Manuel Rüger <gentoo@rueg.eu> +heredoc_unindent-1.1.2.ebuild,
-  +metadata.xml:
-  dev-ruby/heredoc_unindent: Initial ebuild
