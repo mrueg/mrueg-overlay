@@ -1,4 +1,7 @@
   30 Jul 2013; Manuel Rüger <mrueg@gentoo.org> cef-0.5.ebuild:
+  Add enhancements of bug #459498
+
+  30 Jul 2013; Manuel Rüger <mrueg@gentoo.org> cef-0.5.ebuild:
   Fix license
 
 *cef-0.5 (30 Jul 2013)
