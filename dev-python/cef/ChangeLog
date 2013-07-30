@@ -1,0 +1,4 @@
+*cef-0.5 (30 Jul 2013)
+
+  30 Jul 2013; Manuel Rüger <mrueg@gentoo.org> +cef-0.5.ebuild, +metadata.xml:
+  Initial version
