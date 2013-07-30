@@ -11,7 +11,7 @@ DESCRIPTION="Module that emits CEF logs"
 HOMEPAGE="https://pypi.python.org/pypi/cef"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
-LICENSE="GPL-2 LGPL-2.1 MPL-1.1"
+LICENSE="|| ( GPL-2 LGPL-2.1 MPL-1.1 )"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
