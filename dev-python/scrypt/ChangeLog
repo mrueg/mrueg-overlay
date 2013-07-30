@@ -1,0 +1,5 @@
+*scrypt-0.6.1 (30 Jul 2013)
+
+  30 Jul 2013; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
+  +scrypt-0.6.1.ebuild:
+  Initial version
