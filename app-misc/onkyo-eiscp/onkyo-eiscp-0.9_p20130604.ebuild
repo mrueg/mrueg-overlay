@@ -3,13 +3,13 @@
 # $Header: $
 
 EAPI=5
-PYTHON_COMPAT=( python2_7)
+PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1 vcs-snapshot
 
 DESCRIPTION="Control Onkyo receivers over ethernet"
 HOMEPAGE="https://github.com/miracle2k/onkyo-eiscp"
-COMMIT="42e5eec7ccd2743f98f303d6d29f9fe5f3fc9569"
+COMMIT="96b23b321c4f53c93e476f092e9850f9f185770d"
 SRC_URI="https://github.com/miracle2k/${PN}/tarball/${COMMIT} -> ${P}.tar.gz"
 
 LICENSE="MIT"

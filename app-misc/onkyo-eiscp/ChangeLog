@@ -1,3 +1,9 @@
+*onkyo-eiscp-0.9_p20130604 (30 Jul 2013)
+
+  30 Jul 2013; Manuel Rüger <mrueg@gentoo.org>
+  +onkyo-eiscp-0.9_p20130604.ebuild, -onkyo-eiscp-0.9_p20130525.ebuild:
+  Version bump
+
 *onkyo-eiscp-0.9_p20130525 (26 May 2013)
 
   26 May 2013; Manuel Rueger (mrueg) gentoo@rueg.eu
