@@ -1,0 +1,24 @@
+https://github.com/maul-esel/jekyll/commit/c5fc947373094af7c88a5852300ea9130a7a8b0f
+
+From c5fc947373094af7c88a5852300ea9130a7a8b0f Mon Sep 17 00:00:00 2001
+From: "maul.esel" <maul.esel@go4more.de>
+Date: Mon, 1 Jul 2013 18:35:19 +0200
+Subject: [PATCH] require 'pathname' to fix 'NameError' exceptions
+
+---
+ lib/jekyll/generators/pagination.rb | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/lib/jekyll/generators/pagination.rb b/lib/jekyll/generators/pagination.rb
+index a9c279a..9c70978 100644
+--- a/lib/jekyll/generators/pagination.rb
++++ b/lib/jekyll/generators/pagination.rb
+@@ -1,3 +1,5 @@
++require 'pathname'
++
+ module Jekyll
+   module Generators
+     class Pagination < Generator
+-- 
+1.8.1.6
+
