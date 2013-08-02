@@ -7,10 +7,11 @@ USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_EXTRADOC="History.rdoc README.rdoc"
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
+RUBY_FAKEGEM_RECIPE_DOC="doc"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Simple wrapper around multithreaded Porter stemming algorithm"
+DESCRIPTION="The complete solution for Ruby command-line executables"
 HOMEPAGE="http://visionmedia.github.com/commander/"
 
 LICENSE="MIT"
