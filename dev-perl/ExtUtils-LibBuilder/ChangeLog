@@ -1,5 +1,0 @@
-*ExtUtils-LibBuilder-0.04 (02 Nov 2012)
-
-  02 Nov 2012;  <mrueg@gentoo.org> +ExtUtils-LibBuilder-0.04.ebuild,
-  +metadata.xml:
-  dev-perl/ExtUtils-LibBuilder: Import from bug #386803
