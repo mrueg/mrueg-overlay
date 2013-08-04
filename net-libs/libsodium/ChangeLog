@@ -1,0 +1,6 @@
+*libsodium-0.4.2 (04 Aug 2013)
+
+  04 Aug 2013; Manuel Rüger <mrueg@gentoo.org>
+  +files/libsodium-0.4.2-fix-stack.patch, +libsodium-0.4.2.ebuild,
+  +metadata.xml:
+  Initial version
