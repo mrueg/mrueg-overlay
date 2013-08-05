@@ -5,4 +5,10 @@
 		<email>mrueg@gentoo.org</email>
 		<name>Manuel Rüger</name>
 	</maintainer>
+	<longdescription>
+	Project Tox, also known as Tox, is a FOSS (Free and Open Source Software) instant messaging application aimed to replace Skype.
+	</longdescription>
+	<use>
+		<flag name="nacl"></flag>
+	</use>
 </pkgmetadata>
