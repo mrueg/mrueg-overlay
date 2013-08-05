@@ -9,8 +9,7 @@ inherit distutils-r1 vcs-snapshot
 
 DESCRIPTION="Control Onkyo receivers over ethernet"
 HOMEPAGE="https://github.com/miracle2k/onkyo-eiscp"
-COMMIT="96b23b321c4f53c93e476f092e9850f9f185770d"
-SRC_URI="https://github.com/miracle2k/${PN}/tarball/${COMMIT} -> ${P}.tar.gz"
+SRC_URI="https://github.com/miracle2k/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
