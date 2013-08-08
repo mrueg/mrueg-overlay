@@ -4,10 +4,9 @@
 
 EAPI=5
 
-inherit vcs-snapshot
 DESCRIPTION="Additional completion definitions for Zsh"
 HOMEPAGE="https://github.com/zsh-users/zsh-completions"
-SRC_URI="https://github.com/zsh-users/${PN}/tarball/${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/zsh-users/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

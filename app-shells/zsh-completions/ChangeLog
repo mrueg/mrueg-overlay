@@ -1,3 +1,9 @@
+*zsh-completions-0.10.0 (08 Aug 2013)
+
+  08 Aug 2013; Manuel Rüger <mrueg@gentoo.org> +zsh-completions-0.10.0.ebuild,
+  -zsh-completions-0.9.0.ebuild:
+  Version bump
+
 *zsh-completions-0.9.0 (31 May 2013)
 
   31 May 2013; Manuel Rueger (mrueg) gentoo@rueg.eu
