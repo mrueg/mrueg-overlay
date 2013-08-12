@@ -1,3 +1,9 @@
+*commander-4.1.5 (12 Aug 2013)
+
+  12 Aug 2013; Manuel Rüger <mrueg@gentoo.org> +commander-4.1.5.ebuild,
+  -commander-4.1.4.ebuild:
+  Version bump
+
 *commander-4.1.4 (31 Jul 2013)
 
   31 Jul 2013; Manuel Rüger <mrueg@gentoo.org> +commander-4.1.4.ebuild,
