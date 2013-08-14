@@ -1,3 +1,6 @@
+  14 Aug 2013; Manuel Rüger <mrueg@gentoo.org> tox-core-9999.ebuild:
+  Add missing deps
+
   05 Aug 2013; Manuel Rüger <mrueg@gentoo.org> metadata.xml,
   tox-core-9999.ebuild:
   Various improvements. Thanks to chithanh. See bug #478874

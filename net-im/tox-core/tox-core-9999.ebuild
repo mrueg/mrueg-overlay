@@ -16,8 +16,10 @@ SLOT="0"
 KEYWORDS=""
 IUSE="nacl"
 
-RDEPEND="dev-libs/libconfig
-	net-libs/libsodium
+RDEPEND="dev-libs/check
+	dev-libs/libconfig
+	sys-libs/ncurses
+	!nacl? ( net-libs/libsodium )
 	nacl? ( net-libs/nacl )"
 DEPEND="${RDEPEND}
 	dev-python/sphinx"
@@ -38,11 +40,13 @@ src_install() {
 	default
 	cd "${BUILD_DIR}" || die
 	local binaries=(
+		crypto_speed_test
 		DHT_test
 		Lossless_UDP_testclient
 		Lossless_UDP_testserver
 		Messenger_test
 		nTox
+		timer_test
 		toxic/toxic
 	)
 	dobin ${binaries[@]/#/testing/}
