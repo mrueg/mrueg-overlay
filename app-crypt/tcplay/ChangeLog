@@ -1,3 +1,9 @@
+*tcplay-1.2_pre20130815 (18 Aug 2013)
+
+  18 Aug 2013; Manuel Rüger <mrueg@gentoo.org> +tcplay-1.2_pre20130815.ebuild,
+  -tcplay-1.1_pre20130629.ebuild:
+  Version bump
+
 *tcplay-1.1_pre20130629 (27 Jul 2013)
 
   27 Jul 2013; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,

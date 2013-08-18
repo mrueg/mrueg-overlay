@@ -8,10 +8,10 @@ USE_RUBY="ruby19"
 
 inherit ruby-ng eutils vcs-snapshot cmake-utils
 
-COMMIT_ID="b44b1fad854c726dda3ec7bfc96fe2d437d4343f"
+COMMIT="66c7e8793af435c4011c9ef677cd496d2107b475"
 DESCRIPTION="Free and simple TrueCrypt Implementation based on dm-crypt"
 HOMEPAGE="https://github.com/bwalex/tc-play"
-SRC_URI="https://github.com/bwalex/tc-play/tarball/${COMMIT_ID} -> ${P}.tar.gz"
+SRC_URI="https://github.com/bwalex/tc-play/tarball/${COMMIT} -> ${P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
