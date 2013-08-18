@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit eutils autotools
+inherit autotools
 DESCRIPTION="Firmware Test Suite"
 HOMEPAGE="https://wiki.ubuntu.com/Kernel/Reference/fwts"
 SRC_URI="http://launchpad.net/ubuntu/+archive/primary/+files/${PN}_${PV}.orig.tar.gz"
@@ -40,6 +40,5 @@ src_prepare(){
 			src/utilities/kernelscan.c || die
 	fi
 
-	# No Makefile included - upstream wants autoreconf
 	eautoreconf
 }
