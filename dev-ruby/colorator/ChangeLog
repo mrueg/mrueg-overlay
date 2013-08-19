@@ -1,5 +1,0 @@
-*colorator-0.1 (09 May 2013)
-
-  09 May 2013; Manuel Rueger (mrueg) gentoo@rueg.eu +colorator-0.1.ebuild,
-  +metadata.xml:
-  dev-ruby/colorator: Initial version
