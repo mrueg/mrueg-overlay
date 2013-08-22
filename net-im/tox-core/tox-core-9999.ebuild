@@ -46,7 +46,6 @@ src_install() {
 		Lossless_UDP_testserver
 		Messenger_test
 		nTox
-		timer_test
 		toxic/toxic
 	)
 	dobin ${binaries[@]/#/testing/}

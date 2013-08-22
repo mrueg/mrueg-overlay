@@ -1,3 +1,6 @@
+  22 Aug 2013; Manuel Rüger <mrueg@gentoo.org> tox-core-9999.ebuild:
+  Drop removed binary
+
   14 Aug 2013; Manuel Rüger <mrueg@gentoo.org> tox-core-9999.ebuild:
   Add missing deps
 
