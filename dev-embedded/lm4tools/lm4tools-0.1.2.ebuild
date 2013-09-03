@@ -1,15 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 EAPI=5
 
-inherit toolchain-funcs vcs-snapshot
+inherit toolchain-funcs
 
 DESCRIPTION="Tools for the TI Stellaris Launchpad boards"
 HOMEPAGE="https://github.com/utzig/lm4tools"
-SRC_URI="https://github.com/utzig/lm4tools/tarball/cc466b1e453aeff6f8b48d3e2951a943f6f94ce8
--> ${P}.tar.gz"
+SRC_URI="https://github.com/utzig/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="~amd64"

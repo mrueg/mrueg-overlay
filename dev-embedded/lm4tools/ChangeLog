@@ -1,3 +1,9 @@
+*lm4tools-0.1.2 (03 Sep 2013)
+
+  03 Sep 2013; Manuel Rüger <mrueg@gentoo.org> +lm4tools-0.1.2.ebuild,
+  -lm4tools-0_pre20121113.ebuild:
+  Version bump
+
 *lm4tools-0_pre20121113 (03 Dec 2012)
 
   03 Dec 2012; Manuel Rueger (mrueg) gentoo@rueg.eu
