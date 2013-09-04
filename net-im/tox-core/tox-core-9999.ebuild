@@ -6,7 +6,7 @@ EAPI=5
 
 EGIT_REPO_URI="https://github.com/irungentoo/ProjectTox-Core"
 
-inherit git-2 cmake-utils
+inherit git-2 multilib autotools-utils
 
 DESCRIPTION="Free as in freedom Skype replacement"
 HOMEPAGE="http://tox.im"
@@ -14,41 +14,39 @@ HOMEPAGE="http://tox.im"
 LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS=""
-IUSE="nacl"
+IUSE=""
 
 RDEPEND="dev-libs/check
 	dev-libs/libconfig
 	sys-libs/ncurses
-	!nacl? ( net-libs/libsodium )
-	nacl? ( net-libs/nacl )"
+	net-libs/libsodium"
 DEPEND="${RDEPEND}
-	dev-python/sphinx"
+	virtual/pkgconfig"
 
 src_prepare() {
-	# remove -Werror from CFLAGS
-	sed -i 's/ -Werror//' CMakeLists.txt || die
-}
-
-src_configure() {
-	local mycmakeargs=(
-		$(cmake-utils_use_use nacl)
-		)
-	cmake-utils_src_configure
+	eautoreconf
 }
 
 src_install() {
 	default
 	cd "${BUILD_DIR}" || die
+	insinto /usr/$(get_libdir)/pkgconfig
+	doins libtoxcore.pc
+	ls -lisa
 	local binaries=(
 		crypto_speed_test
+		crypto_test
 		DHT_test
+		DHT_bootstrap
+		DHT_bootstrap_daemon
 		Lossless_UDP_testclient
 		Lossless_UDP_testserver
 		Messenger_test
+		messenger_autotest
 		nTox
-		toxic/toxic
 	)
-	dobin ${binaries[@]/#/testing/}
+	dobin ${binaries[@]/#/build/}
+	dolib build/.libs/libtoxcore$(get_libname)
 }
 
 pkg_postinst() {

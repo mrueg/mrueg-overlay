@@ -1,3 +1,7 @@
+  04 Sep 2013; Manuel Rüger <mrueg@gentoo.org> metadata.xml,
+  tox-core-9999.ebuild:
+  Switch to autotools, install more stuff
+
   22 Aug 2013; Manuel Rüger <mrueg@gentoo.org> tox-core-9999.ebuild:
   Drop removed binary
 
