@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -22,17 +22,16 @@ ruby_add_rdepend "dev-ruby/classifier
 	dev-ruby/colorator
 	dev-ruby/commander
 	dev-ruby/directory_watcher
-	dev-ruby/kramdown
 	dev-ruby/liquid
 	dev-ruby/maruku
 	dev-ruby/pygments_rb
 	dev-ruby/redcarpet
 	dev-ruby/safe_yaml
-	test? (	dev-ruby/launchy
+	test? (	dev-ruby/kramdown
+			dev-ruby/launchy
 			dev-ruby/rdiscount
 			dev-ruby/redcloth
 			dev-ruby/rr
-			dev-ruby/shoulda
-			dev-ruby/simplecov )"
+			dev-ruby/shoulda )"
 
-RUBY_PATCHES=("${FILESDIR}"/${P}-fix-tests.patch)
+RUBY_PATCHES=("${FILESDIR}"/${PN}-1.1.2-fix-tests.patch)
