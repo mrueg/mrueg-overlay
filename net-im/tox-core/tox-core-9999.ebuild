@@ -32,17 +32,14 @@ src_install() {
 	cd "${BUILD_DIR}" || die
 	insinto /usr/$(get_libdir)/pkgconfig
 	doins libtoxcore.pc
-	ls -lisa
 	local binaries=(
 		crypto_speed_test
-		crypto_test
 		DHT_test
 		DHT_bootstrap
 		DHT_bootstrap_daemon
 		Lossless_UDP_testclient
 		Lossless_UDP_testserver
 		Messenger_test
-		messenger_autotest
 		nTox
 	)
 	dobin ${binaries[@]/#/build/}
