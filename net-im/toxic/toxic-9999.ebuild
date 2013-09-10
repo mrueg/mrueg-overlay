@@ -18,7 +18,7 @@ IUSE=""
 
 RDEPEND="sys-libs/ncurses
 	net-im/tox-core
-	net-libs/libsodium"
+	dev-libs/libsodium"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 

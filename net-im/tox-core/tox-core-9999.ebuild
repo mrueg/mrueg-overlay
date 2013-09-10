@@ -19,7 +19,7 @@ IUSE=""
 RDEPEND="dev-libs/check
 	dev-libs/libconfig
 	sys-libs/ncurses
-	net-libs/libsodium"
+	dev-libs/libsodium"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
