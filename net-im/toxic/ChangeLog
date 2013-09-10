@@ -1,0 +1,5 @@
+*toxic-9999 (10 Sep 2013)
+
+  10 Sep 2013; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
+  +toxic-9999.ebuild:
+  [net-im/toxic] Initial version. No install rules yet.
