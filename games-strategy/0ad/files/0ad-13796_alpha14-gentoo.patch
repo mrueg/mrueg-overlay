@@ -7,11 +7,11 @@ let stripping be handled by the system
 
 fix minimal-flags option:
 	leave -fvisibility=hidden active
-	leave conditional -fpc-proprocess active
+	leave conditional -fpc-preprocess active
 
 --- build/premake/premake4.lua
 +++ build/premake/premake4.lua
-@@ -135,7 +135,7 @@
+@@ -138,7 +138,7 @@
  
  function project_set_build_flags()
  
@@ -20,49 +20,7 @@ fix minimal-flags option:
  	if not _OPTIONS["icc"] and (os.is("windows") or not _OPTIONS["minimal-flags"]) then
  		-- adds the -Wall compiler flag
  		flags { "ExtraWarnings" } -- this causes far too many warnings/remarks on ICC
-@@ -232,33 +232,19 @@
- 					"-fno-omit-frame-pointer"
- 				}
- 
--				if not _OPTIONS["without-pch"] then
--					buildoptions {
--						-- do something (?) so that ccache can handle compilation with PCH enabled
--						-- (ccache 3.1+ also requires CCACHE_SLOPPINESS=time_macros for this to work)
--						"-fpch-preprocess"
--					}
--				end
--
--				if arch == "x86" or arch == "amd64" then
--					buildoptions {
--						-- enable SSE intrinsics
--						"-msse"
--					}
--				end
- 
- 				if os.is("linux") or os.is("bsd") then
--					linkoptions { "-Wl,--no-undefined", "-Wl,--as-needed" }
-+					linkoptions { "-Wl,--no-undefined" }
- 				end
- 
--				if arch == "x86" then
--					buildoptions {
--						-- To support intrinsics like __sync_bool_compare_and_swap on x86
--						-- we need to set -march to something that supports them
--						"-march=i686"
--					}
--				end
-+			end
- 
-+			if not _OPTIONS["without-pch"] then
-+				buildoptions {
-+					-- do something (?) so that ccache can handle compilation with PCH enabled
-+					-- (ccache 3.1+ also requires CCACHE_SLOPPINESS=time_macros for this to work)
-+					"-fpch-preprocess"
-+				}
- 			end
- 
- 			if arch == "arm" then
-@@ -281,13 +267,11 @@
+@@ -308,13 +308,11 @@
  			end
  		end
  
@@ -74,19 +32,19 @@ fix minimal-flags option:
  			}
 -		end
  
- 		-- X11 includes may be installed in one of a gadzillion of three places
- 		-- Famous last words: "You can't include too much! ;-)"
---- libraries/fcollada/src/Makefile
-+++ libraries/fcollada/src/Makefile
-@@ -9,8 +9,8 @@
- 
- CXX ?= g++
- CXXFLAGS += -fvisibility=hidden -W -Wall -Wno-unused-parameter -Wno-unused-function $(OS_DEFINE) $(PIC_FLAGS) $(CPPFLAGS)
+ 		if _OPTIONS["bindir"] then
+ 			defines { "INSTALLED_BINDIR=" .. _OPTIONS["bindir"] }
+--- libraries/source/fcollada/src/Makefile
++++ libraries/source/fcollada/src/Makefile
+@@ -14,8 +14,8 @@
+ ifeq ($(OS_CPU),armv7l)
+ CXXFLAGS += -mtune=cortex-a15 -mfpu=neon-vfpv4 -mfloat-abi=hard
+ endif
 -CXXFLAGS_DEBUG := -O0 -g -D_DEBUG -DRETAIL
 -CXXFLAGS_RELEASE := -O1 -DNDEBUG -DRETAIL
 +CXXFLAGS_DEBUG := -D_DEBUG -DRETAIL
 +CXXFLAGS_RELEASE := -DNDEBUG -DRETAIL
- # (-O2 with gcc 4.3 causes linker errors when using this library, for unknown reasons, so stick with -O1)
+ # (-O2 with gcc 4.3 causes linker errors when using this library, for unknown reasons, so stick with -O1 until gcc >4.3 is typical.)
  CXXFLAGS_TEST := -O0 -g -D_DEBUG
  LIBS += `pkg-config libxml-2.0 --libs`
 --- build/premake/premake4/src/tools/gcc.lua

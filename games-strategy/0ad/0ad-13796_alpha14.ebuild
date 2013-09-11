@@ -1,22 +1,21 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
 WX_GTK_VER="2.8"
 
 inherit eutils wxwidgets toolchain-funcs games
 
-MY_P="${PN}-0.0.${PV#*alpha}-alpha"
-
+MY_P=0ad-0.0.14-alpha
 DESCRIPTION="A free, real-time strategy game"
 HOMEPAGE="http://wildfiregames.com/0ad/"
 SRC_URI="http://releases.wildfiregames.com/${MY_P}-unix-build.tar.xz"
 
-LICENSE="GPL-2 LGPL-2.1 MIT CCPL-Attribution-ShareAlike-3.0 as-is"
+LICENSE="GPL-2 LGPL-2.1 MIT CC-BY-SA-3.0 as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="-* ~amd64 ~x86"
 IUSE="+audio editor fam pch test"
 
 RDEPEND="
@@ -36,8 +35,7 @@ RDEPEND="
 	audio? ( media-libs/libogg
 		media-libs/libvorbis
 		media-libs/openal )
-	editor? ( x11-libs/wxGTK:${WX_GTK_VER}[X,opengl] )
-	fam? ( virtual/fam )"
+	editor? ( x11-libs/wxGTK:${WX_GTK_VER}[X,opengl] )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	test? ( dev-lang/perl )"
@@ -45,19 +43,15 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gentoo.patch \
-		"${FILESDIR}"/${P}-pch.patch
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 }
 
 src_configure() {
-	use pch && append-cflags "-fpch-preprocess"
-
 	local myconf=(
 		--with-system-nvtt
 		--with-system-enet
 		--with-system-mozjs185
 		--minimal-flags
-		$(usex fam "" "--without-fam")
 		$(usex pch "" "--without-pch")
 		$(usex test "" "--without-tests")
 		$(usex audio "" "--without-audio")
@@ -92,7 +86,7 @@ src_configure() {
 
 src_compile() {
 	# build 3rd party fcollada
-	emake -C libraries/fcollada/src
+	emake -C libraries/source/fcollada/src
 
 	# build 0ad
 	emake -C build/workspaces/gcc verbose=1

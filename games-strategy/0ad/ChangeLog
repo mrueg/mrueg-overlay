@@ -1,3 +1,11 @@
+*0ad-13796_alpha14 (11 Sep 2013)
+
+  11 Sep 2013; Manuel Rüger <mrueg@gentoo.org> +0ad-13796_alpha14.ebuild,
+  +files/0ad-13796_alpha14-gentoo.patch, -0ad-0_alpha11.ebuild,
+  -files/0ad-0_alpha11-gentoo.patch, -files/0ad-0_alpha11-pch.patch,
+  metadata.xml:
+  Pull updates from hasufell-overlay.
+
   09 Sep 2012; Manuel Rüger (mrueg) gentoo@rueg.eu
   +files/0ad-0_alpha11-pch.patch, -files/0ad-0_alpha11-include.patch,
   0ad-0_alpha11.ebuild, files/0ad-0_alpha11-gentoo.patch:
