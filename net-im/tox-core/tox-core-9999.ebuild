@@ -4,46 +4,44 @@
 
 EAPI=5
 
-EGIT_REPO_URI="https://github.com/irungentoo/ProjectTox-Core"
-
-inherit git-2 multilib autotools-utils
+inherit autotools multilib eutils git-2
 
 DESCRIPTION="Free as in freedom Skype replacement"
-HOMEPAGE="http://tox.im"
+HOMEPAGE="http://tox.im/"
+EGIT_REPO_URI="https://github.com/irungentoo/ProjectTox-Core.git"
 
 LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE="+dht-bootstrap-daemon nacl +ntox static-libs test"
 
-RDEPEND="dev-libs/check
-	dev-libs/libconfig
-	sys-libs/ncurses
-	dev-libs/libsodium"
+RDEPEND="
+	dht-bootstrap-daemon? ( dev-libs/libconfig )
+	!nacl? ( dev-libs/libsodium )
+	ntox? ( sys-libs/ncurses )"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig"
+	virtual/pkgconfig
+	nacl? ( net-libs/nacl )
+	test? ( dev-libs/check )"
 
 src_prepare() {
 	eautoreconf
 }
 
+src_configure() {
+	econf \
+		$(use_enable nacl) \
+		$(use_enable test tests) \
+		$(use_enable ntox) \
+		$(use_enable dht-bootstrap-daemon) \
+		$(use_enable static-libs static) \
+		--with-nacl-headers=/usr/include/nacl \
+		--with-nacl-libs=/usr/$(get_libdir)/nacl
+}
+
 src_install() {
 	default
-	cd "${BUILD_DIR}" || die
-	insinto /usr/$(get_libdir)/pkgconfig
-	doins libtoxcore.pc
-	local binaries=(
-		crypto_speed_test
-		DHT_test
-		DHT_bootstrap
-		DHT_bootstrap_daemon
-		Lossless_UDP_testclient
-		Lossless_UDP_testserver
-		Messenger_test
-		nTox
-	)
-	dobin ${binaries[@]/#/build/}
-	dolib build/.libs/libtoxcore$(get_libname)
+	prune_libtool_files
 }
 
 pkg_postinst() {
