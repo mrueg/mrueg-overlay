@@ -1,3 +1,9 @@
+*0ad-data-13796_alpha14 (11 Sep 2013)
+
+  11 Sep 2013; Manuel Rüger <mrueg@gentoo.org> +0ad-data-13796_alpha14.ebuild,
+  -0ad-data-0_alpha11.ebuild:
+  Pull updates from hasufell-overlay.
+
   09 Sep 2012; Manuel Rüger (mrueg) gentoo@rueg.eu 0ad-data-0_alpha11.ebuild:
   games-strategy/0ad-data: Sync with hasufell-overlay
 

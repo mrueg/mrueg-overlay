@@ -1,22 +1,19 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
 inherit games
 
-MY_PN="${PN%-data}"
-MY_PV="0.0.${PV#*alpha}"
-MY_P="${MY_PN}-${MY_PV}-alpha"
-
+MY_P=0ad-0.0.14-alpha
 DESCRIPTION="Data files for 0ad"
 HOMEPAGE="http://wildfiregames.com/0ad/"
 SRC_URI="http://releases.wildfiregames.com/${MY_P}-unix-data.tar.xz"
 
-LICENSE="GPL-2 CCPL-Attribution-ShareAlike-3.0 LPPL-1.3c BitstreamVera"
+LICENSE="GPL-2 CC-BY-SA-3.0 LPPL-1.3c BitstreamVera"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
@@ -26,7 +23,7 @@ src_prepare() {
 }
 
 src_install() {
-	insinto "${GAMES_DATADIR}"/${MY_PN}
+	insinto "${GAMES_DATADIR}"/0ad
 	doins -r binaries/data/*
 	prepgamesdirs
 }
