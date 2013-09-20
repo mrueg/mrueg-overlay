@@ -7,7 +7,7 @@ USE_RUBY="ruby19"
 
 inherit ruby-fakegem
 
-RUBY_FAKEGEM_EXTRADOC="README.textile History.txt"
+RUBY_FAKEGEM_EXTRADOC="CONTRIBUTING.markdown README.markdown History.markdown"
 RUBY_FAKEGEM_EXTRAINSTALL="features"
 
 DESCRIPTION="A simple, blog aware, static site generator"
@@ -26,12 +26,12 @@ ruby_add_rdepend "dev-ruby/classifier
 	dev-ruby/maruku
 	dev-ruby/pygments_rb
 	dev-ruby/redcarpet
-	dev-ruby/safe_yaml
-	test? (	dev-ruby/kramdown
-			dev-ruby/launchy
-			dev-ruby/rdiscount
-			dev-ruby/redcloth
-			dev-ruby/rr
-			dev-ruby/shoulda )"
+	dev-ruby/safe_yaml"
+ruby_add_bdepend "test? ( dev-ruby/kramdown
+		dev-ruby/launchy
+		dev-ruby/rdiscount
+		dev-ruby/redcloth
+		dev-ruby/rr
+		dev-ruby/shoulda )"
 
 RUBY_PATCHES=("${FILESDIR}"/${PN}-1.1.2-fix-tests.patch)

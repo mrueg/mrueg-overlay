@@ -1,3 +1,6 @@
+  20 Sep 2013; Manuel Rüger <mrueg@gentoo.org> jekyll-1.2.1.ebuild:
+  Fix install.
+
 *jekyll-1.2.0 (07 Sep 2013)
 
   07 Sep 2013; Manuel Rüger <mrueg@gentoo.org> +jekyll-1.2.0.ebuild,
