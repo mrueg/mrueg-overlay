@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1
 
-MY_PV1="${PV%.*.*}"
+MY_PV1="${PV%*.*}"
 MY_PV2="${PV#*.*.}"
 MY_PV="${MY_PV1}+13.10.${MY_PV2}"
 DESCRIPTION="Scripts to work with Phablet. Installs Touch Developer Preview on Nexus devices"
