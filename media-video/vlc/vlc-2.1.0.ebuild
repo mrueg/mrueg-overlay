@@ -191,6 +191,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${P}-freetype-proper-default-font.patch
 	epatch "${FILESDIR}"/${P}-newer-rdp.patch
+	epatch "${FILESDIR}"/${P}-libva-1.2.1-compat.patch
 
 	eautoreconf
 }
