@@ -1,0 +1,2 @@
+  03 Oct 2013; Manuel Rüger <mrueg@gentoo.org> metadata.xml, vlc-2.1.0.ebuild:
+  Fix metadata. Add missing gettext dependency.

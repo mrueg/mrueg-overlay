@@ -145,6 +145,7 @@ RDEPEND="
 		"
 
 DEPEND="${RDEPEND}
+	>=sys-devel/gettext-0.18.3
 	fbosd? ( sys-kernel/linux-headers )
 	kde? ( >=kde-base/kdelibs-4 )
 	xcb? ( x11-proto/xproto )

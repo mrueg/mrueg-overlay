@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-  	<email>TomWij@gentoo.org</email>
-    <name>Tom Wijsman</name>
+  	<email>mrueg@gentoo.org</email>
+    <name>Manuel Rüger</name>
   </maintainer>
   <use>
     <flag name="atmo">Enables support for AtmoLight (homebrew Ambient Lighting Technology)</flag>
