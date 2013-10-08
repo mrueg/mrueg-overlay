@@ -1,0 +1,5 @@
+*xc3sprog-9999 (08 Oct 2013)
+
+  08 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
+  +xc3sprog-9999.ebuild:
+  Initial ebuild.
