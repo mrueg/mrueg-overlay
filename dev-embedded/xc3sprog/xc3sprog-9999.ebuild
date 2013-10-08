@@ -13,7 +13,7 @@ HOMEPAGE="http://xc3sprog.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="ftd2xx"
+IUSE="-ftd2xx"
 
 DEPEND="!ftd2xx? ( dev-embedded/libftdi )
 ftd2xx? ( dev-embedded/libftd2xx )
@@ -23,6 +23,7 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	sed -i -e '/if(EXISTS/a set(VERSION_STRING "Gentoo")' \
 		-e '/if(EXISTS/,/endif(EXISTS/d' CMakeLists.txt || die
+	sed -i -e 's#usr/lib#opt/lib64#' FindlibFTD2XX.cmake || die
 }
 src_configure() {
 	local mycmakeargs=(
