@@ -31,3 +31,9 @@ src_configure() {
 	)
 	cmake-utils_src_configure
 }
+
+src_install() {
+	cmake-utils_src_install
+	insinto /usr/share/${PF}/
+	doins -r bscan_spi
+}
