@@ -11,7 +11,6 @@ HOMEPAGE="http://wiki.freedesktop.org/www/Software/Beignet/"
 
 # we cannot use the snapshots as the checksum changes for every download
 EGIT_REPO_URI="git://anongit.freedesktop.org/beignet"
-EGIT_COMMIT="Release_v${PV}"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,6 +19,7 @@ if [[ "${PV}" == "9999" ]]; then
 	KEYWORDS=""
 else
 	KEYWORDS="~amd64 ~x86"
+	EGIT_COMMIT="Release_v${PV}"
 fi
 
 DEPENDS=">=sys-devel/gcc-4.6"
