@@ -6,7 +6,7 @@ EAPI=5
 
 EGIT_REPO_URI="https://github.com/Tox/toxic"
 
-inherit git-2 multilib autotools-utils
+inherit git-r3 multilib autotools-utils
 
 DESCRIPTION="Console client for Tox"
 HOMEPAGE="https://github.com/tox/toxic"
