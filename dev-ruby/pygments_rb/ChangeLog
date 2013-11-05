@@ -1,3 +1,9 @@
+*pygments_rb-0.5.4 (05 Nov 2013)
+
+  05 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +pygments_rb-0.5.4.ebuild,
+  -pygments_rb-0.5.2.ebuild:
+  Version bump.
+
 *pygments_rb-0.5.2 (18 Jul 2013)
 
   18 Jul 2013; Manuel Rüger <mrueg@gentoo.org> +pygments_rb-0.5.2.ebuild,
