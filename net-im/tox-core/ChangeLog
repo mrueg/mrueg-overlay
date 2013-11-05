@@ -1,3 +1,7 @@
+  05 Nov 2013; Manuel Rüger <mrueg@gentoo.org> metadata.xml,
+  tox-core-9999.ebuild:
+  Switch to git-r3.
+
   07 Sep 2013; Manuel Rüger <mrueg@gentoo.org> tox-core-9999.ebuild:
   Remove binaries that aren't built without enabled tests
 

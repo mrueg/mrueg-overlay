@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit autotools multilib eutils git-2
+inherit autotools multilib eutils git-r3
 
 DESCRIPTION="Free as in freedom Skype replacement"
 HOMEPAGE="http://tox.im/"
@@ -13,7 +13,7 @@ EGIT_REPO_URI="https://github.com/irungentoo/ProjectTox-Core.git"
 LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS=""
-IUSE="+dht-bootstrap-daemon nacl +ntox static-libs test"
+IUSE="+dht-bootstrap-daemon -nacl +ntox static-libs test"
 
 RDEPEND="
 	dht-bootstrap-daemon? ( dev-libs/libconfig )
