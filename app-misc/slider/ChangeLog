@@ -1,0 +1,5 @@
+*slider-0_pre20131111 (11 Nov 2013)
+
+  11 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +slider-0_pre20131111.ebuild,
+  -slider-0_pre20131023.ebuild:
+  New snapshot

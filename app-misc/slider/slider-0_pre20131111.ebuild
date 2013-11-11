@@ -6,7 +6,7 @@ EAPI=5
 
 inherit vcs-snapshot toolchain-funcs
 
-COMMIT_ID="20ead194c2d0fe76e6c811d8ff1c195925cd4dec"
+COMMIT_ID="92f650840a178ad1ed50cd8749524a4b4267d462"
 DESCRIPTION="PDF presentation tool"
 HOMEPAGE="https://github.com/TrilbyWhite/Slider"
 SRC_URI="https://github.com/TrilbyWhite/Slider/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
