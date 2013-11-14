@@ -1,4 +1,7 @@
   14 Nov 2013; Manuel Rüger <mrueg@gentoo.org> shoc-1.1.4_p20130826.ebuild:
+  Add missed cuda dep.
+
+  14 Nov 2013; Manuel Rüger <mrueg@gentoo.org> shoc-1.1.4_p20130826.ebuild:
   Fix desc.
 
 *shoc-1.1.4_p20130826 (14 Nov 2013)

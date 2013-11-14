@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="cuda mpi opencl"
 
-RDEPEND="mpi? ( virtual/mpi )
+RDEPEND="cuda? ( dev-util/nvidia-cuda-sdk )
+	mpi? ( virtual/mpi )
 	opencl? ( virtual/opencl )"
 
 DEPEND="${RDEPEND}"
