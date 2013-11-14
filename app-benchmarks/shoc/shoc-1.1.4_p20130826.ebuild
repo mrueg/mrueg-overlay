@@ -5,7 +5,7 @@
 EAPI=5
 
 inherit vcs-snapshot autotools
-DESCRIPTION="Firmware Test Suite"
+DESCRIPTION="Scalable Heterogeneous Computing Benchmark Suite"
 HOMEPAGE="http://keeneland.gatech.edu/software/keeneland/shoc"
 COMMIT_ID="2b00f6123ff21eb08ea006b5039ad7202ba2035f"
 SRC_URI="https://github.com/vetter/${PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
