@@ -1,0 +1,5 @@
+*shoc-1.1.4_p20130826 (14 Nov 2013)
+
+  14 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
+  +shoc-1.1.4_p20130826.ebuild:
+  Initial version.
