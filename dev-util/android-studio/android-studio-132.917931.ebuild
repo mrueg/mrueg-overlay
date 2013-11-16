@@ -7,16 +7,18 @@ inherit eutils
 
 RESTRICT="strip"
 QA_TEXTRELS="opt/${P}/bin/libbreakgen.so"
+STUDIO_V=0.3.6
 
 DESCRIPTION="A new Android development environment based on IntelliJ IDEA"
 HOMEPAGE="http://developer.android.com/sdk/installing/studio.html"
-SRC_URI="https://dl-ssl.google.com/android/studio/${PN}-bundle-${PV}-linux.tgz"
+SRC_URI="http://dl.google.com/dl/android/studio/ide-zips/${STUDIO_V}/${PN}-ide-${PV}-linux.zip"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE=""
 KEYWORDS="~x86 ~amd64"
 
+DEPEND="app-arch/zip"
 RDEPEND=">=virtual/jdk-1.6"
 S=${WORKDIR}/${PN}
 
