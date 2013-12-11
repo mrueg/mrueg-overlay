@@ -1,3 +1,9 @@
+*android-studio-132.932373 (11 Dec 2013)
+
+  11 Dec 2013; Manuel Rüger <mrueg@gentoo.org>
+  +android-studio-132.932373.ebuild, -android-studio-132.917931.ebuild:
+  Version bump.
+
 *android-studio-132.917931 (16 Nov 2013)
 
   16 Nov 2013; Manuel Rüger <mrueg@gentoo.org>

@@ -7,7 +7,7 @@ inherit eutils
 
 RESTRICT="strip"
 QA_TEXTRELS="opt/${P}/bin/libbreakgen.so"
-STUDIO_V=0.3.6
+STUDIO_V=0.3.7
 
 DESCRIPTION="A new Android development environment based on IntelliJ IDEA"
 HOMEPAGE="http://developer.android.com/sdk/installing/studio.html"
