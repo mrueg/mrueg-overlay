@@ -22,14 +22,17 @@ ruby_add_rdepend "dev-ruby/classifier
 	dev-ruby/colorator
 	dev-ruby/commander
 	dev-ruby/liquid
-	dev-ruby/listen
+	>=dev-ruby/listen-1.3
 	>=dev-ruby/maruku-0.7.0
 	dev-ruby/pygments_rb
 	dev-ruby/redcarpet
 	dev-ruby/safe_yaml
 	dev-ruby/toml"
-ruby_add_bdepend "test? ( dev-ruby/kramdown
+
+ruby_add_bdepend "test? (
+		>=dev-ruby/kramdown-1.2
 		dev-ruby/launchy
+		dev-ruby/mime-types
 		<dev-ruby/rdiscount-2
 		dev-ruby/redcloth
 		dev-ruby/rr
