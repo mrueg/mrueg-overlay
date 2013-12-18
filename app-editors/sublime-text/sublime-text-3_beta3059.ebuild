@@ -44,6 +44,7 @@ src_install() {
 	dodoc "changelog.txt"
 	doins "sublime_plugin.py"
 	doins "sublime.py"
+	doins "python3.3.zip"
 	doexe "sublime_text"
 	doexe "plugin_host"
 	doexe "crash_reporter"
