@@ -1,3 +1,9 @@
+*android-studio-0.4.0.132.955124 (24 Dec 2013)
+
+  24 Dec 2013; Manuel Rüger <mrueg@gentoo.org>
+  +android-studio-0.4.0.132.955124.ebuild, -android-studio-132.932373.ebuild:
+  [dev-util/androidstudio] Version bump. Switch versioning scheme
+
 *android-studio-132.932373 (11 Dec 2013)
 
   11 Dec 2013; Manuel Rüger <mrueg@gentoo.org>

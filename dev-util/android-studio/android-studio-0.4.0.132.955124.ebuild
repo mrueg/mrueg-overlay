@@ -3,15 +3,15 @@
 # $Header: $
 
 EAPI=5
-inherit eutils
+inherit eutils versionator
 
 RESTRICT="strip"
 QA_TEXTRELS="opt/${P}/bin/libbreakgen.so"
-STUDIO_V=0.3.7
-
+STUDIO_V=$(get_version_component_range 1-3)
+ZIP_V=$(get_version_component_range 4-5)
 DESCRIPTION="A new Android development environment based on IntelliJ IDEA"
 HOMEPAGE="http://developer.android.com/sdk/installing/studio.html"
-SRC_URI="http://dl.google.com/dl/android/studio/ide-zips/${STUDIO_V}/${PN}-ide-${PV}-linux.zip"
+SRC_URI="http://dl.google.com/dl/android/studio/ide-zips/${STUDIO_V}/${PN}-ide-${ZIP_V}-linux.zip"
 
 LICENSE="Apache-2.0"
 SLOT="0"
