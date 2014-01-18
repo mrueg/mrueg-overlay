@@ -1,3 +1,8 @@
+*eclipse-sdk-bin-4.3.1 (18 Jan 2014)
+
+  18 Jan 2014; Manuel Rüger <mrueg@gentoo.org> +eclipse-sdk-bin-4.3.1.ebuild:
+  [dev-util/eclipse-sdk-bin] Version bump.
+
   22 May 2013; Manuel Rueger (mrueg) gentoo@rueg.eu
   eclipse-sdk-bin-4.2.2.ebuild:
   dev-util/eclipse-sdk-bin: Silence repoman
