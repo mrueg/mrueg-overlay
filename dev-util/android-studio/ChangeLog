@@ -1,3 +1,10 @@
+*android-studio-0.4.2.133.970939 (18 Jan 2014)
+
+  18 Jan 2014; Manuel Rüger <mrueg@gentoo.org>
+  +android-studio-0.4.2.133.970939.ebuild,
+  -android-studio-0.4.0.132.955124.ebuild:
+  [dev-util/android-studio] Version bump.
+
 *android-studio-0.4.0.132.955124 (24 Dec 2013)
 
   24 Dec 2013; Manuel Rüger <mrueg@gentoo.org>
