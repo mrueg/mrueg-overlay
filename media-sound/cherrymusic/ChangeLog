@@ -1,3 +1,9 @@
+*cherrymusic-0.30.0 (21 Jan 2014)
+
+  21 Jan 2014; Manuel Rüger <mrueg@gentoo.org> +cherrymusic-0.30.0.ebuild,
+  -cherrymusic-0.29.0.ebuild:
+  [media-sound/cherrymusic] Version bump.
+
 *cherrymusic-0.29.0 (11 Nov 2013)
 
   11 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +cherrymusic-0.29.0.ebuild,
