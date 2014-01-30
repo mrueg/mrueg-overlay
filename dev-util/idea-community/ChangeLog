@@ -1,3 +1,9 @@
+*idea-community-13.0.2.133.696 (30 Jan 2014)
+
+  30 Jan 2014; Manuel Rüger <mrueg@gentoo.org>
+  +idea-community-13.0.2.133.696.ebuild, -idea-community-13.0.1.133.331.ebuild:
+  [dev-util/idea-community] Version bump. Cleanup old.
+
 *idea-community-13.0.1.133.331 (24 Dec 2013)
 
   24 Dec 2013; Manuel Rüger <mrueg@gentoo.org>
