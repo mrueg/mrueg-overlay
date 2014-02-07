@@ -14,7 +14,7 @@ else
 	COMMIT_ID="a55f6ddcc9f48bb0a4300c714b433e5fe523d868"
 	SRC_URI="https://github.com/danieleds/Asus-Zenbook-Ambient-Light-Sensor-Controller/archive/${COMMIT_ID}.tar.gz -> ${P}-git.tar.gz"
 	KEYWORDS="~amd64"
-	S=${WORKDIR}/als-${COMMIT_ID}
+	S=${WORKDIR}/Asus-Zenbook-Ambient-Light-Sensor-Controller-${COMMIT_ID}
 fi
 
 DESCRIPTION="ASUS Zenbook Ambient Light Sensor Controller"
@@ -25,6 +25,8 @@ SLOT="0"
 IUSE=""
 
 DEPEND="dev-qt/qtcore"
+RDEPEND="app-laptop/zenbook-als-module
+	sys-power/acpi_call"
 
 src_configure() {
 	eqmake4 service/als-controller.pro

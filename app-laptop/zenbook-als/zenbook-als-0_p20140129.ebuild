@@ -25,6 +25,8 @@ SLOT="0"
 IUSE=""
 
 DEPEND="dev-qt/qtcore"
+RDEPEND="app-laptop/zenbook-als-module
+	sys-power/acpi_call"
 
 src_configure() {
 	eqmake4 service/als-controller.pro
