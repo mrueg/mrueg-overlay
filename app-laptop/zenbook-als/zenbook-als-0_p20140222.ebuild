@@ -11,7 +11,7 @@ if [ "${PV}" = "9999" ]; then
 	EGIT_REPO_URI="git://github.com/danieleds/Asus-Zenbook-Ambient-Light-Sensor-Controller.git"
 	KEYWORDS=""
 else
-	COMMIT_ID="a55f6ddcc9f48bb0a4300c714b433e5fe523d868"
+	COMMIT_ID="11e64b1df737f3e3f8439ffdc602f55357e046bc"
 	SRC_URI="https://github.com/danieleds/Asus-Zenbook-Ambient-Light-Sensor-Controller/archive/${COMMIT_ID}.tar.gz -> ${P}-git.tar.gz"
 	KEYWORDS="~amd64"
 	S=${WORKDIR}/Asus-Zenbook-Ambient-Light-Sensor-Controller-${COMMIT_ID}
@@ -24,8 +24,9 @@ LICENSE="Apache-2.0"
 SLOT="0"
 IUSE=""
 
-DEPEND="dev-qt/qtcore"
-RDEPEND="app-laptop/zenbook-als-module
+DEPEND="dev-libs/libbsd"
+RDEPEND="${DEPEND}
+	app-laptop/zenbook-als-module
 	sys-power/acpi_call"
 
 src_configure() {
@@ -33,6 +34,7 @@ src_configure() {
 }
 
 src_install() {
+	newinitd "${FILESDIR}"/${PN}.initd als-controller
 	dodoc README.md
 	dosbin als-controller
 }
