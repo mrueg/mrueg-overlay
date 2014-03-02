@@ -1,0 +1,5 @@
+*validictory-0.9.3 (02 Mar 2014)
+
+  02 Mar 2014; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
+  +validictory-0.9.3.ebuild:
+  [dev-python/validictory] Initial version.
