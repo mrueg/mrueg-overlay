@@ -1,0 +1,5 @@
+*proboscis-1.2.6.0 (02 Mar 2014)
+
+  02 Mar 2014; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
+  +proboscis-1.2.6.0.ebuild:
+  [dev-python/proboscis] Initial version.
