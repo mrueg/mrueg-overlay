@@ -19,7 +19,3 @@ IUSE="test"
 RDEPEND="dev-python/nose[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"
-
-python_test() {
-	nosetests || die
-}

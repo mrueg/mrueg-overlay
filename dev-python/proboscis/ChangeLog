@@ -1,3 +1,6 @@
+  03 Mar 2014; Manuel Rüger <mrueg@gentoo.org> proboscis-1.2.6.0.ebuild:
+  [dev-python/proboscis] Remove non-existing tests.
+
 *proboscis-1.2.6.0 (02 Mar 2014)
 
   02 Mar 2014; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
