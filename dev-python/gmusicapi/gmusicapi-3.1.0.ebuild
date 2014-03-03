@@ -8,7 +8,7 @@ PYTHON_COMPAT=(python2_7)
 inherit distutils-r1
 
 DESCRIPTION="An unofficial api for Google Play Music"
-HOMEPAGE="https://pypi.python.org/pypi/gmusicapi/"
+HOMEPAGE="https://github.com/simon-weber/Unofficial-Google-Music-API/"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
