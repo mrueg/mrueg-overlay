@@ -1,0 +1,5 @@
+*gmusicapi-3.1.0 (03 Mar 2014)
+
+  03 Mar 2014; Manuel Rüger <mrueg@gentoo.org> +gmusicapi-3.1.0.ebuild,
+  +metadata.xml:
+  [dev-python/gmusicapi] Initial version.
