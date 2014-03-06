@@ -1,3 +1,9 @@
+*eclipse-sdk-bin-4.3.1-r1 (06 Mar 2014)
+
+  06 Mar 2014; Manuel Rüger <mrueg@gentoo.org> +eclipse-sdk-bin-4.3.1-r1.ebuild,
+  -eclipse-sdk-bin-4.3.ebuild:
+  [dev-util/eclipse-bin] Fix slot in launch script. Thanks to Euank.
+
 *eclipse-sdk-bin-4.3.1 (18 Jan 2014)
 
   18 Jan 2014; Manuel Rüger <mrueg@gentoo.org> +eclipse-sdk-bin-4.3.1.ebuild:
