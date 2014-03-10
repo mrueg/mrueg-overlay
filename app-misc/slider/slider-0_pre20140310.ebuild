@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -6,7 +6,7 @@ EAPI=5
 
 inherit vcs-snapshot toolchain-funcs
 
-COMMIT_ID="92f650840a178ad1ed50cd8749524a4b4267d462"
+COMMIT_ID="c934ca8f6fed7030e9d70ce077137d372689d236"
 DESCRIPTION="PDF presentation tool"
 HOMEPAGE="https://github.com/TrilbyWhite/Slider"
 SRC_URI="https://github.com/TrilbyWhite/Slider/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
