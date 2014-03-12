@@ -6,7 +6,7 @@ EAPI=5
 
 inherit linux-mod git-2
 
-DESCRIPTION="A kernel module that enables you to call ACPI methods"
+DESCRIPTION="Non-fuse kernel driver for exFat and VFat file systems"
 HOMEPAGE="https://github.com/dorimanx/exfat-nofuse.git"
 
 EGIT_REPO_URI="git://github.com/dorimanx/exfat-nofuse.git"
