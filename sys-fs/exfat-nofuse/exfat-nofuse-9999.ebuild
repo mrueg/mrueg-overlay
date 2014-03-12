@@ -7,7 +7,7 @@ EAPI=5
 inherit linux-mod git-2
 
 DESCRIPTION="Non-fuse kernel driver for exFat and VFat file systems"
-HOMEPAGE="https://github.com/dorimanx/exfat-nofuse.git"
+HOMEPAGE="https://github.com/dorimanx/exfat-nofuse"
 
 EGIT_REPO_URI="git://github.com/dorimanx/exfat-nofuse.git"
 
