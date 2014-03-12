@@ -1,4 +1,7 @@
   12 Mar 2014; Manuel Rüger <mrueg@gentoo.org> exfat-nofuse-9999.ebuild:
+  [sys-fs/exfat-nofuse] Fix build_targets.
+
+  12 Mar 2014; Manuel Rüger <mrueg@gentoo.org> exfat-nofuse-9999.ebuild:
   [sys-fs/exfat-nofuse] Fix homepage.
 
   12 Mar 2014; Manuel Rüger <mrueg@gentoo.org> exfat-nofuse-9999.ebuild:

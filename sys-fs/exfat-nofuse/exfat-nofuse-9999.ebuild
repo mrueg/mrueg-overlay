@@ -17,7 +17,7 @@ KEYWORDS=""
 IUSE=""
 
 MODULE_NAMES="exfat(kernel/fs:${S})"
-BUILD_TARGETS="-j1 all"
+BUILD_TARGETS="all"
 
 src_prepare(){
 	sed -i -e "/^KREL/,2d" Makefile || die
