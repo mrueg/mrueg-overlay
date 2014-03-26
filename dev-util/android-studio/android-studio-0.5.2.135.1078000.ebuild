@@ -16,7 +16,7 @@ SRC_URI="http://dl.google.com/dl/android/studio/ide-zips/${STUDIO_V}/${PN}-ide-$
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND="app-arch/zip"
 RDEPEND=">=virtual/jdk-1.6"
