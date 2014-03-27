@@ -16,7 +16,9 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND="dev-python/gmusicapi[${PYTHON_USEDEP}]
+RDEPEND="
+	dev-python/eyeD3:0.7[${PYTHON_USEDEP}]
+	dev-python/gmusicapi[${PYTHON_USEDEP}]
 	dev-python/netifaces[${PYTHON_USEDEP}]
 	dev-python/python-daemon[${PYTHON_USEDEP}]
 	dev-python/pyxdg[${PYTHON_USEDEP}]"
