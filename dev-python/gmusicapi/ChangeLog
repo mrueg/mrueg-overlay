@@ -1,3 +1,9 @@
+*gmusicapi-3.1.0_p20140309 (27 Mar 2014)
+
+  27 Mar 2014; Manuel Rüger <mrueg@gentoo.org>
+  +gmusicapi-3.1.0_p20140309.ebuild:
+  [dev-python/gmusicapi] Add new snapshot.
+
   03 Mar 2014; Manuel Rüger <mrueg@gentoo.org> gmusicapi-3.1.0.ebuild:
   [dev-python/gmusicapi] Update HOMEPAGE
 
