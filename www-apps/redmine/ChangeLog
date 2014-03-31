@@ -1,0 +1,6 @@
+*redmine-2.5.1 (31 Mar 2014)
+
+  31 Mar 2014; Manuel Rüger <mrueg@gentoo.org> +files/10_redmine_vhost.conf,
+  +files/redmine-2.initd, +files/redmine.confd, +metadata.xml,
+  +redmine-2.5.1.ebuild:
+  [www-apps/redmine] Version bump. Ebuild taken from the tree.
