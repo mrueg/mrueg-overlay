@@ -1,7 +1,0 @@
-*nginx-1.5.13 (12 Apr 2014)
-
-  12 Apr 2014; Manuel Rüger <mrueg@gentoo.org>
-  +files/nginx-1.4.1-fix-perl-install-path.patch, +files/nginx.conf,
-  +files/nginx.initd-r2, +files/nginx.logrotate, +files/nginx.service-r1,
-  +files/upstream-check-1.5.13.patch, +metadata.xml, +nginx-1.5.13.ebuild:
-  [www-servers/nginx] Version bump. Ebuild by Johan Bergström. See bug #503414
