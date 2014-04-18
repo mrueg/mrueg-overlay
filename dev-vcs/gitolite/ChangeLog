@@ -1,0 +1,5 @@
+*gitolite-3.5.3.1_p20140410 (18 Apr 2014)
+
+  18 Apr 2014; Manuel Rüger <mrueg@gentoo.org>
+  +gitolite-3.5.3.1_p20140410.ebuild, +metadata.xml:
+  [dev-vcs/gitolite] Add snapshot with git-annex support.
