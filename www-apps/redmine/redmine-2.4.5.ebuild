@@ -69,7 +69,7 @@ all_ruby_prepare() {
 	rm -r log files/delete.me || die
 
 	# bug #406605
-	rm .gitignore .hgignore .travis.yml || die
+	rm .gitignore .hgignore || die
 
 	rm Gemfile config/preinitializer.rb || die
 
