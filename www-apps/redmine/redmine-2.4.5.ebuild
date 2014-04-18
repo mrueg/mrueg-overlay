@@ -10,7 +10,7 @@ DESCRIPTION="Redmine is a flexible project management web application written us
 HOMEPAGE="http://www.redmine.org/"
 SRC_URI="http://www.redmine.org/releases/${P}.tar.gz"
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 # All db-related USEs are ineffective since we depend on rails
@@ -25,12 +25,9 @@ ruby_add_rdepend "virtual/ruby-ssl
 	>=dev-ruby/rails-3.2.17:3.2
 	>=dev-ruby/jquery-rails-2.0.2
 	dev-ruby/i18n:0.6
-	dev-ruby/awesome_nested_set
 	>=dev-ruby/coderay-1.1.0
 	dev-ruby/builder:3
 	dev-ruby/rake
-	dev-ruby/mime-types
-	dev-ruby/redcarpet
 	ldap? ( >=dev-ruby/ruby-net-ldap-0.3.1 )
 	openid? (
 		>=dev-ruby/ruby-openid-2.3.0
