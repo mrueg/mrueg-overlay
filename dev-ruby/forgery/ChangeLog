@@ -1,0 +1,5 @@
+*forgery-0.6.0 (19 Apr 2014)
+
+  19 Apr 2014; Manuel Rüger <mrueg@gentoo.org> +forgery-0.6.0.ebuild,
+  +metadata.xml:
+  [dev-ruby/forgery] Initial version.
