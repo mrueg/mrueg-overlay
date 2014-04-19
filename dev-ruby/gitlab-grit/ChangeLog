@@ -1,0 +1,5 @@
+*gitlab-grit-2.6.5 (19 Apr 2014)
+
+  19 Apr 2014; Manuel Rüger <mrueg@gentoo.org> +gitlab-grit-2.6.5.ebuild,
+  +metadata.xml:
+  [dev-ruby/gitlab-grit] Initial version.
