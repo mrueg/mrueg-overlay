@@ -1,0 +1,5 @@
+*github-markup-1.2.0 (21 Apr 2014)
+
+  21 Apr 2014; Manuel Rüger <mrueg@gentoo.org> +github-markup-1.2.0.ebuild,
+  +metadata.xml:
+  [dev-ruby/github-markup] Import from dev-zero's overlay. Tests currently fail.
