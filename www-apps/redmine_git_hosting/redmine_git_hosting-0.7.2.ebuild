@@ -35,8 +35,33 @@ pkg_setup() {
 all_ruby_install() {
 	dodoc README.md
 	rm README.md LICENSE
-	dodir ${REDMINE_DIR}/plugins/${PN}
-	insinto ${REDMINE_DIR}/plugins/${PN}
+	dodir "${REDMINE_DIR}"/plugins/${PN}
+	insinto "${REDMINE_DIR}"/plugins/${PN}
 	doins -r .
-	fowners -R redmine:redmine ${REDMINE_DIR}/plugins/${PN}
+	fowners -R redmine:redmine "${REDMINE_DIR}"/plugins/${PN}
+}
+
+pkg_postinst() {
+	einfo
+	elog "Please run emerge --config ${PF}"
+	elog "Further information:"
+	elog "https://github.com/jbox-web/redmine_git_hosting/wiki/Step-by-step-installation-instructions"
+	einfo
+}
+
+pkg_config() {
+	local RAILS_ENV=${RAILS_ENV:-production}
+	if [ ! -L /usr/bin/ruby ]; then
+		eerror "/usr/bin/ruby is not a valid symlink to any ruby implementation."
+		eerror "Please update it via `eselect ruby`"
+		die
+	fi
+	local RUBY=${RUBY:-ruby}
+	einfo "Upgrading the plugin migrations."
+	RAILS_ENV="${RAILS_ENV}" ${RUBY} -S rake redmine:plugins:migrate || die
+	if [ ! -e "${REDMINE_DIR}"/plugins/redmine_git_hosting/ssh_keys/redmine_gitolite_admin_id_rsa ]; then
+		einfo "Generating SSH-Keypair for Redmine user"
+		ssh-keygen -N '' -f "${REDMINE_DIR}"/plugins/redmine_git_hosting/ssh_keys/redmine_gitolite_admin_id_rsa || die
+		fowners redmine:redmine "${REDMINE_DIR}"/plugins/redmine_git_hosting/ssh_keys/redmine_gitolite_admin_ida_rsa{,.pub}
+	fi
 }
