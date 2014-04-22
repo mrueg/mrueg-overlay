@@ -1,3 +1,9 @@
+*idea-community-13.1.2.135.690 (22 Apr 2014)
+
+  22 Apr 2014; Manuel Rüger <mrueg@gentoo.org>
+  +idea-community-13.1.2.135.690.ebuild, -idea-community-13.1.1.135.480.ebuild:
+  [dev-util/idea-community] Version bump.
+
 *idea-community-13.1.1.135.480 (26 Mar 2014)
 
   26 Mar 2014; Manuel Rüger <mrueg@gentoo.org>
