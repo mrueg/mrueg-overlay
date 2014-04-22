@@ -63,6 +63,6 @@ pkg_config() {
 	if [ ! -e "${EPREFIX}${REDMINE_DIR}"/plugins/redmine_git_hosting/ssh_keys/redmine_gitolite_admin_id_rsa ]; then
 		einfo "Generating SSH-Keypair for Redmine user"
 		ssh-keygen -N '' -f "${EPREFIX}${REDMINE_DIR}"/plugins/redmine_git_hosting/ssh_keys/redmine_gitolite_admin_id_rsa || die
-		chown redmine:redmine "${EPREFIX}${REDMINE_DIR}"/plugins/redmine_git_hosting/ssh_keys/redmine_gitolite_admin_ida_rsa{,.pub} || die
+		chown redmine:redmine "${EPREFIX}${REDMINE_DIR}"/plugins/redmine_git_hosting/ssh_keys/redmine_gitolite_admin_id_rsa{,.pub} || die
 	fi
 }
