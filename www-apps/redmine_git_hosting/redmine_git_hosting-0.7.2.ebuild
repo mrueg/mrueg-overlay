@@ -43,7 +43,7 @@ all_ruby_install() {
 
 pkg_postinst() {
 	einfo
-	elog "Please run emerge --config ${PF}"
+	elog "Please run emerge --config =${PF}"
 	elog "Further information:"
 	elog "https://github.com/jbox-web/redmine_git_hosting/wiki/Step-by-step-installation-instructions"
 	einfo
@@ -58,6 +58,7 @@ pkg_config() {
 	fi
 	local RUBY=${RUBY:-ruby}
 	einfo "Upgrading the plugin migrations."
+	cd "${REDMINE_DIR}" || die
 	RAILS_ENV="${RAILS_ENV}" ${RUBY} -S rake redmine:plugins:migrate || die
 	if [ ! -e "${REDMINE_DIR}"/plugins/redmine_git_hosting/ssh_keys/redmine_gitolite_admin_id_rsa ]; then
 		einfo "Generating SSH-Keypair for Redmine user"
