@@ -6,7 +6,7 @@ EAPI=5
 
 USE_RUBY="ruby19"
 RUBY_FAKEGEM_EXTRADOC="README.md"
-
+RUBY_FAKEGEM_EXTRAINSTALL="VERSION"
 inherit eutils ruby-fakegem
 
 DESCRIPTION="Git Library for Ruby. Gitlab fork"
@@ -29,4 +29,5 @@ ruby_add_rdepend "dev-ruby/charlock_holmes
 
 ruby_add_bdepend "test? (
 	dev-ruby/mocha
-	dev-ruby/pry )"
+	dev-ruby/pry
+	dev-ruby/slop )"
