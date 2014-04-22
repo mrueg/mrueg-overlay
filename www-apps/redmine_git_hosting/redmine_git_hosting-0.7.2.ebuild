@@ -34,7 +34,7 @@ pkg_setup() {
 
 all_ruby_install() {
 	dodoc README.md
-	rm README.md LICENSE
+	rm .gitignore README.md LICENSE
 	dodir "${REDMINE_DIR}"/plugins/${PN}
 	insinto "${REDMINE_DIR}"/plugins/${PN}
 	doins -r .
