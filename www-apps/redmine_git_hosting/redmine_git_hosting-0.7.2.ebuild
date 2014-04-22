@@ -38,5 +38,5 @@ all_ruby_install() {
 	dodir ${REDMINE_DIR}/plugins/${PN}
 	insinto ${REDMINE_DIR}/plugins/${PN}
 	doins -r .
-	fowners -r redmine:redmine ${REDMINE_DIR}/plugins/${PN}
+	fowners -R redmine:redmine ${REDMINE_DIR}/plugins/${PN}
 }
