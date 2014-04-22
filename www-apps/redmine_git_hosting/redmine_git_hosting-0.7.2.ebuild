@@ -58,11 +58,11 @@ pkg_config() {
 	fi
 	local RUBY=${RUBY:-ruby}
 	einfo "Upgrading the plugin migrations."
-	cd "${REDMINE_DIR}" || die
+	cd "${EPREFIX}${REDMINE_DIR}" || die
 	RAILS_ENV="${RAILS_ENV}" ${RUBY} -S rake redmine:plugins:migrate || die
-	if [ ! -e "${REDMINE_DIR}"/plugins/redmine_git_hosting/ssh_keys/redmine_gitolite_admin_id_rsa ]; then
+	if [ ! -e "${EPREFIX}${REDMINE_DIR}"/plugins/redmine_git_hosting/ssh_keys/redmine_gitolite_admin_id_rsa ]; then
 		einfo "Generating SSH-Keypair for Redmine user"
-		ssh-keygen -N '' -f "${REDMINE_DIR}"/plugins/redmine_git_hosting/ssh_keys/redmine_gitolite_admin_id_rsa || die
-		fowners redmine:redmine "${REDMINE_DIR}"/plugins/redmine_git_hosting/ssh_keys/redmine_gitolite_admin_ida_rsa{,.pub}
+		ssh-keygen -N '' -f "${EPREFIX}${REDMINE_DIR}"/plugins/redmine_git_hosting/ssh_keys/redmine_gitolite_admin_id_rsa || die
+		chown redmine:redmine "${EPREFIX}${REDMINE_DIR}"/plugins/redmine_git_hosting/ssh_keys/redmine_gitolite_admin_ida_rsa{,.pub} || die
 	fi
 }
