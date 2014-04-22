@@ -1,5 +1,0 @@
-*charlock_holmes-0.6.9.4 (19 Apr 2014)
-
-  19 Apr 2014; Manuel Rüger <mrueg@gentoo.org> +charlock_holmes-0.6.9.4.ebuild,
-  +files/charlock_holmes-0.6.9.4-extconf.patch, +metadata.xml:
-  [dev-ruby/charlock_holmes] Initial version.
