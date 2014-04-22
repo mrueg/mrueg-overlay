@@ -136,7 +136,7 @@ pkg_postinst() {
 		elog "For upgrade instructions take a look at:"
 		elog "http://www.redmine.org/wiki/redmine/RedmineUpgrade"
 	else
-		elog "Execute the following command to initlize environment:"
+		elog "Execute the following command to initialize environment:"
 		elog
 		elog "# cd ${EPREFIX}${REDMINE_DIR}"
 		elog "# cp config/database.yml.example config/database.yml"
