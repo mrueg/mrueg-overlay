@@ -20,3 +20,10 @@ KEYWORDS="~amd64"
 IUSE=""
 
 RUBY_S="gratr-${COMMIT_ID}"
+
+ruby_add_rdepend "dev-ruby/priorityqueue"
+
+all_ruby_prepare() {
+	# Remove bundled lib
+	rm -r lib/priority-queue || die
+}
