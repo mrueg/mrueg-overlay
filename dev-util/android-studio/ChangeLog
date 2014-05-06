@@ -1,3 +1,10 @@
+*android-studio-0.5.7.135.1138084 (06 May 2014)
+
+  06 May 2014; Manuel Rüger <mrueg@gentoo.org>
+  +android-studio-0.5.7.135.1138084.ebuild,
+  -android-studio-0.5.5.135.1122749.ebuild:
+  [dev-util/android-studio] Version bump. Cleanup old.
+
 *android-studio-0.5.5.135.1122749 (18 Apr 2014)
 
   18 Apr 2014; Manuel Rüger <mrueg@gentoo.org>
