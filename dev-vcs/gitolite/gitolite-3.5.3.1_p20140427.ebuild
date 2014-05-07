@@ -8,7 +8,7 @@ inherit perl-module user versionator vcs-snapshot
 
 DESCRIPTION="Highly flexible server for git directory version tracker"
 HOMEPAGE="http://github.com/sitaramc/gitolite"
-COMMIT_ID="c0e36b3e7f11bb67397d10f771e8b13e63bb605d"
+COMMIT_ID="14d75c65444aacc2a316847432997a79c894a5f8"
 SRC_URI="https://github.com/sitaramc/gitolite/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"

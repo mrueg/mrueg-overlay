@@ -1,3 +1,9 @@
+*gitolite-3.5.3.1_p20140427 (07 May 2014)
+
+  07 May 2014; Manuel Rüger <mrueg@gentoo.org>
+  +gitolite-3.5.3.1_p20140427.ebuild, -gitolite-3.5.3.1_p20140410.ebuild:
+  [dev-vcs/gitolite] Add new snapshot.
+
 *gitolite-3.5.3.1_p20140410 (18 Apr 2014)
 
   18 Apr 2014; Manuel Rüger <mrueg@gentoo.org>
