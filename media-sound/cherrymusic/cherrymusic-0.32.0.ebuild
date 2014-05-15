@@ -4,7 +4,7 @@
 
 EAPI=5
 PYTHON_REQ_USE='sqlite'
-PYTHON_COMPAT=( python{2_6,2_7,3_2} )
+PYTHON_COMPAT=( python{2_7,3_3} )
 inherit distutils-r1
 
 DESCRIPTION="A standalone music server based on CherryPy and jPlayer"
