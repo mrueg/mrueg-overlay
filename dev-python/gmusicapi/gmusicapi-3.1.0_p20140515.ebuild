@@ -9,7 +9,7 @@ inherit vcs-snapshot distutils-r1
 
 DESCRIPTION="An unofficial api for Google Play Music"
 HOMEPAGE="https://github.com/simon-weber/Unofficial-Google-Music-API/"
-COMMIT_ID="6d79fd11a802ef41ddd34103b971b4280196987f"
+COMMIT_ID="d7d3e0b3ccbd958e4558f55893728f9b2616f271"
 SRC_URI="https://github.com/simon-weber/Unofficial-Google-Music-API/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
