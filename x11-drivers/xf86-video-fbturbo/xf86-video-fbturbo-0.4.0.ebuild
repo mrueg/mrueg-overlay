@@ -10,10 +10,13 @@ DESCRIPTION="Drop-in replacement for xf86-video-fbdev and xf86-video-mali provid
 KEYWORDS="~amd64 ~arm"
 IUSE=""
 
-RDEPEND="x11-base/xorg-server"
+RDEPEND="x11-base/xorg-server
+	x11-libs/libdrm
+	x11-libs/pixman"
 DEPEND="${RDEPEND}
 	x11-proto/fontsproto
 	x11-proto/randrproto
 	x11-proto/renderproto
 	x11-proto/videoproto
+	x11-proto/xf86driproto
 	x11-proto/xproto"
