@@ -1,0 +1,5 @@
+*xf86-video-fbturbo-0.4.0 (21 May 2014)
+
+  21 May 2014; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
+  +xf86-video-fbturbo-0.4.0.ebuild:
+  [x11-drivers/xf86-video-fbturbo] Initial version.
