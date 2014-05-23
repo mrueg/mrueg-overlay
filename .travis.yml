@@ -13,7 +13,7 @@ before_script:
     - tar xjf portage-2.2.10.tar.bz2 -C portage
     - tar xJf portage-latest.tar.xz -C /usr/
     - cp portage/portage-2.2.10/cnf/repos.conf /etc/portage/
-
+    - /usr/bin/rsync --recursive --links --safe-links --perms --times --omit-dir-times --compress --force --whole-file --delete --stats --human-readable --timeout=180 --exclude=/distfiles --checksum --progress --quiet rsync://rsync.gentoo.org/gentoo-portage /usr/portage
 script: 
     - cd travis-overlay
     - "./../portage/portage-2.2.10/bin/repoman full -d"
