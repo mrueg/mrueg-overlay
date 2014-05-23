@@ -33,7 +33,6 @@ QA_PREBUILT="/opt/${PN}/crash_reporter
 	/opt/${PN}/plugin_host
 	/opt/${PN}/sublime_text"
 
-
 src_install() {
 	insinto /opt/${PN}
 	into /opt/${PN}
