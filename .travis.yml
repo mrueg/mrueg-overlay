@@ -1,6 +1,6 @@
 before_script:
     - mkdir travis-overlay
-    - mv !(travis-overlay) travis-overlay/
+    - mv !(travis-overlay) .* travis-overlay/
     - wget "http://distfiles.gentoo.org/distfiles/portage-2.2.10.tar.bz2"
     - wget "http://distfiles.gentoo.org/snapshots/portage-latest.tar.xz"
     - mkdir -p portage tree
