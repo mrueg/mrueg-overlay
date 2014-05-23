@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="media-libs/libpng:0
-	media-libs/libsdl[audio]
+	media-libs/libsdl[sound]
 	media-libs/sdl-mixer[wav]"
 DEPEND="${RDEPEND}
 	dev-libs/boost"
