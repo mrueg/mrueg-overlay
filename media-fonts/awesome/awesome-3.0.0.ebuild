@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://fortawesome.github.com/Font-Awesome"
 SRC_URI="https://github.com/FortAwesome/${MY_PN}/archive/v${PV}.tar.gz ->
 ${P}.tar.gz"
 
-LICENSE="OFL-1.1 CCPL-Attribution-3.0"
+LICENSE="OFL-1.1 CC-BY-3.0"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
