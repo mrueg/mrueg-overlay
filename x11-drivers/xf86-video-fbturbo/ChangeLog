@@ -1,3 +1,6 @@
+  25 May 2014; Manuel Rüger <mrueg@gentoo.org> xf86-video-fbturbo-0.4.0.ebuild:
+  [x11-drivers/xf86-video-turbo] Fix HOMEPAGE.
+
   21 May 2014; Manuel Rüger <mrueg@gentoo.org> xf86-video-fbturbo-0.4.0.ebuild:
   [x11-drivers/xf86-video-fbturbo] Add missing dependencies.
 
