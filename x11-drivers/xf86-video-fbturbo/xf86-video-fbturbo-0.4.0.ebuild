@@ -9,6 +9,7 @@ inherit xorg-2
 SRC_URI="https://github.com/ssvb/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 DESCRIPTION="Drop-in replacement for xf86-video-fbdev and xf86-video-mali providing a better performance on ARM"
 HOMEPAGE="https://github.com/ssvb/xf86-video-fbturbo"
+LICENSE="MIT GPL-2+"
 KEYWORDS="~arm"
 IUSE=""
 
