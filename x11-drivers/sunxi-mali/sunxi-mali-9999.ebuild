@@ -20,7 +20,24 @@ src_configure() {
 	emake config
 }
 
+src_compile() {
+	:;
+}
+
+src_install() {
+	dodir /usr/lib
+	emake DESTDIR="${D}" install
+}
+
 src_test() {
 	emake test
 	./test/test || die
+}
+
+pkg_postinst() {
+	elog "Don't forget to add a udev-rule for mali"
+	elog ""
+	elog "Put this into /etc/udev/rules.d/50-mali.rules"
+	elog "KERNEL==\"mali\", MODE=\"0660\", GROUP=\"video\""
+	elog "KERNEL==\"ump\", MODE=\"0660\", GROUP=\"video\""
 }
