@@ -34,6 +34,7 @@ src_compile() {
 
 src_install() {
 	dodir /usr/$(get_libdir)/opengl/${PN}/{lib,include}
+	touch "${D}"/usr/$(get_libdir)/opengl/${PN}/.gles-only || die
 	emake DESTDIR="${D}" prefix="/usr/$(get_libdir)/opengl/${PN}/" install
 }
 
