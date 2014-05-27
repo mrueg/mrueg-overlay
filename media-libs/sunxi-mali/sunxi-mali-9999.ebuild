@@ -13,10 +13,16 @@ LICENSE="all-rights-reserved"
 KEYWORDS=""
 IUSE=""
 
-DEPEND="x11-libs/libump"
+CDEPEND="x11-libs/libump"
+DEPEND="virtual/pkgconfig
+	${CDEPEND}"
 RDEPEND="
 	app-admin/eselect-opengl
-	${RDEPEND}"
+	${CDEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-glchar-pkgconfig.patch
+}
 
 src_configure() {
 	emake config
