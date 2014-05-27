@@ -21,7 +21,7 @@ RDEPEND="
 	${CDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-glchar-pkgconfig.patch
+	epatch "${FILESDIR}"/${PN}-glchar-pkgconfig.patch
 }
 
 src_configure() {
