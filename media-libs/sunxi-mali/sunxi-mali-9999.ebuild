@@ -28,7 +28,7 @@ src_compile() {
 
 src_install() {
 	dodir /usr/lib/opengl/${PN}
-	emake DESTDIR="${D}" prefix="/usr/lib/opengl/${PN}" install
+	emake DESTDIR="${D}" prefix="/usr/lib/opengl/${PN}/" install
 }
 
 src_test() {
