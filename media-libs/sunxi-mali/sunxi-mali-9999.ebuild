@@ -5,7 +5,7 @@
 EAPI=5
 
 EGIT_REPO_URI="https://github.com/linux-sunxi/${PN}.git"
-inherit xorg-2
+inherit multilib xorg-2
 
 DESCRIPTION="Proprietary Mali userspace driver"
 HOMEPAGE="https://github.com/linux-sunxi/sunxi-mali"
@@ -33,8 +33,8 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/lib/opengl/${PN}/{lib,include}
-	emake DESTDIR="${D}" prefix="/usr/lib/opengl/${PN}/" install
+	dodir /usr/$(get_libdir)/opengl/${PN}/{lib,include}
+	emake DESTDIR="${D}" prefix="/usr/$(get_libdir)/opengl/${PN}/" install
 }
 
 src_test() {
