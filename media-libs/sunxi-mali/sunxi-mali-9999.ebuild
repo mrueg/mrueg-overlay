@@ -5,7 +5,7 @@
 EAPI=5
 
 EGIT_REPO_URI="https://github.com/linux-sunxi/${PN}.git"
-inherit xorg-2
+inherit multilib xorg-2
 
 DESCRIPTION="Proprietary Mali userspace driver"
 HOMEPAGE="https://github.com/linux-sunxi/sunxi-mali"
@@ -13,8 +13,16 @@ LICENSE="all-rights-reserved"
 KEYWORDS=""
 IUSE=""
 
-RDEPEND="x11-libs/libump"
-DEPEND="${RDEPEND}"
+CDEPEND="x11-libs/libump"
+DEPEND="virtual/pkgconfig
+	${CDEPEND}"
+RDEPEND="
+	app-admin/eselect-opengl
+	${CDEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-glchar-pkgconfig.patch
+}
 
 src_configure() {
 	emake config
@@ -25,8 +33,9 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/lib
-	emake DESTDIR="${D}" install
+	dodir /usr/$(get_libdir)/opengl/${PN}/{lib,include}
+	touch "${D}"/usr/$(get_libdir)/opengl/${PN}/.gles-only || die
+	emake DESTDIR="${D}" prefix="/usr/$(get_libdir)/opengl/${PN}/" install
 }
 
 src_test() {
