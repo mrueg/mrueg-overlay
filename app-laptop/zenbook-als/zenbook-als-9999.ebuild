@@ -6,12 +6,12 @@ EAPI=5
 
 inherit qmake-utils
 
-if [ "${PV}" = "9999" ]; then
+if [[ "${PV}" = "9999" ]]; then
 	inherit git-2
 	EGIT_REPO_URI="git://github.com/danieleds/Asus-Zenbook-Ambient-Light-Sensor-Controller.git"
 	KEYWORDS=""
 else
-	COMMIT_ID="11e64b1df737f3e3f8439ffdc602f55357e046bc"
+	COMMIT_ID="ba447bc47271dbf69ac4a4bad11cfadc04df69c3"
 	SRC_URI="https://github.com/danieleds/Asus-Zenbook-Ambient-Light-Sensor-Controller/archive/${COMMIT_ID}.tar.gz -> ${P}-git.tar.gz"
 	KEYWORDS="~amd64"
 	S=${WORKDIR}/Asus-Zenbook-Ambient-Light-Sensor-Controller-${COMMIT_ID}
@@ -26,8 +26,7 @@ IUSE=""
 
 DEPEND="dev-libs/libbsd"
 RDEPEND="${DEPEND}
-	app-laptop/zenbook-als-module
-	sys-power/acpi_call"
+	app-laptop/zenbook-als-module"
 
 src_configure() {
 	eqmake4 service/als-controller.pro
