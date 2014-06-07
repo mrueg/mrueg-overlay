@@ -16,21 +16,10 @@ LICENSE="all-rights-reserved"
 SLOT="0"
 IUSE=""
 
-MODULE_NAMES="(misc:${S})"
+MODULE_NAMES="mali_drm(:${S}/DX910-SW-99002-r3p2-01rel2/driver/src/egl/x11/drm_module/mali_drm.rk30) ump(:${S}/DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/ump) mali(:${S}/DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/mali)"
 BUILD_TARGETS="all"
 
 src_compile(){
-	BUILD_PARAMS="EXTRA_CFLAGS=\"-D__linux__\" KDIR=${KV_OUT_DIR} M=${S}/DX910-SW-99002-r3p2-01rel2/driver/src/egl/x11/drm_module/mali_drm.rk30/ -C ${S}/DX910-SW-99002-r3p2-01rel2/driver/src/egl/x11/drm_module/mali_drm.rk30"
+	BUILD_PARAMS="EXTRA_CFLAGS=\"-D__linux__ -DMALI_VOLTAGE_LOCK=0 -DMALI_POWER_MGMT_TEST_SUITE=0\" MALI_SHARED_INTERRUPTS=1 MALI_PLATFORM=rk30 TARGET_PLATFORM=rk30 USING_UMP=1 CONFIG=rk30-m400-4 BUILD=release KDIR=${KV_OUT_DIR} M=${S}"
 	linux-mod_src_compile
-	BUILD_PARAMS="KDIR=${KV_OUT_DIR} M=${S}/DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/ump -C ${S}/DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/ump CONFIG=rk30-m400-4 BUILD=release"
-	linux-mod_src_compile
-	BUILD_PARAMS="EXTRA_CFLAGS=\"-DMALI_VOLTAGE_LOCK=0 -DMALI_POWER_MGMT_TEST_SUITE=0\" KDIR=${KV_OUT_DIR} M=${S}/DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/mali -C ${S}/DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/mali USING_UMP=1 BUILD=release TARGET_PLATFORM=rk30 MALI_PLATFORM=rk30 MALI_SHARED_INTERRUPTS=1"
-	linux-mod_src_compile
-}
-
-src_install(){
-	insinto /lib/modules/${KV_FULL}/
-	doins DX910-SW-99002-r3p2-01rel2/driver/src/egl/x11/drm_module/mali_drm.rk30/mali_drm.${KV_OBJ}
-	doins DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/ump/ump.${KV_OBJ}
-	doins DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/mali/mali.${KV_OBJ}
 }
