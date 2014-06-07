@@ -5,4 +5,7 @@
 		<email>mrueg@gentoo.org</email>
 		<name>Manuel Rüger</name>
 	</maintainer>
+	<use>
+		<flag name="firmware">Install linux kernel firmware</flag>
+	</use>
 </pkgmetadata>
