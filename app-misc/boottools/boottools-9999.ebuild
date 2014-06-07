@@ -12,7 +12,7 @@ HOMEPAGE="https://github.com/AndroidRoot/BootTools"
 
 LICENSE="Apache-2.0 BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm"
+KEYWORDS=""
 IUSE=""
 
 src_prepare() {
