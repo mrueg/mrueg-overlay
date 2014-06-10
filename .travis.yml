@@ -21,7 +21,7 @@ before_script:
     - cp portage-${PORTAGE_VER}/cnf/repos.conf /etc/portage/
     - rsync --recursive --links --safe-links --perms --times --omit-dir-times --compress --force --whole-file --delete --stats --human-readable --timeout=180 --exclude=/distfiles --checksum --quiet rsync://rsync.gentoo.org/gentoo-portage /usr/portage
     - ln -s /usr/portage/profiles/base/ /etc/portage/make.profile
-    - wget "http://www.gentoo.org/dtd/metadata.dtd" -O /usr/portage/distfiles/
+    - wget "http://www.gentoo.org/dtd/metadata.dtd" -O /usr/portage/distfiles/metadata.dtd
     - cd travis-overlay
 script: 
     - "./../portage-${PORTAGE_VER}/bin/repoman full -d"
