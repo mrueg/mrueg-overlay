@@ -22,31 +22,37 @@ RDEPEND="
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-glchar-pkgconfig.patch
+	cp "${FILESDIR}"/mali_clz_lut_dump.c . || die
 }
 
 src_configure() {
 	emake config
+	VERSION=$( ./version/version )
 }
 
 src_compile() {
-	:;
+	MALI_DIR="lib/mali/${VERSION}/armhf/x11/"
+	# Hack around due to missing _mali_clz_lut 
+	$(CC) $(CFLAGS) mali_clz_lut_dump.c -lGLESv2 || die
+	./a.out fake_mali_clz_lut.c || die
+	$(CC) -fPIC -shared $(CFLAGS) -o ${MALI_DIR}/fake_mali_clz_lut.so fake_mali_clz_lut.c || die
+	cd ${MALI_DIR} || die
+	mv libEGL.so.1.4 libEGL_Mali.so || die
+	$(CC) --shared W1,--no-as-needed -lEGL_Mali -lfake_mali_clz_lut -o libEGL.so.1.4 || die
 }
 
 src_install() {
 	dodir /usr/$(get_libdir)/opengl/${PN}/{lib,include}
 	touch "${D}"/usr/$(get_libdir)/opengl/${PN}/.gles-only || die
 	emake DESTDIR="${D}" prefix="/usr/$(get_libdir)/opengl/${PN}/" install
+	insinto /usr/$(get_libdir)/opengl/${PN}/lib
+	doins ${MALI_DIR}/libEGL_Mali.so ${MALI_DIR}/fake_mali_clz_lut.so
+	dodir /etc/udev/rules.d
+	insinto /etc/udev/rules.d
+	doins "${FILESDIR}"/50-mali.rules
 }
 
 src_test() {
 	emake test
 	./test/test || die
-}
-
-pkg_postinst() {
-	elog "Don't forget to add a udev-rule for mali"
-	elog ""
-	elog "Put this into /etc/udev/rules.d/50-mali.rules"
-	elog "KERNEL==\"mali\", MODE=\"0660\", GROUP=\"video\""
-	elog "KERNEL==\"ump\", MODE=\"0660\", GROUP=\"video\""
 }
