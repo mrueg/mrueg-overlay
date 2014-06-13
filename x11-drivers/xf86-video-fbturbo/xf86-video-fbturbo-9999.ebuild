@@ -5,6 +5,7 @@
 EAPI=5
 
 EGIT_REPO_URI="https://github.com/ssvb/${PN}.git"
+EGIT_BRANCH="mali-r3p2-support"
 inherit xorg-2
 
 DESCRIPTION="Drop-in replacement for xf86-video-fbdev and xf86-video-mali providing a better performance on ARM"
@@ -15,6 +16,7 @@ IUSE=""
 
 RDEPEND="x11-base/xorg-server
 	x11-libs/libdrm
+	x11-libs/libump
 	x11-libs/pixman"
 DEPEND="${RDEPEND}
 	x11-proto/fontsproto
