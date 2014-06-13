@@ -4,7 +4,7 @@
 
 EAPI=5
 
-EGIT_REPO_URI="https://github.com/radxa/initrd.git"
+EGIT_REPO_URI="https://github.com/neo-technologies/radxa_initrd.git"
 inherit git-r3
 
 DESCRIPTION="Ramdisk for radxa rock"
@@ -19,7 +19,7 @@ DEPEND="app-arch/cpio"
 
 src_compile() {
 	COMMIT_ID=$(git-r3_peek_remote_ref)
-	find . ! -path "./.git*" ! -path "./README" ! -path "./Makefile"  | cpio -H newc -o > initrd-${COMMIT_ID}.img
+	find . ! -path "./.git*" ! -path "./README" ! -path "./Makefile"  | cpio -H newc -o > initrd-${COMMIT_ID}.img || die
 
 }
 
