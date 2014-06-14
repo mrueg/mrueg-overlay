@@ -46,8 +46,7 @@ src_install() {
 	emake DESTDIR="${D}" prefix="/usr/$(get_libdir)/opengl/${PN}/" install
 	insinto /usr/$(get_libdir)/opengl/${PN}/lib
 	doins ${MALI_DIR}/libEGL_Mali.so ${MALI_DIR}/libfake_mali_clz_lut.so
-	dodir /etc/udev/rules.d
-	insinto /etc/udev/rules.d
+	insinto /lib/udev/rules.d
 	doins "${FILESDIR}"/50-mali.rules
 }
 
