@@ -7,6 +7,7 @@ USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 RUBY_FAKEGEM_EXTRADOC="README.md History.markdown"
+RUBY_FAKEGEM_TASK_DOC=""
 
 inherit ruby-fakegem
 
@@ -16,7 +17,7 @@ HOMEPAGE="https://github.com/jekyll/jekyll-coffeescript"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+IUSE="test"
 
 all_ruby_prepare() {
 	sed -i -e '/bundler/d' Rakefile || die
@@ -27,4 +28,4 @@ all_ruby_prepare() {
 }
 
 ruby_add_rdepend "dev-ruby/coffee-script"
-ruby_add_bdepend "www-apps/jekyll"
+ruby_add_bdepend "test? ( www-apps/jekyll )"
