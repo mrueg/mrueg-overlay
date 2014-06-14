@@ -7,6 +7,8 @@ EAPI=5
 USE_RUBY="ruby19"
 RUBY_FAKEGEM_EXTRADOC="README.md"
 RUBY_FAKEGEM_EXTRAINSTALL="VERSION"
+RUBY_FAKEGEM_RECIPE_DOC="rdoc"
+
 inherit eutils ruby-fakegem
 
 DESCRIPTION="Git Library for Ruby. Gitlab fork"
