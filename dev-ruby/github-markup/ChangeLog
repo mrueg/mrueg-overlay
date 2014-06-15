@@ -1,3 +1,6 @@
+  15 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -github-markup-1.2.0.ebuild:
+  [dev-ruby/github_markup] Cleanup old.
+
 *github-markup-1.2.1 (30 May 2014)
 
   30 May 2014; Manuel Rüger <mrueg@gentoo.org> +github-markup-1.2.1.ebuild:
