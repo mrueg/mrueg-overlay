@@ -6,7 +6,7 @@ EAPI=5
 
 inherit linux-mod git-r3
 EGIT_REPO_URI="https://github.com/linux-rockchip/mali-modules.git"
-EGIT_REPO_BRANCH="r3p2-01re12-olegk0"
+EGIT_REPO_BRANCH="r3p2-01rel2-olegk0"
 KEYWORDS=""
 
 DESCRIPTION="Kernel modules for Mali driver"
@@ -16,7 +16,8 @@ LICENSE="all-rights-reserved"
 SLOT="0"
 IUSE=""
 
-MODULE_NAMES="mali_drm(:${S}/DX910-SW-99002-r3p2-01rel2/driver/src/egl/x11/drm_module/mali_drm.rk30) ump(:${S}/DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/ump) mali(:${S}/DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/mali)"
+BASE_DIR="DX910-SW-99002-r3p2-01rel2/driver/src"
+MODULE_NAMES="mali_drm(:${S}/${BASE_DIR}/egl/x11/drm_module/mali_drm.rk30) ump(:${S}/${BASE_DIR}/devicedrv/ump) mali(:${S}/${BASE_DIR}/devicedrv/mali)"
 BUILD_TARGETS="all"
 
 src_compile(){
