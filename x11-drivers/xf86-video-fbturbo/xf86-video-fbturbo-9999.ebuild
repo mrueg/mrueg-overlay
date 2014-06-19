@@ -12,7 +12,7 @@ DESCRIPTION="Drop-in replacement for xf86-video-fbdev and xf86-video-mali provid
 HOMEPAGE="https://github.com/ssvb/xf86-video-fbturbo"
 LICENSE="MIT GPL-2+"
 KEYWORDS=""
-IUSE=""
+IUSE="ump"
 
 RDEPEND="x11-base/xorg-server
 	x11-libs/libdrm
@@ -25,3 +25,7 @@ DEPEND="${RDEPEND}
 	x11-proto/videoproto
 	x11-proto/xf86driproto
 	x11-proto/xproto"
+
+src_configure() {
+	econf --enable-libump=$(usex ump)
+}

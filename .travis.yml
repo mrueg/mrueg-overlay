@@ -11,7 +11,6 @@ before_script:
     - mv !(travis-overlay) travis-overlay/
     - mv .git travis-overlay/
     - wget "https://raw.githubusercontent.com/mrueg/repoman-travis/master/.travis.yml" -O .travis.yml.upstream
-    - if cmp -s .travis.yml .travis.yml.upstream; then  echo -e ".travis.yml outdated! Update available https://github.com/mrueg/repoman-travis"; fi
     - wget "http://distfiles.gentoo.org/distfiles/portage-${PORTAGE_VER}.tar.bz2"
     - wget "http://distfiles.gentoo.org/snapshots/portage-latest.tar.xz"
     - wget "https://raw.githubusercontent.com/mrueg/repoman-travis/master/spinner.sh"
@@ -27,4 +26,5 @@ before_script:
     - wget "http://www.gentoo.org/dtd/metadata.dtd" -O /usr/portage/distfiles/metadata.dtd
     - cd travis-overlay
 script:
+    - if ! cmp -s ../.travis.yml ../.travis.yml.upstream; then  echo -e ".travis.yml outdated! Update available https://github.com/mrueg/repoman-travis"; fi
     - ./../spinner.sh "./../portage-${PORTAGE_VER}/bin/repoman full -d"
