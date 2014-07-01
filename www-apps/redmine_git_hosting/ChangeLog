@@ -1,3 +1,7 @@
+  01 Jul 2014; Manuel Rüger <mrueg@gentoo.org>
+  -redmine_git_hosting-0.7.2.ebuild:
+  [www-apps/redmine_git_hosting] Cleanup old.
+
 *redmine_git_hosting-0.7.3 (11 Jun 2014)
 
   11 Jun 2014; Manuel Rüger <mrueg@gentoo.org>
