@@ -1,3 +1,9 @@
+*redmine-2.4.6 (06 Jul 2014)
+
+  06 Jul 2014; Manuel Rüger <mrueg@gentoo.org> +redmine-2.4.6.ebuild,
+  -redmine-2.4.5.ebuild:
+  [www-apps/redmine] Version bump. Cleanup old.
+
   23 May 2014; Manuel Rüger <mrueg@gentoo.org> redmine-2.5.1.ebuild:
   [www-apps/redmine] Drop keyword as it is not working.
 
