@@ -13,7 +13,6 @@ detect_arch
 
 EGIT_REPO_URI="https://github.com/linux-rockchip/kernel_rockchip.git"
 EGIT_BRANCH="radxa/radxa-dev-kk"
-SLOT=$PVR-${$EGIT_BRANCH/\/-}
 inherit git-r3
 
 DESCRIPTION="Kernel sources for Radxa Rock"
