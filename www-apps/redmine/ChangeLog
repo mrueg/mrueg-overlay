@@ -1,3 +1,6 @@
+  25 Jul 2014; Manuel Rüger <mrueg@gentoo.org> redmine-2.4.6.ebuild:
+  [www-apps/redmine] Add sanity check for ruby versions during pkg_config.
+
 *redmine-2.4.6 (06 Jul 2014)
 
   06 Jul 2014; Manuel Rüger <mrueg@gentoo.org> +redmine-2.4.6.ebuild,
