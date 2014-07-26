@@ -1,3 +1,8 @@
+*gitlab-grit-2.7.0 (26 Jul 2014)
+
+  26 Jul 2014; Manuel Rüger <mrueg@gentoo.org> +gitlab-grit-2.7.0.ebuild:
+  [dev-ruby/gitlab-grit] Version bump.
+
 *gitlab-grit-2.6.9 (28 Jun 2014)
 
   28 Jun 2014; Manuel Rüger <mrueg@gentoo.org> +gitlab-grit-2.6.9.ebuild,
