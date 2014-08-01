@@ -1,5 +1,0 @@
-*malai-0.2_pre20121026 (09 Dec 2012)
-
-  09 Dec 2012; Manuel Rueger (mrueg) gentoo@rueg.eu
-  +files/malai-build.xml.patch, +malai-0.2_pre20121026.ebuild, +metadata.xml:
-  dev-java/malai: Initial version

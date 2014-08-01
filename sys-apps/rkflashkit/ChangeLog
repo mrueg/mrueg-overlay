@@ -1,5 +1,0 @@
-*rkflashkit-0.1.1 (18 Jan 2014)
-
-  18 Jan 2014; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
-  +rkflashkit-0.1.1.ebuild:
-  [sys-apps/rkflashkit] Initial version.

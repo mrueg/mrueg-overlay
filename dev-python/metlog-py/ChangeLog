@@ -1,5 +1,0 @@
-*metlog-py-0.10.0 (30 Jul 2013)
-
-  30 Jul 2013; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
-  +metlog-py-0.10.0.ebuild:
-  Taken from bug #459504, minor changes

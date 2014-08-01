@@ -1,8 +1,0 @@
-  23 May 2014; Manuel Rüger <mrueg@gentoo.org> flyhard-0.42.ebuild:
-  [games-arcarde/flyhard] Rename audio useflag to sound.
-
-*flyhard-0.42 (09 Sep 2012)
-
-  09 Sep 2012; Manuel Rüger (mrueg) gentoo@rueg.eu
-  +files/flyhard-0.42-Makefile.patch, +flyhard-0.42.ebuild, +metadata.xml:
-  games-arcade/flyhard: Initial ebuild

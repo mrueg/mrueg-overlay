@@ -1,5 +1,0 @@
-*gync-0.1.2 (27 Sep 2012)
-
-  27 Sep 2012; Manuel Rueger (mrueg) gentoo@rueg.eu +gync-0.1.2.ebuild,
-  +metadata.xml:
-  dev-vcs/gync: Initial ebuild

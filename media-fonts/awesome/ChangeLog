@@ -1,8 +1,0 @@
-  23 May 2014; Manuel Rüger <mrueg@gentoo.org> awesome-3.0.0.ebuild:
-  [media-fonts/awesome] Update license.
-
-*awesome-3.0.0 (04 Jan 2013)
-
-  04 Jan 2013; Manuel Rüger <gentoo@rueg.eu> +awesome-3.0.0.ebuild,
-  +metadata.xml:
-  media-fonts/awesome: Initial version

@@ -1,8 +1,0 @@
-  14 Jun 2014; Manuel Rüger <mrueg@gentoo.org> jekyll-coffeescript-1.0.0.ebuild:
-  [www-apps/jekyll-coffeescript] Fix build with doc.
-
-*jekyll-coffeescript-1.0.0 (14 Feb 2014)
-
-  14 Feb 2014; Manuel Rüger <mrueg@gentoo.org>
-  +jekyll-coffeescript-1.0.0.ebuild, +metadata.xml:
-  [www-apps/jekyll-coffeescript] Initial ebuild.

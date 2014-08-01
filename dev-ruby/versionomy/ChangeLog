@@ -1,6 +1,0 @@
-*versionomy-0.4.4 (06 Jan 2013)
-
-  06 Jan 2013; Manuel Rüger <gentoo@rueg.eu>
-  +files/versionomy-0.4.4-fix-tests.patch, +metadata.xml,
-  +versionomy-0.4.4.ebuild:
-  dev-ruby/versionomy: Initial version

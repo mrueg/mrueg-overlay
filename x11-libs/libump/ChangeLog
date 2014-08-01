@@ -1,6 +1,0 @@
-*libump-0_p20140326 (21 May 2014)
-*libump-9999 (21 May 2014)
-
-  21 May 2014; Manuel Rüger <mrueg@gentoo.org> +libump-0_p20140326.ebuild,
-  +libump-9999.ebuild, +metadata.xml:
-  [x11-libs/libump] Initial version.

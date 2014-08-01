@@ -1,5 +1,0 @@
-*stagger-0.4.2 (08 Jan 2013)
-
-  08 Jan 2013; Manuel Rueger (mrueg) gentoo@rueg.eu +metadata.xml,
-  +stagger-0.4.2.ebuild:
-  media-sound/stagger: Initial version

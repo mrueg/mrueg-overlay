@@ -1,5 +1,0 @@
-*grit-2.5.0 (30 Sep 2012)
-
-  30 Sep 2012; Manuel Rueger (mrueg) gentoo@rueg.eu +grit-2.5.0.ebuild,
-  +metadata.xml:
-  dev-ruby/grit: Initial version

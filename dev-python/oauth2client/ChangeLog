@@ -1,5 +1,0 @@
-*oauth2client-1.2 (03 Mar 2014)
-
-  03 Mar 2014; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
-  +oauth2client-1.2.ebuild:
-  [dev-python/oauth2client] Initial version.

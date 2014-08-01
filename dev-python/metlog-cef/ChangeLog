@@ -1,5 +1,0 @@
-*metlog-cef-0.2 (30 Jul 2013)
-
-  30 Jul 2013; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
-  +metlog-cef-0.2.ebuild:
-  Pulled from bug #459502

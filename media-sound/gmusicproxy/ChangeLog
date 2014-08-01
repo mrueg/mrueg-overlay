@@ -1,8 +1,0 @@
-  27 Mar 2014; Manuel Rüger <mrueg@gentoo.org> gmusicproxy-0.9.5.ebuild:
-  [media-sound/gmusicproxy] Add missing dependency on eyeD3.
-
-*gmusicproxy-0.9.5 (27 Mar 2014)
-
-  27 Mar 2014; Manuel Rüger <mrueg@gentoo.org> +gmusicproxy-0.9.5.ebuild,
-  +metadata.xml:
-  [media-sound/gmusicproxy] Initial commit.
