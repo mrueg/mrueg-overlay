@@ -10,7 +10,7 @@ RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 
 inherit ruby-fakegem
 
-DESCRIPTION="A Ruby bindings to the libgit2 linkable C Git library"
+DESCRIPTION="Ruby bindings to the libgit2 linkable C Git library"
 HOMEPAGE="https://github.com/libgit2/rugged"
 SRC_URI="https://github.com/libgit2/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	test? ( https://github.com/libgit2/libgit2/archive/v${PV}.tar.gz -> ${P}-libgit2.tar.gz )"
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND+=" dev-libs/libgit2"
+RDEPEND+=" >=dev-libs/libgit2-${PV}"
 
 ruby_add_bdepend "test? (
 	dev-ruby/minitest
@@ -29,7 +29,6 @@ ruby_add_bdepend "test? (
 
 all_ruby_unpack() {
 	[[ -n ${A} ]] && unpack ${A}
-	ls -lisa
 	if use test; then
 		mv libgit2-*/* ${P}/vendor/libgit2/ || die
 	fi
