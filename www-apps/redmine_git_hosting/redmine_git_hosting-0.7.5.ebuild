@@ -4,7 +4,7 @@
 
 EAPI=5
 
-USE_RUBY="ruby19"
+USE_RUBY="ruby19 ruby20"
 inherit ruby-ng user
 
 DESCRIPTION="A Redmine plugin which makes configuring your own Git hosting easy"
@@ -16,17 +16,18 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND+=" www-apps/redmine"
-
-ruby_add_rdepend "dev-ruby/lockfile
-	>=dev-ruby/jbox-gitolite-1.2.2
-	dev-ruby/redcarpet
-	dev-ruby/github-markup
-	dev-ruby/redcloth
-	dev-ruby/org-ruby
+ruby_add_rdepend "dev-ruby/asciidoctor
 	dev-ruby/creole
+	dev-ruby/github-markup
+	>=dev-ruby/jbox-gitolite-1.2.2
+	dev-ruby/lockfile
+	dev-ruby/org-ruby
+	dev-ruby/redcarpet
+	dev-ruby/redcloth
 	dev-ruby/wikicloth
-	dev-ruby/asciidoctor"
+	www-apps/redmine"
+
+ruby_add_bdepend "www-apps/redmine"
 
 REDMINE_DIR="/var/lib/redmine"
 
