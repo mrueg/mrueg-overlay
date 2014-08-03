@@ -11,7 +11,7 @@ inherit mercurial distutils-r1
 MY_PN="Pygments"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="Pygments is a syntax highlighting package written in Python."
+DESCRIPTION="Pygments is a syntax highlighting package written in Python"
 HOMEPAGE="http://pygments.org/ http://pypi.python.org/pypi/Pygments"
 
 LICENSE="BSD"
