@@ -11,7 +11,7 @@ RUBY_FAKEGEM_EXTRADOC="HISTORY.md README.md"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Used on GitHub when rendering README or any other rich text file."
+DESCRIPTION="Used on GitHub when rendering README or any other rich text file"
 HOMEPAGE="https://github.com/github/markup"
 #SRC_URI="https://github.com/github/markup/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
