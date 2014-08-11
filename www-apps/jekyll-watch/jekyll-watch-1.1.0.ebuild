@@ -25,4 +25,6 @@ ruby_add_bdepend "test? ( >=www-apps/jekyll-2 )"
 
 all_ruby_prepare() {
 	rm Rakefile || die
+	# Fix tests until Rspec:3 is in tree
+	sed -i -e "/default_formatter/d" -e "/verify_partial_doubles/d" spec/spec_helper.rb || die
 }
