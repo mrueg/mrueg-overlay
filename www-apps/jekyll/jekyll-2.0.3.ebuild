@@ -29,8 +29,8 @@ ruby_add_rdepend "dev-ruby/classifier
 	=dev-ruby/yajl-ruby-1.1*
 	>=dev-ruby/safe_yaml-1
 	dev-ruby/toml
-	www-apps/jekyll-coffeescript"
-	#www-apps/jekyll-sass-converter"
+	www-apps/jekyll-coffeescript
+	www-apps/jekyll-sass-converter"
 
 ruby_add_bdepend "test? (
 		dev-ruby/activesupport:3.2
