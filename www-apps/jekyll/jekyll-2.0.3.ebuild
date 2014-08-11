@@ -9,6 +9,7 @@ inherit ruby-fakegem
 
 RUBY_FAKEGEM_EXTRADOC="CONTRIBUTING.markdown README.markdown History.markdown"
 RUBY_FAKEGEM_EXTRAINSTALL="features"
+RUBY_FAKEGEM_GEMSPEC="${PN}.gemspec"
 
 DESCRIPTION="A simple, blog aware, static site generator"
 HOMEPAGE="http://jekyllrb.com http://github.com/mojombo/jekyll"
