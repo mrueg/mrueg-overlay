@@ -18,10 +18,5 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-all_ruby_prepare() {
-	sed -i -e '/bundler/d' Rakefile || die
-}
-
 ruby_add_rdepend "dev-ruby/sass"
-
 ruby_add_bdepend "test? ( >=www-apps/jekyll-2 )"

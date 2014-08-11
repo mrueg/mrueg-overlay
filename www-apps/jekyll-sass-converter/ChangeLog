@@ -1,3 +1,7 @@
+  11 Aug 2014; Manuel Rüger <mrueg@gentoo.org>
+  jekyll-sass-converter-1.2.0.ebuild:
+  [www-apps/jekyll-sass-converter] Remove prepare phase.
+
 *jekyll-sass-converter-1.2.0 (11 Aug 2014)
 
   11 Aug 2014; Manuel Rüger <mrueg@gentoo.org>
