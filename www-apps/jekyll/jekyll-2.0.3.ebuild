@@ -43,5 +43,6 @@ ruby_add_bdepend "test? (
 		>=dev-ruby/shoulda-3 )"
 
 all_ruby_prepare() {
+	sed -i -e "s/\"~> 0.5.0\"/\">= 0.5.0\"/" ${PN}.gemspec || die
 	sed -i -e "/simplecov/,/Coveralls/d" test/helper.rb || die
 }
