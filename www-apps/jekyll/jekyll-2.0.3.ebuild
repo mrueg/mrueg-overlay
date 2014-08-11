@@ -24,7 +24,7 @@ ruby_add_rdepend "dev-ruby/classifier
 	>=dev-ruby/liquid-2.5.5
 	>=dev-ruby/listen-2.5
 	>=dev-ruby/mercenary-0.3.3
-	dev-ruby/pygments_rb
+	>=dev-ruby/pygments_rb-0.5
 	>=dev-ruby/redcarpet-3.1
 	=dev-ruby/yajl-ruby-1.1*
 	>=dev-ruby/safe_yaml-1
@@ -43,6 +43,6 @@ ruby_add_bdepend "test? (
 		>=dev-ruby/shoulda-3 )"
 
 all_ruby_prepare() {
-	sed -i -e "s/\"~> 0.5.0\"/\">= 0.5.0\"/" ${PN}.gemspec || die
+	sed -i -e "s/\"~> 0.5.0\"/'>= 0.5.0'/" ${PN}.gemspec || die
 	sed -i -e "/simplecov/,/Coveralls/d" test/helper.rb || die
 }
