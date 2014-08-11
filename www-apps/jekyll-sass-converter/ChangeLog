@@ -1,5 +1,9 @@
   11 Aug 2014; Manuel Rüger <mrueg@gentoo.org>
   jekyll-sass-converter-1.2.0.ebuild:
+  [www-apps/jekyll-sass-converter] Fix tests.
+
+  11 Aug 2014; Manuel Rüger <mrueg@gentoo.org>
+  jekyll-sass-converter-1.2.0.ebuild:
   [www-apps/jekyll-sass-converter] Use tarball instead of gem, fix HOMEPAGE.
 
   11 Aug 2014; Manuel Rüger <mrueg@gentoo.org>

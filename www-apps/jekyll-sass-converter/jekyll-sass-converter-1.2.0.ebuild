@@ -25,4 +25,6 @@ ruby_add_bdepend "test? ( >=www-apps/jekyll-2 )"
 
 all_ruby_prepare() {
 	rm Rakefile || die
+	# Fix tests until rspec:3 is in tree.
+	sed -i -e "s/truthy/true/" -e "s/falsey/false/" spec/scss_converter_spec.rb spec/sass_coverter_spec.rb || die
 }
