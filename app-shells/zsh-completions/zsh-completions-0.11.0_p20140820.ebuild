@@ -8,7 +8,7 @@ inherit vcs-snapshot
 
 DESCRIPTION="Additional completion definitions for Zsh"
 HOMEPAGE="https://github.com/zsh-users/zsh-completions"
-COMMIT_ID="409c9763f1d723cd06bd02c7759bba3d3372232e"
+COMMIT_ID="8d3c8e6541e9c1f20fe3c67e333920eba00c0cd7"
 SRC_URI="https://github.com/zsh-users/${PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
