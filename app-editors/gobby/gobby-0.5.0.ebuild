@@ -8,19 +8,16 @@ inherit autotools eutils gnome2-utils toolchain-funcs
 
 DESCRIPTION="GTK-based collaborative editor"
 HOMEPAGE="http://gobby.0x539.de/"
-COMMIT_ID="10afee1813bbebc03c8b5acba61dbba862d620a1"
-SRC_URI="https://github.com/gobby/gobby/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/gobby/gobby/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="ISC"
 SLOT="0.5"
 KEYWORDS="~amd64 ~x86"
 IUSE="avahi doc nls"
 
-S=${WORKDIR}/${PN}-${COMMIT_ID}
-
 RDEPEND="dev-cpp/glibmm:2
 	dev-cpp/gtkmm:3.0
 	dev-libs/libsigc++:2
-	>=net-libs/libinfinity-0.6_pre20140810[gtk,avahi?]
+	>=net-libs/libinfinity-0.6.1[gtk,avahi?]
 	x11-libs/gtk+:3
 	dev-cpp/libxmlpp:2.6
 	x11-libs/gtksourceview:3.0"
