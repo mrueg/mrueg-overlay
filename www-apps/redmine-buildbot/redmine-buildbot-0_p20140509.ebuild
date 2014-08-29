@@ -17,6 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
+S=${WORKDIR}/${PN}-${COMMIT_ID}
+
 ruby_add_rdepend "
 	www-apps/redmine"
 
