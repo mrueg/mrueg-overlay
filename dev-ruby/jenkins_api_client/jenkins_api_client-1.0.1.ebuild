@@ -8,6 +8,7 @@ USE_RUBY="ruby19 ruby20"
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 RUBY_FAKEGEM_RECIPE_DOC="yard"
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG.md README.md"
+RUBY_FAKEGEM_EXTRA_INSTALL="java_deps"
 
 inherit ruby-fakegem
 
@@ -25,6 +26,8 @@ ruby_add_rdepend "
 	>=dev-ruby/nokogiri-1.6
 	dev-ruby/terminal-table
 	>=dev-ruby/thor-0.16.0"
+
+RDEPEND+=" >=virtual/jre-1.5"
 
 all_ruby_prepare() {
 	# Only run unit_tests
