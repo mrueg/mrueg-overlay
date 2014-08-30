@@ -22,9 +22,9 @@ IUSE=""
 ruby_add_rdepend "
 	dev-ruby/json
 	dev-ruby/mixlib-shellout
-	dev-ruby/nokogiri
+	>=dev-ruby/nokogiri-1.6
 	dev-ruby/terminal-table
-	dev-ruby/thor"
+	>=dev-ruby/thor-0.16.0"
 
 all_ruby_prepare() {
 	# Only run unit_tests
