@@ -18,6 +18,8 @@ KEYWORDS="~amd64"
 IUSE=""
 
 ruby_add_rdepend "
+	dev-ruby/jenkins_api_client
+	dev-ruby/will_paginate
 	www-apps/redmine
 	www-apps/redmine_bootstrap_kit"
 
