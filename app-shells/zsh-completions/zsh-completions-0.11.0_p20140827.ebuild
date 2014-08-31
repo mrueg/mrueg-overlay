@@ -8,15 +8,14 @@ inherit vcs-snapshot
 
 DESCRIPTION="Additional completion definitions for Zsh"
 HOMEPAGE="https://github.com/zsh-users/zsh-completions"
-COMMIT_ID="8d3c8e6541e9c1f20fe3c67e333920eba00c0cd7"
+COMMIT_ID="732cbc81e29ac622b6075a2891406a2b5b189385"
 SRC_URI="https://github.com/zsh-users/${PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="+gentoo-zsh-completion"
-RDEPEND="app-shells/zsh
-	gentoo-zsh-completion? ( app-shells/zsh-completion )"
+RDEPEND="gentoo-zsh-completion? ( app-shells/zsh-completion )"
 
 src_install() {
 	insinto /usr/share/zsh/site-functions/
