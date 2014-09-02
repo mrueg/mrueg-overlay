@@ -4,9 +4,9 @@
 
 EAPI=5
 
-inherit vcs-snapshot toolchain-funcs
+inherit vcs-snapshot
 
-COMMIT_ID="c934ca8f6fed7030e9d70ce077137d372689d236"
+COMMIT_ID="20d941d63aef95da0ff1c5bdae6e9773fbe3c396"
 DESCRIPTION="PDF presentation tool"
 HOMEPAGE="https://github.com/TrilbyWhite/Slider"
 SRC_URI="https://github.com/TrilbyWhite/Slider/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
@@ -17,7 +17,14 @@ KEYWORDS="~amd64"
 IUSE=""
 
 RDEPEND="app-text/poppler:=
+	media-libs/freetype
 	x11-libs/cairo
-	x11-libs/libXrandr"
+	x11-libs/libX11
+	x11-libs/libXinerama"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+src_install() {
+	default
+	doman doc/slider.1
+}
