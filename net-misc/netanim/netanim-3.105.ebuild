@@ -21,3 +21,8 @@ S=${WORKDIR}/${PN}-${COMMIT_ID}
 DEPEND="dev-qt/qtcore:4
 	dev-qt/qtgui:4"
 RDEPEND="${DEPEND}"
+
+src_install() {
+	dodoc RELEASE_NOTES
+	dobin NetAnim
+}
