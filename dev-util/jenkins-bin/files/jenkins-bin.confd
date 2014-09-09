@@ -54,9 +54,9 @@ JENKINS_USER=jenkins
 #
 # Pid File 
 #
-JENKINS_PIDFILE=/run/jenkins/jenkins.pid
+JENKINS_PIDFILE="/var/run/jenkins.pid"
 
 #
 # War File
 #
-JENKINS_WAR=/opt/jenkins/jenkins.war
+JENKINS_WAR="/opt/jenkins/jenkins.war"
