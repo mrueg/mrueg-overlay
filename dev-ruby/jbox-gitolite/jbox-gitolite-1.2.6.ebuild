@@ -18,9 +18,10 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-ruby_add_rdepend ">=dev-ruby/gitlab-grit-2.7.0
+ruby_add_rdepend ">=dev-ruby/gitlab-grit-2.7.1
 	dev-ruby/gratr19"
-ruby_add_bdepend "test? ( dev-ruby/forgery )"
+ruby_add_bdepend "test? ( dev-ruby/forgery
+	dev-ruby/spork )"
 
 all_ruby_prepare() {
 	sed -i -e '/[Bb]undler/d' -e '/ci\/reporter/d' Rakefile || die
