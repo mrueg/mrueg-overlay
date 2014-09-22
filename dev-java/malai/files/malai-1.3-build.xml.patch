@@ -446,7 +446,7 @@ index 0000000..04c70b1
 +  <!-- ====================================================================== -->
 +
 +  <path id="build.classpath">
-+    <pathelement location="${maven.repo.local}/org/malai/malai.core/1.3/malai.core-1.3.jar"/>
++    <pathelement location="../malai.core-1.3/target/malai.core-1.3.jar"/>
 +  </path>
 +  <path id="build.test.classpath">
 +    <pathelement location="${maven.repo.local}/junit/junit/4.11/junit-4.11.jar"/>
