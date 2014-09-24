@@ -10,7 +10,7 @@ DESCRIPTION="Redmine is a flexible project management web application written us
 HOMEPAGE="http://www.redmine.org/"
 SRC_URI="http://www.redmine.org/releases/${P}.tar.gz"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 LICENSE="GPL-2"
 SLOT="0"
 # All db-related USEs are ineffective since we depend on rails
