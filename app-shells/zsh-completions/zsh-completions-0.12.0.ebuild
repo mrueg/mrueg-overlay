@@ -10,7 +10,7 @@ SRC_URI="https://github.com/zsh-users/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm"
 IUSE="+gentoo-zsh-completion"
 RDEPEND="gentoo-zsh-completion? ( app-shells/zsh-completion )"
 
