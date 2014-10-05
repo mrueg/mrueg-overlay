@@ -12,7 +12,7 @@ if [[ ${PV} = *9999 ]]; then
 	KEYWORDS=""
 	EGIT_REPO_URI="git://git.grml.org/grml-etc-core.git"
 else
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~arm"
 	SRC_URI="http://deb.grml.org/pool/main/g/${PN}/${PN}_${PV}.tar.gz"
 fi
 LICENSE="GPL-2"
