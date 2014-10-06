@@ -16,7 +16,7 @@ QA_TEXTRELS="opt/${P}/bin/libbreakgen.so"
 
 DESCRIPTION="IntelliJ IDEA is an intelligent Java IDE (Community Edition)"
 HOMEPAGE="http://jetbrains.com/idea/"
-SRC_URI="http://download.jetbrains.com/${MY_PN}/${MY_PN}IC-$(get_version_component_range 1-3)b.tar.gz"
+SRC_URI="http://download.jetbrains.com/${MY_PN}/${MY_PN}IC-$(get_version_component_range 1-3).tar.gz"
 LICENSE="Apache-2.0"
 IUSE=""
 KEYWORDS="~x86 ~amd64"
