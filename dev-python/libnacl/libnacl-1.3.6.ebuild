@@ -11,7 +11,7 @@ DESCRIPTION="Python bindings for libsodium/tweetnacl based on ctypes"
 HOMEPAGE="https://libnacl.readthedocs.org"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
-LICENSE="LGPL-2.1"
+LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="test"
