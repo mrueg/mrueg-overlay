@@ -14,7 +14,7 @@ HOMEPAGE="http://research.protocollabs.com/captcp/"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND="dev-python/dpkt[${PYTHON_USEDEP}]"
