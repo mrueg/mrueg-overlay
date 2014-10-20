@@ -30,9 +30,8 @@ src_install() {
 	keepdir /var/run/jenkins /var/log/jenkins
 	keepdir /var/lib/jenkins/home /var/lib/jenkins/backup
 
-	cp "${DISTDIR}"/${P}.war ${PN/-bin/}.war
 	insinto /opt/jenkins
-	doins jenkins.war
+	newins "${DISTDIR}"/${P}.war ${PN/-bin/}.war
 
 	newinitd "${FILESDIR}/${PN}.init" jenkins
 	newconfd "${FILESDIR}/${PN}.confd" jenkins
