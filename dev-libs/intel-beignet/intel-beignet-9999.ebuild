@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -25,17 +25,15 @@ else
 	S=${WORKDIR}/Beignet-${PV}-Source
 fi
 
-DEPENDS=">=sys-devel/gcc-4.6
+DEPEND=">=sys-devel/gcc-4.6
 	${PYTHON_DEPS}"
-RDEPENDS="
-	app-admin/eselect-opencl
+RDEPEND="app-admin/eselect-opencl
 	media-libs/mesa
 	sys-devel/clang
 	>=sys-devel/llvm-3.3
 	x11-libs/libdrm
 	x11-libs/libXext
-	x11-libs/libXfixes
-	"
+	x11-libs/libXfixes"
 
 pkg_setup() {
 	python_setup
