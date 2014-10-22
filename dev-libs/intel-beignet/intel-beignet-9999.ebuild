@@ -63,4 +63,6 @@ src_install() {
 
 	dosym lib/beignet/libcl.so "${IBEIGNET_DIR}"/libOpenCL.so.1
 	dosym lib/beignet/libcl.so "${IBEIGNET_DIR}"/libOpenCL.so
+	dosym lib/beignet/libcl.so "${IBEIGNET_DIR}"/libcl.so.1
+	dosym lib/beignet/libcl.so "${IBEIGNET_DIR}"/libcl.so
 }
