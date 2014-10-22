@@ -38,19 +38,18 @@ RDEPEND="app-admin/eselect-opencl
 pkg_setup() {
 	python_setup
 }
-IBEIGNET_DIR=/usr/$(get_libdir)/OpenCL/vendors/intel-beignet/
+IBEIGNET_DIR=/usr/$(get_libdir)/OpenCL/vendors/intel-beignet
 
 src_prepare() {
 	# disable tests for now
 	sed -i "s/ADD_SUBDIRECTORY(utests)/#ADD_SUBDIRECTORY(utests)/" CMakeLists.txt || die "sed failed"
 
-	echo "${IBEIGNET_DIR}/libcl.so" > intelbeignet.icd
-
+	echo "${IBEIGNET_DIR}/libOpenCL.so" > intelbeignet.icd
 	cmake-utils_src_prepare
 }
 src_configure() {
 
-	local mycmakeargs=( -DCMAKE_INSTALL_PREFIX="${IBEIGNET_DIR}" )
+	local mycmakeargs=( -DCMAKE_INSTALL_PREFIX="${IBEIGNET_DIR}/" )
 
 	cmake-utils_src_configure
 }
