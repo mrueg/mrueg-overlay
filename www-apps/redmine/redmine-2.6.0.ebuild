@@ -72,7 +72,7 @@ all_ruby_prepare() {
 	use ldap || rm app/models/auth_source_ldap.rb || die
 
 	# Make it work
-	sed -i -i "1irequire 'request_store'" apps/controllers/application_controller.rb || die
+	sed -i -i "1irequire 'request_store'" app/controllers/application_controller.rb || die
 }
 
 all_ruby_install() {
