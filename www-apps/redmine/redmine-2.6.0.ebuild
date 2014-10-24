@@ -10,7 +10,7 @@ DESCRIPTION="Redmine is a flexible project management web application written us
 HOMEPAGE="http://www.redmine.org/"
 SRC_URI="http://www.redmine.org/releases/${P}.tar.gz"
 
-KEYWORDS=""
+KEYWORDS="~amd64"
 LICENSE="GPL-2"
 SLOT="0"
 # All db-related USEs are ineffective since we depend on rails
@@ -70,6 +70,9 @@ all_ruby_prepare() {
 
 	# remove ldap staff module if disabled to avoid #413779
 	use ldap || rm app/models/auth_source_ldap.rb || die
+
+	# Make it work
+	sed -i -i "1irequire 'request_store'" apps/controllers/application_controller.rb || die
 }
 
 all_ruby_install() {
