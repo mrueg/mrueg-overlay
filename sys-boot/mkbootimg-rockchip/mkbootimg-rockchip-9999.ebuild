@@ -28,6 +28,9 @@ src_install() {
 	# File collision with vanilla Android tools
 	newbin mkbootimg mkbootimg-rockchip
 	newbin afptool afptool-rockchip
-	newbin unpackbootimg unpackbootimg-rockchip
+	newbin unmkbootimg unmkbootimg-rockchip
+	newbin mkrootfs mkrootfs-rockchip
+	newbin mkcpiogz mkcpiogz-rockchip
+	newbin unmkcpiogz unmkcpiogz-rockchip
 	newbin img_maker img_maker-rockchip
 }
