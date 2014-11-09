@@ -9,7 +9,7 @@ inherit ruby-ng user
 
 DESCRIPTION="A Redmine plugin which makes building your Jenkins projects easy"
 HOMEPAGE="https://github.com/jbox-web/redmine_jenkins"
-COMMIT_ID="a9142de8a64e1107d8ccf0cbd3d9b5e6f523fe71"
+COMMIT_ID="e6f939e9686fbc5d75cc6497e7ba47cd4691b17c"
 SRC_URI="https://github.com/jbox-web/${PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
