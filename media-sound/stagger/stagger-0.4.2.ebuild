@@ -4,7 +4,7 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python3_2 )
+PYTHON_COMPAT=( python3_4 )
 inherit distutils-r1
 
 DESCRIPTION="An ID3v1/ID3v2 tag manipulation package written in pure Python 3"
@@ -16,6 +16,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-python_test(){
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
+
+python_test() {
 	esetup.py test || die "Test failed"
 }
