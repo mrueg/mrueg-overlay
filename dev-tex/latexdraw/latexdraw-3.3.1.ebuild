@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -26,17 +26,16 @@ RDEPEND=">=virtual/jre-1.6
 	${COMMONDEPEND}"
 
 DEPEND=">=virtual/jdk-1.6
-	app-arch/unzip
 	${COMMONDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
-EANT_GENTOO_CLASSPATH="jlibeps,pdf-renderer,malai,scala"
+EANT_GENTOO_CLASSPATH="jlibeps,pdf-renderer,malai,scala"  #,scala-parser-combinators"
 JAVA_ANT_REWRITE_CLASSPATH="true"
 
 java_prepare() {
 	epatch -p1 "${FILESDIR}"/${PN}-3.2.0-build.xml.patch
-	java-ant_rewrite-classpath build.xml
+	java-ant_rewrite-classpath maven-build.xml
 }
 src_install() {
 	cd out/data || die
