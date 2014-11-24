@@ -19,6 +19,7 @@ IUSE=""
 
 COMMONDEPEND="dev-java/jlibeps:0
 	>=dev-java/malai-1.3
+	>=dev-java/mockito-1.9.5
 	>=dev-java/scala-2.11
 	>=dev-java/pdf-renderer-1.0.5:0"
 
@@ -30,11 +31,10 @@ DEPEND=">=virtual/jdk-1.7
 
 S=${WORKDIR}/${MY_P}
 
-EANT_GENTOO_CLASSPATH="jlibeps,pdf-renderer,malai,scala"  #,scala-parser-combinators"
-JAVA_ANT_REWRITE_CLASSPATH="true"
+EANT_GENTOO_CLASSPATH="jlibeps,pdf-renderer,malai,mockito,scala"  #,scala-parser-combinators"
 
 java_prepare() {
-	epatch -p1 "${FILESDIR}"/${PN}-3.2.0-build.xml.patch
+	epatch -p1 "${FILESDIR}"/${P}-build.xml.patch
 	java-ant_rewrite-classpath maven-build.xml
 }
 src_install() {
