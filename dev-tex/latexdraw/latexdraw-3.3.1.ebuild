@@ -22,10 +22,10 @@ COMMONDEPEND="dev-java/jlibeps:0
 	>=dev-java/scala-2.11
 	>=dev-java/pdf-renderer-1.0.5:0"
 
-RDEPEND=">=virtual/jre-1.6
+RDEPEND=">=virtual/jre-1.7
 	${COMMONDEPEND}"
 
-DEPEND=">=virtual/jdk-1.6
+DEPEND=">=virtual/jdk-1.7
 	${COMMONDEPEND}"
 
 S=${WORKDIR}/${MY_P}
