@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit eutils java-pkg-2 java-ant-2 versionator
+inherit eutils java-pkg-2 java-ant-2
 
 MY_PN="LaTeXDraw"
 MY_P=${MY_PN}-${PV}
