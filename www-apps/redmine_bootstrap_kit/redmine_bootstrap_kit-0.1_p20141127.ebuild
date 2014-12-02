@@ -9,7 +9,7 @@ inherit ruby-ng user
 
 DESCRIPTION="Installs JQuery UI Bootstrap as Redmine plugins to load it globally"
 HOMEPAGE="https://github.com/jbox-web/redmine_bootstrap_kit"
-COMMIT_ID="aa1eee65d5408f5d21c0c8f1afe8efad30e51266"
+COMMIT_ID="9b8407cf96796d4c4514b4c76181346ab5591bd1"
 SRC_URI="https://github.com/jbox-web/${PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
