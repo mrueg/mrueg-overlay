@@ -84,7 +84,7 @@ RESTRICT="test"
 src_prepare() {
 	gnome2_src_prepare
 	epatch \
-		"${FILESDIR}"/${P}-spell.patch \
+		"${FILESDIR}"/${PN}-0.91_pre2-spell.patch \
 		"${FILESDIR}"/${PN}-0.48.3.1-desktop.patch \
 		"${FILESDIR}"/${PN}-0.48.4-epython.patch
 
