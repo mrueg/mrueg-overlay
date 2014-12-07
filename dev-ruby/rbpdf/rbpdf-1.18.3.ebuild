@@ -12,7 +12,7 @@ RUBY_FAKEGEM_EXTRADOC="README.md"
 inherit ruby-fakegem
 
 DESCRIPTION="Ruby on Rails TCPDF plugin"
-HOMEPAGE="https://github.com/naitho/rbpdf"
+HOMEPAGE="https://github.com/naitoh/rbpdf"
 
 LICENSE="LGPL-2.1+"
 SLOT="0"
