@@ -20,7 +20,7 @@ SRC_URI="http://download.jetbrains.com/${MY_PN}/${MY_PN}IC-$(get_version_compone
 LICENSE="Apache-2.0"
 IUSE=""
 KEYWORDS="~x86 ~amd64"
-S="${WORKDIR}/${MY_PN}-IC-${MY_PV}"
+S="${WORKDIR}/${MY_PN}-IC-${MY_PV}.2"
 
 src_install() {
 	local dir="/opt/${P}"
