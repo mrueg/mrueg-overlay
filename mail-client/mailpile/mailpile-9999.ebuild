@@ -5,15 +5,16 @@
 EAPI=5
 PYTHON_COMPAT=(python2_7)
 
-inherit distutils-r1
+EGIT_REPO_URI="https://github.com/mailpile/Mailpile.git"
+
+inherit distutils-r1 git-r3
 
 DESCRIPTION="A modern, fast web-mail client with user-friendly encryption and privacy features"
 HOMEPAGE="https://github.com/pagekite/Mailpile"
-SRC_URI="https://github.com/pagekite/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="|| ( Apache-2.0 AGPL-3 )"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS=""
 IUSE="test"
 
 RDEPEND="app-crypt/gnupg
@@ -26,10 +27,9 @@ RDEPEND="app-crypt/gnupg
 DEPEND="${RDEPEND}
 	test? ( dev-python/mock[${PYTHON_USEDEP}]
 		dev-python/nose[${PYTHON_USEDEP}]
-		>=dev-python/selenium-2.40.0[${PYTHON_USEDEP}]
-		>=www-client/phantomjs-1.9.7 )
+		>=dev-python/selenium-2.40.0[${PYTHON_USEDEP}] )
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 python_test() {
-	nosetests tests || die
+	nosetests mailpile/tests || die
 }
