@@ -6,7 +6,7 @@ EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 
-inherit git-2 distutils-r1
+inherit git-r3 distutils-r1
 EGIT_REPO_URI="https://github.com/mrueg/captcp.git"
 DESCRIPTION="A open source program for TCP analysis of PCAP files"
 HOMEPAGE="http://research.protocollabs.com/captcp/"
