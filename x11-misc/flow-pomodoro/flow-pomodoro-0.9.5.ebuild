@@ -15,8 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="dev-qt/qtdeclarative:5
-	dev-qt/qtcore:5
+DEPEND="dev-qt/qtcore:5
+	dev-qt/qtdbus:5
+	dev-qt/qtdeclarative:5
 	dev-qt/qtgui:5
 	dev-qt/qtquickcontrols:5
 	dev-qt/qtnetwork:5
@@ -25,7 +26,8 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	# Pidgin plugin needs a patched pidgin, others not tested
-	sed -i -e 's/plugins//' flow.pro || die
+	sed -i -e 's#lib/kde4#$(get_libdir)/qt5#' plugins/plugins.pri || die
+	sed -i -e '/QMAKE_CXXFLAGS/d' global.pri || die
 }
 
 src_configure() {
