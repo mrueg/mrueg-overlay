@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit qmake-utils
+inherit multilib qmake-utils
 
 DESCRIPTION="A pomodoro app that blocks distractions while you work"
 HOMEPAGE="https://github.com/iamsergio/flow-pomodoro"
@@ -26,7 +26,7 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	# Pidgin plugin needs a patched pidgin, others not tested
-	sed -i -e 's#lib/kde4#$(get_libdir)/qt5#' plugins/plugins.pri || die
+	sed -i -e "s#lib/kde4#$(get_libdir)/qt5#" plugins/plugins.pri || die
 	sed -i -e '/QMAKE_CXXFLAGS/d' global.pri || die
 }
 
