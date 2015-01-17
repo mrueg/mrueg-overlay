@@ -33,5 +33,5 @@ src_install() {
 	doins -r lib
 	java-pkg_jarinto /opt/${PN/-bin}
 	java-pkg_dojar ${MY_PN}.jar
-	java-pkg_dolauncher ${PN/-bin} --main net.sf.${PN/bin}.${MY_PN} --jar /opt/${PN/-bin}/${MY_PN}.jar
+	java-pkg_dolauncher ${PN/-bin} --main net.sf.${PN/-bin}.${MY_PN} --jar /opt/${PN/-bin}/${MY_PN}.jar
 }
