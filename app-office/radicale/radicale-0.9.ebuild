@@ -27,9 +27,11 @@ RDEPEND="
 	fastcgi? ( dev-python/flup[${PYTHON_USEDEP}] )
 	git? ( dev-python/dulwich[${PYTHON_USEDEP}] )
 	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )
-	mysql? ( dev-python/sqlalchemy[${PYTHON_USEDEP},mysql] )
+	mysql? ( dev-python/sqlalchemy[${PYTHON_USEDEP}]
+		dev-python/mysql-python[${PYTHON_USEDEP}] )
 	sqlite? ( dev-python/sqlalchemy[${PYTHON_USEDEP},sqlite] )
-	postgres? ( dev-python/sqlalchemy[${PYTHON_USEDEP},postgres] )"
+	postgres? ( dev-python/sqlalchemy[${PYTHON_USEDEP}]
+		dev-python/psycopg:2[${PYTHON_USEDEP}] )"
 
 # radicale's authentication against PAM is not possible here:
 # Gentoo has not included the package
