@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -33,5 +33,5 @@ src_install() {
 	doins -r lib
 	java-pkg_jarinto /opt/${PN/-bin}
 	java-pkg_dojar ${MY_PN}.jar
-	java-pkg_dolauncher ${PN/-bin} --main net.sf.${PN}.${MY_PN} --jar /opt/${PN/-bin}/${MY_PN}.jar
+	java-pkg_dolauncher ${PN/-bin} --main net.sf.${PN/bin}.${MY_PN} --jar /opt/${PN/-bin}/${MY_PN}.jar
 }
