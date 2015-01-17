@@ -19,7 +19,7 @@ IUSE=""
 
 RDEPEND="!dev-tex/latexdraw
 	>=virtual/jre-1.7"
-DEPEND="app-arch/zip"
+DEPEND="app-arch/unzip"
 
 S=${WORKDIR}/${MY_P}
 
