@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 inherit eutils versionator
 
 SLOT="$(get_major_version)"
@@ -19,7 +19,7 @@ HOMEPAGE="http://jetbrains.com/idea/"
 SRC_URI="http://download.jetbrains.com/${MY_PN}/${MY_PN}IC-$(get_version_component_range 1-3).tar.gz"
 LICENSE="Apache-2.0"
 IUSE=""
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 S="${WORKDIR}/${MY_PN}-IC-${MY_PV}.2"
 
 src_install() {
