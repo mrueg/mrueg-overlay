@@ -20,8 +20,8 @@ IUSE="ldap imagemagick fastcgi passenger"
 
 #RDEPEND="$(ruby_implementation_depend jruby '>=' -1.6.7)[ssl]"
 
-ruby_add_rdepend "virtual/ruby-ssl
-	virtual/rubygems
+ruby_add_rdepend "
+	dev-ruby/rubygems
 	>=dev-ruby/rails-3.2.19:3.2
 	>=dev-ruby/jquery-rails-3.1.1
 	dev-ruby/i18n:0.6
