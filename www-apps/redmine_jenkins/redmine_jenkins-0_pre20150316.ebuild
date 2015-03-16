@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -9,7 +9,7 @@ inherit ruby-ng user
 
 DESCRIPTION="A Redmine plugin which makes building your Jenkins projects easy"
 HOMEPAGE="https://github.com/jbox-web/redmine_jenkins"
-COMMIT_ID="b56e2dce408e7a572745180eabb776b2a0442772"
+COMMIT_ID="ac785dbdc8d987d25815209f7d3b5d2dabd9e64f"
 SRC_URI="https://github.com/jbox-web/${PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -18,10 +18,9 @@ KEYWORDS="~amd64"
 IUSE=""
 
 ruby_add_rdepend "
-	dev-ruby/jenkins_api_client
-	dev-ruby/will_paginate
+	>=dev-ruby/jenkins_api_client-1.3.0
 	www-apps/redmine
-	www-apps/redmine_bootstrap_kit"
+	>=www-apps/redmine_bootstrap_kit-0.2.2"
 
 RDEPEND+=" dev-util/jenkins-bin"
 
