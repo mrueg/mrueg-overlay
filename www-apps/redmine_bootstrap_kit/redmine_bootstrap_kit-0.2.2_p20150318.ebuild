@@ -22,6 +22,7 @@ ruby_add_rdepend "
 	www-apps/redmine"
 
 REDMINE_DIR="/var/lib/redmine"
+RUBY_S=${PN}-${COMMIT_ID}
 
 pkg_setup() {
 	enewgroup redmine
