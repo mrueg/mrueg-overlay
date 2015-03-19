@@ -9,8 +9,7 @@ inherit ruby-ng user
 
 DESCRIPTION="A Redmine plugin which makes building your Jenkins projects easy"
 HOMEPAGE="https://github.com/jbox-web/redmine_jenkins"
-COMMIT_ID="d0439ce1b6e0ffed80f9a866cfca8dc30d9424bf"
-SRC_URI="https://github.com/jbox-web/${PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/jbox-web/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -23,8 +22,6 @@ ruby_add_rdepend "
 	>=www-apps/redmine_bootstrap_kit-0.2.2"
 
 RDEPEND+=" dev-util/jenkins-bin"
-
-RUBY_S=${PN}-${COMMIT_ID}
 
 REDMINE_DIR="/var/lib/redmine"
 
