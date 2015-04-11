@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -27,7 +27,7 @@ fi
 
 DEPEND=">=sys-devel/gcc-4.6
 	${PYTHON_DEPS}"
-RDEPEND="app-admin/eselect-opencl
+RDEPEND="app-eselect/eselect-opencl
 	media-libs/mesa
 	sys-devel/clang
 	>=sys-devel/llvm-3.3
