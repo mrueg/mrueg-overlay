@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -34,4 +34,3 @@ src_install() {
 	make_wrapper "${exe}" "/opt/${P}/bin/${MY_PN}.sh"
 	make_desktop_entry ${exe} "IntelliJ IDEA $(get_version_component_range 1-3)	(Community Edition)" "${exe}" "Development;IDE"
 }
-
