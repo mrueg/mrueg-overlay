@@ -18,6 +18,8 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~amd64 ~x86"
 
+S=${WORKDIR}/${PN}-1.0
+
 src_install() {
 	local dir="/opt/${P}"
 	local exe="${PN}"
