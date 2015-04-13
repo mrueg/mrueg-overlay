@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: Exp $
 
@@ -16,7 +16,7 @@ IUSE=""
 CDEPEND="x11-libs/libump"
 DEPEND="virtual/pkgconfig
 	${CDEPEND}"
-RDEPEND="app-admin/eselect-opengl
+RDEPEND="app-eselect/eselect-opengl
 	${CDEPEND}"
 
 src_prepare() {
