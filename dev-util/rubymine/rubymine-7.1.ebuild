@@ -13,7 +13,7 @@ RESTRICT="strip"
 QA_TEXTRELS="opt/${P}/bin/libbreakgen.so"
 
 DESCRIPTION="The most intelligent Ruby and Rails IDE"
-HOMEPAGE="http://jetbrains.com/idea/"
+HOMEPAGE="http://jetbrains.com/ruby/"
 SRC_URI="http://download.jetbrains.com/ruby/${MY_PN}-${PV}.tar.gz"
 LICENSE="all-rights-reserved"
 IUSE=""
