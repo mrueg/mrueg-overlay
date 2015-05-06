@@ -22,20 +22,20 @@ IUSE=""
 
 RDEPEND+=" dev-python/docutils
 	virtual/perl-Pod-Simple"
-# see lib/github/markups.rb:
-#   need one markdown parser, runtime switchable
-ruby_add_rdepend "|| (
-		dev-ruby/github-markdown
-		dev-ruby/redcarpet
-		dev-ruby/rdiscount
-		dev-ruby/maruku
-		dev-ruby/kramdown
-		dev-ruby/bluecloth
-		)
+
+ruby_add_rdepend "
+	dev-ruby/redcarpet
+	dev-ruby/rdiscount
+	dev-ruby/maruku
+	dev-ruby/kramdown
 	dev-ruby/posix-spawn
 	dev-ruby/redcloth
-	>=dev-ruby/rdoc-3.6.1
 	dev-ruby/org-ruby
+	dev-ruby/rinku
 	dev-ruby/creole
 	dev-ruby/wikicloth
 	dev-ruby/asciidoctor"
+
+each_ruby_test() {
+	${RUBY} -Ilib test/markup_test.rb || die
+}
