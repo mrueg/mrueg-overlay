@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/sys-apps/rkflashtool/rkflashtool-5.1.ebuild,v 1.1 2014/01/08 04:43:34 mrueg Exp $
 
@@ -10,7 +10,7 @@ inherit python-single-r1 waf-utils
 
 DESCRIPTION="Tool for flashing Rockchip devices"
 HOMEPAGE="https://github.com/linuxerwang/rkflashkit"
-COMMIT_ID="caa7df5244df16ed9b64b1da7b0c6127e5f15e4a"
+COMMIT_ID="224eeefec43f051e934055c37f32f331fe0d1499"
 SRC_URI="https://github.com/linuxerwang/${PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
