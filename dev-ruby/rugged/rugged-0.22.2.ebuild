@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -13,7 +13,7 @@ inherit ruby-fakegem
 DESCRIPTION="Ruby bindings to the libgit2 linkable C Git library"
 HOMEPAGE="https://github.com/libgit2/rugged"
 SRC_URI="https://github.com/libgit2/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
-	test? ( https://github.com/libgit2/libgit2/archive/v${PV}.tar.gz -> ${P}-libgit2.tar.gz )"
+	https://github.com/libgit2/libgit2/archive/v${PV}.tar.gz -> ${P}-libgit2.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -29,9 +29,7 @@ ruby_add_bdepend "test? (
 
 all_ruby_unpack() {
 	[[ -n ${A} ]] && unpack ${A}
-	if use test; then
-		mv libgit2-*/* ${P}/vendor/libgit2/ || die
-	fi
+	mv libgit2-*/* ${P}/vendor/libgit2/ || die
 }
 
 all_ruby_prepare() {
