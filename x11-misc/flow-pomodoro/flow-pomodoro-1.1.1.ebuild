@@ -8,8 +8,7 @@ inherit cmake-utils
 
 DESCRIPTION="A pomodoro app that blocks distractions while you work"
 HOMEPAGE="https://github.com/iamsergio/flow-pomodoro"
-SRC_URI="https://github.com/iamsergio/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/iamsergio/flow-pomodoro/commit/c1062dcdb03a9c3f977395e7c0d7e872ba8dc07a.patch -> ${P}-fix-libdir.patch"
+SRC_URI="https://github.com/iamsergio/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
