@@ -23,7 +23,11 @@ ruby_add_bdepend "test? ( >=dev-ruby/activerecord-4.0.0
 	dev-ruby/mocha )"
 
 all_ruby_prepare() {
-	sed -i -e "/bundler/d" Rakefile || die
+	sed -i -e "/bundler/d" Rakefile test/abstract_unit.rb || die
 	sed -i -e "/git/d" ${PN}.gemspec || die
 	sed -i -e "2irequire 'mocha/setup'" test/caching_test.rb || die
+}
+
+each_ruby_test() {
+	${RUBY} -Ilib:test test/caching_test.rb || die
 }
