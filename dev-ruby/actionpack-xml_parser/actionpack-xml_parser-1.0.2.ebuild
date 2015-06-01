@@ -21,3 +21,11 @@ IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/actionpack-4.0.0"
 ruby_add_bdepend "test? ( >=dev-ruby/activesupport-4.0.0 )"
+
+all_ruby_prepare() {
+	sed -i -e "/bundler/d" Rakefile test/helper.rb || die
+}
+
+each_ruby_test() {
+	${RUBY} -Ilib:test test/xml_params_parsing_test.rb
+}
