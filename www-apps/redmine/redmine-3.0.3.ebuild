@@ -79,7 +79,7 @@ all_ruby_prepare() {
 	sed -i -e "18irequire 'action_controller'" -e "19irequire 'action_controller/action_caching'"\
 		app/controllers/welcome_controller.rb || die
 	sed -i -e "4irequire 'action_dispatch/xml_params_parser'" -e "/Bundler/d" config/application.rb || die
-	sed -i -e "18require 'protected_attributes'" app/models/custom_field.rb || die
+	sed -i -e "18irequire 'protected_attributes'" app/models/custom_field.rb || die
 }
 
 all_ruby_install() {
