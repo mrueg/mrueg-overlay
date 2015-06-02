@@ -75,7 +75,11 @@ all_ruby_prepare() {
 	use ldap || rm app/models/auth_source_ldap.rb || die
 
 	# Make it work
-	sed -i -i "1irequire 'request_store'" app/controllers/application_controller.rb || die
+	sed -i -e "1irequire 'request_store'" app/controllers/application_controller.rb || die
+	sed -i -e "18irequire 'action_controller'" -e "19irequire 'action_controller/action_caching'"\
+		app/controllers/welcome_controller.rb || die
+	sed -i -e "4irequire 'action_dispatch/xml_params/parser'" -e "/Bundler/d" config/application.rb || die
+	sed -i -e "18require 'protected_attributes'" app/models/custom_field.rb || die
 }
 
 all_ruby_install() {
