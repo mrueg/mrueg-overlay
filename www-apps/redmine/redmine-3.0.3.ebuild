@@ -10,7 +10,7 @@ DESCRIPTION="A flexible project management web application written using Ruby on
 HOMEPAGE="http://www.redmine.org/"
 SRC_URI="http://www.redmine.org/releases/${P}.tar.gz"
 
-#KEYWORDS="~amd64"
+KEYWORDS="~amd64"
 LICENSE="GPL-2"
 SLOT="0"
 # All db-related USEs are ineffective since we depend on rails
@@ -78,7 +78,7 @@ all_ruby_prepare() {
 	sed -i -e "1irequire 'request_store'" app/controllers/application_controller.rb || die
 	sed -i -e "18irequire 'action_controller'" -e "19irequire 'action_controller/action_caching'"\
 		app/controllers/welcome_controller.rb || die
-	sed -i -e "4irequire 'action_dispatch/xml_params/parser'" -e "/Bundler/d" config/application.rb || die
+	sed -i -e "4irequire 'action_dispatch/xml_params_parser'" -e "/Bundler/d" config/application.rb || die
 	sed -i -e "18require 'protected_attributes'" app/models/custom_field.rb || die
 }
 
