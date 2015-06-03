@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -17,6 +17,7 @@ IUSE="test"
 
 RDEPEND="dev-python/appdirs[${PYTHON_USEDEP}]
 	dev-python/decorator[${PYTHON_USEDEP}]
+	dev-python/gpsoauth[${PYTHON_USEDEP}]
 	dev-python/mock[${PYTHON_USEDEP}]
 	dev-python/oauth2client[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
