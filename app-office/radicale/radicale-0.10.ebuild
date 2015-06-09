@@ -4,8 +4,8 @@
 
 EAPI=5
 
-# radicale also supports python3_{2,3}
-# but python-ldap, dulwich and flup are blocking here
+# radicale also supports python3_{3,4}
+# but python-ldap and dulwich (v0.10.2 should have py3 support) are blocking here
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="ssl?"
 
@@ -24,7 +24,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE="fastcgi git ldap mysql sqlite postgres ssl"
 
 RDEPEND="
-	fastcgi? ( dev-python/flup[${PYTHON_USEDEP}] )
+	fastcgi? ( $(python_gen_cond_dep 'dev-python/flup[${PYTHON_USEDEP}]' python2_7)
+		$(python_gen_cond_dep 'dev-python/flipflop[${PYTHON_USEDEP}]' python3_{3,4})
+	)
 	git? ( dev-python/dulwich[${PYTHON_USEDEP}] )
 	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )
 	mysql? ( dev-python/sqlalchemy[${PYTHON_USEDEP}]
@@ -52,7 +54,7 @@ pkg_setup() {
 
 python_install_all() {
 	# delete the useless .rst, so that it is not installed
-	rm README.rst
+	rm README.rst || die
 
 	# init file
 	newinitd "${FILESDIR}"/radicale.init.d radicale
