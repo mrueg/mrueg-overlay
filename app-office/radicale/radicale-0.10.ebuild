@@ -47,10 +47,10 @@ LDIR=/var/log/radicale
 
 PATCHES=( "${FILESDIR}"/${P}-config.patch )
 
-#pkg_setup() {
-#	enewgroup radicale
-#	enewuser radicale -1 -1 ${RDIR} radicale
-#}
+pkg_setup() {
+	enewgroup radicale
+	enewuser radicale -1 -1 ${RDIR} radicale
+}
 
 python_install_all() {
 	# delete the useless .rst, so that it is not installed
