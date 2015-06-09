@@ -45,7 +45,7 @@ S=${WORKDIR}/${MY_P}
 RDIR=/var/lib/radicale
 LDIR=/var/log/radicale
 
-PATCHES=( "${FILESDIR}"/${P}-config.patch )
+PATCHES=( "${FILESDIR}"/${PN}-0.9-config.patch )
 
 pkg_setup() {
 	enewgroup radicale
