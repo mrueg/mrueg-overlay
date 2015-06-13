@@ -13,7 +13,6 @@ inherit ruby-fakegem
 
 DESCRIPTION="Jekyll plugin that generates galleries from directories full of images"
 HOMEPAGE="https://github.com/ggreer/jekyll-gallery-generator"
-SRC_URI="https://github.com/ggreer/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
