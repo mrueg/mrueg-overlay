@@ -18,7 +18,7 @@ IUSE=""
 
 RDEPEND="
 	dev-python/eyeD3:0.7[${PYTHON_USEDEP}]
-	>=dev-python/gmusicapi-5[${PYTHON_USEDEP}]
+	>=dev-python/gmusicapi-6[${PYTHON_USEDEP}]
 	dev-python/netifaces[${PYTHON_USEDEP}]
 	dev-python/python-daemon[${PYTHON_USEDEP}]
 	dev-python/pyxdg[${PYTHON_USEDEP}]"
