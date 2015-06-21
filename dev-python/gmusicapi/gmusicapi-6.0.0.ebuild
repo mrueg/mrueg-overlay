@@ -8,8 +8,8 @@ PYTHON_COMPAT=(python2_7)
 inherit vcs-snapshot distutils-r1
 
 DESCRIPTION="An unofficial api for Google Play Music"
-HOMEPAGE="https://github.com/simon-weber/Unofficial-Google-Music-API/"
-SRC_URI="https://github.com/simon-weber/Unofficial-Google-Music-API/archive/${PV}.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="https://github.com/simon-weber/gmusicapi"
+SRC_URI="https://github.com/simon-weber/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
