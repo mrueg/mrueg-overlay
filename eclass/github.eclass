@@ -80,7 +80,7 @@ _calculate_patches_uri() {
 	if [[ -n $GH_PATCHES ]]; then
             _GH_PATCHES=
             for gh_commit in "${GH_PATCHES[@]}"; do
-                SRC_URI=+" https://github.com/${GH_USER}/${GH_REPO}/commit/${gh_commit}.patch -> ${PN}-${gh_commit}.patch"
+                SRC_URI+=" https://github.com/${GH_USER}/${GH_REPO}/commit/${gh_commit}.patch -> ${PN}-${gh_commit}.patch"
                 _GH_PATCHES+=( "${DISTDIR}"/${PN}-${gh_commit}.patch )
             done
     fi
