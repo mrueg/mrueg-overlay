@@ -45,6 +45,16 @@ esac
 # GH_PATCHES=( "b02c39fb8dec9043b0ac9d23d5caec19b8b0c337" )
 # @CODE
 
+# @ECLASS-VARIABLE: GH_PULLREQ
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# Pull requests to be fetched and applied from Github by its id.
+# Example:
+# @CODE
+# GH_PULLREQ=( 17 19 )
+# @CODE
+
+
 # @ECLASS-VARIABLE: GH_TAG
 # @DESCRIPTION:
 # Tag/commit that is fetched from Github.
@@ -84,6 +94,12 @@ _calculate_patches_uri() {
 			_GH_PATCHES+=("${DISTDIR}"/${PN}-${gh_commit}.patch)
 		done
 	fi
+	if [[ -n $GH_PULLREQ ]]; then 
+                for gh_commit in "${GH_PULLREQ[@]}"; do
+			SRC_URI+=" https://github.com/${GH_USER}/${GH_REPO}/pull//${gh_commit}.patch -> ${PN}-pr-${gh_commit}.patch"
+			_GH_PATCHES+=("${DISTDIR}"/${PN}-pr-${gh_commit}.patch)
+		done
+        fi
 }
 
 
