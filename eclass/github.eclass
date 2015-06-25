@@ -63,11 +63,11 @@ else
 	_GH_BUILD_TYPE=$GH_BUILD_TYPE
 fi
 
-if [[ ${GH_BUILD_TYPE} = live ]]; then
+if [[ ${_GH_BUILD_TYPE} = live ]]; then
 	inherit git-r3
 fi
 
-if [[ ${GH_BUILD_TYPE} = release ]]; then
+if [[ ${_GH_BUILD_TYPE} = release ]]; then
 	inherit vcs-snapshot
 fi
 
@@ -108,9 +108,9 @@ _calculate_live_repo() {
 }
 
 
-case ${GH_BUILD_TYPE} in
+case ${_GH_BUILD_TYPE} in
 	live) _calculate_live_repo ;;
-	default) _calculate_src_uri ;;
+	release) _calculate_src_uri ;;
 esac
 _calculate_patches_uri
 
