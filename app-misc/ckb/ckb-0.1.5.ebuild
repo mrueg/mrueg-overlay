@@ -34,7 +34,11 @@ src_configure() {
 }
 
 src_install() {
-	dobin bin/ckb bin/ckb-daemon bin/ckb-animations/ckb-*
+	dobin bin/ckb bin/ckb-daemon
+	dodir /usr/bin/ckb-animations
+	exeinto /usr/bin/ckb-animations
+	doexe bin/ckb-animations/*
+
 	domenu usr/ckb.desktop
 	doicon usr/ckb.png
 	systemd_dounit service/systemd/ckb-daemon.service
