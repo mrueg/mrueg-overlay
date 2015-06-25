@@ -42,16 +42,16 @@ esac
 # Patches to be fetched and applied from Github by commit id.
 # Example:
 # @CODE
-# GH_PATCHES=( "b02c39fb8dec9043b0ac9d23d5caec19b8b0c337" )
+# GH_PATCHES=("b02c39fb8dec9043b0ac9d23d5caec19b8b0c337" "b0c337b02c39fb8dec9043b0ac9d23d5caec19b8" )
 # @CODE
 
-# @ECLASS-VARIABLE: GH_PULLREQ
+# @ECLASS-VARIABLE: GH_PULLREQS
 # @DEFAULT_UNSET
 # @DESCRIPTION:
 # Pull requests to be fetched and applied from Github by its id.
 # Example:
 # @CODE
-# GH_PULLREQ=( 17 19 )
+# GH_PULLREQS=(17 19)
 # @CODE
 
 
@@ -95,9 +95,9 @@ _calculate_patches_uri() {
 		done
 	fi
 	if [[ -n $GH_PULLREQ ]]; then 
-			for gh_commit in "${GH_PULLREQ[@]}"; do
-			SRC_URI+=" https://github.com/${GH_USER}/${GH_REPO}/pull//${gh_commit}.patch -> ${PN}-pr-${gh_commit}.patch"
-			_GH_PATCHES+=("${DISTDIR}"/${PN}-pr-${gh_commit}.patch)
+			for gh_pullreqid in "${GH_PULLREQS[@]}"; do
+			SRC_URI+=" https://github.com/${GH_USER}/${GH_REPO}/pull//${gh_pullreq}.patch -> ${PN}-pr-${gh_pullreq}.patch"
+			_GH_PATCHES+=("${DISTDIR}"/${PN}-pr-${gh_pullreqid}.patch)
 		done
         fi
 }
