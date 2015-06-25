@@ -95,7 +95,7 @@ _calculate_patches_uri() {
 		done
 	fi
 	if [[ -n $GH_PULLREQ ]]; then 
-                for gh_commit in "${GH_PULLREQ[@]}"; do
+			for gh_commit in "${GH_PULLREQ[@]}"; do
 			SRC_URI+=" https://github.com/${GH_USER}/${GH_REPO}/pull//${gh_commit}.patch -> ${PN}-pr-${gh_commit}.patch"
 			_GH_PATCHES+=("${DISTDIR}"/${PN}-pr-${gh_commit}.patch)
 		done
