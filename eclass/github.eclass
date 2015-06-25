@@ -31,9 +31,10 @@ esac
 : ${GH_REPO:=${PN}}
 
 # @ECLASS-VARIABLE: GH_BUILD_TYPE
+# @DEFAULT-UNSET
 # @DESCRIPTION:
-# Live ebuilds use "live" here.
-: ${GH_BUILD_TYPE:=default}
+# Defines if fetched from git ("live") or tarball ("release")
+# Use if autodetection via PV fails.
 
 # @ECLASS-VARIABLE: GH_PATCHES
 # @DEFAULT_UNSET
@@ -52,15 +53,21 @@ esac
 
 inherit eutils
 
-if [[ ${PV} == *9999 ]]; then
-	GH_BUILD_TYPE=live
+if [[ -z ${GH_BUILD_TYPE}  ]]; then
+	if [[ ${PV} == *9999 ]]; then
+		_GH_BUILD_TYPE=live
+	else
+		_GH_BUILD_TYPE=release
+	fi
+else 
+	_GH_BUILD_TYPE=$GH_BUILD_TYPE
 fi
 
 if [[ ${GH_BUILD_TYPE} = live ]]; then
 	inherit git-r3
 fi
 
-if [[ ${GH_BUILD_TYPE} = default ]]; then
+if [[ ${GH_BUILD_TYPE} = release ]]; then
 	inherit vcs-snapshot
 fi
 
@@ -115,7 +122,7 @@ debug-print "${LINENO} ${ECLASS} ${FUNCNAME}: SRC_URI is ${SRC_URI}"
 github_src_unpack() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	if [[ ${GH_BUILD_TYPE} = live ]]; then
+	if [[ ${_GH_BUILD_TYPE} = live ]]; then
 		git-r3_src_unpack
 	else
 		vcs-snapshot_src_unpack
