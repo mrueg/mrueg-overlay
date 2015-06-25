@@ -123,7 +123,7 @@ github_src_unpack() {
 }
 
 
-# @FUNCTION: github_src_unpack
+# @FUNCTION: github_src_prepare
 # @DESCRIPTION:
 # Function for applying patches to Github packages.
 github_src_prepare() {
