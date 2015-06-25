@@ -39,21 +39,15 @@ esac
 # @ECLASS-VARIABLE: GH_PATCHES
 # @DEFAULT_UNSET
 # @DESCRIPTION:
-# Patches to be fetched and applied from Github by commit id.
+# Patches, pull requests, patches from forks to be fetched and applied.
+# Prefix:
+# f: - Regular patch from FILESDIR
+# c: - Patch identified by commit, optional: fork name
+# p: - Patch identified by pull request id, optional: fork name
 # Example:
 # @CODE
-# GH_PATCHES=("b02c39fb8dec9043b0ac9d23d5caec19b8b0c337" "b0c337b02c39fb8dec9043b0ac9d23d5caec19b8" )
+# GH_PATCHES=("c:b02c39fb8dec9043b0ac9d23d5caec19b8b0c337" "c:gentoo/b0c337b02c39fb8dec9043b0ac9d23d5caec19b8" "foo.patch" "p:1" "p:gentoo/17" )
 # @CODE
-
-# @ECLASS-VARIABLE: GH_PULLREQS
-# @DEFAULT_UNSET
-# @DESCRIPTION:
-# Pull requests to be fetched and applied from Github by its id.
-# Example:
-# @CODE
-# GH_PULLREQS=(17 19)
-# @CODE
-
 
 # @ECLASS-VARIABLE: GH_TAG
 # @DESCRIPTION:
@@ -62,6 +56,10 @@ esac
 
 
 inherit eutils
+
+if [[ ${PV} != *9999 && ${GH_BUILD_TYPE} == live ]]; then
+    eqawarn "Uncommon package version for a live ebuild."
+fi 
 
 if [[ -z ${GH_BUILD_TYPE}  ]]; then
 	if [[ ${PV} == *9999 ]]; then
@@ -85,27 +83,68 @@ HOMEPAGE="https://github.com/${GH_USER}/${GH_REPO}"
 
 EXPORT_FUNCTIONS src_prepare src_unpack
 
+_patch_calc_commit() {
+	debug-print-function ${FUNCNAME} "$@"
+
+	local gh_filepatch="$1"
+	_GH_PATCHES+=($gh_filepatch)
+}
+
+_patch_calc_commit() {
+	debug-print-function ${FUNCNAME} "$@"
+
+	local gh_patch="$1"
+	local gh_commit=${gh_patch##*/}
+	local gh_fork=${GH_USER}
+	local gh_forkedby=""
+	if [[ "${gh_patch}" == */* ]]; then 
+		gh_fork=${gh_patch%%/*}
+		gh_forkedby=${gh_fork}-
+	fi
+	SRC_URI+=" https://github.com/${GH_USER}/${GH_REPO}/commit/${gh_commit}.patch -> ${PN}-${gh_forkedby}${gh_commit}.patch"
+	_GH_PATCHES+=("${DISTDIR}"/${PN}-${gh_forkedby}${gh_commit}.patch)
+}
+
+_patch_calc_pull-request() {
+	debug-print-function ${FUNCNAME} "$@"
+
+	local gh_patch="$1"
+	local gh_pullreq=${gh_patch##*/}
+	local gh_fork=${GH_USER}
+	local gh_forkedby=""
+
+	if [[ "${gh_patch}" == */* ]]; then 
+		gh_fork=${gh_patch%%/*}
+		gh_forkedby=${gh_fork}-
+	fi
+ 
+	SRC_URI+=" https://github.com/${gh_fork}/${GH_REPO}/pull/${gh_pullreq}.patch -> ${PN}-pr${gh_forkedby}-${gh_pullreq}.patch"
+	_GH_PATCHES+=("${DISTDIR}"/${PN}-pr-${gh_forkedby}${gh_pullreq}.patch)
+}
 
 # If patches are fetched, calculate their location
 _calculate_patches_uri() {
 	if [[ -n $GH_PATCHES ]]; then
 		for gh_commit in "${GH_PATCHES[@]}"; do
-			SRC_URI+=" https://github.com/${GH_USER}/${GH_REPO}/commit/${gh_commit}.patch -> ${PN}-${gh_commit}.patch"
-			_GH_PATCHES+=("${DISTDIR}"/${PN}-${gh_commit}.patch)
+			case ${gh_commit:0:1} in
+				f) _patch_calc_filesdir "${gh_commit:2}"
+				;;
+				c) _patch_calc_commit "${gh_commit:2}"
+				;;
+				p) _patch_calc-pull_request "${gh_commit:2}"
+				;;
+				*) die "Wrong patch pattern: ${gh_commit}"
+				;;
+			esac
 		done
 	fi
-	if [[ -n $GH_PULLREQ ]]; then 
-		for gh_pullreq in "${GH_PULLREQS[@]}"; do
-			SRC_URI+=" https://github.com/${GH_USER}/${GH_REPO}/pull/${gh_pullreq}.patch -> ${PN}-pr-${gh_pullreq}.patch"
-			_GH_PATCHES+=("${DISTDIR}"/${PN}-pr-${gh_pullreq}.patch)
-		done
-        fi
 }
 
 
 # Determine fetch location for tarballs and patches
 _calculate_src_uri() {
 	debug-print-function ${FUNCNAME} "$@"
+
 	SRC_URI="https://github.com/${GH_USER}/${GH_REPO}/archive/${GH_TAG}.tar.gz -> ${P}.tar.gz"
 }
 
@@ -115,9 +154,9 @@ _calculate_live_repo() {
 
 	SRC_URI=""
 	# @ECLASS-VARIABLE: EGIT_MIRROR
-        # @DESCRIPTION:
-	# This variable allows easy overriding of default kde mirror service
-	# (anongit) with anything else you might want to use.
+	# @DESCRIPTION:
+	# This variable allows easy overriding of github uri.
+	# (uses https) with anything else you might want to use.
 	EGIT_MIRROR=${EGIT_MIRROR:=https://github.com}
 	
 	EGIT_REPO_URI="${EGIT_MIRROR}/${GH_USER}/${GH_REPO}.git"
