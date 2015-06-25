@@ -5,7 +5,6 @@
 EAPI=5
 
 GH_USER="perusio"
-GH_TAG="9d13b0ff5626b093c7c3cd2e0aa088f8f06b7b35"
 
 inherit github bash-completion-r1
 
@@ -13,7 +12,7 @@ DESCRIPTION="A script to enable or disable a site in nginx"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS=""
 IUSE=""
 
 src_install() {
