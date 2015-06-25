@@ -8,7 +8,6 @@ description="Controller for Corsair Keyboard Driver"
 pidfile="/var/run/ckb.pid"
 
 start() {
-	checkconfig || return 1
 	ebegin "Starting Corsair Keyboard Driver"
 	start-stop-daemon --start --exec "${command}" --pidfile "${pidfile}"
 	eend $?
