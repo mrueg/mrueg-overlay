@@ -34,7 +34,7 @@ esac
 # @DEFAULT-UNSET
 # @DESCRIPTION:
 # Defines if fetched from git ("live") or tarball ("release")
-# Use if autodetection via PV fails.
+: ${GH_BUILD_TYPE:=release}
 
 # @ECLASS-VARIABLE: GH_PATCHES
 # @DEFAULT_UNSET
@@ -57,25 +57,11 @@ esac
 
 inherit eutils
 
-if [[ ${PV} != *9999 && ${GH_BUILD_TYPE} == live ]]; then
-    eqawarn "Uncommon package version for a live ebuild."
-fi 
-
-if [[ -z ${GH_BUILD_TYPE}  ]]; then
-	if [[ ${PV} == *9999 ]]; then
-		_GH_BUILD_TYPE=live
-	else
-		_GH_BUILD_TYPE=release
-	fi
-else 
-	_GH_BUILD_TYPE=$GH_BUILD_TYPE
-fi
-
-if [[ ${_GH_BUILD_TYPE} = live ]]; then
+if [[ ${GH_BUILD_TYPE} = live ]]; then
 	inherit git-r3
 fi
 
-if [[ ${_GH_BUILD_TYPE} = release ]]; then
+if [[ ${GH_BUILD_TYPE} = release ]]; then
 	inherit vcs-snapshot
 fi
 
@@ -83,7 +69,7 @@ HOMEPAGE="https://github.com/${GH_USER}/${GH_REPO}"
 
 EXPORT_FUNCTIONS src_prepare src_unpack
 
-_patch_calc_commit() {
+_patch_calc_filesdir() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	local gh_filepatch="$1"
@@ -131,7 +117,7 @@ _calculate_patches_uri() {
 				;;
 				c) _patch_calc_commit "${gh_commit:2}"
 				;;
-				p) _patch_calc-pull_request "${gh_commit:2}"
+				p) _patch_calc_pull-request "${gh_commit:2}"
 				;;
 				*) die "Wrong patch pattern: ${gh_commit}"
 				;;
@@ -163,7 +149,7 @@ _calculate_live_repo() {
 }
 
 
-case ${_GH_BUILD_TYPE} in
+case ${GH_BUILD_TYPE} in
 	live) _calculate_live_repo ;;
 	release) _calculate_src_uri ;;
 esac
@@ -177,7 +163,7 @@ debug-print "${LINENO} ${ECLASS} ${FUNCNAME}: SRC_URI is ${SRC_URI}"
 github_src_unpack() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	if [[ ${_GH_BUILD_TYPE} = live ]]; then
+	if [[ ${GH_BUILD_TYPE} = live ]]; then
 		git-r3_src_unpack
 	else
 		vcs-snapshot_src_unpack
