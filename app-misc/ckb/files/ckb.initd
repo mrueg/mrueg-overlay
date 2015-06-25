@@ -1,0 +1,28 @@
+#!/sbin/runscript
+## Copyright 1999-2015 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+extra_started_commands="reload"
+command="/usr/bin/ckb-daemon"
+description="Controller for Corsair Keyboard Driver"
+pidfile="/var/run/ckb.pid"
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting Corsair Keyboard Driver"
+	start-stop-daemon --start --exec "${command}" --pidfile "${pidfile}"
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Corsair Keyboard Driver"
+	start-stop-daemon --stop --exec "${command}" --pidfile "${pidfile}"
+	eend $?
+
+}
+
+reload() {
+	stop
+	sleep 3
+	start
+}
