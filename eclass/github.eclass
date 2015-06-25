@@ -78,12 +78,12 @@ EXPORT_FUNCTIONS src_prepare src_unpack
 # If patches are fetched, calculate their location
 _calculate_patches_uri() {
 	if [[ -n $GH_PATCHES ]]; then
-            _GH_PATCHES=
-            for gh_commit in "${GH_PATCHES[@]}"; do
-                SRC_URI+=" https://github.com/${GH_USER}/${GH_REPO}/commit/${gh_commit}.patch -> ${PN}-${gh_commit}.patch"
-                _GH_PATCHES+=( "${DISTDIR}"/${PN}-${gh_commit}.patch )
-            done
-    fi
+		GH_PATCHES=
+		for gh_commit in "${GH_PATCHES[@]}"; do
+			SRC_URI+=" https://github.com/${GH_USER}/${GH_REPO}/commit/${gh_commit}.patch -> ${PN}-${gh_commit}.patch"
+			_GH_PATCHES+=( "${DISTDIR}"/${PN}-${gh_commit}.patch )
+		done
+	fi
 }
 
 
@@ -134,9 +134,11 @@ github_src_unpack() {
 # @DESCRIPTION:
 # Function for applying patches to Github packages.
 github_src_prepare() {
-    [[ $_GH_PATCHES ]] && epatch "${_GH_PATCHES[@]}"
-    epatch_user
-    default
+	debug-print-function ${FUNCNAME} "$@"
+
+	[[ $_GH_PATCHES ]] && epatch "${_GH_PATCHES[@]}"
+	epatch_user
+	default
 }
 
 fi
