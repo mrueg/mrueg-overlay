@@ -39,7 +39,7 @@ src_install() {
 	exeinto /usr/bin/ckb-animations
 	doexe bin/ckb-animations/*
 
-	doinitd "${FILESDIR}"/ckb.initd
+	newinitd "${FILESDIR}"/ckb.initd ckb-daemon
 	domenu usr/ckb.desktop
 	doicon usr/ckb.png
 	systemd_dounit service/systemd/ckb-daemon.service
