@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+	<email>mrueg@gentoo.org</email>
+	<name>Manuel Rüger</name>
+</maintainer>
+<longdescription>Community-writen modules for Prosody IM Server</longdescription>
+<use>
+	<flag name='luajit'>Use dev-lang/luajit instead of dev-lang/lua</flag>
+	<flag name='misc'>Install misc files.</flag>
+</use>
+</pkgmetadata>
