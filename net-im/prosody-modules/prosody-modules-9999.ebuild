@@ -7,7 +7,7 @@ EAPI=5
 inherit eutils multilib mercurial
 
 DESCRIPTION="Add-on modules for Prosody IM Server written in Lua"
-HOMEPAGE="https://prosody-modules.googlecode.com/"
+HOMEPAGE="https://prosody-modules.googlecode.com/ http://hg.prosody.im/prosody-modules/"
 EHG_REPO_URI="https://hg.prosody.im/prosody-modules"
 
 LICENSE="MIT"
@@ -23,13 +23,13 @@ PROSODY_MODULES="
 	auth_internal_yubikey auth_joomla auth_ldap auth_ldap2 auth_pam
 	auth_phpbb3 auth_sql auth_wordpress auto_accept_subscriptions
 	auto_activate_hosts benchmark_storage bidi blocking
-	block_registrations	block_s2s_subscriptions block_strangers
+	block_registrations block_s2s_subscriptions block_strangers
 	block_subscribes block_subscriptions broadcast c2s_conn_throttle
 	c2s_limit_sessions candy captcha_registration carbons carbons_adhoc
 	carbons_copies checkcerts client_certs compact_resource compat_bind
 	compat_muc_admin compat_vcard component_client component_roundrobin
 	conformance_restricted couchdb csi csi_compat data_access
-	default_bookmarks default_vcard	delegation disable_tls discoitems
+	default_bookmarks default_vcard delegation disable_tls discoitems
 	dwd email_pass extdisco filter_chatstates firewall flash_policy
 	group_bookmarks host_blacklist host_guard http_altconnect
 	http_dir_listing http_favicon http_index http_muc_log
@@ -49,7 +49,7 @@ PROSODY_MODULES="
 	readonly register_json register_redirect register_web reload_modules
 	remote_roster require_otr roster_allinall roster_command
 	s2s_auth_compat s2s_auth_dane s2s_auth_fingerprint
-	s2s_auth_monkeysphere s2s_blacklist	s2s_idle_timeout s2s_keepalive
+	s2s_auth_monkeysphere s2s_blacklist s2s_idle_timeout s2s_keepalive
 	s2s_keysize_policy s2s_log_certs s2s_never_encrypt_blacklist
 	s2soutinjection s2s_reload_newcomponent s2s_whitelist saslauth_muc
 	saslname seclabels secure_interfaces server_contact_info
