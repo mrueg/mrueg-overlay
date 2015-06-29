@@ -30,10 +30,10 @@ pkg_setup() {
 all_ruby_install() {
 	dodoc README.rdoc
 	rm README.rdoc license.txt || die
-	dodir "${REDMINE_DIR}"/plugins/${PN}
-	insinto "${REDMINE_DIR}"/plugins/${PN}
+	dodir "${REDMINE_DIR}"/plugins/scrum
+	insinto "${REDMINE_DIR}"/plugins/scrum
 	doins -r .
-	fowners -R redmine:redmine "${REDMINE_DIR}"/plugins/${PN}
+	fowners -R redmine:redmine "${REDMINE_DIR}"/plugins/scrum
 }
 
 pkg_postinst() {
