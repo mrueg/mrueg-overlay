@@ -20,6 +20,8 @@ DEPEND+=" app-arch/unzip"
 
 ruby_add_rdepend ">=www-apps/redmine-3"
 
+RUBY_S=${PN}
+
 REDMINE_DIR="/var/lib/redmine"
 
 pkg_setup() {
