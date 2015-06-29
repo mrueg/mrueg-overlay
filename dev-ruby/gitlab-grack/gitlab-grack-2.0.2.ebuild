@@ -7,8 +7,9 @@ EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
 RUBY_FAKEGEM_EXTRADOC="README.md CHANGELOG"
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
+RUBY_FAKEGEM_GEMSPEC="grack.gemspec"
 
-inherit eutils ruby-fakegem
+inherit ruby-fakegem
 
 DESCRIPTION="Git Smart HTTP Server Rack Implemenation. Gitlab fork"
 HOMEPAGE="https://github.com/gitlabhq/grack"
@@ -25,8 +26,10 @@ ruby_add_rdepend ">=dev-ruby/rack-1.5"
 ruby_add_bdepend "test? ( dev-ruby/mocha:0.11 )"
 
 all_ruby_prepare() {
+	rm Gemfile.lock || die
 	sed -i -e "/bundler/d" Rakefile || die
 	sed -i -e 's#mocha#mocha/setup#' tests/main_test.rb || die
+	sed -i -e "s/~> 1.5.1/>= 1.5.1/" grack.gemspec || die
 }
 
 each_ruby_test() {
