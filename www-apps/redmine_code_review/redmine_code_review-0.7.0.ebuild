@@ -31,7 +31,7 @@ pkg_setup() {
 
 all_ruby_install() {
 	dodoc README.rdoc
-	rm README.rdoc GPL.txt rmv-installer rvm.env || die
+	rm README.rdoc GPL.txt rvm-installer rvm.env || die
 	dodir "${REDMINE_DIR}"/plugins/${PN}
 	insinto "${REDMINE_DIR}"/plugins/${PN}
 	doins -r .
