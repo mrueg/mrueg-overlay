@@ -18,17 +18,18 @@ IUSE=""
 
 ruby_add_rdepend "dev-ruby/asciidoctor
 	dev-ruby/creole
+	dev-ruby/dalli
 	dev-ruby/github-markup
 	>=dev-ruby/gitolite-rugged-1.2.0
-	dev-ruby/gitlab-grack
 	dev-ruby/org-ruby
-	dev-ruby/asciidoctor
 	>=dev-ruby/redcarpet-3.1.2
+	dev-ruby/redis
 	dev-ruby/redcloth
 	dev-ruby/wikicloth
 	dev-ruby/haml-rails
+	www-apps/redmine_bootstrap_kit
 	>=www-apps/redmine-3"
-
+# dev-ruby/gitlab-grack
 ruby_add_bdepend ">=www-apps/redmine-3"
 
 REDMINE_DIR="/var/lib/redmine"
@@ -36,6 +37,10 @@ REDMINE_DIR="/var/lib/redmine"
 pkg_setup() {
 	enewgroup redmine
 	enewuser redmine -1 -1 "${REDMINE_DIR}" redmine
+}
+
+all_ruby_prepare() {
+	sed -i -e "/mount Grack/,s/^/#/" config/routes.rb || die
 }
 
 all_ruby_install() {
