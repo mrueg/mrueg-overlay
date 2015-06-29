@@ -17,8 +17,15 @@ KEYWORDS="~amd64"
 IUSE="test"
 
 RDEPEND="dev-python/pykka[${PYTHON_USEDEP}]
+	dev-python/gst-python:0.10[${PYTHON_USEDEP}]
+	media-libs/gst-plugins-bad:0.10
+	media-libs/gst-plugins-good:0.10
+	media-libs/gst-plugins-ugly:0.10
+	media-plugins/gst-plugins-meta:0.10
 	www-servers/tornado[${PYTHON_USEDEP}]"
-DEPEND="test? ( dev-python/nose[${PYTHON_USEDEP}] )
+
+DEPEND="test? ( ${RDEPEND}
+	dev-python/nose[${PYTHON_USEDEP}] )
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 S=${WORKDIR}/Mopidy-${PV}
