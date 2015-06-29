@@ -34,13 +34,13 @@ ruby_add_bdepend ">=www-apps/redmine-3"
 
 REDMINE_DIR="/var/lib/redmine"
 
-pkg_setup() {
-	enewgroup redmine
-	enewuser redmine -1 -1 "${REDMINE_DIR}" redmine
-}
+#pkg_setup() {
+#	enewgroup redmine
+#	enewuser redmine -1 -1 "${REDMINE_DIR}" redmine
+#}
 
 all_ruby_prepare() {
-	sed -i -e "/mount Grack/,s/^/#/" config/routes.rb || die
+	sed -i -e "/mount Grack/ s/^/#/" config/routes.rb || die
 }
 
 all_ruby_install() {
