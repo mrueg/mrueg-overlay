@@ -16,4 +16,4 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="dev-python/py[${PYTHON_USEDEP}]"
+RDEPEND="dev-python/py[${PYTHON_USEDEP}]"
