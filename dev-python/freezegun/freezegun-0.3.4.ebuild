@@ -16,8 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="test"
 
-RDEPEND="dev-python/nose[${PYTHON_USEDEP}]"
-DEPEND="${RDEPEND}
+DEPEND="test? ( dev-python/nose[${PYTHON_USEDEP}] )
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 python_test() {
