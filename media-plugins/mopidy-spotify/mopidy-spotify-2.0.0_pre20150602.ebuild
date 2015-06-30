@@ -7,7 +7,7 @@ PYTHON_COMPAT=(python2_7)
 
 inherit vcs-snapshot distutils-r1
 
-DESCRIPTION="An extensible music server that plays music from local disk and more"
+DESCRIPTION="Mopidy extension for playing music from Spotify"
 HOMEPAGE="http://mopidy.com https://github.com/mopidy/mopidy-spotify"
 COMMIT_ID="70f27932cbc728693140d5d264054fb8c777516f"
 SRC_URI="https://github.com/mopidy/${PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
