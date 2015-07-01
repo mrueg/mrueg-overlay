@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -20,7 +20,7 @@ IUSE=""
 COMMONDEPEND="dev-java/jlibeps:0
 	>=dev-java/malai-1.3
 	>=dev-java/mockito-1.9.5
-	>=dev-java/scala-2.11
+	>=dev-lang/scala-2.11
 	>=dev-java/pdf-renderer-1.0.5:0"
 
 RDEPEND=">=virtual/jre-1.7
