@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/sci-mathematics/calc/calc-2.12.4.4.ebuild,v 1.1 2012/08/09 17:52:26 bicatali Exp $
 
@@ -16,9 +16,8 @@ KEYWORDS="~amd64"
 
 IUSE=""
 
-DEPEND="
-	sys-libs/ncurses
-	sys-libs/readline"
+DEPEND="sys-libs/ncurses
+	sys-libs/readline:0"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
@@ -37,7 +36,7 @@ src_compile() {
 		LDFLAGS="${LDFLAGS}" \
 		CALCPAGER="${PAGER}" \
 		USE_READLINE="-DUSE_READLINE" \
-		READLINE_LIB="-lreadline -lhistory -lncurses -L${S}/custom -lcustcalc" \
+		READLINE_LIB="-lreadline -lhistory -lncurses -L\"${S}\"/custom -lcustcalc" \
 		all
 }
 
