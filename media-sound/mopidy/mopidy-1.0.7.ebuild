@@ -5,7 +5,7 @@
 EAPI=5
 PYTHON_COMPAT=(python2_7)
 
-inherit distutils-r1
+inherit eutils distutils-r1
 
 DESCRIPTION="An extensible music server that plays music from local disk and more"
 HOMEPAGE="http://mopidy.com https://github.com/mopidy/mopidy"
@@ -30,7 +30,11 @@ DEPEND="test? ( ${RDEPEND}
 
 S=${WORKDIR}/Mopidy-${PV}
 
-DOCS=( README.rst )
+src_install() {
+	distutils-r1_src_install
+	domenu extra/desktop/mopidy.desktop || die
+
+}
 
 python_test() {
 	nosetests || die
