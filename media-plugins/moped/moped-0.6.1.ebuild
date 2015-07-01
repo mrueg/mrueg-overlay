@@ -17,7 +17,4 @@ KEYWORDS="~amd64"
 IUSE="test"
 
 RDEPEND="media-sound/mopidy[${PYTHON_USEDEP}]"
-
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
-
-DOCS=( README.rst )
