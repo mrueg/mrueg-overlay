@@ -31,8 +31,8 @@ DEPEND="test? ( ${RDEPEND}
 S=${WORKDIR}/Mopidy-${PV}
 
 pkg_setup() {
-	enewuser mopidy -1 -1 "/etc/mopidy" mopidy
 	enewgroup mopidy
+	enewuser mopidy -1 -1 "/etc/mopidy" mopidy
 	distutils-r1_pkg_setup
 }
 
