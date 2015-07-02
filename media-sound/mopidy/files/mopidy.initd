@@ -11,8 +11,7 @@ start() {
         --user mopidy \
         --pidfile ${PIDFILE} --make-pidfile \
         --exec /usr/bin/mopidy \
-        --config /usr/share/mopidy/conf.d:/etc/mopidy/mopidy.conf\
-        -- --foreground
+        -- --config /usr/share/mopidy/conf.d:/etc/mopidy/mopidy.conf
     eend $?
 }
 
