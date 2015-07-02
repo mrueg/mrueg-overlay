@@ -5,7 +5,7 @@
 EAPI=5
 PYTHON_COMPAT=(python2_7)
 
-inherit eutils systemd distutils-r1
+inherit user eutils systemd distutils-r1
 
 DESCRIPTION="An extensible music server that plays music from local disk and more"
 HOMEPAGE="http://mopidy.com https://github.com/mopidy/mopidy"
