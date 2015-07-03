@@ -20,7 +20,8 @@ RDEPEND="dev-python/msgpack[${PYTHON_USEDEP}]
 	dev-python/llfuse[${PYTHON_USEDEP}]
 	dev-python/pyopenssl[${PYTHON_USEDEP}]"
 
-DEPEND="test? ( ${RDEPEND} )"
+DEPEND="test? ( ${RDEPEND} )
+	dev-python/cython[${PYTHON_USEDEP}]"
 
 RESTRICT="test"
 
