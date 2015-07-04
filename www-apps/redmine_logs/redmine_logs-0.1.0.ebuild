@@ -23,6 +23,8 @@ ruby_add_rdepend "
 
 REDMINE_DIR="/var/lib/redmine"
 
+RUBY_S=${PN}
+
 pkg_setup() {
 	enewgroup redmine
 	enewuser redmine -1 -1 "${REDMINE_DIR}" redmine
