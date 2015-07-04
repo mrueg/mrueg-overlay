@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-2.4.6.ebuild,v 1.2 2014/08/06 00:06:01 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby20"
+USE_RUBY="ruby20 ruby21"
 inherit eutils depend.apache ruby-ng user
 
 DESCRIPTION="A flexible project management web application written using Ruby on Rails framework"
@@ -21,10 +21,10 @@ IUSE="ldap fastcgi passenger" #imagemagick
 ruby_add_rdepend "
 	dev-ruby/rubygems
 	>=dev-ruby/rails-4.2.1:4.2
-	>=dev-ruby/jquery-rails-3.1.1
+	>=dev-ruby/jquery-rails-3.1.1:3
 	>=dev-ruby/coderay-1.1.0
 	dev-ruby/builder:3
-	dev-ruby/mime-types
+	dev-ruby/mime-types:*
 	=dev-ruby/request_store-1.0.5
 	>=dev-ruby/rbpdf-1.18.5
 	dev-ruby/actionpack-action_caching
