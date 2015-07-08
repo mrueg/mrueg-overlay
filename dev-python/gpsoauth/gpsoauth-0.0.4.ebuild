@@ -16,4 +16,5 @@ KEYWORDS="~amd64"
 IUSE=""
 
 RDEPEND="dev-python/requests[${PYTHON_USEDEP}]
+	dev-python/pycrypto[${PYTHON_USEDEP}]
 	dev-python/python-dateutil[${PYTHON_USEDEP}]"
