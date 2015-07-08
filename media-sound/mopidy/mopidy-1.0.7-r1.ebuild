@@ -21,7 +21,7 @@ RDEPEND="dev-python/pykka[${PYTHON_USEDEP}]
 	media-libs/gst-plugins-bad:0.10
 	media-libs/gst-plugins-good:0.10
 	media-libs/gst-plugins-ugly:0.10
-	media-plugins/gst-plugins-meta:0.10
+	media-plugins/gst-plugins-meta:0.10[http,mp3]
 	www-servers/tornado[${PYTHON_USEDEP}]"
 
 DEPEND="test? ( ${RDEPEND}
@@ -33,6 +33,7 @@ S=${WORKDIR}/Mopidy-${PV}
 pkg_setup() {
 	enewgroup mopidy
 	enewuser mopidy -1 -1 "/etc/mopidy" mopidy
+
 	distutils-r1_pkg_setup
 }
 
