@@ -22,14 +22,14 @@ IUSE="ldap imagemagick fastcgi passenger"
 
 ruby_add_rdepend "
 	dev-ruby/rubygems
-	>=dev-ruby/rails-3.2.19:3.2
+	>=dev-ruby/rails-3.2.22:3.2
 	>=dev-ruby/jquery-rails-3.1.1:3
 	dev-ruby/i18n:0.6
 	>=dev-ruby/coderay-1.1.0
 	dev-ruby/builder:3
 	dev-ruby/mime-types:*
 	=dev-ruby/request_store-1.0.5
-	>=dev-ruby/rbpdf-1.18.1
+	>=dev-ruby/rbpdf-1.18.6
 	ldap? ( >=dev-ruby/ruby-net-ldap-0.3.1 )
 	>=dev-ruby/ruby-openid-2.3.0
 	>=dev-ruby/rack-openid-0.2.1

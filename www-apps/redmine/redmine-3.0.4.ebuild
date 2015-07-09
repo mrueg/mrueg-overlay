@@ -16,17 +16,17 @@ SLOT="0"
 # All db-related USEs are ineffective since we depend on rails
 # which depends on activerecord which depends on all ruby's db bindings
 #IUSE="ldap openid imagemagick postgres sqlite mysql fastcgi passenger"
-IUSE="ldap fastcgi passenger" #imagemagick
+IUSE="ldap fastcgi passenger imagemagick"
 
 ruby_add_rdepend "
 	dev-ruby/rubygems
-	>=dev-ruby/rails-4.2.1:4.2
+	>=dev-ruby/rails-4.2.3:4.2
 	>=dev-ruby/jquery-rails-3.1.1:3
 	>=dev-ruby/coderay-1.1.0
 	dev-ruby/builder:3
 	dev-ruby/mime-types:*
 	=dev-ruby/request_store-1.0.5
-	>=dev-ruby/rbpdf-1.18.5
+	>=dev-ruby/rbpdf-1.18.6
 	dev-ruby/actionpack-action_caching
 	dev-ruby/actionpack-xml_parser
 	dev-ruby/protected_attributes
@@ -35,9 +35,8 @@ ruby_add_rdepend "
 	>=dev-ruby/ruby-openid-2.3.0
 	>=dev-ruby/rack-openid-0.2.1
 	fastcgi? ( dev-ruby/fcgi )
-	passenger? ( www-apache/passenger )"
-	# Not available yet, tests fail
-	#imagemagick? ( >=dev-ruby/rmagick-2.14.0 )
+	passenger? ( www-apache/passenger )
+	imagemagick? ( >=dev-ruby/rmagick-2.13.4 )"
 	#	ruby_targets_ruby19? (
 #		postgres? ( >=dev-ruby/pg-0.11 )
 #		sqlite3? ( dev-ruby/sqlite3 )
