@@ -25,48 +25,36 @@ src_prepare() {
 	preparation() {
 		if python_is_python3; then
 			cp -r -l "${WORKDIR}/${P}" "${BUILD_DIR}" || die
-			pushd "${BUILD_DIR}" > /dev/null
 		else
 			cp -r -l "${WORKDIR}/python2-${P}" "${BUILD_DIR}" || die
-			pushd "${BUILD_DIR}" > /dev/null
 		fi
+			pushd "${BUILD_DIR}" > /dev/null
 			sed -e "/^    'sphinx.ext.intersphinx',/d" -i doc/conf.py || die
 			popd > /dev/null
-			distutils-r1_python_prepare
 	}
 	python_foreach_impl preparation
 	distutils-r1_python_prepare_all
 }
 
-src_compile() {
-	compile () {
+python_compile() {
 		if [[ -z $DOC_BUILT ]]; then
+			pushd "${BUILD_DIR}" > /dev/null || die
 			use doc && emake -C doc html
-			export DOC_BUILT=1
+			DOC_BUILT=1
+			popd > /dev/null || die
 		fi
-			distutils-r1_python_compile
-	}
-	python_foreach_impl run_in_build_dir compile
 }
 
-src_install() {
-	install () {
-		if [[ -z $EXAMPLES_INSTALLED ]]; then
-			use examples && local EXAMPLES=( examples/. )
-			export EXAMPLES_INSTALLED=1
-		fi
-		if [[ -z $DOCS_INSTALLED ]]; then
-			use doc && local HTML_DOCS=( doc/_build/html/. )
-			export DOCS_INSTALLED=1
-		fi
-		distutils-r1_python_install
-		distutils-r1_python_install_all
-	}
-	python_foreach_impl run_in_build_dir install
-}
-
-run_in_build_dir() {
+python_install() {
 	pushd "${BUILD_DIR}" > /dev/null || die
-	"$@"
+	if [[ -z $EXAMPLES_INSTALLED ]]; then
+		use examples && local EXAMPLES=( examples/. )
+		EXAMPLES_INSTALLED=1
+	fi
+	if [[ -z $DOCS_INSTALLED ]]; then
+		use doc && local HTML_DOCS=( doc/_build/html/. )
+		DOCS_INSTALLED=1
+	fi
+	distutils-r1_python_install_all
 	popd > /dev/null || die
 }
