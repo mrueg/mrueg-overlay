@@ -32,10 +32,5 @@ DEPEND="test? ( ${RDEPEND} )
 S=${WORKDIR}/${P}/${PN}
 
 python_test() {
-	# Fix me: testdata is not available for tests otherwise
-	cp -R ${PN}/testdata ../${PN}-${EPYTHON/./_}/lib/${PN} || die
-
-	for i in ${PN}/*_test.py; do
-		${PYTHON} "${i}" || die
-	done
+	nosetests -w ${PN} || die
 }
