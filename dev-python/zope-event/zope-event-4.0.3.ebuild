@@ -9,7 +9,7 @@ inherit distutils-r1
 MY_PN=zope.event
 
 MY_P=${MY_PN}-${PV}
-DESCRIPTION=" Event publishing / dispatch, used by Zope Component Architecture"
+DESCRIPTION="Event publishing / dispatch, used by Zope Component Architecture"
 HOMEPAGE="https://github.com/zopefoundation/zope.event http://docs.zope.org/zope.event/"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
