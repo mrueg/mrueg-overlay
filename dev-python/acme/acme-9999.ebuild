@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=5
-PYTHON_COMPAT=(python2_7)
+PYTHON_COMPAT=(python{2_7,3_3,3_4})
 
 EGIT_REPO_URI="https://github.com/letsencrypt/letsencrypt.git"
 
