@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -12,7 +12,7 @@ inherit distutils-r1 git-r3
 DESCRIPTION="A modern, fast web-mail client with user-friendly encryption and privacy features"
 HOMEPAGE="https://github.com/mailpile/Mailpile"
 
-LICENSE="|| ( Apache-2.0 AGPL-3 )"
+LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS=""
 IUSE="test"
