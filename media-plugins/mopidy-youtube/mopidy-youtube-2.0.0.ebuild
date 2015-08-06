@@ -5,12 +5,11 @@
 EAPI=5
 PYTHON_COMPAT=(python2_7)
 
-inherit vcs-snapshot distutils-r1
+inherit distutils-r1
 
 DESCRIPTION="Mopidy extension for playing music from Youtube"
 HOMEPAGE="https://github.com/dz0ny/mopidy-youtube"
-COMMIT_ID="2e7ce46b782f70e16ab87dc487418ffb3c495599"
-SRC_URI="https://github.com/dz0ny/${PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/dz0ny/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
