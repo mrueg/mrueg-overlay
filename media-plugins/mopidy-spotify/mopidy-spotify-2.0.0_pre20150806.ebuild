@@ -9,7 +9,7 @@ inherit vcs-snapshot distutils-r1
 
 DESCRIPTION="Mopidy extension for playing music from Spotify"
 HOMEPAGE="http://mopidy.com https://github.com/mopidy/mopidy-spotify"
-COMMIT_ID="70f27932cbc728693140d5d264054fb8c777516f"
+COMMIT_ID="3b3bc09b075563d87fd8c4bcd7d21a37a665fec0"
 SRC_URI="https://github.com/mopidy/${PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
@@ -18,7 +18,7 @@ KEYWORDS="~amd64"
 IUSE="test"
 
 RDEPEND="dev-python/pykka[${PYTHON_USEDEP}]
-	>=dev-python/pyspotify-2.0.0[${PYTHON_USEDEP}]
+	>=dev-python/pyspotify-2.0.2[${PYTHON_USEDEP}]
 	media-sound/mopidy[${PYTHON_USEDEP}]"
 
 DEPEND="test? ( ${RDEPEND}
