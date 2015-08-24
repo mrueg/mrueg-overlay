@@ -47,6 +47,7 @@ carbons - This module implements XEP-0280: Message Carbons, allowing users to ma
 carbons_adhoc - This module will add an Adhoc-command by which a user can see if Message Carbons (XEP-0280) are generated for his clients and also which version is used for the individual client. Clients which receive copies as per mod_carbons_copies will be listed as Version 0 carbons.
 carbons_copies - Enable v0 style carbons for clients which are not carbons-capable yet. This will not interfere with clients which have support for regular Message Carbons (XEP-0280).
 checkcerts - This module periodically checks your certificate to see if it is about to expire soon.  The time before expiry is printed in the logs.  About a week before a certificate expires, reminder messages will be sent to admins.
+cloud_notify - XEP-0357: Cloud push notifications
 client_certs - XEP-0257 specifies a protocol for clients to store and manage client side certificates. When a client presents a stored client side certificate during the TLS handshake, it can log in without supplying a password (using SASL EXTERNAL). This makes it possible to have multiple devices accessing an account, without any of them needing to know the password, and makes it easier to revoke access for a single device.
 compact_resource - Enforces short random resources
 compat_bind - Compatibility with clients that set 'to' on resource bind requests.

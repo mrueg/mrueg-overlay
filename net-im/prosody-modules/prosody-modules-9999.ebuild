@@ -26,11 +26,11 @@ PROSODY_MODULES="
 	block_registrations block_s2s_subscriptions block_strangers
 	block_subscribes block_subscriptions broadcast c2s_conn_throttle
 	c2s_limit_sessions candy captcha_registration carbons carbons_adhoc
-	carbons_copies checkcerts client_certs compact_resource compat_bind
-	compat_muc_admin compat_vcard component_client component_roundrobin
-	conformance_restricted couchdb csi csi_compat data_access
-	default_bookmarks default_vcard delegation disable_tls discoitems
-	dwd email_pass extdisco filter_chatstates firewall flash_policy
+	carbons_copies checkcerts client_certs cloud_notify compact_resource 
+	compat_bind compat_muc_admin compat_vcard component_client 
+	component_roundrobin conformance_restricted couchdb csi csi_compat 
+	data_access default_bookmarks default_vcard delegation disable_tls 
+	discoitems dwd email_pass extdisco filter_chatstates firewall flash_policy
 	group_bookmarks host_blacklist host_guard http_altconnect
 	http_dir_listing http_favicon http_index http_muc_log
 	http_user_count idlecompat incidents_handling ipcheck isolate_host
@@ -67,7 +67,8 @@ PROSODY_MODULES="
 # storage_mongodb proctitle storage_lmdb
 
 for x in ${PROSODY_MODULES}; do
-	IUSE="${IUSE} ${x//[^+]/}prosody_modules_${x/+}"
+	# Allow to enable modules by default
+	IUSE+=" ${x//[^+]/}prosody_modules_${x/+}"
 done
 
 DEPEND=">=net-im/prosody-0.9"
@@ -171,6 +172,10 @@ REQUIRED_USE="
 src_install() {
 	for m in ${PROSODY_MODULES}; do
 		if use prosody_modules_${m}; then
+			if [[ -e mod_${m}/README.wiki ]]; then
+				newdoc mod_${m}/README.wiki mod_${m}_README.wiki
+				rm mod_${m}/README.wiki || die
+			fi
 			insinto /usr/$(get_libdir)/prosody/modules;
 			doins -r "mod_${m}"
 		fi
