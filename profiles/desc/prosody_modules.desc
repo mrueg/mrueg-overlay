@@ -111,6 +111,7 @@ manifesto - This module informs users about the XMPP Test day and whether their 
 measure_cpu - Collect CPU usage statistic
 measure_memory - Module for polling memory useage from Lua, meminfo() and /proc depending on availability.
 message_logging - Often service administrators need to log their users' messages for reasons such as auditing and compliance. This module simply logs user messages to simple text files, which can be easily searched, archived or removed on a regular basis.
+migrate - Provides a prosodyctl command for copying data between storage backends
 motd_sequential - A variant of prosody_modules_motd that lets you specify a sequence of MOTD messages instead of a single static one.  Each message is only sent once and the module keeps track of who as seen which message.
 muc_ban_ip - One frequent complaint about XMPP chatrooms (MUCs) compared to IRC is the inability for a room admin to ban a user based on their IP address. This is because an XMPP user is not identified on the network by their IP address, only their JID.
 muc_config_restrict - Sometimes, especially on public services, you may want to allow people to create their own rooms, but prevent some options from being modified by normal users.

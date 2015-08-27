@@ -38,7 +38,7 @@ PROSODY_MODULES="
 	list_inactive listusers log_auth log_events log_messages_sql
 	log_rate log_sasl_mech log_slow_events mam mam_adhoc mam_archive
 	mam_muc mam_muc_sql mam_sql mamsub manifesto measure_cpu
-	measure_memory message_logging motd_sequential muc_ban_ip
+	measure_memory message_logging migrate motd_sequential muc_ban_ip
 	muc_config_restrict muc_intercom muc_limits muc_log muc_log_http
 	muc_restrict_rooms munin net_dovecotauth offline_email onhold onions
 	openid password_policy pastebin pep_vcard_avatar post_msg
