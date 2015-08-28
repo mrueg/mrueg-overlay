@@ -18,6 +18,7 @@ IUSE="test"
 
 RDEPEND="dev-python/pykka[${PYTHON_USEDEP}]
 	dev-python/gst-python:0.10[${PYTHON_USEDEP}]
+	dev-python/requests[${PYTHON_USEDEP}]
 	media-libs/gst-plugins-bad:0.10
 	media-libs/gst-plugins-good:0.10
 	media-libs/gst-plugins-ugly:0.10
@@ -25,7 +26,9 @@ RDEPEND="dev-python/pykka[${PYTHON_USEDEP}]
 	www-servers/tornado[${PYTHON_USEDEP}]"
 
 DEPEND="test? ( ${RDEPEND}
-	dev-python/nose[${PYTHON_USEDEP}] )
+	dev-python/mock[${PYTHON_USEDEP}]
+	dev-python/pytest[${PYTHON_USEDEP}]
+	dev-python/responses[${PYTHON_USEDEP}] )
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 S=${WORKDIR}/Mopidy-${PV}
@@ -33,7 +36,6 @@ S=${WORKDIR}/Mopidy-${PV}
 pkg_setup() {
 	enewgroup mopidy
 	enewuser mopidy -1 -1 "/etc/mopidy" mopidy
-
 	distutils-r1_pkg_setup
 }
 
@@ -54,5 +56,5 @@ src_install() {
 }
 
 python_test() {
-	nosetests || die
+	py.test || die
 }
