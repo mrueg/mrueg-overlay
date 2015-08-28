@@ -18,7 +18,7 @@ IUSE="test"
 
 RDEPEND="dev-python/dbus-python[${PYTHON_USEDEP}]
 	dev-python/pykka[${PYTHON_USEDEP}]
-	media-sound/mopidy[${PYTHON_USEDEP}]"
+	>=media-sound/mopidy-1.1.0[${PYTHON_USEDEP}]"
 
 DEPEND="test? ( ${RDEPEND}
 	>=dev-python/mock-1.0[${PYTHON_USEDEP}]
