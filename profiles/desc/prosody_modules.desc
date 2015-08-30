@@ -79,6 +79,7 @@ http_dir_listing - This module generates directory listings when invoked by pros
 http_favicon - This simple module serves a favicon.ico from prosodys HTTP server and nothing else.
 http_index - Generates an index of local HTTP apps.
 http_muc_log - This module provides a built-in web interface to view chatroom logs stored by prosody_modules_mam_muc.
+http_upload - Implementation of HTTP Upload file transfer mechanism used by Conversations
 http_user_count - HTTP module to report the current number of online users or sessions.
 idlecompat - This module adds XEP-0319 idle tags to presence stanzas containing XEP-0012: Last Activity tags for idle indication (e.g. supported by libpurple clients). It works on outgoing and incoming presence stanzas.
 incidents_handling - This module implements XEP-0268: Incident reporting among XMPP server deployments.
@@ -178,6 +179,7 @@ server_status - This module fetches the current status of configured hosts and/o
 service_directories - XEP-0309: Service Directories.
 sift - SIFT is a technology to allow clients to filter incoming traffic on the server. This helps save bandwidth, etc.
 smacks - By default XMPP is as reliable as your network is. Unfortunately in some cases that is not very reliable - in some network conditions disconnects can be frequent and message loss can occur.
+smacks_offline - Monkeypatch mod_smacks to send unacked messages to offline storage IFF there was only one session
 sms_clickatell - This module provides and SMS gateway component which uses the Clickatell HTTP API to deliver text messages. See clickatell.com for details on their services. Note that at present, this is entirely one way: replies will either go nowhere or as sms to the source number you specify.
 srvinjection - This Prosody plugin lets you manually override SRV records used for a remote host.
 sslv3_warn - Notice users connected with SSLv3 that they need to upgrade becasue SSLv3 is insecure.
