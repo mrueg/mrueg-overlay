@@ -173,8 +173,8 @@ src_install() {
 	for m in ${PROSODY_MODULES}; do
 		if use prosody_modules_${m}; then
 			if [[ -e mod_${m}/README.wiki ]]; then
-				newdoc mod_${m}/README.wiki mod_${m}_README.wiki
-				rm mod_${m}/README.wiki || die
+				newdoc mod_${m}/README.markdown mod_${m}_README.markdown
+				rm mod_${m}/README.markdown || die
 			fi
 			insinto /usr/$(get_libdir)/prosody/modules;
 			doins -r "mod_${m}"
