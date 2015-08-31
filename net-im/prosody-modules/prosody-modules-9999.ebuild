@@ -172,7 +172,7 @@ REQUIRED_USE="
 src_install() {
 	for m in ${PROSODY_MODULES}; do
 		if use prosody_modules_${m}; then
-			if [[ -e mod_${m}/README.wiki ]]; then
+			if [[ -e mod_${m}/README.markdown ]]; then
 				newdoc mod_${m}/README.markdown mod_${m}_README.markdown
 				rm mod_${m}/README.markdown || die
 			fi
