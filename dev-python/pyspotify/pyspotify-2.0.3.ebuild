@@ -20,7 +20,8 @@ RDEPEND="dev-libs/libspotify
 	>=dev-python/cffi-1.0.0[${PYTHON_USEDEP}]"
 
 DEPEND="${RDEPEND}
-	test? ( dev-python/nose[${PYTHON_USEDEP}] )
+	test? ( dev-python/nose[${PYTHON_USEDEP}]
+		dev-python/mock[${PYTHON_USEDEP}] )
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 DOCS=( README.rst )
