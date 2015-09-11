@@ -37,15 +37,14 @@ PROSODY_MODULES="
 	jid_prep json_streams lastlog latex lib_ldap limit_auth limits
 	list_inactive listusers log_auth log_events log_messages_sql
 	log_rate log_sasl_mech log_slow_events mam mam_adhoc mam_archive
-	mam_muc mam_muc_sql mam_sql mamsub manifesto measure_cpu
-	measure_memory message_logging migrate motd_sequential muc_ban_ip
-	muc_config_restrict muc_intercom muc_limits muc_log muc_log_http
-	muc_restrict_rooms munin net_dovecotauth offline_email onhold onions
-	openid password_policy pastebin pep_vcard_avatar post_msg
-	privacy_lists private_adhoc privilege profile proxy65_whitelist
-	pubsub_eventsource pubsub_feeds pubsub_github pubsub_googlecode
-	pubsub_hub pubsub_mqtt pubsub_pivotaltracker pubsub_post
-	pubsub_twitter query_client_ver rawdebug
+	mam_muc mamsub manifesto measure_cpu measure_memory message_logging
+	migrate motd_sequential muc_ban_ip muc_config_restrict muc_intercom
+	muc_limits muc_log muc_log_http muc_restrict_rooms munin
+	net_dovecotauth offline_email onhold onions openid password_policy
+	pastebin pep_vcard_avatar post_msg privacy_lists private_adhoc
+	privilege profile proxy65_whitelist pubsub_eventsource pubsub_feeds
+	pubsub_github pubsub_googlecode pubsub_hub pubsub_mqtt
+	pubsub_pivotaltracker pubsub_post pubsub_twitter query_client_ver rawdebug
 	readonly register_json register_redirect register_web reload_modules
 	remote_roster require_otr roster_allinall roster_command
 	s2s_auth_compat s2s_auth_dane s2s_auth_fingerprint
@@ -108,10 +107,6 @@ RDEPEND="
 	prosody_modules_auth_custom_http? (
 		dev-lua/luasocket
 	)
-	prosody_modules_mam_muc_sql? (
-		dev-lua/luasocket
-		dev-lua/luadbi
-	)
 	prosody_modules_checkcerts? (
 		dev-lua/luasec
 	)
@@ -124,10 +119,6 @@ RDEPEND="
 	prosody_modules_http_dir_listing? (
 		dev-lua/luasocket
 		dev-lua/luafilesystem
-	)
-	prosody_modules_mam_sql? (
-		dev-lua/luasocket
-		dev-lua/luadbi
 	)
 	prosody_modules_offline_email? (
 		dev-lua/luasocket
