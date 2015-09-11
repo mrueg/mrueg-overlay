@@ -105,8 +105,6 @@ mam - Implementation of XEP-0313: Message Archive Management.
 mam_adhoc - This module complements mod_mam by allowing clients to change archiving preferences through an Ad-hoc command.
 mam_archive - Implementation of XEP-0136: Message Archiving for prosody_modules_mam.
 mam_muc - This module logs the conversation of chatrooms running on the server to Prosody's archive storage. To access them you will need a client with support for XEP-0313: Message Archive Management or a module such as prosody_modules_http_muc_log.
-mam_muc_sql - SQL variant of prosody_modules_mam_muc.
-mam_sql - Implementation of (an older version of) XEP-0313: Message Archive Management backed by a SQL database. Like prosody_modules_mam, but using SQL.
 mamsub - Experimental implementation of MAM subscriptions
 manifesto - This module informs users about the XMPP Test day and whether their contacts are affected.
 measure_cpu - Collect CPU usage statistic
