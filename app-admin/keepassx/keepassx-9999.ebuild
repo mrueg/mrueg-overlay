@@ -17,10 +17,11 @@ IUSE="test"
 
 DEPEND="
 	dev-libs/libgcrypt:0=
-	dev-qt/qtcore:4
-	dev-qt/qtdbus:4
-	dev-qt/qtgui:4
-	dev-qt/qttest:4
+	dev-qt/qtcore:5
+	dev-qt/qtconcurrent:5
+	dev-qt/linguist-tools:5
+	dev-qt/qttest:5
+	dev-qt/qtwidgets:5
 	sys-libs/zlib
 	x11-libs/libX11
 	x11-libs/libXtst
