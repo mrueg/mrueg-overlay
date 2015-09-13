@@ -5,7 +5,7 @@
 EAPI=5
 
 # radicale also supports python3_{3,4}
-# but python-ldap and dulwich (v0.10.2 should have py3 support) are blocking here
+# but python-ldap is blocking here
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="ssl?"
 
