@@ -6,6 +6,6 @@
 		<name>Manuel Rüger</name>
 	</maintainer>
 	<use>
-		<flag name='mysql'>Enable support for using MySQL-Databases as storage backend.</flag>
+		<flag name='http_auth'>Enable support for HTTP authentication.</flag>
 	</use>
 </pkgmetadata>
