@@ -6,11 +6,13 @@ EAPI=5
 
 PYTHON_COMPAT=( python{2_7,3_4} )
 
-inherit distutils-r1
+inherit vcs-snapshot distutils-r1
 
 DESCRIPTION="A command-line utility that creates projects from cookiecutters (project templates)"
 HOMEPAGE="https://github.com/audreyr/cookiecutter"
-SRC_URI="https://github.com/audreyr/cookiecutter/archive/${PV}.tar.gz -> ${P}.tar.gz"
+
+COMMIT_ID="df76d74c64f0192a65997297f19ad72e124e4e72"
+SRC_URI="https://github.com/audreyr/cookiecutter/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
