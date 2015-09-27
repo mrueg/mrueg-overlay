@@ -18,11 +18,13 @@ IUSE="test"
 
 RDEPEND="dev-python/pykka[${PYTHON_USEDEP}]
 	>=dev-python/pyspotify-2.0.2[${PYTHON_USEDEP}]
-	>=media-sound/mopidy-1.1.0[${PYTHON_USEDEP}]"
+	>=media-sound/mopidy-1.1.0[${PYTHON_USEDEP}]
+	>=dev-python/requests-2.0[${PYTHON_USEDEP}]"
 
 DEPEND="test? ( ${RDEPEND}
 	dev-python/pytest[${PYTHON_USEDEP}]
-	dev-python/pytest-capturelog[${PYTHON_USEDEP}] )
+	dev-python/pytest-capturelog[${PYTHON_USEDEP}]
+	dev-python/responses[${PYTHON_USEDEP}] )
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 DOCS=( README.rst )
