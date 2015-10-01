@@ -78,6 +78,7 @@ http_altconnect - XEP-0156: Discovering Alternative XMPP Connection Methods.
 http_dir_listing - This module generates directory listings when invoked by prosody_modules_http_files.
 http_favicon - This simple module serves a favicon.ico from prosodys HTTP server and nothing else.
 http_index - Generates an index of local HTTP apps.
+http_logging - Produces HTTP logs in the style of Apache
 http_muc_log - This module provides a built-in web interface to view chatroom logs stored by prosody_modules_mam_muc.
 http_upload - Implementation of HTTP Upload file transfer mechanism used by Conversations
 http_user_count - HTTP module to report the current number of online users or sessions.
