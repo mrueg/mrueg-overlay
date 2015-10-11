@@ -30,8 +30,8 @@ PROSODY_MODULES="
 	compat_bind compat_muc_admin compat_vcard component_client
 	component_roundrobin conformance_restricted couchdb csi csi_compat
 	data_access default_bookmarks default_vcard delegation disable_tls
-	discoitems dwd email_pass extdisco filter_chatstates firewall flash_policy
-	group_bookmarks host_blacklist host_guard http_altconnect
+	discoitems dwd email_pass extdisco fallback_vcard filter_chatstates firewall
+	flash_policy group_bookmarks host_blacklist host_guard http_altconnect
 	http_dir_listing http_favicon http_index http_logging http_muc_log http_upload
 	http_user_count idlecompat incidents_handling ipcheck isolate_host
 	jid_prep json_streams lastlog latex lib_ldap limit_auth limits
