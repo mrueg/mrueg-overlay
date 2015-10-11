@@ -17,17 +17,18 @@ SLOT="0"
 KEYWORDS=""
 IUSE="test"
 
-RDEPEND="dev-python/acme[${PYTHON_USEDEP}]
+RDEPEND=">=dev-python/acme-${PV}[${PYTHON_USEDEP}]
 	dev-python/configargparse[${PYTHON_USEDEP}]
 	dev-python/configobj[${PYTHON_USEDEP}]
 	>=dev-python/cryptography-0.7[${PYTHON_USEDEP}]
 	dev-python/mock[${PYTHON_USEDEP}]
 	dev-python/parsedatetime[${PYTHON_USEDEP}]
-	dev-python/psutil[${PYTHON_USEDEP}]
-	dev-python/pyrfc3339[${PYTHON_USEDEP}]
+	>=dev-python/psutil-2.1.0[${PYTHON_USEDEP}]
 	>=dev-python/pyopenssl-0.15[${PYTHON_USEDEP}]
+	dev-python/pyrfc3339[${PYTHON_USEDEP}]
 	>=dev-python/pythondialog-3.2.2[${PYTHON_USEDEP}]
 	dev-python/pytz[${PYTHON_USEDEP}]
+	dev-python/requests[${PYTHON_USEDEP}]
 	dev-python/zope-component[${PYTHON_USEDEP}]
 	dev-python/zope-interface[${PYTHON_USEDEP}]"
 DEPEND="test? ( ${RDEPEND}
