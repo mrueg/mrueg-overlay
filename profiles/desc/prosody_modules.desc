@@ -68,6 +68,7 @@ discoitems - This Prosody plugin lets you manually override the service discover
 dwd - This module implements an optimization of the Dialback protocol, by skipping the dialback step for servers presenting a valid certificate.
 email_pass - This module aims to help in the procedure of user password restoration. To start the restoration, the user must go to an URL provided by this module, fill the JID and email and submit the request.
 extdisco - XEP-0215: External Service Discovery
+fallback_vcard - Generates missing vcards from a template
 filter_chatstates - Removes chat states from messages to inactive (per CSI) sessions.
 firewall - A firewall is an invaluable tool in the sysadmin's toolbox. However while low-level firewalls such as iptables and pf are incredibly good at what they do, they are generally not able to handle application-layer rules.
 flash_policy - This Prosody plugin adds support for flash socket policies. When connecting with a flash client (from a webpage, not an exe) to prosody the flash client requests for an xml "file" on port 584 or the connecting port (5222 in the case of default xmpp). Responding on port 584 is tricky because it requires root priviliges to set up a socket on a port smaller than 1024.
