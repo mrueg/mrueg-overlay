@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python{2_7,3_4} )
 
 inherit vcs-snapshot distutils-r1
 
-DESCRIPTION="A command-line utility that creates projects from cookiecutters (project templates)"
+DESCRIPTION="Command-line utility to create projects from cookiecutters (project templates)"
 HOMEPAGE="https://github.com/audreyr/cookiecutter"
 
 SRC_URI="https://github.com/audreyr/cookiecutter/archive/${PV}.tar.gz -> ${P}.tar.gz"
