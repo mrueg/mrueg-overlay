@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.99.917-r2.ebuild,v 1.1 2015/06/15 12:26:19 chithanh Exp $
+# $Id$
 
 EAPI=5
 
@@ -11,7 +11,7 @@ DESCRIPTION="X.Org driver for Intel cards"
 
 KEYWORDS="~amd64 ~x86 ~amd64-fbsd -x86-fbsd"
 IUSE="debug +sna +udev uxa xvmc"
-COMMIT_ID="ef859c807a4bfad7c8a01a1d63f354f3ef310db5"
+COMMIT_ID="694e9bc4e2e9a73ce72b1fb9ef8ecbf773b901fe"
 SRC_URI="http://cgit.freedesktop.org/xorg/driver/xf86-video-intel/snapshot/${COMMIT_ID}.tar.xz -> ${P}.tar.xz"
 
 S=${WORKDIR}/${COMMIT_ID}
