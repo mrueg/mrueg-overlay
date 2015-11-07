@@ -18,7 +18,7 @@ SRC_URI="http://download.jetbrains.com/ruby/${MY_PN}-${PV}.tar.gz"
 LICENSE="all-rights-reserved"
 IUSE=""
 KEYWORDS="~amd64 ~x86"
-S="${WORKDIR}/${MY_PN}-${PV}"
+S=${WORKDIR}/${MY_PN}-${PV%.*}
 
 src_install() {
 	local dir="/opt/${P}"
