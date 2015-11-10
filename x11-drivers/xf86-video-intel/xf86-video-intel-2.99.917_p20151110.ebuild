@@ -11,7 +11,7 @@ DESCRIPTION="X.Org driver for Intel cards"
 
 KEYWORDS="~amd64 ~x86 ~amd64-fbsd -x86-fbsd"
 IUSE="debug +sna +udev uxa xvmc"
-COMMIT_ID="694e9bc4e2e9a73ce72b1fb9ef8ecbf773b901fe"
+COMMIT_ID="97786e99fbfb8f8ea3931c305f31e993de378fb2"
 SRC_URI="http://cgit.freedesktop.org/xorg/driver/xf86-video-intel/snapshot/${COMMIT_ID}.tar.xz -> ${P}.tar.xz"
 
 S=${WORKDIR}/${COMMIT_ID}
