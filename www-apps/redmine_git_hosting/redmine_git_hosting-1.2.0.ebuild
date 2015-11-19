@@ -27,6 +27,7 @@ ruby_add_rdepend "dev-ruby/asciidoctor
 	dev-ruby/redcloth
 	dev-ruby/wikicloth
 	dev-ruby/haml-rails
+	dev-ruby/rack-parser
 	www-apps/redmine_bootstrap_kit
 	>=www-apps/redmine-3"
 # dev-ruby/gitlab-grack
