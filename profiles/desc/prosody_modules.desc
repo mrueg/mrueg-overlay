@@ -12,6 +12,7 @@ admin_blocklist - Prevents s2s connections to/from domains blocked by a local ad
 admin_message - This module provides a console over XMPP. All the commands of the mod_admin_telnet module are available from an XMPP client.
 admin_probe - Module allowing server administrators to probe any user.
 admin_web - This module provides a basic web administration interface. It currently gives you access to Ad-Hoc commands on any virtual host or component that you are set as an administrator for in the Prosody config file. It also provides a live list of all S2S and C2S connections.
+alias - Point alias accounts or domains to correct XMPP user.
 auth_any - This module accepts any username and password, which can be useful for testing.
 auth_ccert - This module implements PKI-style client certificate authentication. You will therefore need your own Certificate Authority. How to set that up is beyond the current scope of this document.
 auth_custom_http - No module description on upstream wiki yet.
