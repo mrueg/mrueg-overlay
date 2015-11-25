@@ -75,9 +75,8 @@ python_install_all() {
 	doins config logging rights
 
 	# fcgi and wsgi files
-	insinto /usr/share/${PN}
-	doins radicale.wsgi
-	use fastcgi && doins radicale.fcgi
+	python_doscript radicale.wsgi
+	use fastcgi &&  python_doscript radicale.fcgi
 
 	distutils-r1_python_install_all
 }
