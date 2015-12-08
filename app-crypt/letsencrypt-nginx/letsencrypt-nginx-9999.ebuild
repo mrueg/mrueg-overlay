@@ -18,7 +18,7 @@ KEYWORDS=""
 IUSE="test"
 
 RDEPEND="app-crypt/letsencrypt[${PYTHON_USEDEP}]
-	dev-python/acme[${PYTHON_USEDEP}]
+	app-crypt/acme[${PYTHON_USEDEP}]
 	dev-python/mock[${PYTHON_USEDEP}]
 	dev-python/pyparsing[${PYTHON_USEDEP}]
 	dev-python/zope-interface[${PYTHON_USEDEP}]"
