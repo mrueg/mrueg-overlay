@@ -10,15 +10,12 @@ inherit python-single-r1 waf-utils
 
 DESCRIPTION="Tool for flashing Rockchip devices"
 HOMEPAGE="https://github.com/linuxerwang/rkflashkit"
-COMMIT_ID="224eeefec43f051e934055c37f32f331fe0d1499"
-SRC_URI="https://github.com/linuxerwang/${PN}/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/linuxerwang/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
-
-S=${WORKDIR}/${PN}-${COMMIT_ID}
 
 RDEPEND="dev-python/pygtk[${PYTHON_USEDEP}]
 	virtual/libusb:1
