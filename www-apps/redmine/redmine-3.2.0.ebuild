@@ -80,6 +80,7 @@ all_ruby_prepare() {
 		app/controllers/welcome_controller.rb || die
 	sed -i -e "4irequire 'action_dispatch/xml_params_parser'" -e "/Bundler/d" config/application.rb || die
 	sed -i -e "18irequire 'protected_attributes'" app/models/custom_field.rb || die
+	sed -i -e "19irequire 'roadie-rails'" app/models/mailer.rb || die
 }
 
 all_ruby_install() {
