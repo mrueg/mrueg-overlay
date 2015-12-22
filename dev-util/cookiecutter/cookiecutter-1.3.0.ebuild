@@ -24,7 +24,7 @@ RDEPEND=">=dev-python/binaryornot-0.2.0[${PYTHON_USEDEP}]
 	>=dev-python/future-0.15.2[${PYTHON_USEDEP}]
 	>=dev-python/jinja-2.7[${PYTHON_USEDEP}]
 	>=dev-python/pyyaml-3.10[${PYTHON_USEDEP}]
-	>=dev-python/click-4.0[${PYTHON_USEDEP}]
+	>=dev-python/click-5.0[${PYTHON_USEDEP}]
 	>=dev-python/whichcraft-0.1.1[${PYTHON_USEDEP}]"
 
 DEPEND="test? ( ${RDEPEND}
