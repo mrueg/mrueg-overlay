@@ -43,7 +43,7 @@ PROSODY_MODULES="
 	net_dovecotauth offline_email onhold onions openid password_policy
 	pastebin pep_vcard_avatar post_msg privacy_lists private_adhoc
 	privilege profile proxy65_whitelist pubsub_eventsource pubsub_feeds
-	pubsub_github pubsub_googlecode pubsub_hub pubsub_mqtt
+	pubsub_github pubsub_hub pubsub_mqtt
 	pubsub_pivotaltracker pubsub_post pubsub_twitter query_client_ver rawdebug
 	readonly register_json register_redirect register_web reload_modules
 	remote_roster require_otr roster_allinall roster_command
