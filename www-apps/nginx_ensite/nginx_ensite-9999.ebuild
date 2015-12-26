@@ -13,7 +13,7 @@ DESCRIPTION="A script to enable or disable a site in nginx"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS=""
 IUSE=""
 
 src_install() {
