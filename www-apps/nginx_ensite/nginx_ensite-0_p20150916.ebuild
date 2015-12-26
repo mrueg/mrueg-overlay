@@ -5,7 +5,7 @@
 EAPI=5
 
 GH_USER="perusio"
-GH_BUILD_TYPE="live"
+GH_TAG="fa4d72ce1c0a490442c8474e9c8dc21ed52c93d0"
 
 inherit github bash-completion-r1
 
