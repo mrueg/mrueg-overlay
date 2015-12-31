@@ -31,7 +31,7 @@ esac
 : ${GH_REPO:=${PN}}
 
 # @ECLASS-VARIABLE: GH_BUILD_TYPE
-# @DEFAULT-UNSET
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # Defines if fetched from git ("live") or tarball ("release")
 : ${GH_BUILD_TYPE:=release}
