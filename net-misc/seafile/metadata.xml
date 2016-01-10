@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>mrueg@gentoo.org</email>
+		<name>Manuel Rüger</name>
+	</maintainer>
+	<use>
+		<flag name="client">Install client components</flag>
+		<flag name="fuse">Enable FUSE virtual file system</flag>
+		<flag name="riak">Enable riak backend</flag>
+		<flag name="server">Install server components</flag>
+	</use>
+</pkgmetadata>
