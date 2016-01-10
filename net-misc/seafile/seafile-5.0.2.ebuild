@@ -32,6 +32,8 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	$(vala_depend)"
 
+RESTRICT="test"
+
 src_prepare() {
 	eautoreconf
 	vala_src_prepare
