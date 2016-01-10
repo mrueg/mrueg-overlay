@@ -14,7 +14,7 @@ SRC_URI="https://github.com/haiwen/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="client examples ldap server static-libs"
+IUSE="+client examples ldap +server static-libs"
 
 RDEPEND="dev-libs/glib:2
 	dev-libs/libevent
