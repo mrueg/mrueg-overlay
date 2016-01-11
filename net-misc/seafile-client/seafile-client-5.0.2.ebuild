@@ -6,7 +6,7 @@ EAPI=5
 
 inherit cmake-utils
 
-DESCRIPTION="Cloud storage system with features on privacy protection and teamwork"
+DESCRIPTION="Desktop client for Seafile"
 HOMEPAGE="https://github.com/haiwen/seafile-client http://www.seafile.com"
 SRC_URI="https://github.com/haiwen/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
