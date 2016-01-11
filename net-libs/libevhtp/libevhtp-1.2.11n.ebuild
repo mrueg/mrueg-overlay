@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit cmake-utils
+inherit cmake-utils multilib
 
 DESCRIPTION="A more flexible replacement for libevent's http EAPI"
 HOMEPAGE="http://ellzey.github.io/libevhtp/"
@@ -20,8 +20,14 @@ DEPEND="ssl? ( dev-libs/openssl:0 )
 	dev-libs/oniguruma"
 RDEPEND="${DEPEND}"
 
+src_prepare() {
+	sed -i -e "s#CMAKE_INSTALL_PREFIX}/lib#CMAKE_INSTALL_PREFIX}/$(get_libdir)#" CMakeLists.txt || die
+}
+
 src_configure() {
 	local mycmakeargs=(
+		-DEVHTP_BUILD_SHARED=ON
 		$(usex ssl "" -DEVHTP_DISABLE_SSL=ON) )
+
 	cmake-utils_src_configure
 }
