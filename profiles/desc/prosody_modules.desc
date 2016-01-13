@@ -34,6 +34,7 @@ auto_activate_hosts - By default Prosody does not automatically activate/deactiv
 benchmark_storage - A storage benchmark run through prosodyctl
 bidi - This module implements XEP-0288: Bidirectional Server-to-Server Connections. It allows servers to use a single connection for sending stanzas to each other, instead of two connections (one for stanzas in each direction).
 blocking - Privacy lists are a widely implemented protocol for instructing your server on blocking communications with selected users and services.
+block_outgoing - Module to block all outgoing stanzas from a list of users.
 block_registrations - On a server with public registration it is usually desirable to prevent registration of certain "reserved" accounts, such as "admin".
 block_s2s_subscriptions - Module to block incoming presence subscriptions from non-contacts on selected remote hosts.
 block_strangers - Module to block message and iqs from people not on your roster.
