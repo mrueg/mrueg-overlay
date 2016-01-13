@@ -21,7 +21,7 @@ RDEPEND="dev-libs/glib:2
 	dev-libs/libevent
 	dev-libs/openssl:0
 	dev-db/sqlite:3
-	net-libs/ccnet[${PYTHON_USEDEP},client?,server?]
+	>=net-libs/ccnet-5[${PYTHON_USEDEP},client?,server?]
 	net-libs/libsearpc[${PYTHON_USEDEP}]
 	client? ( net-misc/curl )
 	fuse? ( sys-fs/fuse )
