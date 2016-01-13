@@ -19,9 +19,9 @@ RDEPEND="dev-libs/jansson
 	dev-libs/libevent
 	dev-libs/openssl:0
 	dev-db/sqlite:3
-	net-libs/ccnet[client]
+	>=net-libs/ccnet-5[client]
 	net-libs/libsearpc
-	net-misc/seafile[client]
+	>=net-misc/seafile-5[client]
 	qt5? ( dev-qt/qtcore:5
 		dev-qt/qtdbus:5
 		dev-qt/qtgui:5
