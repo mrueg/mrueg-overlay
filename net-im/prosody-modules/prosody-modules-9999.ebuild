@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -22,7 +22,7 @@ PROSODY_MODULES="
 	auth_custom_http auth_dovecot auth_ha1 auth_http_async auth_imap
 	auth_internal_yubikey auth_joomla auth_ldap auth_ldap2 auth_pam
 	auth_phpbb3 auth_sql auth_wordpress auto_accept_subscriptions
-	auto_activate_hosts benchmark_storage bidi block_registrations
+	auto_activate_hosts benchmark_storage bidi block_outgoing block_registrations
 	block_s2s_subscriptions block_strangers block_subscribes
 	block_subscriptions blocking broadcast c2s_conn_throttle
 	c2s_limit_sessions candy captcha_registration carbons carbons_adhoc
