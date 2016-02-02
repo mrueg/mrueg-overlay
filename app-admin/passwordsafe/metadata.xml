@@ -8,5 +8,6 @@
 	<use>
 		<flag name="minimal">Avoid collision with app-misc/pwsafe</flag>
 		<flag name="yubikey">Enable support for Yubikey</flag>
+		<flag name="xml">Enable XML import support</flag>
 	</use>
 </pkgmetadata>
