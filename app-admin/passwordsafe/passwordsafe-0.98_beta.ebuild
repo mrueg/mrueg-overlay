@@ -16,17 +16,18 @@ SRC_URI="https://github.com/pwsafe/pwsafe/archive/${MY_PV}.tar.gz -> ${P}.tar.gz
 LICENSE="Artistic-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="minimal yubikey +xml"
+IUSE="minimal test yubikey +xml"
 
 RDEPEND="xml? ( dev-libs/xerces-c )
 	sys-apps/util-linux
-	sys-devel/gettext
 	x11-libs/libXt
 	x11-libs/libXtst
 	x11-libs/wxGTK:${WX_GTK_VER}[X]
 	!minimal? ( !!app-misc/pwsafe )
 	yubikey? ( sys-auth/ykpers )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	sys-devel/gettext
+	test? ( dev-cpp/gtest )"
 
 S=${WORKDIR}/pwsafe-${MY_PV}
 
@@ -42,6 +43,8 @@ src_prepare() {
 	sed -i docs/pwsafe.1 \
 		-e 's/PWSAFE/PASSWORDSAFE/' \
 		-e "s/^.B pwsafe/.B ${PN}/" || die
+	use test || sed -i -e '/find_package(GTest REQUIRED)/s/^/#/' \
+		-e '/add_subdirectory (src\/test)/s/^/#/' CMakeLists.txt || die
 	epatch "${FILESDIR}"/${P}-fix-noyubikey.patch\
 		"${FILESDIR}"/${P}-fix-yubikey.patch
 }
