@@ -132,6 +132,7 @@ openid - OpenID is an decentralized authentication mechanism for the Web.  mod_o
 password_policy - Password policy enforcement for Prosody.
 pastebin - Pastebins are used very often in IM, especially in chat rooms. You have a long log or command output which you need to send to someone over IM, and don't want to fill their message window with it. Put it on a pastebin site, and give them the URL instead, simple.
 pep_vcard_avatar - Syncs avatars between PEP and vCard.
+pinger - Ping clients regularly to mark them offline if they don't respond
 post_msg - Sometimes it's useful to have different interfaces to access XMPP.
 privacy_lists - Privacy lists are a flexible method for blocking communications.
 private_adhoc - This is a very simple module which implements an adhoc commant toretrieves the users private XML data.
