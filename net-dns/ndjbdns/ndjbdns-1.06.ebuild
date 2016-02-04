@@ -15,6 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
+RDEPEND="!!net-dns/djbdns"
+
 src_prepare() {
 	sed -i -e '/^AM_CFLAGS/s|-g -O2 ||g' Makefile.am || die
 	sed -i -e 's#/rc.d##' etc/init.d/Makefile.in || die
