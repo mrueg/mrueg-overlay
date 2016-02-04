@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND="!!net-dns/djbdns"
+RDEPEND="!!net-dns/djbdns
+	!!sys-apps/ucspi-tcp"
 
 src_prepare() {
 	sed -i -e '/^AM_CFLAGS/s|-g -O2 ||g' Makefile.am || die
