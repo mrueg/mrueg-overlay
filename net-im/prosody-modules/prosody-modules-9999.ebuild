@@ -33,7 +33,7 @@ PROSODY_MODULES="
 	discoitems dwd email_pass extdisco fallback_vcard filter_chatstates firewall
 	flash_policy group_bookmarks host_blacklist host_guard http_altconnect
 	http_dir_listing http_favicon http_index http_logging http_muc_log http_upload
-	http_user_count idlecompat incidents_handling ipcheck isolate_host
+	http_user_count idlecompat incidents_handling invite ipcheck isolate_host
 	jid_prep json_streams lastlog latex lib_ldap limit_auth limits
 	list_inactive listusers log_auth log_events log_messages_sql
 	log_rate log_sasl_mech log_slow_events mam mam_adhoc mam_archive
