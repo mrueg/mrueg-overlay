@@ -88,6 +88,7 @@ http_user_count - HTTP module to report the current number of online users or se
 idlecompat - This module adds XEP-0319 idle tags to presence stanzas containing XEP-0012: Last Activity tags for idle indication (e.g. supported by libpurple clients). It works on outgoing and incoming presence stanzas.
 incidents_handling - This module implements XEP-0268: Incident reporting among XMPP server deployments.
 inotify_reload - Reloads modules when their files change.
+invite - Allow users to invite new users.
 ipcheck - Sometimes for various reasons a client might want to know its IP address as it appears to the server. XEP-0279 allows the client to ask the server for the IP address it is connected from.
 isolate_host - In some environments it is desirable to isolate one or more hosts, and prevent communication with external, or even other internal domains.
 jid_prep - This is a plugin that implements the JID prep protocol.
