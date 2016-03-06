@@ -193,6 +193,7 @@ statistics_cputotal - Module that collects accumulated CPU usage statistics.
 statistics_mem - Module that collects memory usage stats from /proc.
 statistics_statsd - Module for pushing from util.statistics (0.10) to statsd.
 statsd - Log common stats to statsd.
+storage_appendmap - Experimental map store optimized for small incremental changes
 storage_gdbm - Storage backend based on lgdbm.
 storage_ldap - See prosody_modules_lib_ldap for more information.
 storage_lmdb - Storage module using Lightning Memory-Mapped Database 
