@@ -39,6 +39,7 @@ src_prepare() {
 	vala_src_prepare
 	sed -i -e 's/valac /${VALAC} /' lib/Makefile.am || die
 	sed -i -e '/-I$(top_srcdir)\/include \\/a -I\/usr\/include\/evhtp \\' server/Makefile.am || die
+	sed -i -e 's/-Werror//' daemon/Makefile.am || die
 }
 
 src_configure() {
