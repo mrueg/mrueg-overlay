@@ -55,7 +55,7 @@ PROSODY_MODULES="
 	server_status service_directories sift smacks smacks_offline sms_clickatell
 	srvinjection sslv3_warn stanza_counter statistics statistics_auth
 	statistics_cputotal statistics_mem statistics_statsd statsd
-	storage_gdbm storage_ldap storage_memory storage_mongodb
+	storage_appendmap storage_gdbm storage_ldap storage_memory storage_mongodb
 	storage_muc_log storage_multi storage_xmlarchive streamstats
 	strict_https support_contact swedishchef tcpproxy telnet_tlsinfo
 	throttle_presence tls_policy turncredentials twitter uptime_presence
