@@ -58,8 +58,8 @@ PROSODY_MODULES="
 	storage_appendmap storage_gdbm storage_ldap storage_memory storage_mongodb
 	storage_muc_log storage_multi storage_xmlarchive streamstats
 	strict_https support_contact swedishchef tcpproxy telnet_tlsinfo
-	throttle_presence tls_policy turncredentials twitter uptime_presence
-	vjud watchuntrusted webpresence
+	throttle_presence throttle_unsolicited tls_policy track_muc_joins
+	turncredentials twitter uptime_presence vjud watchuntrusted webpresence
 	"
 # Missing modules because of missing deps: 
 # auth_internal_yubikey auth_external inotify_reload statistics 
