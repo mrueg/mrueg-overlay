@@ -209,7 +209,9 @@ swedishchef - This module does some conversions on message bodys passed through 
 tcpproxy - It happens occasionally that I would like to use the XMPP server as a generic proxy for connecting to another service. It is especially awkward in some environments, and impossible in (for example) Javascript inside a web browser.
 telnet_tlsinfo - This module adds two commands to the telnet console, c2s:showtls() and s2s:showtls().  These commands shows TLS parameters, such as ciphers and key agreement protocols, of all c2s or s2s connections.
 throttle_presence - For most people 'presence' (status changes) of contacts make up most of the traffic received by their client. However much of the time it is not essential to have highly accurate presence information.
+throttle_unsolicited - Limit rate of outgoing unsolicited messages
 tls_policy - Enforce per-host TLS parameter policies.
+track_muc_joins - Keep track of joined chat rooms
 turncredentials - XEP-0215 implementation for time-limited turn credentials.
 twitter - Twitter has simple API to use, so I tried to deal with it via Prosody. I didn't manage to finish this module, but it is nice example of component that accepts registrations, unregistrations, does HTTP polling and so on. Maybe someone will finnish this idea.
 uptime_presence - Indicates uptime by replying to probes with delay-stamped presence.
