@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -7,7 +7,7 @@ EAPI=5
 USE_RUBY="ruby20 ruby21"
 inherit ruby-ng user
 
-STUPID_NUMBER="353"
+STUPID_NUMBER="374"
 DESCRIPTION="A Redmine plugin which allows to follow Scrum methodology"
 HOMEPAGE="https://redmine.ociotec.com/projects/redmine-plugin-scrum"
 SRC_URI="http://redmine.ociotec.com/attachments/download/${STUPID_NUMBER}/scrum%20v${PV}.tar.gz -> ${P}.tar.gz"
