@@ -8,6 +8,7 @@ USE_RUBY="ruby20 ruby21 ruby22 ruby23"
 
 RUBY_FAKEGEM_RECIPE_TEST=""
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
+RUBY_FAKEGEM_EXTRAINSTALL="ext"
 
 inherit ruby-fakegem multilib
 
@@ -19,12 +20,14 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
+RDEPEND+=" virtual/krb5"
+DEPEND+=" virtual/krb5"
+
 each_ruby_configure() {
 	${RUBY} -Cext extconf.rb || die
 }
 
 each_ruby_compile() {
 	emake V=1 -Cext
-	mkdir lib || die
-	cp ext/krb5_auth$(get_modname) lib/ || die
+	rm -r ext/{Makefile,*.o,*.c,*.rb,*.log} || die
 }
