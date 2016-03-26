@@ -3,11 +3,12 @@
 # $Id$
 
 EAPI=5
-USE_RUBY="ruby21"
+USE_RUBY="ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_RECIPE_TEST=""
 RUBY_FAKEGEM_RECIPE_DOC=""
-RUBY_FAKEGEM_EXTRADOC=""
+# File collision with qt-linguist
+RUBY_FAKEGEM_BINWRAP="git-linguist"
 
 inherit ruby-fakegem
 
