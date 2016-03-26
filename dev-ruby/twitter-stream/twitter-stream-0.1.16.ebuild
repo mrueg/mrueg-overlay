@@ -26,4 +26,5 @@ ruby_add_rdepend ">=dev-ruby/eventmachine-1.0.7
 all_ruby_prepare() {
 	# Fix for >=eventmachine-1.0
 	sed -i -e "s/&& !@buffer.empty?//" -e "s/, MAX_LINE_LENGTH//" lib/twitter/json_stream.rb || die
+	sed -i -e "s/0.1.4/'0.1'/" -e "s/0.5.1/'0.5'/" ../metadata || die
 }
