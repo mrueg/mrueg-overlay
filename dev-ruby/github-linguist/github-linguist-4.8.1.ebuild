@@ -28,3 +28,7 @@ ruby_add_rdepend ">=dev-ruby/charlock_holmes-0.7.3
 	>=dev-ruby/escape_utils-1.1.0
 	>=dev-ruby/mime-types-1.19
 	>=dev-ruby/rugged-0.23.0b"
+
+all_ruby_prepare() {
+	sed -i -e "s/1.1.0/'1.1'/" ../metadata || die
+}
