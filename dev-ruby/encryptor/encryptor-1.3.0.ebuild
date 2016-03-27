@@ -25,6 +25,10 @@ ruby_add_bdepend "test? ( dev-ruby/minitest
 
 all_ruby_prepare() {
 	sed -i -e "/bundler/d" Rakefile || die
-	sed -i -e "/simplecov/,+15d" test/test_helper.rb || die
+	sed -i -e "/simplecov/,+10d" test/test_helper.rb || die
 	sed -i -e "1s/^/require \'securerandom\'\n/" test/test_helper.rb || die
+}
+
+each_ruby_test() {
+	${RUBY} -S testrb -Ilib test/*_test.rb || die
 }
