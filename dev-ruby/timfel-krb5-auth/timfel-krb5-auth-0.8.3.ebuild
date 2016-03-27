@@ -9,6 +9,7 @@ USE_RUBY="ruby20 ruby21 ruby22 ruby23"
 RUBY_FAKEGEM_RECIPE_TEST=""
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 RUBY_FAKEGEM_EXTRAINSTALL="ext"
+RUBY_FAKEGEM_EXTRADOC="README"
 
 inherit ruby-fakegem multilib
 
