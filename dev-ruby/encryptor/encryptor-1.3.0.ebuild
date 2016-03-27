@@ -14,7 +14,7 @@ DESCRIPTION="A simple wrapper for the ruby OpenSSL library to encrypt and decryp
 HOMEPAGE="http://github.com/attr-encrypted/encryptor https://rubygems.org/gems/encryptor"
 
 LICENSE="MIT"
-SLOT="3"
+SLOT="1"
 KEYWORDS="~amd64"
 IUSE=""
 
