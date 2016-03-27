@@ -4,9 +4,14 @@
 
 EAPI=5
 
-USE_RUBY="ruby20 ruby21"
+USE_RUBY="ruby20 ruby21 ruby22"
+RUBY_FAKEGEM_EXTRADOC="CHANGELOG README.rdoc"
 
-RUBY_FAKEGEM_RECIPE_DOC="rdoc"
+RUBY_FAKEGEM_DOCDIR="doc"
+RUBY_FAKEGEM_TASK_DOC=""
+
+# uuid uses this to determine its version number.
+RUBY_FAKEGEM_EXTRAINSTALL="uuid.gemspec"
 
 inherit ruby-fakegem
 
@@ -21,10 +26,11 @@ IUSE=""
 ruby_add_rdepend ">=dev-ruby/macaddr-1.0
 	<dev-ruby/macaddr-2"
 
-ruby_add_bdepend "test? ( dev-ruby/mocha
+ruby_add_bdepend "test? ( dev-ruby/mocha:0.14
 	dev-ruby/test-unit
 	dev-ruby/rake )"
 
 all_ruby_prepare() {
-	sed -i -e "11s/^/require \'mocha\/test_unit\'\n/" test/test-uuid.rb || die
+	# Only works with older mocha versions.
+	sed -e '2igem "mocha", "~>0.14.0"' -i test/test-uuid.rb || die
 }
