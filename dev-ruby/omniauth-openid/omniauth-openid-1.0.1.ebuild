@@ -30,4 +30,5 @@ ruby_add_bdepend "test? ( >=dev-ruby/rack-test-0.5
 
 all_ruby_prepare() {
 	sed -i -e "/[Ss]imple[Cc]ov/d" spec/spec_helper.rb || die
+	sed -i -e "s/1.3.1/'1.3'/" ../metadata || die
 }
