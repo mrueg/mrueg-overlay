@@ -7,7 +7,7 @@ EAPI=5
 USE_RUBY="ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_TASK_DOC="rdoc"
-RUBY_FAKEGEM_EXTRA_DOC="README.md"
+RUBY_FAKEGEM_EXTRADOC="README.md"
 
 inherit ruby-fakegem
 
