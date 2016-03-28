@@ -4,7 +4,7 @@
 
 EAPI=5
 
-USE_RUBY="ruby20 ruby21"
+USE_RUBY="ruby20 ruby21 ruby22"
 RUBY_FAKEGEM_EXTRADOC="README.md"
 RUBY_FAKEGEM_EXTRAINSTALL="VERSION"
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
@@ -31,5 +31,8 @@ ruby_add_rdepend "dev-ruby/charlock_holmes
 
 ruby_add_bdepend "test? (
 	dev-ruby/mocha
-	dev-ruby/pry
 	dev-ruby/slop )"
+
+all_ruby_prepare() {
+	sed -i -e "/pry/d" test/helper.rb || die
+}
