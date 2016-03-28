@@ -21,8 +21,7 @@ IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/omniauth-1.0
 	<dev-ruby/omniauth-2
-	>=dev-ruby/rack-openid-1.3.1
-	<dev-ruby/rack-openid-1.4"
+	>=dev-ruby/rack-openid-1.3.1"
 
 ruby_add_bdepend "test? ( >=dev-ruby/rack-test-0.5
 	<dev-ruby/rack-test-1
