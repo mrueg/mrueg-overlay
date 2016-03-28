@@ -8,7 +8,7 @@ USE_RUBY="ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_RECIPE_DOC="yard"
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
-RUBY_FAKEGEM_EXTRA_DOC="History.txt README.rdoc"
+RUBY_FAKEGEM_EXTRADOC="History.txt README.rdoc"
 
 inherit ruby-fakegem
 
