@@ -41,9 +41,9 @@ PROSODY_MODULES="
 	migrate motd_sequential muc_ban_ip muc_config_restrict muc_intercom
 	muc_limits muc_log muc_log_http muc_restrict_rooms munin
 	net_dovecotauth offline_email onhold onions openid password_policy
-	pastebin pep_vcard_avatar pinger post_msg privacy_lists private_adhoc
-	privilege profile proxy65_whitelist pubsub_eventsource pubsub_feeds
-	pubsub_github pubsub_hub pubsub_mqtt
+	pastebin pep_vcard_avatar pinger post_msg presence_dedup
+	privacy_lists private_adhoc privilege profile proxy65_whitelist
+	pubsub_eventsource pubsub_feeds pubsub_github pubsub_hub pubsub_mqtt
 	pubsub_pivotaltracker pubsub_post pubsub_twitter query_client_ver rawdebug
 	readonly register_json register_redirect register_web reload_modules
 	remote_roster require_otr roster_allinall roster_command
