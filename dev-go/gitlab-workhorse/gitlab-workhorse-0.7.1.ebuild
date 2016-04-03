@@ -3,7 +3,7 @@
 # $Id$
 
 EAPI=5
-inherit golang-build golang-vcs-snapshot
+inherit golang-base golang-vcs-snapshot
 
 EGO_SRC=gitlab.com/gitlab-org/${PN}
 EGO_PN=${EGO_SRC}/...
@@ -20,17 +20,15 @@ IUSE=""
 
 RESTRICT="test"
 
-src_prepare() {
-	# Fix relative imports
+src_compile() {
+	pushd src/$EGO_SRC || die
+	emake
+	popd
+}
+
+src_install() {
 	pushd src/${EGO_SRC} || die
-	sed -i -e "s#\./#${EGO_SRC}/#" main.go || die
-	sed -i -e "s#\.\./#${EGO_SRC}/internal/#" internal/upstream/routes.go internal/api/api.go \
-		internal/artifacts/artifact_download.go internal/badgateway/roundtripper.go \
-		internal/artifacts/artifacts_upload.go internal/git/git-http.go \
-		internal/git/archive.go internal/lfs/lfs.go internal/proxy/proxy.go \
-		internal/git/blob.go internal/sendfile/sendfile.go internal/staticpages/deploy_page.go \
-		internal/upload/uploads.go internal/staticpages/error_pages.go internal/upstream/upstream.go \
-		internal/staticpages/servefile.go internal/upstream/handlers.go || die
-	sed -i -e "s#\.\./\.\./#${EGO_SRC}/#" cmd/gitlab-zip-cat/main.go cmd/gitlab-zip-metadata/main.go || die
-	popd || die
+	dodoc CHANGELOG README.md
+	emake install PREFIX="${D}"/usr
+	popd
 }
