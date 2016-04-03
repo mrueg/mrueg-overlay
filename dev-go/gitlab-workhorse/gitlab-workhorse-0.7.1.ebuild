@@ -3,7 +3,7 @@
 # $Id$
 
 EAPI=5
-inherit golang-base golang-vcs-snapshot
+inherit golang-base vcs-snapshot
 
 EGO_SRC=gitlab.com/gitlab-org/${PN}
 EGO_PN=${EGO_SRC}/...
@@ -20,15 +20,11 @@ IUSE=""
 
 RESTRICT="test"
 
-src_compile() {
-	pushd src/$EGO_SRC || die
-	emake
-	popd
+src_prepare() {
+	sed -i -e 's/VERSION=.*/VERSION=${PV}/' Makefile || die
 }
 
 src_install() {
-	pushd src/${EGO_SRC} || die
 	dodoc CHANGELOG README.md
 	emake install PREFIX="${D}"/usr
-	popd
 }
