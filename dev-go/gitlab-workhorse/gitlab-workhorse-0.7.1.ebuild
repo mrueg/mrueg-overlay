@@ -5,15 +5,11 @@
 EAPI=5
 inherit golang-base vcs-snapshot
 
-EGO_SRC=gitlab.com/gitlab-org/${PN}
-EGO_PN=${EGO_SRC}/...
-
-ARCHIVE_URI="https://${EGO_SRC}/repository/archive.tar.gz?ref=v${PV} -> ${P}.tar.gz"
-KEYWORDS="~amd64"
-
 DESCRIPTION="A smart reverse proxy for GitLab written in Go"
 HOMEPAGE="https://gitlab.com/gitlab-org/gitlab-workhorse"
-SRC_URI="${ARCHIVE_URI}"
+SRC_URI="https://gitlab.com/gitlab-org/gitlab-workhorse/repository/archive.tar.gz?ref=v${PV} -> ${P}.tar.gz"
+
+KEYWORDS="~amd64"
 LICENSE="MIT"
 SLOT="0/${PVR}"
 IUSE=""
