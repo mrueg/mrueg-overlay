@@ -21,6 +21,8 @@ RDEPEND=">=dev-python/six-1.9.0[${PYTHON_USEDEP}]
 	dev-python/requests-toolbelt[${PYTHON_USEDEP}]
 	>=dev-python/requests-2.6.0[${PYTHON_USEDEP}]
 	dev-python/requests-kerberos[${PYTHON_USEDEP}]
+	dev-python/filemagic[${PYTHON_USEDEP}]
+	dev-python/pycrypto[${PYTHON_USEDEP}]
 	>=dev-python/requests-oauthlib-0.3.3[${PYTHON_USEDEP}]
 	$(python_gen_cond_dep '>=dev-python/tlslite-0.4.4[${PYTHON_USEDEP}]' python_2_7 )"
 
