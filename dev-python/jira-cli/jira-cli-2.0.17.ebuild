@@ -31,7 +31,8 @@ DEPEND="${RDEPEND}
 RESTRICT="test"
 
 src_prepare() {
-	sed -i -e "/sys.version < (2,7)/,+2d" setup.py
+	sed -i -e "/sys.version < (2,7)/,+2d" setup.py || die
+	sed -i -e "s/'ez_setup'/'ez_setup','tests'/" setup.py || die
 	distutils-r1_src_prepare
 }
 
