@@ -18,5 +18,5 @@ IUSE=""
 
 src_install() {
 	golang-build_src_install
-	dobin bin/*
+	dobin bin/ace
 }
