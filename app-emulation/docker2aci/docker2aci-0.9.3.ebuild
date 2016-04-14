@@ -19,3 +19,8 @@ IUSE=""
 DEPEND="app-emulation/appc-spec
 	app-emulation/docker-distribution
 	dev-go/ioprogress"
+
+src_install() {
+	golang-build_src_install
+	dobin bin/${PN}
+}
