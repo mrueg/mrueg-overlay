@@ -17,3 +17,8 @@ SLOT="0/${PVR}"
 IUSE=""
 
 DEPEND="app-emulation/appc-spec"
+
+src_install() {
+	golang-build_src_install
+	dobin bin/*
+}
