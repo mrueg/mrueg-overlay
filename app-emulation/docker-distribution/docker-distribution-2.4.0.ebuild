@@ -15,3 +15,8 @@ SRC_URI="${ARCHIVE_URI}"
 LICENSE="Apache-2.0"
 SLOT="0/${PVR}"
 IUSE=""
+
+src_install() {
+	golang-build_src_install
+	dobin bin/*
+}
