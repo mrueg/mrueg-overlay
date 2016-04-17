@@ -17,6 +17,8 @@ LICENSE="MPL-2.0"
 SLOT="0/${PVR}"
 IUSE=""
 
+DEPEND="dev-go/iochan"
+
 src_install() {
 	mkdir pkg || die
 	golang-build_src_install
