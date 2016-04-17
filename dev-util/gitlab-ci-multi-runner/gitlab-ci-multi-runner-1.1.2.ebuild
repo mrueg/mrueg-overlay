@@ -18,7 +18,8 @@ SLOT="0/${PVR}"
 IUSE="docker-build"
 
 DEPEND="dev-go/gox
-	dev-go/go-bindata"
+	dev-go/go-bindata
+	docker-build? ( >=app-emulation/docker-1.5 )"
 
 RESTRICT="test"
 
