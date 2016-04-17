@@ -7,7 +7,7 @@ inherit golang-build golang-vcs-snapshot
 
 EGO_PN="gitlab.com/gitlab-org/gitlab-ci-multi-runner/..."
 
-DESCRIPTION="A smart reverse proxy for GitLab written in Go"
+DESCRIPTION="Official GitLab CI Runner written in Go"
 HOMEPAGE="https://gitlab.com/gitlab-org/gitlab-ci-multi-runner"
 SRC_URI="https://gitlab.com/gitlab-org/${PN}/repository/archive.tar.gz?ref=v${PV} -> ${P}.tar.gz
 	!docker-build? ( https://dev.gentoo.org/~mrueg/files/${P}-prebuilt.tar.gz )"
