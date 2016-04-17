@@ -3,7 +3,10 @@
 # $Id$
 
 EAPI=5
-inherit golang-base vcs-snapshot
+
+EGO_PN="gitlab.com/gitlab-org/gitlab-workhorse/..."
+
+inherit golang-build golang-vcs-snapshot
 
 DESCRIPTION="A smart reverse proxy for GitLab written in Go"
 HOMEPAGE="https://gitlab.com/gitlab-org/gitlab-workhorse"
@@ -17,10 +20,14 @@ IUSE=""
 RESTRICT="test"
 
 src_prepare() {
-	sed -i -e 's/VERSION=.*/VERSION=${PV}/' Makefile || die
+	sed -i -e 's/VERSION=.*/VERSION=${PV}/' -e "1iexport GOPATH?=" -e "s/PREFIX=/PREFIX?=/" src/${EGO_PN%/*}/Makefile || die
+}
+
+src_compile() {
+	emake GOPATH="${WORKDIR}/${P}/_build:$(get_golibdir_gopath)" -C src/${EGO_PN%/*}
 }
 
 src_install() {
-	dodoc CHANGELOG README.md
-	emake install PREFIX="${D}"/usr
+	emake GOPATH="${WORKDIR}/${P}/_build:$(get_golibdir_gopath)" -C src/${EGO_PN%/*} DESTDIR="${D}" PREFIX=/usr install
+	dodoc src/${EGO_PN%/*}/CHANGELOG src/${EGO_PN%/*}/README.md
 }
