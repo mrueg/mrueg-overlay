@@ -16,7 +16,7 @@ QA_TEXTRELS="opt/${P}/bin/libbreakgen.so"
 
 DESCRIPTION="IntelliJ IDEA is an intelligent Java IDE (Community Edition)"
 HOMEPAGE="http://jetbrains.com/idea/"
-SRC_URI="http://download.jetbrains.com/${MY_PN}/${MY_PN}IC-$(get_version_component_range 1-2).tar.gz"
+SRC_URI="http://download.jetbrains.com/${MY_PN}/${MY_PN}IC-$(get_version_component_range 1-3).tar.gz"
 LICENSE="Apache-2.0"
 IUSE=""
 KEYWORDS="~amd64 ~x86"
@@ -30,7 +30,8 @@ src_install() {
 	doins -r *
 	fperms 755 "${dir}/bin/${MY_PN}.sh" "${dir}/bin/fsnotifier" "${dir}/bin/fsnotifier64"
 
-	newicon "bin/${MY_PN}.png" "${exe}.png"
+	newicon -s 128 "bin/${MY_PN}.png" "${exe}.png"
 	make_wrapper "${exe}" "/opt/${P}/bin/${MY_PN}.sh"
 	make_desktop_entry ${exe} "IntelliJ IDEA $(get_version_component_range 1-3)	(Community Edition)" "${exe}" "Development;IDE"
 }
+
