@@ -35,5 +35,6 @@ ruby_add_bdepend "test? ( dev-ruby/rspec-mocks:3
 
 all_ruby_prepare() {
 	sed -i -e "/[Ss]imple[Cc]ov/d" -e '/pry/d' spec/spec_helper.rb || die
-	sed -i -e "1s/^/require \'pathname\'\n/" lib/gitlab_git/path_helper.rb || die
+	sed -i -e "1irequire \'pathname\'\n" lib/gitlab_git/path_helper.rb || die
+	sed -i -e "1irequire \'forwardable\'\n" lib/gitlab_git/repository.rb || die
 }
