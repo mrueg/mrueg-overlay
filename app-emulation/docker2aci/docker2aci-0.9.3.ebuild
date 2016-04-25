@@ -17,7 +17,7 @@ SLOT="0/${PVR}"
 IUSE=""
 
 DEPEND="app-emulation/appc-spec
-	app-emulation/docker-distribution
+	app-emulation/docker-registry
 	dev-go/ioprogress"
 
 src_install() {
