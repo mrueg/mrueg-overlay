@@ -28,7 +28,8 @@ ruby_add_rdepend ">=dev-ruby/activesupport-4.0
 	>=dev-ruby/github-linguist-4.7.0
 	>=dev-ruby/rugged-0.24.0
 	<dev-ruby/rugged-0.25"
-ruby_add_bdepend "test? ( dev-ruby/rspec-mocks:3
+ruby_add_bdepend "test? ( >=dev-ruby/listen-3.0.6
+	dev-ruby/rspec-mocks:3
 	dev-ruby/rspec-its
 	dev-ruby/webmock
 	)"
@@ -36,5 +37,5 @@ ruby_add_bdepend "test? ( dev-ruby/rspec-mocks:3
 all_ruby_prepare() {
 	sed -i -e "/[Ss]imple[Cc]ov/d" -e '/pry/d' spec/spec_helper.rb || die
 	sed -i -e "1irequire \'pathname\'\n" lib/gitlab_git/path_helper.rb || die
-	sed -i -e "1irequire \'forwardable\'\n" lib/gitlab_git/repository.rb || die
+	sed -i -e "1irequire \'forwardable\'\n" -e "1irequire \'time\'\n" lib/gitlab_git/repository.rb || die
 }
