@@ -6,7 +6,7 @@ EAPI=5
 inherit golang-build golang-vcs-snapshot eutils
 
 EGO_PN="github.com/mitchellh/gox/..."
-EGIT_COMMIT="dc474e55926b34ea132178d975737fac74420f17"
+EGIT_COMMIT="cd6367da6f814b26cc86332423488134db2bd2ed"
 ARCHIVE_URI="https://${EGO_PN%/*}/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 KEYWORDS="~amd64"
 
