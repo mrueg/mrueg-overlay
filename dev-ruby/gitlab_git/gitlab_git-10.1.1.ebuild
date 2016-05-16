@@ -7,6 +7,7 @@ EAPI=5
 USE_RUBY="ruby20 ruby21 ruby22"
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 RUBY_FAKEGEM_RECIPE_TEST="rspec3"
+RUBY_FAKEGEM_GEMSPEC="${PN}.gemspec"
 
 inherit ruby-fakegem
 
@@ -38,4 +39,5 @@ all_ruby_prepare() {
 	sed -i -e "/[Ss]imple[Cc]ov/d" -e '/pry/d' spec/spec_helper.rb || die
 	sed -i -e "1irequire \'pathname\'\n" lib/gitlab_git/path_helper.rb || die
 	sed -i -e "1irequire \'forwardable\'\n" -e "1irequire \'time\'\n" lib/gitlab_git/repository.rb || die
+	sed -i -e "s/4.7.0/4.7/" ${PN}.gemspec || die
 }
