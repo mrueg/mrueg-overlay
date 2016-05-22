@@ -29,9 +29,6 @@ src_compile() {
 
 src_install() {
 	dodir /usr/$(get_libdir)/purple-2
+	dodir /usr/share/pixmaps/pidgin/protocols/{16,22,24,48}
 	default
-	for i in 16 22 24 48; do
-		insinto /usr/share/pixmaps/pidgin/protocols/${i}
-		doins hangouts${i}.png
-	done
 }
