@@ -32,6 +32,6 @@ src_install() {
 	default
 	for i in 16 22 24 48; do
 		insinto /usr/share/pixmaps/pidgin/protocols/${i}
-		newins hangouts${i}.png hangouts.png
+		doins hangouts${i}.png
 	done
 }
