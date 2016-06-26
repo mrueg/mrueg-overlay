@@ -19,12 +19,13 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-ruby_add_rdepend "<dev-ruby/actionpack-5
+ruby_add_rdepend "<dev-ruby/actionpack-5.1
 	>=dev-ruby/actionpack-4.0.0
-	<dev-ruby/activerecord-5
+	<dev-ruby/activerecord-5.1
 	>=dev-ruby/activerecord-4.0.0
-	<dev-ruby/railties-5
-	>=dev-ruby/railties-4.0.0"
+	<dev-ruby/railties-5.1
+	>=dev-ruby/railties-4.0.0
+	>=dev-ruby/multi_json-1.11.2"
 ruby_add_bdepend "test? ( >=dev-ruby/activerecord-4[sqlite]
 	dev-ruby/minitest
 	dev-ruby/rake
