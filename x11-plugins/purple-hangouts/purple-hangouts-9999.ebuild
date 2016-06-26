@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/protobuf-c-1.1.1
 	dev-libs/json-glib
 	dev-libs/nss
 	sys-libs/zlib
-	net-im/pidgin"
+	>=net-im/pidgin-2.10.12"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
