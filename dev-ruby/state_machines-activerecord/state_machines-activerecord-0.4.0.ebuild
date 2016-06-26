@@ -19,7 +19,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/activerecord-4.1
-	<dev-ruby/activerecord-5
+	<dev-ruby/activerecord-5.1
 	>=dev-ruby/state_machines-activemodel-0.3.0"
 ruby_add_bdepend "test? ( >=dev-ruby/minitest-5.4.0
 	>=dev-ruby/rake-10.3
@@ -28,5 +28,6 @@ ruby_add_bdepend "test? ( >=dev-ruby/minitest-5.4.0
 	<dev-ruby/sqlite3-2 )"
 
 all_ruby_prepare() {
+	sed -i -e "/bundler/d" Rakefile  || die
 	sed -i -e "/[Rr]eporters/d" test/test_helper.rb || die
 }
