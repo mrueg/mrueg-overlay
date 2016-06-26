@@ -23,8 +23,7 @@ IUSE=""
 RUBY_S="raven-ruby-${PV}"
 
 ruby_add_rdepend ">=dev-ruby/faraday-0.7.6"
-ruby_add_bdepend "test? ( >=dev-ruby/mime-types-1.16
-	<dev-ruby/mime-types-2
+ruby_add_bdepend "test? ( dev-ruby/mime-types
 	dev-ruby/rest-client
 	dev-ruby/rspec-rails:3
 	dev-ruby/test-unit:2
