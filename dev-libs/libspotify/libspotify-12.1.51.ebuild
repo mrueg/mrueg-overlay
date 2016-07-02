@@ -21,11 +21,9 @@ DEPEND="virtual/pkgconfig"
 
 QA_PRESTRIPPED="/usr/$(get_libdir)/${PN}.so.${PV}"
 
-if use x86; then
-	S=${WORKDIR}/${P}-Linux-i686-release
-elif use amd64; then
-	S=${WORKDIR}/${P}-Linux-x86_64-release
-fi
+T_ARCH=${ARCH/x86/i686}
+T_ARCH=${T_ARCH/amd64/x86_64}
+S=${WORKDIR}/${P}-Linux-${T_ARCH}-release
 
 src_prepare() {
 	sed -i -e 's#PKG_PREFIX:$(prefix)#PKG_PREFIX:$(real_prefix)#'\
