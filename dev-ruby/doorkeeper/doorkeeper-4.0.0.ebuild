@@ -17,13 +17,13 @@ DESCRIPTION="An OAuth 2 provider for Rails and Grape"
 HOMEPAGE="https://rubygems.org/gems/doorkeeper https://github.com/doorkeeper-gem/doorkeeper"
 
 LICENSE="MIT"
-SLOT="2"
+SLOT="3"
 KEYWORDS="~amd64"
 IUSE=""
 
 RESTRICT="test"
 
-ruby_add_rdepend ">=dev-ruby/railties-3.2"
+ruby_add_rdepend ">=dev-ruby/railties-4.2"
 #ruby_add_bdepend "test? ( >=dev-ruby/capybara-2.3.0:2
 #	>=dev-ruby/database_cleaner-1.3.0
 #	<dev-ruby/database_cleaner-1.4
