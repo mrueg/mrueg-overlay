@@ -7,7 +7,7 @@ EAPI=5
 USE_RUBY="ruby20 ruby21"
 inherit ruby-ng user
 
-DESCRIPTION="A Redmine plugin which adds an issue dashboard that supports drag and drop and various filters"
+DESCRIPTION="Redmine plugin that adds an issue dashboard to drag and drop and various filters"
 HOMEPAGE="https://github.com/jgraichen/redmine_dashboard"
 SRC_URI="https://github.com/jgraichen/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
