@@ -24,10 +24,10 @@ src_prepare() {
 }
 
 src_compile() {
-	emake GOPATH="${WORKDIR}/${P}/_build:$(get_golibdir_gopath)" -C src/${EGO_PN%/*}
+	emake GOPATH="${WORKDIR}/${P}/src/gitlab.com/gitlab-org/gitlab-workhorse/_build:$(get_golibdir_gopath)" -C src/${EGO_PN%/*}
 }
 
 src_install() {
-	emake GOPATH="${WORKDIR}/${P}/_build:$(get_golibdir_gopath)" -C src/${EGO_PN%/*} DESTDIR="${D}" PREFIX=/usr install
+	emake GOPATH="${WORKDIR}/${P}/src/gitlab.com/gitlab-org/gitlab-workhorse/_build:$(get_golibdir_gopath)" -C src/${EGO_PN%/*} DESTDIR="${D}" PREFIX=/usr install
 	dodoc src/${EGO_PN%/*}/CHANGELOG src/${EGO_PN%/*}/README.md
 }
