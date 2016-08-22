@@ -23,9 +23,7 @@ KEYWORDS="~amd64"
 
 IUSE="doc"
 
-ruby_add_rdepend ">=dev-ruby/nokogiri-1.5.10
-	>=dev-ruby/uuid-2.3
-	<dev-ruby/uuid-3"
+ruby_add_rdepend ">=dev-ruby/nokogiri-1.5.10"
 
 ruby_add_bdepend "test? ( >=dev-ruby/minitest-5.5:5
 	>=dev-ruby/mocha-0.14:0.14
