@@ -19,13 +19,16 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
+RESTRICT="test"
+
 ruby_add_rdepend ">=dev-ruby/activesupport-2.3
 	>=dev-ruby/attr_required-0.0.5
 	>=dev-ruby/httpclient-2.4
 	>=dev-ruby/multi_json-1.3.6
 	>=dev-ruby/rack-1.1"
-ruby_add_bdepend "test? ( dev-ruby/rspec-its
-	<dev-ruby/webmock-1.24 )"
+
+#ruby_add_bdepend "test? ( dev-ruby/rspec-its
+#<dev-ruby/webmock-1.24 )"
 
 all_ruby_prepare() {
 	sed -i -e "/simplecov/,+4d" spec/spec_helper.rb || die
