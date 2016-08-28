@@ -16,7 +16,9 @@ LICENSE="Apache-2.0"
 SLOT="0/${PVR}"
 IUSE=""
 
-DEPEND="app-emulation/appc-spec"
+DEPEND=">=app-emulation/appc-spec-0.8.5
+	app-emulation/docker-registry
+	dev-go/mux"
 
 src_install() {
 	golang-build_src_install
