@@ -31,7 +31,7 @@ RESTRICT="test"
 #	>=dev-ruby/posix_mq-2.0
 #	<dev-ruby/posix_mq-3
 #	>=dev-ruby/rack-1.2
-#	<dev-ruby/rack-2
+#	<dev-ruby/rack-3
 #	>=dev-ruby/test-unit-3.0
 #	<dev-ruby/test-unit-4 )"
 
