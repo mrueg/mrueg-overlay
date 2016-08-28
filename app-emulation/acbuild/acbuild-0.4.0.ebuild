@@ -22,5 +22,5 @@ DEPEND=">=app-emulation/appc-spec-0.8.5
 
 src_install() {
 	golang-build_src_install
-	dobin bin/*
+	dobin bin/acbuild
 }
