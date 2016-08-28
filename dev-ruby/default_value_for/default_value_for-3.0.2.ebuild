@@ -21,13 +21,13 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-ruby_add_rdepend "<dev-ruby/activerecord-5.0
+ruby_add_rdepend "<dev-ruby/activerecord-5.1
 	>=dev-ruby/activerecord-3.2.0"
 
 ruby_add_bdepend "test? (
 	>=dev-ruby/minitest-4.2
 	dev-ruby/minitest-around
-	<dev-ruby/railties-5.0
+	<dev-ruby/railties-5.1
 	>=dev-ruby/railties-3.2.0 )"
 
 all_ruby_prepare() {
