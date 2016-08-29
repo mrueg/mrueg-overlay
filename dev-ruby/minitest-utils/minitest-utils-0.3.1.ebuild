@@ -8,6 +8,7 @@ USE_RUBY="ruby20 ruby21 ruby22 ruby23"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_TASK_TEST=""
+RUBY_FAKEGEM_BINWRAP=""
 
 inherit ruby-fakegem
 
