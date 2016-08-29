@@ -3,7 +3,7 @@
 # $Id$
 
 EAPI=5
-USE_RUBY="ruby20 ruby21"
+USE_RUBY="ruby20 ruby21 ruby22"
 inherit eutils depend.apache ruby-ng user
 
 DESCRIPTION="Flexible project management web application using the Ruby on Rails framework"
@@ -23,7 +23,7 @@ ruby_add_rdepend "
 	>=dev-ruby/rails-4.2.6:4.2
 	>=dev-ruby/jquery-rails-3.1.4:3
 	>=dev-ruby/coderay-1.1.1
-	>=dev-ruby/builder-3.0.4:3
+	>=dev-ruby/builder-3.0.4
 	>=dev-ruby/roadie-rails-1.1.0
 	dev-ruby/mimemagic
 	>=dev-ruby/rails-html-sanitizer-1.0.3
