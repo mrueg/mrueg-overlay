@@ -8,7 +8,7 @@ USE_RUBY="ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_RECIPE_DOC="yard"
 RUBY_FAKEGEM_EXTRADOC="README.md CONTRIBUTING.md CODE_OF_CONDUCT.md CHANGELOG.md"
-
+RUBY_FAKEGEM_BINWRAP=""
 inherit ruby-fakegem
 
 DESCRIPTION="Flexible authentication solution for Rails with Warden"
