@@ -4,7 +4,7 @@
 
 EAPI=5
 
-USE_RUBY="ruby20 ruby21"
+USE_RUBY="ruby20 ruby21 ruby22"
 inherit ruby-ng user
 
 DESCRIPTION="Redmine plugin that adds an issue dashboard to drag and drop and various filters"
