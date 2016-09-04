@@ -10,7 +10,8 @@ EGO_PN="gitlab.com/gitlab-org/gitlab-ci-multi-runner/..."
 DESCRIPTION="Official GitLab CI Runner written in Go"
 HOMEPAGE="https://gitlab.com/gitlab-org/gitlab-ci-multi-runner"
 SRC_URI="https://gitlab.com/gitlab-org/${PN}/repository/archive.tar.gz?ref=v${PV} -> ${P}.tar.gz
-	!docker-build? ( https://dev.gentoo.org/~mrueg/files/${P}-prebuilt.tar.gz )"
+	!docker-build? ( https://dev.gentoo.org/~mrueg/files/${P}-prebuilt-x86_64.tar.xz
+		https://dev.gentoo.org/~mrueg/files/${P}-prebuilt-arm.tar.xz )"
 
 KEYWORDS="~amd64"
 LICENSE="MIT"
@@ -24,10 +25,10 @@ DEPEND="dev-go/gox
 RESTRICT="test"
 
 src_prepare() {
-	sed -i -e 's/VERSION=.*/VERSION=${PV}/' src/${EGO_PN%/*}/Makefile || die
 	if ! use docker-build; then
 		mkdir -p src/${EGO_PN%/*}/out/docker || die
-		cp "${DISTDIR}"/${P}-prebuilt.tar.gz src/${EGO_PN%/*}/out/docker/prebuilt.tar.gz || die
+		cp "${DISTDIR}"/${P}-prebuilt-x86_64.tar.xz src/${EGO_PN%/*}/out/docker/prebuilt-x86_64.tar.xz || die
+		cp "${DISTDIR}"/${P}-prebuilt-arm.tar.xz src/${EGO_PN%/*}/out/docker/prebuilt-arm.tar.xz || die
 	else
 		einfo "You need to have docker running on your system during build time"
 		einfo "$(docker info)"
