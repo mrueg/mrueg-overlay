@@ -10,7 +10,7 @@ RUBY_FAKEGEM_RECIPE_DOC="yard"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Shared classes and tests for fog providers and services."
+DESCRIPTION="Shared classes and tests for fog providers and services"
 HOMEPAGE="https://github.com/fog/fog-core https://rubygems.org/gems/fog-core"
 
 LICENSE="MIT"
