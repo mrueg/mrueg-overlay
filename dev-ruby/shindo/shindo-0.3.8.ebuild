@@ -8,7 +8,7 @@ USE_RUBY="ruby20 ruby21 ruby22 ruby23"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Simple depth first ruby testing, watch and learn"
+DESCRIPTION="Simple depth first ruby testing"
 HOMEPAGE="http://github.com/geemus/shindo https://rubygems.org/gems/shindo"
 
 LICENSE="MIT"
