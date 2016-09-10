@@ -17,7 +17,7 @@ LICENSE="MIT"
 SLOT="0/${PVR}"
 IUSE=""
 
-RESTRICT="test"
+#RESTRICT="test"
 
 src_prepare() {
 	sed -i -e 's/VERSION=.*/VERSION=${PV}/' -e "1iexport GOPATH?=" -e "s/PREFIX=/PREFIX?=/" src/${EGO_PN%/*}/Makefile || die
