@@ -19,7 +19,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/activemodel-4.1
-	<dev-ruby/activemodel-5
+	<dev-ruby/activemodel-5.1
 	>=dev-ruby/state_machines-0.4.0"
 ruby_add_bdepend "test? (
 	>=dev-ruby/minitest-5.4
