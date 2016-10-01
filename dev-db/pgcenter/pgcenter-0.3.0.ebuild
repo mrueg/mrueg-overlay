@@ -6,8 +6,7 @@ EAPI=5
 
 DESCRIPTION="Top-like PostgreSQL statistics viewer"
 HOMEPAGE="https://github.com/lesovsky/pgcenter"
-COMMIT_ID="47817b5f9c597b5ad12779a0c42d59d05634ac3f"
-SRC_URI="https://github.com/lesovsky/pgcenter/archive/${COMMIT_ID}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/lesovsky/pgcenter/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -17,8 +16,6 @@ IUSE=""
 RDEPEND="dev-db/postgresql:=
 	sys-libs/ncurses:="
 DEPEND="${RDEPEND}"
-
-S=${WORKDIR}/${PN}-${COMMIT_ID}
 
 src_install() {
 	default
