@@ -20,7 +20,7 @@ IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/redis-namespace-1.5.2
 	>=dev-ruby/rufus-scheduler-2.0.24
-	>=dev-ruby/sidekiq-4.0.0"
+	>=dev-ruby/sidekiq-4.2.1"
 ruby_add_bdepend "test? ( dev-ruby/minitest
 	dev-ruby/mocha
 	dev-ruby/rack
