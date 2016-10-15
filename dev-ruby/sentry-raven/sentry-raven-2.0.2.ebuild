@@ -13,7 +13,7 @@ inherit ruby-fakegem
 
 DESCRIPTION="A gem that provides a client interface for the Sentry error logger"
 HOMEPAGE="https://github.com/getsentry/raven-ruby https://rubygems.org/gems/sentry-raven"
-SRC_URI="https://github.com/getsentry/raven-ruby/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/getsentry/raven-ruby/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
