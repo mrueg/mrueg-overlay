@@ -20,7 +20,7 @@ IUSE="ldap fastcgi passenger imagemagick"
 
 ruby_add_rdepend "
 	dev-ruby/rubygems
-	>=dev-ruby/rails-4.2.6:4.2
+	>=dev-ruby/rails-4.2.7.1:4.2
 	>=dev-ruby/jquery-rails-3.1.4:3
 	>=dev-ruby/coderay-1.1.1
 	>=dev-ruby/builder-3.0.4
