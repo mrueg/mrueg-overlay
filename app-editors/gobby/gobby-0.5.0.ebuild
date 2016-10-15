@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -12,12 +12,12 @@ SRC_URI="https://github.com/gobby/gobby/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="ISC"
 SLOT="0.5"
 KEYWORDS="~amd64 ~x86"
-IUSE="avahi doc nls"
+IUSE="zeroconf doc nls"
 
 RDEPEND="dev-cpp/glibmm:2
 	dev-cpp/gtkmm:3.0
 	dev-libs/libsigc++:2
-	>=net-libs/libinfinity-0.6.1[gtk,avahi?]
+	>=net-libs/libinfinity-0.6.1[gtk,zeroconf?]
 	x11-libs/gtk+:3
 	dev-cpp/libxmlpp:2.6
 	x11-libs/gtksourceview:3.0"
