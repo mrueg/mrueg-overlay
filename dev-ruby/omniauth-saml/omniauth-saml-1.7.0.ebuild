@@ -22,7 +22,7 @@ IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/omniauth-1.3
 	<dev-ruby/omniauth-2
-	>=dev-ruby/ruby-saml-1.3
+	>=dev-ruby/ruby-saml-1.4
 	<dev-ruby/ruby-saml-2"
 ruby_add_bdepend "test? ( >=dev-ruby/rack-test-0.6
 	<dev-ruby/rack-test-1 )"
