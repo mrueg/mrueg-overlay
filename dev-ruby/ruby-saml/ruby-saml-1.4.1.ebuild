@@ -34,13 +34,13 @@ ruby_add_bdepend "test? ( >=dev-ruby/minitest-5.5:5
 
 all_ruby_prepare() {
 	sed -i -e '/ruby-debug/d' \
-		-e '/bundler/I s:^:#:' \
-		-e '/simplecov/ s:^:#:' \
-		-e '/SimpleCov/,/end/ s:^:#:' test/test_helper.rb || die
+		-e '/[Bb]undler/d' \
+		-e '/simplecov/d' \
+		-e '1,7d' test/test_helper.rb || die
 
 	sed -i -e '/git ls-files/d' ${RUBY_FAKEGEM_GEMSPEC} || die
 
-	sed -i -e '2i gem "shoulda", "~> 2.11"' test/test_helper.rb || die
+	sed -i -e '1i gem "shoulda", "~> 2.11"' test/test_helper.rb || die
 
 	sed -i -e '3irequire "onelogin/ruby-saml/http_error"' test/idp_metadata_parser_test.rb || die
 }
