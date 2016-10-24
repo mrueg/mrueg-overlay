@@ -23,7 +23,6 @@ ruby_add_rdepend ">=dev-ruby/concurrent-ruby-1.0
 	>=dev-ruby/connection_pool-2.2.0
 	<dev-ruby/connection_pool-3
 	>=dev-ruby/rack-protection-1.5
-	<dev-ruby/rack-protection-2
 	>=dev-ruby/redis-3.2.1
 	<dev-ruby/redis-4"
 ruby_add_bdepend "test? ( >=dev-ruby/minitest-5.7.0
