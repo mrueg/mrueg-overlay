@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -7,7 +7,7 @@ EAPI=5
 EGIT_REPO_URI="https://github.com/Aloshi/EmulationStation.git"
 inherit git-r3 cmake-utils
 
-DESCRIPTION="A flexible emulator front-end supporting keyboardless navigation and custom system themes"
+DESCRIPTION="Emulator front-end supporting keyboardless navigation and custom system themes"
 HOMEPAGE="https://github.com/Aloshi/EmulationStation/"
 
 LICENSE="MIT"
