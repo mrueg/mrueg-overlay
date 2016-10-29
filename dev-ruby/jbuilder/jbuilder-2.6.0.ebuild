@@ -4,7 +4,7 @@
 
 EAPI=5
 
-USE_RUBY="ruby20 ruby21"
+USE_RUBY="ruby20 ruby21 ruby22 ruby23"
 
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 
@@ -23,10 +23,12 @@ ruby_add_rdepend "<dev-ruby/activesupport-5.1
 	>=dev-ruby/multi_json-1.2
 	<dev-ruby/multi_json-2"
 
+ruby_add_bdepend "test? ( dev-ruby/rake )"
+
 all_ruby_prepare() {
-	sed -i -e "/bundler/d" test/test_helper.rb || die
+	sed -i -e "/bundler/d" test/test_helper.rb Rakefile || die
 }
 
 each_ruby_test() {
-	${RUBY} -Ilib -S testrb test/*_test.rb || die
+	TRAVIS=true ${RUBY} -S rake test || die
 }
