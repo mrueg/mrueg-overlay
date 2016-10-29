@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -7,7 +7,7 @@ EAPI=5
 inherit xorg-2
 
 SRC_URI="https://github.com/ssvb/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
-DESCRIPTION="Drop-in replacement for xf86-video-fbdev and xf86-video-mali providing a better performance on ARM"
+DESCRIPTION="Better performing replacement for xf86-video-fbdev and xf86-video-mali"
 HOMEPAGE="https://github.com/ssvb/xf86-video-fbturbo"
 LICENSE="MIT GPL-2+"
 KEYWORDS="~arm"
