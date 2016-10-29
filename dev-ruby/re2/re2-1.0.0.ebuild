@@ -1,11 +1,11 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
 EAPI=5
-USE_RUBY="ruby20 ruby21 ruby22"
+USE_RUBY="ruby20 ruby21 ruby22 ruby23"
 
-RUBY_FAKEGEM_RECIPE_TEST="rake"
+RUBY_FAKEGEM_RECIPE_TEST="rspec3"
 RUBY_FAKEGEM_RECIPE_DOC="yard"
 
 inherit ruby-fakegem
@@ -31,11 +31,5 @@ each_ruby_compile() {
 }
 
 each_ruby_test() {
-	${RUBY} -Ilib:spec spec/re2_spec.rb || die
-	${RUBY} -Ilib:spec spec/kernel_spec.rb || die
-	${RUBY} -Ilib:spec spec/re2/match_data_spec.rb || die
-	${RUBY} -Ilib:spec spec/re2/regexp_spec.rb || die
-	${RUBY} -Ilib:spec spec/re2/scanner_spec.rb || die
-	${RUBY} -Ilib:spec spec/re2/string_spec.rb || die
-
+	${RUBY} -S rspec-3 -Ilib --require spec_helper spec || die
 }
