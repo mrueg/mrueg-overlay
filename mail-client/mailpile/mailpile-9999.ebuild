@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -9,7 +9,7 @@ EGIT_REPO_URI="https://github.com/mailpile/Mailpile.git"
 
 inherit distutils-r1 git-r3
 
-DESCRIPTION="A modern, fast web-mail client with user-friendly encryption and privacy features"
+DESCRIPTION="Modern, fast web-mail client with user-friendly encryption and privacy features"
 HOMEPAGE="https://github.com/mailpile/Mailpile"
 
 LICENSE="AGPL-3"
