@@ -13,6 +13,7 @@ admin_message - This module provides a console over XMPP. All the commands of th
 admin_probe - Module allowing server administrators to probe any user.
 admin_web - This module provides a basic web administration interface. It currently gives you access to Ad-Hoc commands on any virtual host or component that you are set as an administrator for in the Prosody config file. It also provides a live list of all S2S and C2S connections.
 alias - Point alias accounts or domains to correct XMPP user.
+atom - HTTP Access to PEP -> microblog
 auth_any - This module accepts any username and password, which can be useful for testing.
 auth_ccert - This module implements PKI-style client certificate authentication. You will therefore need your own Certificate Authority. How to set that up is beyond the current scope of this document.
 auth_custom_http - No module description on upstream wiki yet.
@@ -53,6 +54,7 @@ cloud_notify - XEP-0357: Cloud push notifications
 client_certs - XEP-0257 specifies a protocol for clients to store and manage client side certificates. When a client presents a stored client side certificate during the TLS handshake, it can log in without supplying a password (using SASL EXTERNAL). This makes it possible to have multiple devices accessing an account, without any of them needing to know the password, and makes it easier to revoke access for a single device.
 compact_resource - Enforces short random resources
 compat_bind - Compatibility with clients that set 'to' on resource bind requests.
+compat_dialback - Workaround for Dialback with servers that violate RFC 6120 § 4.7.2
 compat_muc_admin - Compat module for old clients using wrong namespaces in MUC's affiliation manipulations. 
 compat_vcard - Compatibility with clients and servers (i.e. ejabberd) that send vcard requests to the full JID.
 component_client - This module turns Prosody hosts into components of other XMPP servers.
@@ -68,22 +70,33 @@ delegation - XEP-0355 Namespace Delegation
 disable_tls - This module can be used to prevent Prosody from offering TLS on client ports that you specify. This can be useful to work around buggy clients when transport security is not required.
 discoitems - This Prosody plugin lets you manually override the service discovery items for a host.
 dwd - This module implements an optimization of the Dialback protocol, by skipping the dialback step for servers presenting a valid certificate.
+e2e_policy - Encourage usage of End-to-end encryption for chat and MUC messages. Warn the sender after plaintext messages or block those.
 email_pass - This module aims to help in the procedure of user password restoration. To start the restoration, the user must go to an URL provided by this module, fill the JID and email and submit the request.
 extdisco - XEP-0215: External Service Discovery
 fallback_vcard - Generates missing vcards from a template
 filter_chatstates - Removes chat states from messages to inactive (per CSI) sessions.
+filter_words - Filter words in messages
 firewall - A firewall is an invaluable tool in the sysadmin's toolbox. However while low-level firewalls such as iptables and pf are incredibly good at what they do, they are generally not able to handle application-layer rules.
 flash_policy - This Prosody plugin adds support for flash socket policies. When connecting with a flash client (from a webpage, not an exe) to prosody the flash client requests for an xml "file" on port 584 or the connecting port (5222 in the case of default xmpp). Responding on port 584 is tricky because it requires root priviliges to set up a socket on a port smaller than 1024.
+graceful_shutdown - Experimental to make the shutdown more graceful
 group_bookmarks -mod_groups allows you to insert contacts into users' contact lists. Well mod_group_bookmarks allows you to insert chatrooms into the user's bookmarks. These are fetched by their client and automatically joined when the log in.
 host_blacklist - Similar to mod_s2s_blacklist, but stanza-based. Works between hosts on the same server, at a slight performance impact. 
 host_guard - Block or restrict by blacklist remote access to local components or hosts.
+host_status_check - Monitor the state of hosts and components with the Prosody server.
+host_status_heartbeat - Provide heartbeats at regular intervals.
 http_altconnect - XEP-0156: Discovering Alternative XMPP Connection Methods.
+http_authentication - Enforces HTTP Basic authentication across all HTTP endpoints served by Prosody.
 http_dir_listing - This module generates directory listings when invoked by prosody_modules_http_files.
 http_favicon - This simple module serves a favicon.ico from prosodys HTTP server and nothing else.
+http_host_status_check - Exposes serves over HTTP the information collected by mod_host_status_check and mod_host_status_heartbeat.
+http_hostaliases - Give HTTP hosts additional aliases.
 http_index - Generates an index of local HTTP apps.
 http_logging - Produces HTTP logs in the style of Apache
 http_muc_log - This module provides a built-in web interface to view chatroom logs stored by prosody_modules_mam_muc.
+http_rest - Send XMPP stanzas via REST/HTTP
+http_roster_admin - Delegate roster management to an external service
 http_upload - Implementation of HTTP Upload file transfer mechanism used by Conversations
+http_upload_external - HTTP File Upload (external service)
 http_user_count - HTTP module to report the current number of online users or sessions.
 idlecompat - This module adds XEP-0319 idle tags to presence stanzas containing XEP-0012: Last Activity tags for idle indication (e.g. supported by libpurple clients). It works on outgoing and incoming presence stanzas.
 incidents_handling - This module implements XEP-0268: Incident reporting among XMPP server deployments.
@@ -103,6 +116,7 @@ listusers - No module description on upstream wiki yet.
 log_auth - Prosody doesn't write IP addresses to its log file by default for privacy reasons (unless debug logging is enabled).
 log_events - Module to log all events on the server/host.
 log_messages_sql - Fork of prosody_modules_mam_sql without the protocol bits.
+log_mark - Log a message once per minute
 log_rate - Log sink that reports the rate of log messages to statsmanager 
 log_sasl_mech - Logs authentication mechanism used.
 log_slow_events - Log events that take a long time to process (including stanzas) 
@@ -114,9 +128,11 @@ mamsub - Experimental implementation of MAM subscriptions
 manifesto - This module informs users about the XMPP Test day and whether their contacts are affected.
 measure_cpu - Collect CPU usage statistic
 measure_memory - Module for polling memory useage from Lua, meminfo() and /proc depending on availability.
+measure_storage - Measure storage API operations.
 message_logging - Often service administrators need to log their users' messages for reasons such as auditing and compliance. This module simply logs user messages to simple text files, which can be easily searched, archived or removed on a regular basis.
 migrate - Provides a prosodyctl command for copying data between storage backends
 motd_sequential - A variant of prosody_modules_motd that lets you specify a sequence of MOTD messages instead of a single static one.  Each message is only sent once and the module keeps track of who as seen which message.
+muc_access_control - Module to allow restricting rooms to a list of JIDs, which can include domains.
 muc_ban_ip - One frequent complaint about XMPP chatrooms (MUCs) compared to IRC is the inability for a room admin to ban a user based on their IP address. This is because an XMPP user is not identified on the network by their IP address, only their JID.
 muc_config_restrict - Sometimes, especially on public services, you may want to allow people to create their own rooms, but prevent some options from being modified by normal users.
 muc_intercom - Relay messages between rooms.
@@ -133,8 +149,11 @@ openid - OpenID is an decentralized authentication mechanism for the Web.  mod_o
 password_policy - Password policy enforcement for Prosody.
 pastebin - Pastebins are used very often in IM, especially in chat rooms. You have a long log or command output which you need to send to someone over IM, and don't want to fill their message window with it. Put it on a pastebin site, and give them the URL instead, simple.
 pep_vcard_avatar - Syncs avatars between PEP and vCard.
+pep_vcard_png_avatar - Converts PEP avatars to png.
 pinger - Ping clients regularly to mark them offline if they don't respond
+poke_strangers - Query the features and version of JIDs sending messages to contacts they are not subscribed to.
 post_msg - Sometimes it's useful to have different interfaces to access XMPP.
+presence_cache - Cache presence from remote users.
 presence_dedup - Presence deduplication module
 privacy_lists - Privacy lists are a flexible method for blocking communications.
 private_adhoc - This is a very simple module which implements an adhoc commant toretrieves the users private XML data.
@@ -153,6 +172,7 @@ pubsub_twitter - Twitter has an open 'realtime' search API, but it requires poll
 query_client_ver - Query and log client software.
 rawdebug - No module description on upstream wiki yet.
 readonly - Allow preventing direct modification of certain user data via XMPP.
+register_dnsbl - Checks the IP address of newly registered users against a DNS block list.
 register_json - This module let's you activate a httpserver interface to handle data from webforms with POST and Base64 encoded JSON.
 register_redirect - Registration Redirect as explained in the XEP-0077: IBR XEP.
 register_web - There are various reasons to prefer web registration instead of "in-band" account registration over XMPP. For example the lack of CAPTCHA support in clients and servers.
@@ -165,6 +185,7 @@ s2s_auth_compat - This module is a workaround for servers that try to do s2s aut
 s2s_auth_dane - This module implements DANE using DNS Security Extensions (DNSSEC) and DNS-based Authentication of Named Entities (DANE) as a Prooftype for XMPP Domain Name Associations.
 s2s_auth_fingerprint - This module allows you to manually pin certificate fingerprints of remote servers.
 s2s_auth_monkeysphere - Monkeysphere is a project aiming to introduce PGP's web of trust to protocols such as SSH and TLS (which XMPP uses).
+s2s_auth_samecert - Authenticate incoming s2s connection if certificate matches that of an established outgoing s2s connection 
 s2s_blacklist - A new _simple_ s2s blacklist module.
 s2s_idle_timeout - Some people find it preferable to close server-to-server connections after they have been silent for a while.
 s2s_keepalive - Poke s2s connections with pings and whitespace.
@@ -185,6 +206,7 @@ sift - SIFT is a technology to allow clients to filter incoming traffic on the s
 smacks - By default XMPP is as reliable as your network is. Unfortunately in some cases that is not very reliable - in some network conditions disconnects can be frequent and message loss can occur.
 smacks_offline - Monkeypatch mod_smacks to send unacked messages to offline storage IFF there was only one session
 sms_clickatell - This module provides and SMS gateway component which uses the Clickatell HTTP API to deliver text messages. See clickatell.com for details on their services. Note that at present, this is entirely one way: replies will either go nowhere or as sms to the source number you specify.
+spam_reporting - XEP-0377: Spam Reporting
 srvinjection - This Prosody plugin lets you manually override SRV records used for a remote host.
 sslv3_warn - Notice users connected with SSLv3 that they need to upgrade becasue SSLv3 is insecure.
 stanza_counter - This module counts incoming and outgoing stanzas from when the instance started, and makes the data available to other modules by creating a global prosody. object
@@ -195,12 +217,14 @@ statistics_mem - Module that collects memory usage stats from /proc.
 statistics_statsd - Module for pushing from util.statistics (0.10) to statsd.
 statsd - Log common stats to statsd.
 storage_appendmap - Experimental map store optimized for small incremental changes
+storage_ejabberdsql_readonly - Ejabberd SQL Read-only Storage Module
 storage_gdbm - Storage backend based on lgdbm.
 storage_ldap - See prosody_modules_lib_ldap for more information.
 storage_lmdb - Storage module using Lightning Memory-Mapped Database 
 storage_memory - This module acts as a normal storage module for Prosody, but saves all data in memory only. All data is lost when the server stops. This makes it useful for testing, or certain specialized applications.
 storage_mongodb - This is a storage backend that uses MongoDB. Depends on luamongo bindings.
 storage_muc_log - prosody_modules_muc_log provided logging of chatrooms running on the server to Prosody's data store. This module gives access to this data using the 0.10+ stanza archive API, allowing legacy log data to be used with prosody_modules_mam_muc and prosody_modules_http_muc_log.
+storage_muconference_readonly - MU-Conference SQL Read-only Storage Module
 storage_multi - Multi-backend storage module.
 storage_xmlarchive - New stanza archive-only storage module backed by plain text files
 streamstats - Streams live stats from Prosody over a TCP stream.
