@@ -24,7 +24,6 @@ RDEPEND+=" >=dev-libs/libgit2-${PV}"
 
 ruby_add_bdepend "test? (
 	dev-ruby/minitest
-	dev-ruby/pry
 	dev-ruby/rake-compiler )"
 
 all_ruby_unpack() {
