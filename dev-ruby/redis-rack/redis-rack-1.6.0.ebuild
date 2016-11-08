@@ -21,8 +21,8 @@ IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/rack-1.5
 	<dev-ruby/rack-2
-	>=dev-ruby/redis-store-1.1.0
-	<dev-ruby/redis-store-1.2"
+	>=dev-ruby/redis-store-1.2.0
+	<dev-ruby/redis-store-1.3"
 
 # ruby_add_bdepend "test? ( >=dev-ruby/minitest-5
 #	dev-ruby/mocha:0.14
