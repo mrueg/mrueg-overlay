@@ -20,15 +20,13 @@ KEYWORDS="~amd64"
 IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/actionpack-4
-	>=dev-ruby/redis-rack-1.5.0
-	<dev-ruby/redis-rack-1.6
+	>=dev-ruby/redis-rack-1
+	<dev-ruby/redis-rack-3
 	>=dev-ruby/redis-store-1.1.0
-	<dev-ruby/redis-store-1.2"
+	<dev-ruby/redis-store-1.4"
 
-#ruby_add_bdepend "test? ( dev-ruby/mini_backtrace
-#	dev-ruby/mini_specunit
-#	>=dev-ruby/minitest-4.2
-#	<dev-ruby/minitest-5
+#ruby_add_bdepend "test? ( 
+#	dev-ruby/minitest-rails
 #	>=dev-ruby/mocha-0.14.0
 #	<dev-ruby/mocha-0.15
 #	>=dev-ruby/rake-10
