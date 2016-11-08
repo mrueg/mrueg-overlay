@@ -19,10 +19,12 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-ruby_add_rdepend ">=dev-ruby/redis-actionpack-4
-	>=dev-ruby/redis-activesupport-4
-	>=dev-ruby/redis-store-1.1.0
-	<dev-ruby/redis-store-1.2"
+ruby_add_rdepend ">=dev-ruby/redis-actionpack-5.0.0
+	<dev-ruby/redis-actionpack-5.1
+	>=dev-ruby/redis-activesupport-5.0.0
+	<dev-ruby/redis-activesupport-5.1
+	>=dev-ruby/redis-store-1.2.0
+	<dev-ruby/redis-store-1.3"
 #ruby_add_bdepend "test? ( >=dev-ruby/minitest-4.2
 #	<dev-ruby/minitest-5
 #	dev-ruby/mocha:0.14
