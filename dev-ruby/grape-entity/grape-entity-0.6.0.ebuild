@@ -4,10 +4,10 @@
 
 EAPI=5
 
-USE_RUBY="ruby20 ruby21 ruby22"
+USE_RUBY="ruby20 ruby21 ruby22 ruby23"
 
 RUBY_FAKEGEM_RECIPE_DOC="yard"
-RUBY_FAKEGEM_RECIPE_TEST="rspec"
+RUBY_FAKEGEM_RECIPE_TEST="rspec3"
 
 inherit ruby-fakegem
 
@@ -27,5 +27,5 @@ ruby_add_bdepend "test? (
 	dev-ruby/rails )"
 
 all_ruby_prepare() {
-	sed -i -e "/[Bb]undler/d" -e "s/pry/grape_entity/" -e "1s/^/require \'rails\'\n/" spec/spec_helper.rb || die
+	sed -i -e "/[Bb]undler/d" -e "1irequire 'grape_entity'" spec/spec_helper.rb || die
 }
