@@ -11,7 +11,7 @@ before_install:
     - sudo apt-get -qq update
     - pip install lxml
 before_script:
-    - mkdir travis-overlay /etc/portage /usr/portage/distfiles
+    - mkdir -p travis-overlay /etc/portage /usr/portage/distfiles
     - mv !(travis-overlay) travis-overlay/
     - mv .git travis-overlay/
     - wget "https://raw.githubusercontent.com/mrueg/repoman-travis/master/.travis.yml" -O .travis.yml.upstream
