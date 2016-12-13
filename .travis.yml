@@ -3,6 +3,8 @@
 # See https://github.com/mrueg/repoman-travis
 #
 language: python
+python:
+    - pypy
 env:
     - PORTAGE_VER="2.3.2"
 before_install:
