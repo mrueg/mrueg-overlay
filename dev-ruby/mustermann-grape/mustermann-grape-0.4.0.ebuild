@@ -10,7 +10,7 @@ RUBY_FAKEGEM_TASK_DOC=""
 
 inherit ruby-fakegem
 
-DESCRIPTION="Adds Grape style patterns to Mustermman"
+DESCRIPTION="Adds Grape style patterns to Mustermann"
 HOMEPAGE="https://github.com/rkh/mustermann https://rubygems.org/gems/mustermann-grape"
 
 LICENSE="MIT"
