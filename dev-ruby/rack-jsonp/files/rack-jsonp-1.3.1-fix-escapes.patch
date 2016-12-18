@@ -1,0 +1,45 @@
+From 44364182fd96f8142e5e49a556a27141061e1d0f Mon Sep 17 00:00:00 2001
+From: mfo <fourcade.m@gmail.com>
+Date: Sun, 30 Nov 2014 21:49:31 +0100
+Subject: [PATCH] fix(escaping): Always escape U+2028 and U+2029 tx:
+ https://github.com/judofyr/rack-contrib/commit/24f3da12ea7f763826d0166591a45eba2d9bfce5
+
+---
+ lib/rack/jsonp.rb       | 4 +++-
+ spec/rack_jsonp_spec.rb | 8 ++++++++
+ 2 files changed, 11 insertions(+), 1 deletion(-)
+
+diff --git a/lib/rack/jsonp.rb b/lib/rack/jsonp.rb
+index 93d4884..378a78e 100644
+--- a/lib/rack/jsonp.rb
++++ b/lib/rack/jsonp.rb
+@@ -56,7 +56,9 @@ def call(env)
+     # since JSON is returned as a full string.
+     #
+     def pad(callback, response, body = "")
+-      response.each{ |s| body << s.to_s }
++      response.each do |s|
++        body << s.to_s.gsub("\u2028", '\u2028').gsub("\u2029", '\u2029')
++      end
+       close(response)
+       ["#{callback}(#{body})"]
+     end
+diff --git a/spec/rack_jsonp_spec.rb b/spec/rack_jsonp_spec.rb
+index 01863b0..1080ca6 100644
+--- a/spec/rack_jsonp_spec.rb
++++ b/spec/rack_jsonp_spec.rb
+@@ -159,6 +159,14 @@
+       body = Rack::JSONP.new(app, :carriage_return => true).call(request).last
+       body.should == ["#{callback}(#{test_body})"]
+     end
++    it 'replaces' do
++      test_body = "{\"bar\":\"\u2028 and \u2029\"}"
++      callback = 'foo'
++      app = lambda { |env| [200, {'Content-Type' => 'application/json'}, [test_body]] }
++      request = Rack::MockRequest.env_for("/", :params => "foo=bar&callback=#{callback}")
++      body = Rack::JSONP.new(app).call(request).last
++      body.join.should_not =~ /\u2028|\u2029/
++    end
+   end
+ 
+   it "should not change anything if no callback param is provided" do
