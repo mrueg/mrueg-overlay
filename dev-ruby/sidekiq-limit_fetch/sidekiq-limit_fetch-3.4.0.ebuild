@@ -4,7 +4,7 @@
 
 EAPI=5
 
-USE_RUBY="ruby20 ruby21 ruby22"
+USE_RUBY="ruby21 ruby22"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_RECIPE_TEST="rspec3"
@@ -22,6 +22,3 @@ IUSE=""
 ruby_add_rdepend ">=dev-ruby/sidekiq-4"
 
 RESTRICT="test"
-#ruby_add_bdepend "test? (
-#	>=dev-ruby/redis-namespace-1.5.2
-#	<dev-ruby/redis-namespace-2 )"
