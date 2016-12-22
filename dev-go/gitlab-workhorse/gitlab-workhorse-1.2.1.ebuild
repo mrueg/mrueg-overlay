@@ -14,10 +14,8 @@ SRC_URI="https://gitlab.com/gitlab-org/gitlab-workhorse/repository/archive.tar.g
 
 KEYWORDS="~amd64"
 LICENSE="MIT"
-SLOT="0/${PVR}"
+SLOT="0"
 IUSE=""
-
-#RESTRICT="test"
 
 src_prepare() {
 	sed -i -e 's/VERSION=.*/VERSION=${PV}/' -e "1iexport GOPATH?=" -e "s/PREFIX=/PREFIX?=/" src/${EGO_PN%/*}/Makefile || die
