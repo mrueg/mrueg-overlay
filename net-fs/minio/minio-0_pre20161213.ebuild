@@ -22,11 +22,13 @@ RESTRICT="test"
 
 src_prepare() {
 	default
-	sed -i -e "s/time.Now().UTC().Format(time.RFC3339)/\"${VERSION}\"/" src/${EGO_PN%/*}/buildscripts/gen-ldflags.go || die
+	sed -i -e "s/time.Now().UTC().Format(time.RFC3339)/\"${VERSION}\"/" -e "/time/d" -e "s/+ commitID()/+ \"${EGIT_COMMIT}\"/" src/${EGO_PN%/*}/buildscripts/gen-ldflags.go || die
 }
 
 src_compile() {
 	pushd src/${EGO_PN%/*} || die
+	MINIO_RELEASE="${VERSION}"
+	go run buildscripts/gen-ldflags.go
 	GOPATH="${S}" go build --ldflags "$(go run buildscripts/gen-ldflags.go)" -o minio || die
 	popd || die
 }
