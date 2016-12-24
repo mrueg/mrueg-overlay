@@ -4,7 +4,7 @@
 
 EAPI=5
 
-USE_RUBY="ruby20 ruby21"
+USE_RUBY="ruby21 ruby22 ruby23"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec3"
 RUBY_FAKEGEM_DOC_DIR="doc"
@@ -29,3 +29,7 @@ ruby_add_bdepend "test? ( dev-ruby/jbuilder
 	>=dev-ruby/rabl-0.11.3
 	dev-ruby/rabl-rails
 	>=dev-ruby/railties-3.0 )"
+
+each_ruby_test() {
+	${RUBY} -S rspec-3 --require spec_helper spec || die
+}
