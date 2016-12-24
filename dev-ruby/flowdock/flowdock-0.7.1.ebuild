@@ -4,7 +4,7 @@
 
 EAPI=5
 
-USE_RUBY="ruby20 ruby21"
+USE_RUBY="ruby21 ruby22 ruby23"
 
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
@@ -23,3 +23,7 @@ ruby_add_rdepend ">=dev-ruby/httparty-0.7
 	<dev-ruby/httparty-1
 	dev-ruby/multi_json"
 ruby_add_bdepend "test? ( dev-ruby/webmock )"
+
+all_ruby_prepare() {
+	sed -i -e "1irequire 'securerandom'" spec/flowdock_spec.rb || die
+}
