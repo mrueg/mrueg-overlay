@@ -19,18 +19,17 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RESTRICT="test"
-
 ruby_add_rdepend ">=dev-ruby/activesupport-3.1
 	>=dev-ruby/railties-3.1
 	>=dev-ruby/thread_safe-0.3.1
 	<dev-ruby/thread_safe-0.4"
 
-#ruby_add_bdepend "test? ( >=dev-ruby/actionpack-3.1
-#	dev-ruby/plist 
-#	dev-ruby/libxml 
-#	dev-ruby/minitest )"
+ruby_add_bdepend "test? ( >=dev-ruby/actionpack-3.1
+	dev-ruby/plist
+	dev-ruby/libxml
+	dev-ruby/minitest )"
 
 all_ruby_prepare() {
 	sed -i -e "/[Bb]undler/d" Rakefile || die
+	sed -i -e "/mock/d" test/helper.rb || die
 }
