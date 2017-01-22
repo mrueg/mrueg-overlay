@@ -15,7 +15,7 @@ SRC_URI="https://gitlab.com/gitlab-org/${PN}/repository/archive.tar.gz?ref=v${PV
 
 KEYWORDS="~amd64"
 LICENSE="MIT"
-SLOT="0/${PVR}"
+SLOT="0"
 IUSE="docker-build"
 
 DEPEND="dev-go/gox
@@ -40,7 +40,6 @@ src_compile() {
 }
 
 src_install() {
-	golang-build_src_install
 	dobin bin/*
 	dodoc src/${EGO_PN%/*}/README.md src/${EGO_PN%/*}/CHANGELOG.md
 }
