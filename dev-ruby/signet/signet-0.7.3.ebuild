@@ -11,8 +11,7 @@ RUBY_FAKEGEM_RECIPE_TEST="rspec3"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Signet is an OAuth 1.0 / OAuth 2.0 implementation.
-"
+DESCRIPTION="Signet is an OAuth 1.0 / OAuth 2.0 implementation"
 HOMEPAGE="https://github.com/google/signet/ https://rubygems.org/gems/signet"
 
 LICENSE="Apache-2.0"
