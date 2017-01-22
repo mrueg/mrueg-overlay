@@ -41,7 +41,7 @@ REDMINE_DIR="/var/lib/redmine"
 #}
 
 all_ruby_prepare() {
-	sed -i -e "/mount Grack/ s/^/#/" config/routes.rb || die
+	sed -i -e "/mount Grack/,+3d" config/routes.rb || die
 }
 
 all_ruby_install() {
