@@ -8,11 +8,9 @@ USE_RUBY="ruby20 ruby21 ruby22"
 RUBY_FAKEGEM_EXTRADOC="README.md CHANGELOG"
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 RUBY_FAKEGEM_GEMSPEC="grack.gemspec"
-RUBY_FAKEGEM_NAME="grack"
 
 inherit ruby-fakegem
 
-SRC_URI="https://rubygems.org/downloads/${P}.gem"
 DESCRIPTION="Git Smart HTTP Server Rack Implemenation. Gitlab fork"
 HOMEPAGE="https://github.com/gitlabhq/grack"
 
