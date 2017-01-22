@@ -7,7 +7,7 @@ EAPI=5
 USE_RUBY="ruby21 ruby22"
 inherit ruby-ng user
 
-STUPID_NUMBER="384"
+STUPID_NUMBER="440"
 DESCRIPTION="A Redmine plugin which allows to follow Scrum methodology"
 HOMEPAGE="https://redmine.ociotec.com/projects/redmine-plugin-scrum"
 SRC_URI="http://redmine.ociotec.com/attachments/download/${STUPID_NUMBER}/scrum%20v${PV}.tar.gz -> ${P}.tar.gz"
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RUBY_S="scrum v${PV}"
+RUBY_S="scrum"
 
 ruby_add_rdepend ">=www-apps/redmine-3"
 
