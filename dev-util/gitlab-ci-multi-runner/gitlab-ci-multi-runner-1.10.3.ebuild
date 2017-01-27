@@ -40,6 +40,6 @@ src_compile() {
 }
 
 src_install() {
-	newbin src/${EGO_PN%/*}/out/binaries/gitlab-ci-multi-runner-linux-amd64 gitlab-ci-multi-runner
+	newbin src/${EGO_PN%/*}/out/binaries/gitlab-ci-multi-runner-linux-${ARCH} gitlab-ci-multi-runner
 	dodoc src/${EGO_PN%/*}/README.md src/${EGO_PN%/*}/CHANGELOG.md
 }
