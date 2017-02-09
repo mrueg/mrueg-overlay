@@ -19,6 +19,8 @@ IUSE=""
 
 DEPEND="dev-go/go-bindata"
 
+RESTRICT="test"
+
 src_prepare() {
 	default
 	sed -i -e "/vendor\/github.com\/jteeuwen\/go-bindata\/go-bindata/d" src/${EGO_PN%/*}/hack/lib/golang.sh || die
