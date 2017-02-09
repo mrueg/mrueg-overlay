@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -36,6 +36,6 @@ src_install() {
 	keepdir /etc/kubernetes/manifests /var/log/kubernetes
 	newinitd "${FILESDIR}"/kubelet.initd kubelet
 	newconfd "${FILESDIR}"/kubelet.confd kubelet
-	insinto /etc/logroate.d
+	insinto /etc/logrotate.d
 	doins "${FILESDIR}"/kubelet.logrotated kubelet
 }
