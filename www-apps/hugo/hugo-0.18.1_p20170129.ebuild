@@ -51,6 +51,8 @@ LICENSE="Apache-2.0"
 SLOT="0"
 IUSE=""
 
+RDEPEND=">=dev-python/pygments-2.1.3"
+
 _golang-include-src() {
 	local VENDORPN=$1 TARBALL=$2
 	mkdir -p "${WORKDIR}/${P}/src/${VENDORPN}" || die
