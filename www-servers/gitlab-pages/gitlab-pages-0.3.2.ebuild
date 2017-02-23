@@ -10,7 +10,7 @@ inherit golang-build golang-vcs-snapshot
 
 COMMIT="7285dc"
 
-DESCRIPTION="A smart reverse proxy for GitLab written in Go"
+DESCRIPTION="Simple HTTP server serving GitLab Pages with CNAMEs and SNI using HTTP/HTTP2"
 HOMEPAGE="https://gitlab.com/gitlab-org/gitlab-pages"
 SRC_URI="https://gitlab.com/gitlab-org/${PN}/repository/archive.tar.gz?ref=v${PV} -> ${P}.tar.gz"
 
