@@ -4,13 +4,13 @@
 
 EAPI=5
 
-EGO_PN="gitlab.com/gitlab-org/gitlab-workhorse/..."
+EGO_PN="gitlab.com/gitlab-org/${PN}/..."
 
 inherit golang-build golang-vcs-snapshot
 
 DESCRIPTION="A smart reverse proxy for GitLab written in Go"
 HOMEPAGE="https://gitlab.com/gitlab-org/gitlab-workhorse"
-SRC_URI="https://gitlab.com/gitlab-org/gitlab-workhorse/repository/archive.tar.gz?ref=v${PV} -> ${P}.tar.gz"
+SRC_URI="https://gitlab.com/gitlab-org/${PN}/repository/archive.tar.gz?ref=v${PV} -> ${P}.tar.gz"
 
 KEYWORDS="~amd64"
 LICENSE="MIT"
@@ -22,10 +22,10 @@ src_prepare() {
 }
 
 src_compile() {
-	emake GOPATH="${WORKDIR}/${P}/src/gitlab.com/gitlab-org/gitlab-workhorse/_build:$(get_golibdir_gopath)" -C src/${EGO_PN%/*}
+	emake GOPATH="${WORKDIR}/${P}/src/gitlab.com/gitlab-org/${PN}/_build" -C src/${EGO_PN%/*}
 }
 
 src_install() {
-	emake GOPATH="${WORKDIR}/${P}/src/gitlab.com/gitlab-org/gitlab-workhorse/_build:$(get_golibdir_gopath)" -C src/${EGO_PN%/*} DESTDIR="${D}" PREFIX=/usr install
+	emake GOPATH="${WORKDIR}/${P}/src/gitlab.com/gitlab-org/${PN}/_build" -C src/${EGO_PN%/*} DESTDIR="${D}" PREFIX=/usr install
 	dodoc src/${EGO_PN%/*}/CHANGELOG src/${EGO_PN%/*}/README.md
 }
