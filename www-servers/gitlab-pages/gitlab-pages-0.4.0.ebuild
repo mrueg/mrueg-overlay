@@ -1,14 +1,13 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
-EAPI=5
+EAPI=6
 
 EGO_PN="gitlab.com/gitlab-org/${PN}/..."
 
 inherit golang-build golang-vcs-snapshot
 
-COMMIT="7285dc"
+COMMIT="fdcb2c92"
 
 DESCRIPTION="Simple HTTP server serving GitLab Pages with CNAMEs and SNI using HTTP/HTTP2"
 HOMEPAGE="https://gitlab.com/gitlab-org/gitlab-pages"
