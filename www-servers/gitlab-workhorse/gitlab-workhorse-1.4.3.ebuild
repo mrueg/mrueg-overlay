@@ -1,8 +1,7 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
-EAPI=5
+EAPI=6
 
 EGO_PN="gitlab.com/gitlab-org/${PN}/..."
 
@@ -18,6 +17,7 @@ SLOT="0"
 IUSE=""
 
 src_prepare() {
+	default
 	sed -i -e 's/VERSION=.*/VERSION=${PV}/' -e "1iexport GOPATH?=" -e "s/PREFIX=/PREFIX?=/" src/${EGO_PN%/*}/Makefile || die
 }
 
