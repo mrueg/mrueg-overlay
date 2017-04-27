@@ -22,7 +22,7 @@ EGO_VENDOR=( "github.com/BurntSushi/toml b26d9c308763d68093482582cea63d69be07a0f
 	"github.com/magiconair/properties 51463bfca2576e06c62a8504b5c0f06d61312647"
 	"github.com/miekg/mmark 8b498b013a3e10b12864c2023a59d490c9d4bf5b"
 	"github.com/mitchellh/mapstructure 53818660ed4955e899c0bcafa97299a388bd7c8e"
-	"github.com/nicksnyder/go-i18n f373441d6d54a32891b2d8b1dbf99bc518f3d60d"
+	"github.com/nicksnyder/go-i18n 4df9b06c0c1ffd8538a3cfa9d888f8f52985b302"
 	"github.com/opennota/urlesc 5bd2802263f21d8788851d5305584c82a5c75d7e"
 	"github.com/pelletier/go-buffruneio c37440a7cf42ac63b919c752ca73a85067e05992"
 	"github.com/pelletier/go-toml fe206efb84b2bc8e8cfafe6b4c1826622be969e3"
@@ -49,7 +49,7 @@ EGO_VENDOR=( "github.com/BurntSushi/toml b26d9c308763d68093482582cea63d69be07a0f
 inherit golang-build golang-vcs-snapshot
 
 EGO_PN="github.com/spf13/hugo/..."
-GIT_COMMIT="8ac1fcd"
+GIT_COMMIT="4bfb013"
 ARCHIVE_URI="https://${EGO_PN%/*}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 KEYWORDS="~amd64"
 
@@ -62,6 +62,8 @@ SLOT="0"
 IUSE=""
 
 RDEPEND=">=dev-python/pygments-2.1.3"
+
+RESTRICT="test"
 
 src_prepare() {
 	default
