@@ -1,11 +1,12 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
-EAPI=5
+EAPI=6
 inherit golang-build golang-vcs-snapshot
 
 EGO_PN="gitlab.com/gitlab-org/gitlab-ci-multi-runner/..."
+
+GITLAB_COMMIT="fa8b86d3"
 
 DESCRIPTION="Official GitLab CI Runner written in Go"
 HOMEPAGE="https://gitlab.com/gitlab-org/gitlab-ci-multi-runner"
@@ -25,6 +26,7 @@ DEPEND="dev-go/gox
 RESTRICT="test"
 
 src_prepare() {
+	default
 	if ! use docker-build; then
 		mkdir -p src/${EGO_PN%/*}/out/docker || die
 		cp "${DISTDIR}"/${P}-prebuilt-x86_64.tar.xz src/${EGO_PN%/*}/out/docker/prebuilt-x86_64.tar.xz || die
@@ -33,6 +35,9 @@ src_prepare() {
 		einfo "You need to have docker running on your system during build time"
 		einfo "$(docker info)"
 	fi
+	sed -i -e "s#./ci/version#echo ${PV}#"\
+		-e "s/git rev-parse --short HEAD/echo ${GITLAB_COMMIT}/"\
+		src/${EGO_PN%/*}/Makefile || die
 }
 
 src_compile() {
@@ -40,6 +45,6 @@ src_compile() {
 }
 
 src_install() {
-	newbin src/${EGO_PN%/*}/out/binaries/gitlab-ci-multi-runner-linux-${ARCH} gitlab-ci-multi-runner
+	newbin src/${EGO_PN%/*}/out/binaries/gitlab-ci-multi-runner-linux-${ARCH} gitlab-runner
 	dodoc src/${EGO_PN%/*}/README.md src/${EGO_PN%/*}/CHANGELOG.md
 }
