@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -22,5 +21,5 @@ IUSE=""
 RESTRICT="test"
 
 ruby_add_rdepend ">=dev-ruby/mime-types-1.15
-	>=dev-ruby/rugged-0.24.0
+	>=dev-ruby/rugged-0.25.0
 	<dev-ruby/rugged-0.25"
