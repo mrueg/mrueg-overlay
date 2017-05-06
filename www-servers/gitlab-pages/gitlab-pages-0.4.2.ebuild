@@ -7,7 +7,7 @@ EGO_PN="gitlab.com/gitlab-org/${PN}/..."
 
 inherit golang-build golang-vcs-snapshot
 
-COMMIT="fdcb2c92"
+COMMIT="dccd0f2b"
 
 DESCRIPTION="Simple HTTP server serving GitLab Pages with CNAMEs and SNI using HTTP/HTTP2"
 HOMEPAGE="https://gitlab.com/gitlab-org/gitlab-pages"
