@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -22,7 +22,8 @@ IUSE=""
 
 RUBY_S="raven-ruby-${PV}"
 
-ruby_add_rdepend ">=dev-ruby/faraday-0.7.6"
+ruby_add_rdepend ">=dev-ruby/faraday-0.7.6
+	<dev-ruby/faraday-1"
 ruby_add_bdepend "test? ( dev-ruby/mime-types
 	dev-ruby/rest-client
 	dev-ruby/rspec-rails:3
