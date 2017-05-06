@@ -9,17 +9,19 @@ RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 
 inherit ruby-fakegem
 
+LIBGIT=0.25.1
+
 DESCRIPTION="Ruby bindings to the libgit2 linkable C Git library"
 HOMEPAGE="https://github.com/libgit2/rugged"
 SRC_URI="https://github.com/libgit2/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/libgit2/libgit2/archive/v${PV}.tar.gz -> ${P}-libgit2.tar.gz"
+	https://github.com/libgit2/libgit2/archive/v${LIBGIT}.tar.gz -> ${PN}-${LIBGIT}-libgit2.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND+=" >=dev-libs/libgit2-${PV}"
+RDEPEND+=" >=dev-libs/libgit2-${LIBGIT}"
 
 ruby_add_bdepend "test? (
 	dev-ruby/minitest
