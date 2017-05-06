@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -23,17 +22,13 @@ ruby_add_rdepend ">=dev-ruby/concurrent-ruby-1.0
 	>=dev-ruby/connection_pool-2.2.0
 	<dev-ruby/connection_pool-3
 	>=dev-ruby/rack-protection-1.5
-	>=dev-ruby/redis-3.2.1
+	>=dev-ruby/redis-3.3.2
 	<dev-ruby/redis-4"
-ruby_add_bdepend "test? ( >=dev-ruby/minitest-5.7.0
+ruby_add_bdepend "test? ( >=dev-ruby/minitest-5.10.0
 	<dev-ruby/minitest-6
 	>=dev-ruby/rails-4
 	>=dev-ruby/rake-10.0
 	>=dev-ruby/redis-namespace-1.5.2
 	<dev-ruby/redis-namespace-2 )"
-
-all_ruby_prepare() {
-	sed -i -e "1s/^/require \'minitest\'\n/" test/helper.rb || die
-}
 
 RESTRICT="test" # requires local redis server
