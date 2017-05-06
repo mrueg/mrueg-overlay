@@ -1,10 +1,9 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
-USE_RUBY="ruby20 ruby21 ruby22 ruby23"
+USE_RUBY="ruby21 ruby22 ruby23"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
@@ -20,9 +19,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-ruby_add_rdepend ">=dev-ruby/activemodel-3.2.0
-	>=dev-ruby/activesupport-3.2.0
-	>=dev-ruby/json-1.7
+ruby_add_rdepend ">=dev-ruby/activemodel-4.0.0
+	>=dev-ruby/activesupport-4.0.0
 	>=dev-ruby/mime-types-1.16"
 #ruby_add_bdepend ">=dev-ruby/cucumber-1.3.2
 #	<dev-ruby/cucumber-1.4
