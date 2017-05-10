@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -11,15 +10,14 @@ RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 inherit ruby-fakegem
 
 DESCRIPTION="Enables to set jobs to be run in specified time (using CRON notation)"
-HOMEPAGE="http://github.com/ondrejbartas/sidekiq-cron https://github.com/ondrejbartas/sidekiq-cron.git https://rubygems.org/gems/sidekiq-cron"
+HOMEPAGE="http://github.com/ondrejbartas/sidekiq-cron https://rubygems.org/gems/sidekiq-cron"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-ruby_add_rdepend ">=dev-ruby/redis-namespace-1.5.2
-	>=dev-ruby/rufus-scheduler-2.0.24
+ruby_add_rdepend ">=dev-ruby/rufus-scheduler-3.3.0
 	>=dev-ruby/sidekiq-4.2.1"
 ruby_add_bdepend "test? ( dev-ruby/minitest
 	dev-ruby/mocha
