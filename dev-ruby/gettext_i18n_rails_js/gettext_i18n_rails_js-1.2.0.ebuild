@@ -8,6 +8,8 @@ USE_RUBY="ruby21 ruby22 ruby23"
 RUBY_FAKEGEM_RECIPE_DOC="yard"
 RUBY_FAKEGEM_RECIPE_TEST="rspec3"
 
+RUBY_FAKEGEM_EXTRAINSTALL="vendor"
+
 inherit ruby-fakegem
 
 DESCRIPTION="Makes your .PO files available to client side javascript as JSON"
