@@ -23,6 +23,6 @@ KUBE_SERVICE_ADDRESSES="--service-cluster-ip-range=10.254.0.0/16"
 KUBE_ADMISSION_CONTROL="--admission-control=NamespaceLifecycle,LimitRanger,SecurityContextDeny,ServiceAccount,ResourceQuota"
 
 # Add your own!
-KUBE_API_ARGS="--allow-privileged=true --log-dir=/var/log/kubernetes"
+KUBE_API_ARGS="--allow-privileged=true --log-dir=/var/log/kube-apiserver"
 
 command_args="${KUBE_API_ADDRESS} ${KUBE_API_PORT} ${KUBELET_PORT} ${KUBE_ETCD_SERVERS} ${KUBE_SERVICE_ADDRESSES} ${KUBE_ADMISSION_CONTROL} ${KUBE_API_ARGS}"
