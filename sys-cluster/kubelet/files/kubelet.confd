@@ -17,6 +17,6 @@ KUBELET_API_SERVER="--api-servers=http://127.0.0.1:8080"
 KUBELET_CONFIG="--config=/etc/kubernetes/manifests"
 
 # Add your own!
-KUBELET_ARGS="--allow-privileged=true --v=2 --log-dir=/var/log/kubernetes"
+KUBELET_ARGS="--allow-privileged=true --v=2 --log-dir=/var/log/kubelet"
 
 command_args="${KUBELET_ADDRESS} ${KUBELET_PORT} ${KUBELET_HOSTNAME} ${KUBELET_API_SERVER} ${KUBELET_CONFIG} ${KUBELET_ARGS}"

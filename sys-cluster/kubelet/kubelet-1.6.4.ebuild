@@ -35,7 +35,7 @@ src_install() {
 	pushd src/${EGO_PN} || die
 	dobin _output/bin/${PN}
 	popd || die
-	keepdir /etc/kubernetes/manifests /var/log/kubernetes
+	keepdir /etc/kubernetes/manifests /var/log/kubelet
 	newinitd "${FILESDIR}"/${PN}.initd ${PN}
 	newconfd "${FILESDIR}"/${PN}.confd ${PN}
 	insinto /etc/logrotate.d

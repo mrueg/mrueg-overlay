@@ -11,8 +11,8 @@ command="/usr/bin/kubelet"
 command_args="${command_args}"
 command_background="true"
 start_stop_daemon_args="--user ${user} --group ${group} \
-	--stdout /var/log/kubernetes/${SVCNAME}.log \
-	--stderr /var/log/kubernetes/${SVCNAME}.log"
+	--stdout /var/log/kubelet/${SVCNAME}.log \
+	--stderr /var/log/kubelet/${SVCNAME}.log"
 
 depend() {
 	need net
