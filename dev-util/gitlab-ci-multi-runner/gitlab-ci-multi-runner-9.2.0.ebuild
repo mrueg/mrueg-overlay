@@ -37,14 +37,16 @@ src_prepare() {
 	fi
 	sed -i -e "s#./ci/version#echo ${PV}#"\
 		-e "s/git rev-parse --short HEAD/echo ${GITLAB_COMMIT}/"\
+		-e "/^LATEST_STABLE_TAG/d"\
+		-e "s#git describe.*\$#echo 0), 0)#"\
 		src/${EGO_PN}/Makefile || die
 }
 
 src_compile() {
-	emake GOPATH="${WORKDIR}/${P}:$(get_golibdir_gopath)" RELEASE=true -C src/${EGO_PN} build
+	emake GOPATH="${WORKDIR}/${P}:$(get_golibdir_gopath)" RELEASE=true -C src/${EGO_PN} build_current
 }
 
 src_install() {
-	newbin src/${EGO_PN}/out/binaries/gitlab-ci-multi-runner-linux-${ARCH} gitlab-runner
+	newbin src/${EGO_PN}/out/binaries/gitlab-ci-multi-runner gitlab-runner
 	dodoc src/${EGO_PN}/README.md src/${EGO_PN}/CHANGELOG.md
 }
