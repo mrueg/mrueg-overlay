@@ -3,11 +3,11 @@
 
 EAPI=6
 
-EGO_PN="gitlab.com/gitlab-org/${PN}/..."
+EGO_PN="gitlab.com/gitlab-org/${PN}"
 
 inherit golang-build golang-vcs-snapshot
 
-COMMIT="dccd0f2b"
+COMMIT="34a68fc5"
 
 DESCRIPTION="Simple HTTP server serving GitLab Pages with CNAMEs and SNI using HTTP/HTTP2"
 HOMEPAGE="https://gitlab.com/gitlab-org/gitlab-pages"
@@ -19,12 +19,12 @@ SLOT="0"
 IUSE=""
 
 src_compile() {
-	pushd src/${EGO_PN%/*} || die
+	pushd src/${EGO_PN} || die
 	GOPATH="${WORKDIR}/${P}" go build -o ${PN} --ldflags="-X main.VERSION=${PV} -X main.REVISION=${COMMIT}" || die
 	popd || die
 }
 
 src_install() {
-	dobin src/${EGO_PN%/*}/${PN}
-	dodoc src/${EGO_PN%/*}/CHANGELOG src/${EGO_PN%/*}/README.md
+	dobin src/${EGO_PN}/${PN}
+	dodoc src/${EGO_PN}/{CHANGELOG,README.md}
 }
