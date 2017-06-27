@@ -1,10 +1,9 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
-USE_RUBY="ruby20 ruby21 ruby22"
+USE_RUBY="ruby21 ruby22 ruby23"
 
 RUBY_FAKEGEM_RECIPE_DOC="yard"
 
@@ -24,14 +23,14 @@ ruby_add_rdepend "<dev-ruby/mixlib-install-3.0
 	>=dev-ruby/mixlib-shellout-1.2
 	>=dev-ruby/net-scp-1.1
 	<dev-ruby/net-scp-2
-	<dev-ruby/net-ssh-4.0
+	<dev-ruby/net-ssh-5.0
 	>=dev-ruby/net-ssh-2.9
-	>=dev-ruby/net-ssh-gateway-1.2.0
+	>=dev-ruby/net-ssh-gateway-1.2
 	<dev-ruby/net-ssh-gateway-1.3
 	>=dev-ruby/safe_yaml-1.0
 	<dev-ruby/safe_yaml-2
-	>=dev-ruby/thor-0.18
-	<dev-ruby/thor-1"
+	>=dev-ruby/thor-0.19
+	<dev-ruby/thor-0.19.2"
 
 ruby_add_bdepend "test? ( >=dev-ruby/fakefs-0.4
 	<dev-ruby/fakefs-1
