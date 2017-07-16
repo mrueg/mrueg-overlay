@@ -1,0 +1,11 @@
+###
+# kubernetes system config
+#
+# The following values are used to configure the kube-proxy
+#
+
+# Add your own!
+KUBE_API_ARGS="--allow-privileged=true --log-dir=/var/log/kube-apiserver"
+
+command_args="${KUBE_API_ARGS}"
+
