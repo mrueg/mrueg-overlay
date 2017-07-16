@@ -8,7 +8,7 @@ EGO_PN="k8s.io/kubernetes"
 ARCHIVE_URI="https://github.com/kubernetes/kubernetes/archive/v${PV}.tar.gz -> kubernetes-${PV}.tar.gz"
 KEYWORDS="~amd64"
 
-DESCRIPTION="Kubernetes API server"
+DESCRIPTION="Kubernetes Proxy service"
 HOMEPAGE="https://github.com/kubernetes/kubernetes https://kubernetes.io"
 SRC_URI="${ARCHIVE_URI}"
 
