@@ -5,7 +5,7 @@
 #
 
 # Add your own!
-KUBE_API_ARGS="--allow-privileged=true --log-dir=/var/log/kube-apiserver"
+KUBE_PROXY_ARGS="--master=http://127.0.0.1 --log-dir=/var/log/kube-proxy"
 
-command_args="${KUBE_API_ARGS}"
+command_args="${KUBE_PROXY_ARGS}"
 
