@@ -79,6 +79,7 @@ all_ruby_prepare() {
 	use ldap || rm app/models/auth_source_ldap.rb || die
 
 	# Make it work
+	sed -i -e "1irequire 'active_record'" app/models/user.rb || die
 	sed -i -e "1irequire 'request_store'" app/controllers/application_controller.rb || die
 	sed -i -e "18irequire 'action_controller'" -e "19irequire 'action_controller/action_caching'"\
 		app/controllers/welcome_controller.rb || die

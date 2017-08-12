@@ -6,6 +6,6 @@
 		<name>Manuel Rüger</name>
 	</maintainer>
 	<use>
-  		<flag name='passenger'>Enable support for <pkg>www-apache/passenger</pkg></flag>
+		<flag name='passenger'>Enable support for <pkg>www-apache/passenger</pkg></flag>
 	</use>
 </pkgmetadata>
