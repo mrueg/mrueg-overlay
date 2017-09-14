@@ -1,0 +1,24 @@
+#!/sbin/openrc-run
+# Copyright 1999-2017 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+depend() {
+	use net
+}
+
+start() {
+        ebegin "Starting gitlab-runner in ${GITLAB_RUNNER_WORK_DIR}"
+        start-stop-daemon --start --quiet --background --make-pidfile \
+		--pidfile ${GITLAB_RUNNER_WORK_DIR}/pid \
+		--exec /usr/bin/gitlab-runner -- run -d ${GITLAB_RUNNER_WORK_DIR} \
+		-u gitlab-runner
+        eend $?
+}
+
+stop() {
+        ebegin "Stopping gitlab-runner"
+        start-stop-daemon --stop --quiet --exec /usr/bin/gitlab-runner \
+		--pidfile ${GITLAB_RUNNER_WORK_DIR}/pid
+        eend $?
+}
+

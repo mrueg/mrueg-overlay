@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit golang-build golang-vcs-snapshot
+inherit golang-build golang-vcs-snapshot user
 
 EGO_PN="gitlab.com/gitlab-org/gitlab-ci-multi-runner"
 
@@ -53,4 +53,18 @@ src_compile() {
 src_install() {
 	newbin src/${EGO_PN}/out/binaries/gitlab-ci-multi-runner gitlab-runner
 	dodoc src/${EGO_PN}/README.md src/${EGO_PN}/CHANGELOG.md
+	doinitd "${FILESDIR}"/init.d/gitlab-runner
+	doconfd "${FILESDIR}"/conf.d/gitlab-runner
+}
+
+pkg_setup() {
+	enewgroup gitlab-runner
+	enewuser gitlab-runner -1 -1 /var/tmp/gitlab-runner/ gitlab-runner
+
+	echo
+	ewarn "To use gitlab-runner with docker, gitlab-runner user must be added"
+	ewarn "to docker group:"
+	ewarn
+	ewarn "    gpasswd -a gitlab-runner docker"
+	echo
 }
